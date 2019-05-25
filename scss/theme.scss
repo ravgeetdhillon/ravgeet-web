@@ -1,0 +1,23 @@
+$font-size-base: 1.15rem;
+$theme-colors: (
+	"primary": #F93943,
+	"secondary": #4A2451,
+	"success": #F96169,
+    "warning": #582A60,
+);
+
+$spacer: 1rem;
+$spacers: (
+	0: 0,
+	1: ($spacer * .25),
+	2: ($spacer * .5),
+	3: $spacer,
+	4: ($spacer * 2),
+	5: ($spacer * 4),
+	6: ($spacer * 8)
+);
+
+$enable-shadows: true;
+$enable-gradients: true;
+
+@import "../node_modules/bootstrap/scss/bootstrap";

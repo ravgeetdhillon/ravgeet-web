@@ -1,0 +1,10 @@
+socialLinks:
+  - name: Github
+    href: 'https://github.com/ravgeetdhillon/'
+    icon: 'fab fa-github'
+  - name: Instagram
+    href: 'https://instagram.com/ravd_ravgeet/'
+    icon: 'fab fa-instagram'
+  - name: Gitlab
+    href: 'https://gitlab.gnome.org/ravgeetdhillon/'
+    icon: 'fab fa-gitlab'

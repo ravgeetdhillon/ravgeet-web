@@ -1,29 +1,55 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Ravgeet Dhillon - Portfolio</title>
-    <link rel="shortcut icon" href="ravgeet.jpg" sizes="192x192" type="image/x-icon" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ site.author }} | {{ site.title }}</title>
+    <!-- <link href="./fontawesome/css/all.css" rel="stylesheet" media="screen" type="text/css" /> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link href="./css/theme.css" rel="stylesheet" media="screen" type="text/css" />
+    <link href="./css/index.css" rel="stylesheet" media="screen" type="text/css" />
 </head>
-<body>
-    <div class="holder">
-        <div class="box">
-            <div class="img-holder">
-                <img src="./ravgeet.jpg" data-src="ravgeet.jpg" title="Ravgeet Dhillon" />
+
+<body class="bg-light text-dark">
+<section class="header">
+    <div class="container py-5 border-bottom">
+        <div class="row">
+            <div class="col-12 col-md-6 d-flex flex-column">
+                <h6 class="text-muted">{{ site.author | upcase | append: "'s" }}</h6>
+                <h1 class="display-1">{{ site.title | camelcase }}</h1>
+                <ul class="list-inline">
+                {% assign socialLinks = site.data.navigation.socialLinks %}
+                {% for link in socialLinks %}
+                    <li class="list-inline-item"><a href="{{ link.href }}" target="_blank" title="{{ link.name }}"><i class="{{ link.icon }}"></i></a></li>
+                {% endfor %}
+                </ul>     
             </div>
-            <div class="info">
-                <h1>Ravgeet Dhillon</h1>
-                <div class="social">
-                    <a href="https://github.com/ravgeetdhillon/"><i class="fab fa-github"></i></a>
-                    <a href="https://instagram.com/ravd_ravgeet/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/RavgeetRocks/"><i class="fab fa-twitter"></i></a>
-                </div>
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center py-4 py-md-0">
+                <img src="./img/undraw_typewriter_i8xd.svg" class="img-fluid" alt="Typewriter" />
             </div>
         </div>
     </div>
+</section>
+    <div class="container">
+        <div class="row">
+        {% for post in site.posts %}
+            <div class="col-12 border-bottom py-5 border-bottom">
+                <p class="text-muted m-0">by <span class="text-success">{{ site.author }}</span> on <span class="text-success">{{ post.date | date: "%b %d, %Y" }}</span></p>
+                <h1 class="display-4 mb-3">{{ post.title }}</h1>
+                {% for category in post.categories %}
+                    <span class="font-weight-light px-2 py-1 badge {% cycle 'badge-success', 'badge-warning' %}">{{ category }}</span>                    
+                {% endfor %}
+                <br><br><br>
+                {{ post.content }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </body>
+
 </html>

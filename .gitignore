@@ -1,0 +1,9 @@
+_site
+.sass-cache
+.jekyll-metadata
+node_modules/
+*.bat
+Gemfile
+Gemfile.lock
+package-lock.json
+package.json

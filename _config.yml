@@ -1,0 +1,19 @@
+title: What do I think
+email: ravgeetdhillon@gmail.com
+description: This is Ravgeet's Blog.
+author: Ravgeet Dhillon
+baseurl: "/ravgeetdhillon.github.io"
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - startJekyll.bat
+  - compileSass.bat
+  - package-lock.json
+  - package.json
+  - node_modules/
