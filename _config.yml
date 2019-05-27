@@ -2,8 +2,8 @@ title: What do I think
 email: ravgeetdhillon@gmail.com
 description: This is Ravgeet's Blog.
 author: Ravgeet Dhillon
-baseurl: "https://ravgeetdhillon.github.io"
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://ravgeetdhillon.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 markdown: kramdown
 kramdown:
   input: GFM
