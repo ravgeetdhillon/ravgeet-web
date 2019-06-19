@@ -1,7 +1,7 @@
 ---
 title:  "Getting Selected for Google SoC'19"
 date:   2019-05-06 11:30:00 +0530
-categories: gsoc google gnome gtk
+categories: gsoc gnome gtk
 img: gnomeandgsoc.png
 ---
 

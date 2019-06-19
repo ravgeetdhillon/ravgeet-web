@@ -45,7 +45,9 @@
                     <span class="font-weight-light px-2 py-1 badge {% cycle 'badge-success', 'badge-warning' %}">{{ category }}</span>                    
                 {% endfor %}
                 <br>
+                {% if post.img %}
                 <img src="./img/{{ post.img }}" class="img-fluid" />
+                {% endif %}
                 <br>
                 {{ post.content }}
             </div>
