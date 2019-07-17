@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ site.author }} | {{ site.title }}</title>
+    <link href="./fontawesome/css/all.css" rel="stylesheet" media="screen" type="text/css" />
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" /> -->
+    <link href="{{ '/css/markdown.css' | prepend: site.url }}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{{ '/css/theme.css' | prepend: site.url }}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{{ '/css/colorful.css' | prepend: site.url }}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{{ '/css/index.css' | prepend: site.url }}" rel="stylesheet" media="screen" type="text/css" />
+</head>
+
+<body>
+    <header class="container d-flex justify-content-between py-3">
+        <div class="brand">
+            <a href="/" class="text-dark text-decoration-none"><span class="font-weight-bold"><img src="{{ '/img/ravgeet-logo.png' | prepend: site.url }}" style="width:40px;">{{ site.author }}</span></a>
+        </div>
+        <div class="links d-flex align-items-center">
+            <ul class="list-inline mb-0">
+                {% for link in site.data.navigation.navbar_links %}
+                    <li class="list-inline-item"><a class="text-xs-center" href="{{ link.href }}">{{ link.title }}</a></li>
+                {% endfor %}
+            </ul>
+    </header>
+</body>

@@ -17,3 +17,15 @@ exclude:
   - package-lock.json
   - package.json
   - node_modules/
+  - README.md
+
+collections:
+  blog:
+    output: true
+
+defaults:
+  - scope:
+      type: blog
+    values:
+      layout: blog_post
+      permalink: blog/:name/

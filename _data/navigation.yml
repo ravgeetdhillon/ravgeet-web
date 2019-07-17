@@ -1,4 +1,8 @@
-socialLinks:
+navbar_links:
+  - title: Blog
+    href: /blog
+
+social_links:
   - name: Github
     href: 'https://github.com/ravgeetdhillon/'
     icon: 'fab fa-github'

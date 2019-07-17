@@ -1,59 +1,22 @@
 ---
+
 ---
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+{% include header.html %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ site.author }} | {{ site.title }}</title>
-<!--     <link href="./fontawesome/css/all.css" rel="stylesheet" media="screen" type="text/css" /> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-    <link href="./css/theme.css" rel="stylesheet" media="screen" type="text/css" />
-    <link href="./css/index.css" rel="stylesheet" media="screen" type="text/css" />
-</head>
-
-<body class="bg-light text-dark">
-<section class="header">
-    <div class="container py-5 border-bottom">
-        <div class="row">
-            <div class="col-12 col-md-6 d-flex flex-column">
-                <h6 class="text-muted">{{ site.author | upcase | append: "'s" }}</h6>
-                <h1 class="display-1">{{ site.title | camelcase }}</h1>
-                <ul class="list-inline">
-                {% assign socialLinks = site.data.navigation.socialLinks %}
-                {% for link in socialLinks %}
-                    <li class="list-inline-item"><a href="{{ link.href }}" target="_blank" title="{{ link.name }}"><i class="{{ link.icon }}"></i></a></li>
-                {% endfor %}
-                </ul>     
-            </div>
-            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center py-4 py-md-0">
-                <img src="./img/undraw_typewriter_i8xd.svg" class="img-fluid" alt="Typewriter" />
-            </div>
-        </div>
-    </div>
-</section>
+<body>
     <div class="container">
         <div class="row">
-        {% for post in site.posts %}
+        {% for post in site.blog %}
             <div class="col-12 col-md-8 border-bottom py-5">
                 <p class="text-muted m-0">by <span class="text-success">{{ site.author }}</span> on <span class="text-success">{{ post.date | date: "%b %d, %Y" }}</span></p>
                 <h1 class="display-4 mb-3">{{ post.title }}</h1>
                 {% for category in post.categories %}
                     <span class="font-weight-light px-2 py-1 badge {% cycle 'badge-success', 'badge-warning' %}">{{ category }}</span>                    
                 {% endfor %}
-                <br>
-                {% if post.img %}
-                <img src="./img/{{ post.img }}" class="img-fluid" />
-                {% endif %}
-                <br>
-                {{ post.content }}
             </div>
         </div>
         {% endfor %}
     </div>
-</body>
 
-</html>
+{% include footer.html %}
