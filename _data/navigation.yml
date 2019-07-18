@@ -1,6 +1,6 @@
 navbar_links:
   - title: Blog
-    href: /blog
+    href: /blog/
 
 social_links:
   - name: Github

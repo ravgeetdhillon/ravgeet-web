@@ -1,0 +1,20 @@
+{% include header.html %}
+
+<section class="landing">
+    <div class="container px-md-0 pb-4">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ '/img/' | prepend: site.url | append: page.img }}" class="img-fluid w-100 shadow">
+            </div>
+            <div class="col-md-6">
+                <h1 class="display-4">About Me</h1>
+                <br>
+                <span class="markdown-body lead">
+                    {{ page.content | markdownify }}
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include footer.html %}

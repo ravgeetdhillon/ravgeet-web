@@ -29,3 +29,8 @@ defaults:
     values:
       layout: blog_post
       permalink: blog/:name/
+
+feed:
+  collections:
+    blog:
+      path: "/blog/feed.xml"

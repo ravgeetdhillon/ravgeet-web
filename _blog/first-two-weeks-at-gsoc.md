@@ -19,7 +19,3 @@ The landing page is the centerstage for this website and will provide routes to 
 I have forked the original project for GTK website into my [workspace](https://gitlab.gnome.org/ravgeetdhillon/gtk-web). The website is deployed using Gitlab CI for now and can be surfed [here](https://ravgeetdhillon.pages.gitlab.gnome.org/gtk-web/).
 
 If you have any suggestion or find an issue, please report it [here](https://gitlab.gnome.org/ravgeetdhillon/gtk-web/issues).
-
-```javascript
-var ravgeet = document.querySelector("#samreet");
-```
