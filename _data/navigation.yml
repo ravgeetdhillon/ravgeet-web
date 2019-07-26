@@ -1,6 +1,8 @@
 navbar_links:
   - title: Blog
     href: /blog/
+  - title: Resume
+    href: /ravgeet-dhillon-resume.pdf
 
 social_links:
   - name: Github
