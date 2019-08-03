@@ -1,0 +1,25 @@
+{
+  "name": "ravgeet-blog",
+  "version": "1.0.0",
+  "description": "This is Ravgeet's Blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blog",
+    "gsoc",
+    "google",
+    "summerofcode",
+    "ravgeet",
+    "dhillon",
+    "web",
+    "designer"
+  ],
+  "author": "Ravgeet Dhillon",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "bootstrap": "^4.3.1"
+  }
+}

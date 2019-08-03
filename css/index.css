@@ -157,11 +157,11 @@ html, body {
 .credits p {
     margin-top: 4px;
 }
-.img-holder {
+.img-holder-blog {
     background: linear-gradient(45deg, #F9394344, #4A245188), url('/img/blog-bg.jpg');
     background-position: 50% 30%;
     background-size: cover;
-    min-height: 300px;
+    min-height: 320px;
 }
 .text-shadow {
     text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.150) !important;
