@@ -27,6 +27,7 @@ defaults:
     values:
       layout: blog_post
       permalink: blog/:name/
+      navbar_type: light
 
 feed:
   collections:

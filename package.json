@@ -19,7 +19,7 @@
   "author": "Ravgeet Dhillon",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.9.0",
+    "@fortawesome/fontawesome-free": "^5.10.2",
     "bootstrap": "^4.3.1"
   }
 }
