@@ -1,6 +1,6 @@
 ---
-title:  Adding pages to Jekyll site
-date:   2019-07-19 14:00:00 +0530
+title: Adding pages to Jekyll site
+date: 2019-07-19 14:00:00 +0530
 categories: jekyll web-dev
 img: newspaper.jpg
 img_credits: Photo by [Fabien Barral](https://unsplash.com/@iammrcup) on [Unsplash](https://unsplash.com)

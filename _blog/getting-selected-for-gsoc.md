@@ -1,6 +1,6 @@
 ---
-title:  Getting Selected for Google SoC'19
-date:   2019-05-06 11:30:00 +0530
+title: Getting Selected for Google SoC'19
+date: 2019-05-06 11:30:00 +0530
 categories: gsoc gnome gtk
 img: road.jpg
 img_credits: Photo by [Luke Stackpoole](https://unsplash.com/@withluke) on [Unsplash](https://unsplash.com)

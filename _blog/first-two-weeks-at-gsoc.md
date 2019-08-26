@@ -1,6 +1,6 @@
 ---
-title:  First Two Weeks at GSoC
-date:   2019-06-10 11:30:00 +0530
+title: First Two Weeks at GSoC
+date: 2019-06-10 11:30:00 +0530
 categories: gsoc gnome gtk
 img: work.jpg
 img_credits: Photo by [Alesia Kazantceva](https://unsplash.com/@saltnstreets) on [Unsplash](https://unsplash.com)
