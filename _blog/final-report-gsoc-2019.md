@@ -18,10 +18,15 @@ The ultimate goal of my project was to redesign and redevelop the GTK’s offici
 
 ## Project Breakdown
 
-Create a content driven website for developers with their skills ranging
-from beginner to expert. Provide the up-to-date data regarding GTK. Focus on elegance and simplicity and at the same time have a great UI/UX. Make the content updation process so simple that even a novice can point out mistakes and solve them on his/her own by sending the pull
-requests. Establish this by using modern Static
-Site Generator such as Jekyll. Optimize the website for search engines.
+<i class="fas fa-calendar-alt text-info"></i> Create a content driven website for developers with their skills ranging from beginner to expert by establishing a Static Site Generator.
+
+<i class="fas fa-calendar-alt text-info"></i> Provide the up-to-date data regarding GTK. Focus on elegance and simplicity and at the same time have a great UI/UX.
+
+<i class="fas fa-calendar-alt text-info"></i> Make the content updation process so simple that even a novice can point out mistakes and solve them on his/her own by sending the pull requests.
+
+<i class="fas fa-calendar-alt text-info"></i> Establish this by using modern Static Site Generator such as Jekyll.
+
+<i class="fas fa-calendar-alt text-info"></i> Optimize the website for search engines.
 
 ## Tasks Completed
 
@@ -43,7 +48,9 @@ Site Generator such as Jekyll. Optimize the website for search engines.
 
 <i class="fas fa-exclamation-circle text-danger"></i> Merge the code to the parent repository.
 
+> The website on [https://ravgeetdhillon.pages.gitlab.gnome.org/gtk-web/](https://ravgeetdhillon.pages.gitlab.gnome.org/gtk-web/) will be shifted to [https://gtk.org](https://gtk.org) when the code will be merged and automatically replace the existing one.
+
 ## Others
 
-* [Contribution within GSoC 2019](https://github.com/ravgeetdhillon/gtk-web/commits/master?author=ravgeetdhillon&since=2019-05-06&until=2019-08-25)
-* [Rework the GTK Website](https://summerofcode.withgoogle.com/projects/#6195706342146048)
+* [Contribution within GSoC 2019 from 2019-05-06 to 2019-08-25](https://github.com/ravgeetdhillon/gtk-web/commits/master?author=ravgeetdhillon&since=2019-05-06&until=2019-08-25)
+* [Project Link: Rework the GTK Website](https://summerofcode.withgoogle.com/projects/#6195706342146048)
