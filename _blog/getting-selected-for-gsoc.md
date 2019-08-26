@@ -3,7 +3,7 @@ title: Getting Selected for Google SoC'19
 date: 2019-05-06 11:30:00 +0530
 categories: gsoc gnome gtk
 img: road.jpg
-img_credits: Photo by [Luke Stackpoole](https://unsplash.com/@withluke) on [Unsplash](https://unsplash.com)
+img_credits: Photo by [Ali Abdul Rahman](https://unsplash.com/@_actually_) on [Unsplash](https://unsplash.com)
 ---
 
 Today is a every special day for me. In my very first try, I cracked the Google Summer of Code. I am very delighted to have been given an oppurtunity to work for GNOME Foundation.

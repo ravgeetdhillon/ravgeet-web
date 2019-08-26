@@ -3,7 +3,7 @@ title: Adding pages to Jekyll site
 date: 2019-07-19 14:00:00 +0530
 categories: jekyll web-dev
 img: newspaper.jpg
-img_credits: Photo by [Fabien Barral](https://unsplash.com/@iammrcup) on [Unsplash](https://unsplash.com)
+img_credits: Photo by [Lilly Rum](https://unsplash.com/@rumandraisin) on [Unsplash](https://unsplash.com)
 ---
 
 This is tutorial can be used to add pages to any Jekyll site. I am assuming that you have setup your Ruby Development Environment. If not, then refer to this document here to get started easily.

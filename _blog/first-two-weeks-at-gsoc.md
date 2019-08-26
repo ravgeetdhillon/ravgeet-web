@@ -3,7 +3,7 @@ title: First Two Weeks at GSoC
 date: 2019-06-10 11:30:00 +0530
 categories: gsoc gnome gtk
 img: work.jpg
-img_credits: Photo by [Alesia Kazantceva](https://unsplash.com/@saltnstreets) on [Unsplash](https://unsplash.com)
+img_credits: Photo by [Simon Abrams](https://unsplash.com/@flysi3000) on [Unsplash](https://unsplash.com)
 ---
 
 Two weeks ago, I wasn't sure about the technology that was to be used in this project. I was completely unfamiliar with some of the tools that were to be used in this project. But I backed myself and was able to pull off the things.
