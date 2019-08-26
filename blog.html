@@ -22,7 +22,7 @@ permalink: /blog/
                 {% for post in blog_posts %}
                     <div class="col-12 col-md-8 border-bottom py-md-5 py-4">
                         <p class="text-muted m-0">on <span class="text-secondary">{{ post.date | date: "%b %d, %Y" }}</span></p>
-                        <a href="{{ post.url }}" class="text-decoration-none text-dark"><h1 class="mb-3 font-weight-light">{{ post.title }}</h1></a>
+                        <a href="{{ post.url }}" class="text-decoration-none text-dark"><h1 class="mb-3">{{ post.title }}</h1></a>
                         {% for category in post.categories %}
                             <span class="font-weight-light px-2 py-1 badge badge-primary">{{ category }}</span>                    
                         {% endfor %}

@@ -3,23 +3,23 @@
 <section class="py-4 bg-white">
     <div class="container">
         <div class="row align-items-start">
-            <div class="col-8">
-                <div class="col-12">
+            <div class="col-12 col-lg-8 p-3 pr-lg-4">
+                <div>
                     <h1>{{ page.title }}</h1>
-                    <p class="text-muted m-0">on <span class="text-success">{{ page.date | date: "%b %d, %Y" }}</span></p>
+                    <p class="text-muted m-0">on <span class="text-secondary">{{ page.date | date: "%b %d, %Y" }}</span></p>
                 </div>
-                <div class="col-12 py-4">
-                    <img src="{{ '/img/' | prepend: site.url | append: page.img }}" class="rounded img-fluid w-100 shadow-sm">
+                <div class="py-4">
+                    <img src="{{ '/assets/img/' | prepend: site.url | append: page.img }}" class="rounded img-fluid w-100 shadow-sm">
                     <span class="small text-muted py-1 credits text-right">{{ page.img_credits | markdownify }}</span>
                 </div>
-                <div class="col-12">
+                <div class="pb-4">
                     <span class="markdown-body">
                         {{ page.content }}
                     </span>
                 </div>
             </div>
-            <div class="col-4 border-left border-light py-3 pl-4">
-                <h5 class="pb-3">Recent Blog Posts</h5>
+            <div class="col-lg-4 border-left border-light py-3 pl-3 pl-lg-4">
+                <p class="text-muted">Recent Blog Posts</p>
                 {% assign blog_posts = site.blog | reverse %}
                 {% for post in blog_posts %}
                     <div class="pb-2">

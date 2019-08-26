@@ -16,6 +16,8 @@ exclude:
   - package.json
   - node_modules/
   - README.md
+  - compile-sass.sh
+  - structurize.sh
 
 collections:
   blog:
