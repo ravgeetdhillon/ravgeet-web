@@ -5,6 +5,10 @@ navbar_links:
     href: https://unsplash.com/@ravgeetdhillon/
   - title: Resume
     href: /ravgeet-dhillon-resume.pdf
+  - title: Github
+    href: https://github.com/ravgeetdhillon/
+  - title: Notes
+    href: /notes/
 
 social_links:
   - name: Github

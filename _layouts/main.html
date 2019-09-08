@@ -1,17 +1,17 @@
 {% include header.html %}
 
-<section class="landing">
+<section class="landing bg-dark text-light">
     <div class="container px-md-0 pb-4">
         <div class="row">
             <div class="col-md-6">
                 <img src="{{ '/assets/img/' | prepend: site.url | append: page.img }}" class="img-fluid w-100 shadow">
             </div>
-            <div class="col-md-6 py-4 py-md-0">
+            <div class="col-md-6 py-4">
                 <h1 class="display-4">About Me</h1>
                 <br>
-                <span class="markdown-body lead">
+                <div class="markdown-body lead">
                     {{ page.content | markdownify }}
-                </span>
+                </div>
             </div>
         </div>
     </div>

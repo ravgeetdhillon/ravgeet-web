@@ -1,0 +1,22 @@
+{% include header.html %}
+
+<section class="landing bg-dark text-light">
+    <div class="container px-md-0 pb-4">
+        <div class="row align-items-center flex-column">
+            <div class="col-md-7 py-4">
+                <h1 class="display-4">Notes</h1>
+                <span class="text-muted lead">Here I keep a record of all the problems that occured to me while I was developing some stuff.</span>
+                <!-- <br><br>
+                <input class="form-control text-less-dark" type="text" name="search" placeholder="Type to search..." onkeyup="searchText()" /> -->
+            </div>
+            <div class="col-md-7 py-4">
+                <div class="markdown-body">
+                    {{ page.content | markdownify }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include footer.html %}

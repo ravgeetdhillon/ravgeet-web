@@ -7,24 +7,30 @@ permalink: /blog/
 
 {% include header.html %}
 
+<style>
+    .blog:last-child {
+        border: none !important;
+    }
+</style>
+
 <body>
-    <section class="img-holder-blog d-flex flex-column justify-content-center">
+    <section class="img-holder-blog d-flex flex-column justify-content-center" id="special">
         <div class="container">
-            <p class="display-4 text-shadow">Blog</p>
+            <p class="display-4 text-light text-shadow">Blog</p>
             <p class="text-light dark w-md-75 w-lg-50 lead text-shadow">{{ page.blog_headline }}</p>
             <span class="small text-light py-1 credits align-self-end">{{ page.img_credits | markdownify }}</span>
         </div>
     </section>
-    <section class="bg-light">
+    <section class="bg-dark">
         <div class="container">
             <div class="row">
                 {% assign blog_posts = site.blog | reverse %}
                 {% for post in blog_posts %}
-                    <div class="col-12 col-md-8 border-bottom py-md-5 py-4">
-                        <p class="text-muted m-0">on <span class="text-secondary">{{ post.date | date: "%b %d, %Y" }}</span></p>
-                        <a href="{{ post.url }}" class="text-decoration-none text-dark"><h1 class="mb-3">{{ post.title }}</h1></a>
+                    <div class="col-12 col-md-8 border-bottom border-less-darker py-md-5 py-4 blog">
+                        <p class="text-muted m-0">on <span class="font-weight-bold">{{ post.date | date: "%b %d, %Y" }}</span></p>
+                        <a href="{{ post.url }}" class="text-decoration-none text-light"><h1 class="mb-3">{{ post.title }}</h1></a>
                         {% for category in post.categories %}
-                            <span class="font-weight-light px-2 py-1 badge badge-primary">{{ category }}</span>                    
+                            <span class="font-weight-light px-2 py-1 badge {% cycle 'badge-primary', 'badge-secondary' %}">{{ category }}</span>
                         {% endfor %}
                     </div>
                 {% endfor %}
