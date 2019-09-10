@@ -1,5 +1,5 @@
 ---
-title: First Two Weeks at GSoC
+title: First Two Weeks at Google SoC'19
 date: 2019-06-10 11:30:00 +0530
 categories: gsoc gnome gtk
 img: work.jpg

@@ -1,6 +1,6 @@
 ---
-title:  Final Report for Google SoC'19
-date:   2019-08-26 06:00:00 +0530
+title: Final Report for Google SoC'19
+date: 2019-08-26 06:00:00 +0530
 categories: gsoc gnome gtk
 img: final.jpg
 img_credits: Photo by [Samuel Zeller](https://unsplash.com/@samuelzeller) on [Unsplash](https://unsplash.com)
