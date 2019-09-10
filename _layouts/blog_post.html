@@ -10,11 +10,11 @@
                     <span class="text-muted m-0 ml-3"><i class="far fa-clock"></i> <span class="font-weight-bold">{{ page.content | number_of_words | divided_by: 180 | plus: 1 }} min read</span></span>
                 </div>
                 <div class="py-4">
-                    <img src="{{ '/assets/img/' | prepend: site.url | append: page.img }}" class="rounded img-fluid w-100 shadow-sm">
+                    <img src="{{ '/assets/img/' | prepend: site.url | append: page.img }}" class="rounded img-fluid w-100 shadow">
                     <span class="small text-muted py-1 credits text-right">{{ page.img_credits | markdownify }}</span>
                 </div>
                 <div class="pb-4">
-                    <span class="markdown-body">
+                    <span class="markdown-body lead">
                         {{ page.content }}
                     </span>
                 </div>
@@ -31,5 +31,12 @@
         </div>
     </div>
 </section>
+
+<script>
+    var images = document.querySelectorAll('.markdown-body img');
+    images.forEach(image => {
+        image.classList.add("rounded");
+    });
+</script>
 
 {% include footer.html %}
