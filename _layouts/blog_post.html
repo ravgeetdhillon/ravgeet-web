@@ -1,42 +1,52 @@
-{% include header.html %}
+{% include meta.html %}
 
-<section class="py-4 bg-dark text-light">
-    <div class="container">
-        <div class="row align-items-start">
-            <div class="col-12 col-lg-8 p-3 pr-lg-4">
-                <div>
-                    <h1>{{ page.title }}</h1>
-                    <span class="text-muted m-0">on <span class="font-weight-bold">{{ page.date | date: "%b %d, %Y" }}</span></span>
-                    <span class="text-muted m-0 ml-3"><i class="far fa-clock"></i> <span class="font-weight-bold">{{ page.content | number_of_words | divided_by: 180 | plus: 1 }} min read</span></span>
-                </div>
-                <div class="py-4">
-                    <img src="{{ '/assets/img/' | prepend: site.url | append: page.img }}" class="rounded img-fluid w-100 shadow">
-                    <span class="small text-muted py-1 credits text-right">{{ page.img_credits | markdownify }}</span>
-                </div>
-                <div class="pb-4">
-                    <span class="markdown-body lead">
-                        {{ page.content }}
-                    </span>
-                </div>
-            </div>
-            <div class="col-lg-4 py-3 pl-3 pl-lg-4">
-                <p class="text-muted">Recent Blog Posts</p>
-                {% assign blog_posts = site.blog | reverse %}
-                {% for post in blog_posts %}
-                    <div class="pb-2">
-                        <p class="mb-0"><a href="{{ post.url }}" class="text-decoration-none text-primary">{{ post.title }}</a></p>
+<body class="bg-dark text-white">
+    
+    {% include header.html %}
+
+    <section class="py-4">
+        <div class="container w-100 w-md-75">
+            <div class="row align-items-start">
+                <div class="col-12 col-lg-8 p-3">
+                    <div>
+                        <h1 class="animated fadeIn faster">{{ page.title }}</h1>
+                        <span class="text-muted m-0 animated fadeInUp faster delay-200">on <span class="font-weight-bold">{{ page.date | date: "%b %d, %Y" }}</span></span>
+                        <span class="text-muted m-0 ml-3 animated fadeInUp faster delay-300"><i class="far fa-clock"></i> <span class="font-weight-bold">{{ page.content | number_of_words | divided_by: 180 | plus: 1 }} min read</span></span>
                     </div>
-                {% endfor %}
+                    <div class="py-4 animated fadeIn faster delay-400">
+                        <img src="{{ '/assets/img/' | prepend: site.url | append: page.img }}" class="rounded img-fluid w-100 shadow">
+                        <span class="small text-muted py-1 credits text-right">{{ page.img_credits | markdownify }}</span>
+                    </div>
+                    <div class="pb-4 animated fadeIn faster">
+                        <span class="markdown-body lead">
+                            {{ page.content }}
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-4 py-3 pl-3 pl-lg-4 animated fadeIn faster delay-600">
+                    <p class="text-muted">Recent Blog Posts</p>
+                    {% assign blog_posts = site.blog | reverse %}
+                    {% for post in blog_posts %}
+                        <div class="pb-2">
+                            <p class="mb-0"><a href="{{ post.url }}">{{ post.title }}</a></p>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<script>
-    var images = document.querySelectorAll('.markdown-body img');
-    images.forEach(image => {
-        image.classList.add("rounded");
-    });
-</script>
+    <script>
+        var images = document.querySelectorAll('.markdown-body img');
+        images.forEach(image => {
+            image.classList.add("rounded");
+        });
+    </script>
 
-{% include footer.html %}
+    {% include footer.html %}
+
+</body>
+
+<script src="/assets/js/scroll.js"></script>
+
+</html>

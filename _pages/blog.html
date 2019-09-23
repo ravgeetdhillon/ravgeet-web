@@ -5,32 +5,35 @@ img_credits: Photo by [Sven Scheuermeier](https://unsplash.com/@sveninho) on [Un
 permalink: /blog/
 ---
 
-{% include header.html %}
-
 <style>
     .blog:last-child {
         border: none !important;
     }
 </style>
 
-<body>
-    <section class="img-holder-blog d-flex flex-column justify-content-center" id="special">
-        <div class="container">
-            <p class="display-4 text-light text-shadow">Blog</p>
-            <p class="text-light dark w-md-75 w-lg-50 lead text-shadow">{{ page.blog_headline }}</p>
+{% include meta.html %}
+
+<body class="bg-dark text-white">
+        
+    {% include header.html %}
+    
+    <section class="img-holder-blog d-flex flex-column justify-content-center animated fadeIn" id="special">
+        <div class="container w-100 w-md-75">
+            <p class="display-4 text-shadow">Blog</p>
+            <p class="text-light w-md-75 w-lg-50 lead text-shadow">{{ page.blog_headline }}</p>
             <span class="small text-light py-1 credits align-self-end">{{ page.img_credits | markdownify }}</span>
         </div>
     </section>
     <section class="bg-dark">
-        <div class="container">
+        <div class="container w-100 w-md-75">
             <div class="row">
                 {% assign blog_posts = site.blog | reverse %}
                 {% for post in blog_posts %}
-                    <div class="col-12 col-md-8 border-bottom border-less-darker py-md-5 py-4 blog">
+                    <div class="col-12 col-md-8 border-bottom border-less-darker py-md-5 py-4 blog revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
                         <p class="text-muted m-0">on <span class="font-weight-bold">{{ post.date | date: "%b %d, %Y" }}</span></p>
-                        <a href="{{ post.url }}" class="text-decoration-none text-light"><h1 class="mb-3">{{ post.title }}</h1></a>
+                        <a href="{{ post.url }}" class="text-decoration-none text-white"><h1 class="mb-3">{{ post.title }}</h1></a>
                         {% for category in post.categories %}
-                            <span class="font-weight-light px-2 py-1 badge {% cycle 'badge-primary', 'badge-secondary' %}">{{ category }}</span>
+                            <span class="badge badge-{{ category }}">{{ category }}</span>
                         {% endfor %}
                     </div>
                 {% endfor %}
@@ -38,4 +41,10 @@ permalink: /blog/
         </div>
     </section>
 
-{% include footer.html %}
+    {% include footer.html %}
+
+</body>
+
+<script src="/assets/js/scroll.js"></script>
+
+</html>

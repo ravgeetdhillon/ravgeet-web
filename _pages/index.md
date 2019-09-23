@@ -1,6 +1,6 @@
 ---
-layout: main
 img: ravgeetdhillon.jpg
+permalink: /i/
 ---
 Hello! I'm Ravgeet Dhillon and I develop exciting things that run on Web. I see myself as a Web Developer who creates best of the experiences for the people whenever he develops something new.
 

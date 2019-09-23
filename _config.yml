@@ -1,14 +1,16 @@
-title: What do I think
+title: Ravgeet Dhillon | Web Developer, Designer
 email: ravgeetdhillon@gmail.com
-description: This is Ravgeet's Blog.
+description: Hello! I'm Ravgeet Dhillon and I develop exciting things that run on Web. I see myself as a Web Developer who creates best of the experiences for the people whenever he develops something new.
 author: Ravgeet Dhillon
-baseurl: ""
-url: "https://ravgeetdhillon.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: /
+url: https://ravgeetdhillon.github.io
+site_repo: https://github.com/ravgeetdhillon/ravgeetdhillon.github.io
 markdown: kramdown
 kramdown:
   input: GFM
 plugins:
   - jekyll-feed
+  # - jekyll-seo-tag
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -21,6 +23,8 @@ exclude:
 
 collections:
   blog:
+    output: true
+  pages:
     output: true
 
 defaults:

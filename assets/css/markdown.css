@@ -311,7 +311,8 @@
     padding: 0.2em 0.4em;
     margin: 0;
     font-size: 85%;
-    background-color: rgba(27, 31, 35, 0.05);
+    /* background-color: rgba(27, 31, 35, 0.05); */
+    background: var(--darker);
     border-radius: 3px;
 }
 .markdown-body code br,
@@ -389,4 +390,14 @@
 
 .markdown-body i {
     padding-right: 4px;
+}
+
+.markdown-body .highlight pre:hover::-webkit-scrollbar-thumb {
+    background: var(--light);
+}
+.markdown-body .highlight pre::-webkit-scrollbar {
+    height: 4px;
+}
+.markdown-body .highlight pre::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 4px var(--dark);
 }

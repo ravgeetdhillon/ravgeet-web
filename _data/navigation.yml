@@ -17,6 +17,9 @@ social_links:
   - name: Instagram
     href: https://instagram.com/ravd_ravgeet/
     icon: fab fa-instagram
+  - name: Twitter
+    href: https://twitter.com/ravgeetdhillon
+    icon: fab fa-twitter
   - name: Gitlab
     href: https://gitlab.gnome.org/ravgeetdhillon/
     icon: fab fa-gitlab

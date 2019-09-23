@@ -1,0 +1,198 @@
+---
+permalink: /
+music:
+    description: Whenever I get free time, I divert my creativeness towards music. I own a Youtube channel where I post my remixes of my favorite songs. Below are few of my favorite that I made so far.
+books:
+    description: I love reading books and articles. They help in increasing my vocabulary and knowledge as well. I read about people, technology, design and universe. I try my best to read a book in a month.
+---
+
+{% include meta.html %}
+
+<body class="bg-dark text-white">
+        
+    {% include header.html %}
+
+    <section class="landing pt-5 lead">
+        <div class="container w-100 w-md-75">
+            <div class="row justify-content-center">
+                <div class="col-md-8 d-flex flex-column align-items-center">
+                    <img src="/assets/img/ravgeet-dhillon.jpg" class="img-fluid rounded-circle pb-3 animated jackInTheBox faster delay-300" style="max-width: 240px;" />
+                    <h1 class="display-4 font-weight-bold animated fadeInUp faster delay-300">I'm Ravgeet</h1>
+                    <p class="text-light text-center animated fadeInUp faster delay-600">{{ site.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-me py-4">
+        <div class="container w-100 w-md-75">
+            <div class="row">
+                <div class="col-md-8 d-flex flex-column justify-content-end">
+                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">About Me</h2>
+                    <span class="text-light">
+                        {{ site.data.stuff.about_me | markdownify }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects py-4">
+        <div class="container w-100 w-md-75">
+            <div class="row">
+                <div class="col-md-8 d-flex flex-column justify-content-end">
+                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Projects</h2>
+                </div>
+            </div>
+            <div class="row">
+                {% assign projects = site.data.stuff.projects %}
+                {% for project in projects %}
+                    <div class="col-md-6 col-lg-4 p-3 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                        <div class="bg-darker hover-darker p-4 rounded h-100">
+                            {% for tag in project.tags %}
+                                <span class="badge badge-{{ tag }} small mb-2">{{ tag }}</span>
+                            {% endfor %}
+                            <h4>{{ project.title }}</h4>
+                            <span class="p-in-span text-light">
+                                {{ project.description | markdownify }}
+                            </span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col py-3">
+                    <a href="https://github.com/ravgeetdhillon" class="btn btn-darker text-white"><i class="fas fa-flask mr-1"></i> More Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools py-4">
+        <div class="container w-100 w-md-75">
+            <div class="row">
+                <div class="col-md-8 d-flex flex-column justify-content-end">
+                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Tools and Technologies</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col py-3 px-4">
+                    {% assign technology = site.data.stuff.technology %}
+                    {% for tech in technology %}
+                        <div class="row bg-darker rounded border-bottom border-dark py-4 px-3 px-lg-0 py-lg-0 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                            <div class="col-lg-5 p-lg-4">
+                                <h4>{{ tech.title }}</h4>
+                            </div>
+                            <div class="col-lg-7 p-lg-4">
+                                <span class="p-in-span text-light">
+                                    {{ tech.description | markdownify }}
+                                </span>
+                                <br>
+                                {% for tool in tech.tools %}
+                                    <span class="badge badge-lg mr-2 mt-2 badge-{{ tool.name }}" title="{{ tool.description }}" data-toggle="tooltip">{{ tool.name | upcase }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <section class="blog py-4">
+        <div class="container w-100 w-md-75">
+            <div class="row">
+                <div class="col-md-8 d-flex flex-column justify-content-end">
+                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Featured Blog Posts</h2>
+                </div>
+            </div>
+            <div class="row d-flex flex-column p-3">
+                {% assign blog_posts = site.blog | reverse %}
+                {% for post in blog_posts %}
+                    <div class="col d-flex flex-sm-row flex-column align-items-sm-center bg-darker hover-darker py-3 px-4 border-bottom border-dark rounded revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                        <div class="order-sm-2">
+                            {% for category in post.categories %}
+                                <span class="badge badge-{{ category }} mr-1">{{ category }}</span>
+                            {% endfor %}
+                        </div>
+                        <a href="{{ post.url }}" class="stretched-link pr-3">{{ post.title }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col py-3">
+                    <a href="/blog/" class="btn btn-darker text-white"><i class="fas fa-book mr-1"></i> More Readings</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="music py-4">
+        <div class="container w-100 w-md-75">
+            <div class="row">
+                <div class="col-md-8 d-flex flex-column justify-content-end">
+                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Music</h2>
+                    <p class="text-light">{{ page.music.description | markdownify }}</p>
+                </div>
+            </div>
+            <div class="row">
+                {% assign youtube_music = site.data.stuff.youtube_music %}
+                {% for music in youtube_music %}
+                    <div class="col-12 col-sm-4 col-md-3 col-xl-4 p-3 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                        <div class="d-flex flex-sm-column flex-xl-row h-100 bg-darker rounded">
+                            <div class="d-flex align-items-center">
+                                <img src="{{ music.cover }}" alt="{{ music.title }}" class="img-fluid w-100" style="max-width:330px;" />
+                            </div>
+                            <div class="w-100 px-3 py-3 d-flex flex-column justify-content-between align-items-start">
+                                <div>
+                                    <span class="text-muted small">{{ music.artist }}</span>
+                                    <h5 class="mb-3">{{ music.title }}</h5>
+                                </div>
+                                <a href="{{ music.link }}"><i class="fas fa-play-circle fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col py-3">
+                    <a href="https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1" target="_blank" class="btn btn-darker text-white"><i class="fab fa-youtube mr-1"></i> Subscribe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="books py-4">
+        <div class="container w-100 w-md-75">
+            <div class="row">
+                <div class="col-md-8 d-flex flex-column justify-content-end">
+                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Books</h2>
+                    <p class="text-light">{{ page.books.description }}</p>
+                </div>
+            </div>
+            <div class="row">
+                {% assign books = site.data.stuff.books %}
+                {% for book in books %}    
+                <div class="col-4 col-sm-3 col-xl-2 p-3 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                    <div class="d-flex align-items-center">
+                        <a href="{{ book.link }}"><img src="{{ book.cover }}" alt="{{ book.title }}" class="img-fluid w-100" style="max-width:330px;" /></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    
+    {% include footer.html %}
+
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();   
+        });
+    </script>
+
+</body>
+
+<script src="/assets/js/scroll.js"></script>
+
+</html>

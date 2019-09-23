@@ -1,5 +1,4 @@
 _site
 .sass-cache
 .jekyll-metadata
-node_modules/bootstrap
-node_modules/@fortawesome
+node_modules/

@@ -1,0 +1,114 @@
+projects:
+  - title: GTK Website
+    tags: [web-dev, jekyll]
+    description: Designed and developed the official website for GTK as a part of my Google SoC'19 project for GNOME.
+  - title: FPL AI
+    tags: [ai, data-science]
+    description: A Data Science and AI project to play Fantasy Premier League.
+  - title: UrLane
+    tags: [python, ai]
+    description: An Image Analysis AI made in Python to regulate the traffic at toll booths.
+  - title: My Github Network
+    tags: [web-dev, visuals]
+    description: A PHP/JS app to show your Github Network in the form of connected node graph.
+  - title: SRT Convertor
+    tags: [utility]
+    description: A tool to convert Video Subtitles into usable text format.
+
+technology:
+  - title: Web Development
+    description: Web Development is my favorite tech job. Every new project brings with itself new challenges. So I try my best to keep my Web Stack updated with new tools and technologies.
+    tools: 
+      - name: django
+        description: Django is one of my favorite backend framework for building websites and APIs.
+      - name: html
+      - name: bootstrap
+        description: Bootstrap is my go to framework for building elegent UIs for all kind of devices. I have even customised it to create my own UI design system.
+      - name: css
+      - name: sass
+      - name: jekyll
+        description: A lot static websites that I have made have been possible due to Jekyll. It's an amazing CMS and even Github recommends this.
+      - name: js
+      - name: react
+        description: I am still learning React, but honestly it's a thing to cherish. One can easily design reusable UIs.
+      - name: mysql
+        description: So far, I have only used MySQL as a database in my full stack. I'm learning to use the new age NoSQL databases as well.
+  - title: Competitive Programming
+    description: I love to solve new problems every day, learn about new algorithms, data structures and this routine helps me exercise my brain as well. You can check out my [hackerrank](https://www.hackerrank.com/ravgeetdhillon) profile for more.
+    tools: 
+      - name: hackerrank
+        description: I solve coding problems on Hackerrank with the difficulty ranging from easy to hard.
+      - name: python
+        description: Python is my go to language for competitive programming as it is all about time conservation and speed.
+  - title: Open Source
+    description: Thanks to the Open Source culture, I have made myself a good web and software developer. So I make sure that in my free time, I contribute towards opoen source projects which I find fascinating.
+    tools: 
+      - name: git
+        description: Version Controlling is a necessity these days. It becomes easy to work within a team due to the presence of such a system.
+      - name: github
+        description: I host all of my projects on Github as it help me standardise the workflow through issues and pull requests.
+  - title: DevOps
+    description: Most of the web projects I have worked upon require continuous integration and delievery. DevOps, since then, have become an important part of my workflow.
+    tools: 
+      - name: gitlab-ci
+        description: I use solve coding problems on Hackerrank with the difficulty ranging from easy to hard.
+      - name: heroku
+        description: So far I have deployed my projects on heroku. It offers a great way to integrate it with Github and I can configure the settings for each push I make to the repository.
+      - name: aws
+        description: I haven't used AWS Cloud Computing services that much but I'm still learning it gradually.
+  - title: Others
+    description: These tools are not specific to any particular technology but they form an important part of my workspace. I use these tools to complement my major tech stack.
+    tools: 
+      - name: postman
+        description: It's a great tool that helps me to debug and test REST APIs.
+      - name: vscode
+        description: Without this, I can't imagine my life as a developer. It's my favorite text editor and I have configured it according to my use.
+      - name: spotify
+        description: Music helps me escape this world. I have various playlists on spotify to boost my productivity while developing and nurture the creative vibes as well.
+      - name: youtube
+        description: I will be honest when I say that Youtube that me more than my undergraduate degree did. Thanks to all the content creators, a new breed of developers emerge as they learn from this wonderful resource.
+      - name: stack-overflow
+        description: Well, words can't describe the love story between developers and Stack overflow. We know it all.
+
+about_me: |-
+
+  With dream of being a developer, I decided to go for a graduation in Computer Science and Engineering at Guru Nanak Dev Univeristy in my hometown, Amritsar in Punjab, India. During my degree, I wanted to learn something that can help me show my creative skills and I can start earning as well. So I started out with Web Development as I was fascinated with the things that were running on the web and impacting people's life.
+
+  Thanks to my love for Web Dev, I participated in **Google Summer of Code** for [GNOME](https://gnome.org) in the summer of 2019. My project was to redesign and develop the GTK's official website. It turned out pretty well and the website would soon be available at [https://gtk.org](https://gtk.org), once the GTK 4 is released.
+
+youtube_music:
+  - artist: Drake
+    title: Broskies
+    link: https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1
+    cover: /assets/img/music/drake-broskies-ravd.jpg
+  - artist: Bebe Rexha
+    title: Sad
+    link: https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1
+    cover: /assets/img/music/sad-ravd-remix.jpg
+  - artist: Lauv
+    title: Paris in the Rain
+    link: https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1
+    cover: /assets/img/music/paris-in-the-rain-ravd-remix.jpg
+  - artist: Khalid, Martin Garrix
+    title: Ocean
+    link: https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1
+    cover: /assets/img/music/ocean-ravd-remix.jpg
+  - artist: Justin Beiber
+    title: Where are you now?
+    link: https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1
+    cover: /assets/img/music/where-are-you-now-ravd-remix.jpg
+  - artist: Zedd, Maren Morris
+    title: The Middle
+    link: https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1
+    cover: /assets/img/music/middle-ravd-remix.jpg
+
+books:
+  - cover: /assets/img/books/refactoring-ui.png
+    title: Refactoring UI
+    link: https://refactoringui.com/book/
+  - cover: /assets/img/books/the-test-of-my-life.jpg
+    title: The Test of my Life
+    link: https://www.amazon.in/Yuvraj-singh-Test-My-Life/dp/818400298X
+  - cover: /assets/img/books/strictly-personal.jpg
+    title: Strictly Personal
+    link: https://www.amazon.in/Strictly-Personal-Gursharan-Daman-Singh/dp/9351363244

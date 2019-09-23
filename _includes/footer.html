@@ -1,15 +1,24 @@
-<footer class="bg-darker text-muted py-2 small">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start">
-                <span>Developed by <a href="/">Ravgeet Dhillon</a> &#8226; </span>
-                {% assign social_links = site.data.navigation.social_links %}
-                {% for link in social_links %}
-                    <a href="{{ link.href }}" class="px-1 text-primary"><i class="{{ link.icon }}"></i></a>
-                {% endfor %}
+<footer class="bg-darker mt-4">
+    <div class="container w-100 w-md-75">
+        <div class="row py-3">
+            <div class="col-12 col-md-4">
+                <p class="text-muted">About this Website</p>
+                <p>This website is powered by <a href="https://jekyllrb.com">Jekyll</a> for Content Management purposes and is deployed using <a href="https://github.com/features/actions">Github Actions</a>.</p>
+                <a href="{{ site.site_repo }}" class="btn btn-sm btn-dark text-white"><i class="fab fa-github mr-1"></i> View on Github</a>
             </div>
-            <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end">
-                <span>All Rights Reserved &#8226; Powered by <a href="https://jekyllrb.com">Jekyll</a></span>
+            <div class="col-12 col-md-4">
+                <p class="text-muted">Follow me on my socials</p>
+                <div class="d-flex py-1">
+                    {% assign social_links = site.data.navigation.social_links %}
+                    {% for link in social_links %}
+                        <a href="{{ link.href }}" class="pr-3"><i class="{{ link.icon }}"></i></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row border-top border-dark text-muted">
+            <div class="col py-2">
+                <span>Developed by <a href="/">Ravgeet Dhillon</a> &#8226; All Rights Reserved</span>
             </div>
         </div>
     </div>
