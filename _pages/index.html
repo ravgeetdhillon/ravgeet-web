@@ -1,5 +1,7 @@
 ---
 permalink: /
+me:
+    description: I develop exciting things that run on Web. I see myself as a Web Developer who creates best of the experiences for the people whenever he develops something new.
 music:
     description: Whenever I get free time, I divert my creativeness towards music. I own a Youtube channel where I post my remixes of my favorite songs. Below are few of my favorite that I made so far.
 books:
@@ -15,10 +17,10 @@ books:
     <section class="landing pt-5 lead">
         <div class="container w-100 w-md-75">
             <div class="row justify-content-center">
-                <div class="col-md-8 d-flex flex-column align-items-center">
+                <div class="col-lg-8 d-flex flex-column align-items-center">
                     <img src="/assets/img/ravgeet-dhillon.jpg" class="img-fluid rounded-circle pb-3 animated jackInTheBox faster delay-300" style="max-width: 240px;" />
                     <h1 class="display-4 font-weight-bold animated fadeInUp faster delay-300">I'm Ravgeet</h1>
-                    <p class="text-light text-center animated fadeInUp faster delay-600">{{ site.description }}</p>
+                    <p class="text-light text-center animated fadeInUp faster delay-600">{{ page.me.description }}</p>
                 </div>
             </div>
         </div>
@@ -56,13 +58,14 @@ books:
                             <span class="p-in-span text-light">
                                 {{ project.description | markdownify }}
                             </span>
+                            <a href="{{ project.link }}" class="stretched-link"></a>
                         </div>
                     </div>
                 {% endfor %}
             </div>
             <div class="row">
                 <div class="col py-3">
-                    <a href="https://github.com/ravgeetdhillon" class="btn btn-darker text-white"><i class="fas fa-flask mr-1"></i> More Projects</a>
+                    <a href="https://github.com/ravgeetdhillon/" class="btn btn-darker text-white"><i class="fas fa-flask mr-1"></i> More Projects</a>
                 </div>
             </div>
         </div>
@@ -132,18 +135,18 @@ books:
             <div class="row">
                 <div class="col-md-8 d-flex flex-column justify-content-end">
                     <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Music</h2>
-                    <p class="text-light">{{ page.music.description | markdownify }}</p>
+                    <span class="text-light">{{ page.music.description | markdownify }}</span>
                 </div>
             </div>
             <div class="row">
                 {% assign youtube_music = site.data.stuff.youtube_music %}
                 {% for music in youtube_music %}
-                    <div class="col-12 col-sm-4 col-md-3 col-xl-4 p-3 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
-                        <div class="d-flex flex-sm-column flex-xl-row h-100 bg-darker rounded">
+                    <div class="col-12 col-sm-6 col-md-4 p-3 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                        <div class="d-flex flex-sm-row flex-md-column flex-xl-row h-100 bg-darker rounded">
                             <div class="d-flex align-items-center">
                                 <img src="{{ music.cover }}" alt="{{ music.title }}" class="img-fluid w-100" style="max-width:330px;" />
                             </div>
-                            <div class="w-100 px-3 py-3 d-flex flex-column justify-content-between align-items-start">
+                            <div class="w-100 px-3 py-3 h-100 d-flex flex-column justify-content-between align-items-start">
                                 <div>
                                     <span class="text-muted small">{{ music.artist }}</span>
                                     <h5 class="mb-3">{{ music.title }}</h5>

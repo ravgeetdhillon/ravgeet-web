@@ -1,6 +1,6 @@
 title: Ravgeet Dhillon | Web Developer, Designer
 email: ravgeetdhillon@gmail.com
-description: Hello! I'm Ravgeet Dhillon and I develop exciting things that run on Web. I see myself as a Web Developer who creates best of the experiences for the people whenever he develops something new.
+description: I'm Ravgeet Dhillon and I develop exciting things that run on Web. I see myself as a Web Developer who creates best of the experiences for the people whenever he develops something new.
 author: Ravgeet Dhillon
 baseurl: /
 url: https://ravgeetdhillon.github.io
@@ -20,18 +20,21 @@ exclude:
   - README.md
   - compile-sass.sh
   - structurize.sh
+  - start-server.sh
 
 collections:
   blog:
     output: true
   pages:
     output: true
+  notes:
+    output: true
 
 defaults:
   - scope:
       type: blog
     values:
-      layout: blog_post
+      layout: blog-post
       permalink: blog/:name/
 
 feed:

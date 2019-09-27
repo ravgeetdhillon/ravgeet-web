@@ -1,14 +1,12 @@
 navbar_links:
-  - title: Blog
-    href: /blog/
-  - title: Photos
-    href: https://unsplash.com/@ravgeetdhillon/
   - title: Resume
     href: /ravgeet-dhillon-resume.pdf
-  - title: Github
-    href: https://github.com/ravgeetdhillon/
+  - title: Blog
+    href: /blog/
   - title: Notes
     href: /notes/
+  - title: Github
+    href: https://github.com/ravgeetdhillon/  
 
 social_links:
   - name: Github

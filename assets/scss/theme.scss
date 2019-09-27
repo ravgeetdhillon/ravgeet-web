@@ -283,6 +283,11 @@ $link-color: map-get($theme-colors, 'primary') !default;
 $link-hover-color: lighten($link-color, 15%) !important;
 $link-hover-decoration: none !important;
 
+$input-border-color: map-get($theme-colors, 'light');
+
+$body-bg: map-get($theme-colors, 'dark');
+$body-color: map-get($theme-colors, 'white');
+
 $labels: (
     "python": #24c9a0,
     "bootstrap": #8207b3,

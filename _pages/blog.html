@@ -1,5 +1,5 @@
 ---
-blog_headline: I write about technologies I use, places I travel, tutorials and other things that are relevant to the community.
+headline: I write about technologies I use, places I travel, tutorials and other things that are relevant to the community.
 img: blog-bg.jpg
 img_credits: Photo by [Sven Scheuermeier](https://unsplash.com/@sveninho) on [Unsplash](https://unsplash.com)
 permalink: /blog/
@@ -19,8 +19,8 @@ permalink: /blog/
     
     <section class="img-holder-blog d-flex flex-column justify-content-center animated fadeIn" id="special">
         <div class="container w-100 w-md-75">
-            <p class="display-4 text-shadow">Blog</p>
-            <p class="text-light w-md-75 w-lg-50 lead text-shadow">{{ page.blog_headline }}</p>
+            <h1 class="display-4 font-weight-bold text-shadow">Blog</h1>
+            <p class="text-light w-md-75 w-lg-50 lead font-weight-normal text-shadow">{{ page.headline }}</p>
             <span class="small text-light py-1 credits align-self-end">{{ page.img_credits | markdownify }}</span>
         </div>
     </section>
@@ -29,7 +29,7 @@ permalink: /blog/
             <div class="row">
                 {% assign blog_posts = site.blog | reverse %}
                 {% for post in blog_posts %}
-                    <div class="col-12 col-md-8 border-bottom border-less-darker py-md-5 py-4 blog revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                    <div class="col-12 col-lg-8 border-bottom border-less-darker py-md-5 py-4 blog revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
                         <p class="text-muted m-0">on <span class="font-weight-bold">{{ post.date | date: "%b %d, %Y" }}</span></p>
                         <a href="{{ post.url }}" class="text-decoration-none text-white"><h1 class="mb-3">{{ post.title }}</h1></a>
                         {% for category in post.categories %}

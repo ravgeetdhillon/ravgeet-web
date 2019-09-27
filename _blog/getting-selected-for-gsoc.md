@@ -2,7 +2,7 @@
 title: Getting Selected for Google SoC'19
 date: 2019-05-06 11:30:00 +0530
 categories: gsoc gnome gtk
-img: road.jpg
+img: getting-selected-for-google-summer-of-code.jpg
 img_credits: Photo by [Ali Abdul Rahman](https://unsplash.com/@_actually_) on [Unsplash](https://unsplash.com)
 ---
 

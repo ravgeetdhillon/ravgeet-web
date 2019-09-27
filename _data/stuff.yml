@@ -2,18 +2,23 @@ projects:
   - title: GTK Website
     tags: [web-dev, jekyll]
     description: Designed and developed the official website for GTK as a part of my Google SoC'19 project for GNOME.
+    link: https://gitlab.gnome.org/ravgeetdhillon/gtk-web/
   - title: FPL AI
     tags: [ai, data-science]
     description: A Data Science and AI project to play Fantasy Premier League.
+    link: https://github.com/ravgeetdhillon/fpl-ai/
   - title: UrLane
     tags: [python, ai]
     description: An Image Analysis AI made in Python to regulate the traffic at toll booths.
+    link: https://github.com/ravgeetdhillon/urlane/
   - title: My Github Network
     tags: [web-dev, visuals]
     description: A PHP/JS app to show your Github Network in the form of connected node graph.
+    link: https://github.com/ravgeetdhillon/my-github-network/
   - title: SRT Convertor
     tags: [utility]
     description: A tool to convert Video Subtitles into usable text format.
+    link: https://github.com/ravgeetdhillon/srt-convertor/
 
 technology:
   - title: Web Development
@@ -79,27 +84,27 @@ about_me: |-
 youtube_music:
   - artist: Drake
     title: Broskies
-    link: https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1
+    link: https://www.youtube.com/watch?v=GFgwd15B_Nc
     cover: /assets/img/music/drake-broskies-ravd.jpg
   - artist: Bebe Rexha
     title: Sad
-    link: https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1
+    link: https://www.youtube.com/watch?v=8FlzS8ctvgs
     cover: /assets/img/music/sad-ravd-remix.jpg
   - artist: Lauv
     title: Paris in the Rain
-    link: https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1
+    link: https://www.youtube.com/watch?v=WQ-81Zj1eos
     cover: /assets/img/music/paris-in-the-rain-ravd-remix.jpg
   - artist: Khalid, Martin Garrix
     title: Ocean
-    link: https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1
+    link: https://www.youtube.com/watch?v=InHLoyOUWtE
     cover: /assets/img/music/ocean-ravd-remix.jpg
   - artist: Justin Beiber
     title: Where are you now?
-    link: https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1
+    link: https://www.youtube.com/watch?v=udkaUZbvgGY
     cover: /assets/img/music/where-are-you-now-ravd-remix.jpg
   - artist: Zedd, Maren Morris
     title: The Middle
-    link: https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1
+    link: https://www.youtube.com/watch?v=F_npFxfOm_E
     cover: /assets/img/music/middle-ravd-remix.jpg
 
 books:

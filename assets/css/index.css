@@ -170,6 +170,9 @@ body {
   background: transparent;
   margin: 1rem; }
 
+.border-muted {
+  border-color: #6c757d !important; }
+
 .credits p {
   margin-top: 4px; }
 

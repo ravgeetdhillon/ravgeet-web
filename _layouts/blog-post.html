@@ -1,0 +1,85 @@
+{% include meta.html %}
+
+<body>
+    
+    {% include header.html %}
+
+    <section class="py-4">
+        <div class="container w-100 w-md-75">
+            <div class="row align-items-start">
+                <div class="col-12 p-3">
+                    <div>
+                        <h1 class="display-4 font-weight-bold text-shadow animated fadeIn faster">{{ page.title }}</h1>
+                        <span class="text-muted m-0 animated fadeInUp faster delay-200">on <span class="font-weight-bold">{{ page.date | date: "%b %d, %Y" }}</span></span>
+                        <span class="text-muted m-0 ml-3 animated fadeInUp faster delay-300"><i class="far fa-clock"></i> <span class="font-weight-bold">{{ page.content | number_of_words | divided_by: 180 | plus: 1 }} min read</span></span>
+                    </div>
+                    <div class="py-4 animated fadeIn faster delay-400">
+                        <img src="{{ '/assets/img/blog/' | prepend: site.url | append: page.img }}" class="rounded img-fluid w-100 shadow" alt="{{ page.title | append: ' : ' | append: page.img }}">
+                        <span class="small text-muted py-1 credits text-right">{{ page.img_credits | markdownify }}</span>
+                    </div>
+                    <div class="pb-4 animated fadeIn faster">
+                        <span class="markdown-body lead font-weight-normal">
+                            {{ page.content | markdownify }}
+                        </span>
+                    </div>
+                </div>
+                <div class="col-12 py-3 pl-3 animated fadeIn faster delay-600">
+                    <p class="text-muted">More Blog Posts</p>
+                    {% assign blog_posts = site.blog | reverse %}
+                    {% for post in blog_posts %}
+                        <div class="pb-2">
+                            <p class="mb-0"><a href="{{ post.url }}">{{ post.title }}</a></p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comments py-4">
+        <div class="container w-100 w-md-75">
+            <div class="row">
+                <div class="col-lg-8 p-3">
+                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Comments</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 py-3">
+                    <input name="blog-name" value="{{ page.url | split: '/' | last }}" hidden />
+                    <div class="form-group" data-validation="username">
+                        <input class="form-control bg-darker text-light border border-muted" type="text" placeholder="Your Name" name="username" maxlength="20" data-validation-error-id="error-username" required />
+                        <span class="text-danger d-none animated fadeIn" style="animation-duration:0.1s;" id="error-username">Please add a name.</span>
+                    </div>
+                    <div class="form-group" data-validation="content">
+                        <textarea class="form-control bg-darker text-light border border-muted" rows="5" placeholder="Your Thoughts" name="content" maxlength="500" data-validation-error-id="error-content" required></textarea>
+                    <span class="text-danger d-none animated fadeIn" style="animation-duration:0.1s;" id="error-content">Please add some useful comments.</span>
+                    </div>
+                    <div class="d-flex">
+                        <button class="btn btn-darker text-white mr-2" id="add-comment-btn">Comment</button>
+                        <button class="btn border border-darker text-white" id="discard-btn">Discard</button>
+                    </div>
+                </div>
+                <div class="col-lg-8 py-4">
+                    <button class="btn border border-darker text-white w-100 p-3" id="load-comments-btn" data-blog="{{ page.url | split: '/' | last }}">Load Comments</button>
+                </div>
+            </div>
+            <div class="row" id="comments-holder">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var images = document.querySelectorAll('.markdown-body img');
+        images.forEach(image => {
+            image.classList.add("rounded");
+        });
+    </script>
+
+    {% include footer.html %}
+
+</body>
+
+<script src="/assets/js/scroll.js"></script>
+<script src="/assets/js/comments.js"></script>
+
+</html>

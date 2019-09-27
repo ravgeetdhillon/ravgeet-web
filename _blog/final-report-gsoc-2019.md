@@ -2,17 +2,16 @@
 title: Final Report for Google SoC'19
 date: 2019-08-26 06:00:00 +0530
 categories: gsoc gnome gtk
-img: final.jpg
-img_credits: Photo by [Samuel Zeller](https://unsplash.com/@samuelzeller) on [Unsplash](https://unsplash.com)
+img: final-report-for-google-summer-of-code.jpg
+img_credits: Photo by [Pietro Rampazzo](https://unsplash.com/@peterampazzo) on [Unsplash](https://unsplash.com)
 ---
 
-## About
 
-**Project**
+## Project
 
-Rework the GTK Website
+Rework the GTK Website.
 
-**Description**
+## Description
 
 The ultimate goal of my project was to redesign and redevelop the GTK’s official website [https://gtk.org](https://gtk.org) by providing it a design that follows current trends and content updation that really matters to the users and developers by using modern static site generators. This website uses Gitlab CI for deployment purposes. The project is a major milestone belonging to the release of GTK 4.0.
 

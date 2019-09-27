@@ -2,7 +2,7 @@
 title: First Two Weeks at Google SoC'19
 date: 2019-06-10 11:30:00 +0530
 categories: gsoc gnome gtk
-img: work.jpg
+img: first-two-weeks-at-google-summer-of-code.jpg
 img_credits: Photo by [Simon Abrams](https://unsplash.com/@flysi3000) on [Unsplash](https://unsplash.com)
 ---
 
