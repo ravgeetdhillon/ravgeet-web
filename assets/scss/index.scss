@@ -76,9 +76,9 @@ body {
 .text-shadow {
     text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15) !important;
 }
-.landing {
-    min-height: 100vh;
-}
+// .landing {
+//     min-height: 100vh;
+// }
 ::selection {
     background: var(--info);
 }

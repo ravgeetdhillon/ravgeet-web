@@ -14,7 +14,7 @@ books:
         
     {% include header.html %}
 
-    <section class="landing pt-5 lead">
+    <section class="landing py-5 lead">
         <div class="container w-100 w-md-75">
             <div class="row justify-content-center">
                 <div class="col-lg-8 d-flex flex-column align-items-center">
@@ -34,6 +34,11 @@ books:
                     <span class="text-light">
                         {{ site.data.stuff.about_me | markdownify }}
                     </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col py-3">
+                    <a class="btn btn-darker text-white" target="_blank" href="https://www.buymeacoffee.com/ravgeetdhillon"><img src="{{ '/assets/img/BMC-btn-logo.svg' | prepend: site.url }}" alt="Buy me a coffee"><span class="mr-1"> Buy me a coffee</span></a>
                 </div>
             </div>
         </div>
