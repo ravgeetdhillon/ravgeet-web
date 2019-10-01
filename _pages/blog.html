@@ -13,7 +13,7 @@ permalink: /blog/
 
 {% include meta.html %}
 
-<body class="bg-dark text-white">
+<body>
         
     {% include header.html %}
     
@@ -24,17 +24,18 @@ permalink: /blog/
             <span class="small text-light py-1 credits align-self-end">{{ page.img_credits | markdownify }}</span>
         </div>
     </section>
-    <section class="bg-dark">
+    <section>
         <div class="container w-100 w-md-75">
             <div class="row">
                 {% assign blog_posts = site.blog | reverse %}
                 {% for post in blog_posts %}
                     <div class="col-12 col-lg-8 border-bottom border-less-darker py-md-5 py-4 blog revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
                         <p class="text-muted m-0">on <span class="font-weight-bold">{{ post.date | date: "%b %d, %Y" }}</span></p>
-                        <a href="{{ post.url }}" class="text-decoration-none text-white"><h1 class="mb-3">{{ post.title }}</h1></a>
+                        <h1 class="mb-3">{{ post.title }}</h1>
                         {% for category in post.categories %}
                             <span class="badge badge-{{ category }}">{{ category }}</span>
                         {% endfor %}
+                        <a href="{{ post.url }}" class="stretched-link"></a>
                     </div>
                 {% endfor %}
             </div>

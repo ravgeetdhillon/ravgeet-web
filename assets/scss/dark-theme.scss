@@ -1,0 +1,24 @@
+// color system
+
+$theme-colors: (
+    "primary": #20bdc9,
+    "secondary": #eadf44,
+    "success": #29c44d,
+    "info": #1485ba,
+    "warning": #fca728,
+    "danger": #ef3437,
+    "white": #ced2d6,
+    "light": #9da5ad,
+    "dark": #343a40,
+    "darker": #30353b,
+    "less-darker": #222736
+);
+
+$input-border-color: map-get($theme-colors, lighten(map-get($theme-colors, 'darker'), 20%));
+
+$body-bg: map-get($theme-colors, 'dark');
+$body-color: map-get($theme-colors, 'white');
+$link-color: map-get($theme-colors, 'primary') !default;
+$link-hover-color: lighten($link-color, 15%) !important;
+
+@import "theme";

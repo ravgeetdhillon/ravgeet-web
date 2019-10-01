@@ -30,7 +30,7 @@ permalink: /docs/tutorials/:name/
 ![](/assets/img/blog/adding-pages-to-jekyll-site-screen-2.png)
 
 ### Step 3.
-Add the your content in the Markdown format to the `hello-world.md.
+Add your content in the Markdown format to the `hello-world.md.
 
 Add the following front matter to the `hello-world.md`.
 ```
@@ -54,7 +54,7 @@ here,
 ![](/assets/img/blog/adding-pages-to-jekyll-site-screen-4.png)
 
 ### Step 5.
-In case the new file is a main section page, then update the sidebar_sections array by adding the following content:
+In case the new file is the main section page, then update the sidebar_sections array by adding the following content:
 ```
 - title: Tutorials
   name: tutorials

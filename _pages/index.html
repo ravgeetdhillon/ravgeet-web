@@ -10,17 +10,17 @@ books:
 
 {% include meta.html %}
 
-<body class="bg-dark text-white">
+<body class="">
         
     {% include header.html %}
 
-    <section class="landing py-5 lead">
+    <section class="landing py-5">
         <div class="container w-100 w-md-75">
             <div class="row justify-content-center">
                 <div class="col-lg-8 d-flex flex-column align-items-center">
                     <img src="/assets/img/ravgeet-dhillon.jpg" class="img-fluid rounded-circle pb-3 animated jackInTheBox faster delay-300" style="max-width: 240px;" />
                     <h1 class="display-4 font-weight-bold animated fadeInUp faster delay-300">I'm Ravgeet</h1>
-                    <p class="text-light text-center animated fadeInUp faster delay-600">{{ page.me.description }}</p>
+                    <p class="text-light text-center lead font-weight-normal animated fadeInUp faster delay-600">{{ page.me.description }}</p>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@ books:
             </div>
             <div class="row">
                 <div class="col py-3">
-                    <a class="btn btn-darker text-white" target="_blank" href="https://www.buymeacoffee.com/ravgeetdhillon"><img src="{{ '/assets/img/BMC-btn-logo.svg' | prepend: site.url }}" alt="Buy me a coffee"><span class="mr-1"> Buy me a coffee</span></a>
+                    <a class="btn btn-darker" target="_blank" href="https://www.buymeacoffee.com/ravgeetdhillon"><img src="{{ '/assets/img/BMC-btn-logo.svg' | prepend: site.url }}" alt="Buy me a coffee"><span class="mr-1"> Buy me a coffee</span></a>
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@ books:
             </div>
             <div class="row">
                 <div class="col py-3">
-                    <a href="https://github.com/ravgeetdhillon/" class="btn btn-darker text-white"><i class="fas fa-flask mr-1"></i> More Projects</a>
+                    <a href="https://github.com/ravgeetdhillon/" class="btn btn-primary text-white"><i class="fas fa-flask mr-1"></i> More Projects</a>
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@ books:
                 <div class="col py-3 px-4">
                     {% assign technology = site.data.stuff.technology %}
                     {% for tech in technology %}
-                        <div class="row bg-darker rounded border-bottom border-dark py-4 px-3 px-lg-0 py-lg-0 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                        <div class="row bg-darker rounded py-4 px-3 px-lg-0 py-lg-0 mb-1 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
                             <div class="col-lg-5 p-lg-4">
                                 <h4>{{ tech.title }}</h4>
                             </div>
@@ -117,7 +117,7 @@ books:
             <div class="row d-flex flex-column p-3">
                 {% assign blog_posts = site.blog | reverse %}
                 {% for post in blog_posts %}
-                    <div class="col d-flex flex-sm-row flex-column align-items-sm-center bg-darker hover-darker py-3 px-4 border-bottom border-dark rounded revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                    <div class="col d-flex flex-sm-row flex-column align-items-sm-center bg-darker hover-darker py-3 px-4 mb-1 rounded revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
                         <div class="order-sm-2">
                             {% for category in post.categories %}
                                 <span class="badge badge-{{ category }} mr-1">{{ category }}</span>
@@ -129,7 +129,7 @@ books:
             </div>
             <div class="row">
                 <div class="col py-3">
-                    <a href="/blog/" class="btn btn-darker text-white"><i class="fas fa-book mr-1"></i> More Readings</a>
+                    <a href="/blog/" class="btn btn-primary text-white"><i class="fas fa-book mr-1"></i> More Readings</a>
                 </div>
             </div>
         </div>
@@ -164,7 +164,7 @@ books:
             </div>
             <div class="row">
                 <div class="col py-3">
-                    <a href="https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1" target="_blank" class="btn btn-darker text-white"><i class="fab fa-youtube mr-1"></i> Subscribe</a>
+                    <a href="https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1" target="_blank" class="btn btn-primary text-white"><i class="fab fa-youtube mr-1"></i> Subscribe</a>
                 </div>
             </div>
         </div>

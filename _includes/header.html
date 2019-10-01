@@ -1,20 +1,44 @@
 <section class="bg-darker animated fadeInDown faster">
-    <header class="container w-100 w-md-75 d-flex flex-sm-row flex-column justify-content-between py-3">
+    <header class="container w-100 w-md-75 d-flex flex-row justify-content-between py-3">
         <div class="brand d-flex justify-content-center animated fadeInDown faster delay-100">
-            <a href="/" class="text-white text-decoration-none"><span class="font-weight-bold"><img src="{{ '/assets/img/ravgeet-logo.png' | prepend: site.url }}" style="width:40px;margin-left:-8px;">{{ site.author }}</span></a>
+            <a href="/" class="text-decoration-none"></span><img src="{{ '/assets/img/ravgeet-dhillon-logo.png' | prepend: site.url }}" style="max-width: 40px;"></a>
         </div>
         <div class="links d-flex justify-content-center align-items-center">
-            <ul class="list-inline mb-0">
+            <ul class="list-inline mb-0 d-none d-sm-block mr-3">
                 {% for link in site.data.navigation.navbar_links %}
                     <li class="list-inline-item animated fadeInDown faster delay-{{ forloop.index | times: 100 }}"><a class="text-xs-center" href="{{ link.href }}">{{ link.title }}</a></li>
                 {% endfor %}
             </ul>
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item animated fadeIn faster delay-800"><a class="text-xs-center" style="cursor:pointer;" onclick="switchTheme(mode='')" id="mode-switch" title="Switch to Light Mode"><i class="fas fa-moon"></i></a></li>
+                <li class="d-sm-none list-inline-item animated fadeIn faster delay-800"><a class="text-xs-center" style="cursor:pointer;" onclick="openNav()"><i class="fas fa-bars"></i></a></li>
+            </ul>
+        </div>
     </header>
 </section>
 
-<button class="d-none btn bg-darker border border-dark text-light rounded position-fixed animated rubberBand" id="btn-go-to-top" style="opacity:0.85;"><i class="fas fa-angle-up"></i></button>
+<div class="d-block d-sm-none sidebar links col-auto h-100 position-fixed bg-darker overflow-hidden pt-3 rounded border-left border-less-darker" style="z-index:10000;top:0;right:-50%;">
+    <ul class="mb-0 list-unstyled">
+        {% for link in site.data.navigation.navbar_links %}
+            <li class="pl-5 pr-3 py-2 text-right"><a class="text-xs-center" href="{{ link.href }}">{{ link.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <div class="position-absolute h-100 d-flex align-items-stretch" style="top:0;">
+        <a class="text-xs-center text-muted d-flex align-items-center" style="cursor:pointer;" onclick="closeNav()"><i class="fas fa-chevron-right"></i></a>
+    </div>
+</div>
+
+<button class="d-none btn bg-darker border border-less-darker text-light rounded position-fixed animated rubberBand" id="btn-go-to-top" style="opacity:0.85;"><i class="fas fa-angle-up"></i></button>
 
 <script>
+    function openNav() {
+        document.querySelector(".sidebar").style.right = "0";
+    }
+      
+    function closeNav() {
+        document.querySelector(".sidebar").style.right = "-50%";
+    }
+    
     var btnTop = $("#btn-go-to-top");
     $(window).scroll(function() {
         if ($(window).scrollTop() < 500) {
@@ -28,4 +52,43 @@
         e.preventDefault();
         $("html, body").animate({scrollTop: 0});
     });
+
+
+    function checkMode() {
+        if (window.localStorage.getItem('mode') == null) {
+            window.localStorage.setItem('mode', 'light');
+        }
+        else if (window.localStorage.getItem('mode') == 'light') {
+            switchTheme(mode='dark');
+        }
+        else if (window.localStorage.getItem('mode') == 'dark') {
+            switchTheme(mode='light');
+        }
+    }
+
+
+    function switchTheme(mode='') {
+        var e = document.getElementById('mode-switch');
+        var stylesheet = document.getElementById('theme-stylesheet');
+        if (mode == '') {
+            var mode = stylesheet.getAttribute('data-mode');
+        }
+        if (mode == 'light') {
+            stylesheet.setAttribute('href', "{{ '/assets/css/dark-theme.css' | prepend: site.url }}");
+            stylesheet.setAttribute('data-mode', 'dark');
+            e.innerHTML = `<i class="fas fa-sun text-secondary"></i>`;
+            e.setAttribute('title', 'Switch to Light Mode');
+            window.localStorage.setItem('mode', 'dark');
+        }
+        else if (mode == 'dark') {
+            stylesheet.setAttribute('href', "{{ '/assets/css/light-theme.css' | prepend: site.url }}");
+            stylesheet.setAttribute('data-mode', 'light');
+            e.innerHTML = `<i class="fas fa-moon text-secondary"></i>`;
+            e.setAttribute('title', 'Switch to Dark Mode');
+            window.localStorage.setItem('mode', 'light');
+        }
+    }
+
+    checkMode();
+
 </script>
