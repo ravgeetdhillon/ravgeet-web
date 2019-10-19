@@ -1,11 +1,11 @@
 ---
-title: Final Report for Google SoC'19
+title: Final Report for Google SoC 2019
 date: 2019-08-26 06:00:00 +0530
 categories: gsoc gnome gtk
+description: After the successful completion of Google SoC 2019, here is my final report about my project. I reimplemented the GTK Website as a Jekyll Website and updated its design and deployment method. Read this blog for information about the project.
 img: final-report-for-google-summer-of-code.jpg
 img_credits: Photo by [Pietro Rampazzo](https://unsplash.com/@peterampazzo) on [Unsplash](https://unsplash.com)
 ---
-
 
 ## Project
 

@@ -1,7 +1,8 @@
 ---
-title: First Two Weeks at Google SoC'19
+title: First Two Weeks at Google SoC 2019
 date: 2019-06-10 11:30:00 +0530
 categories: gsoc gnome gtk
+description: In this blog, I talk about my first two weeks at Google SoC 2019. I learned a lot of new terms like pipelines, liquid syntax, continuous integration, and deployment.
 img: first-two-weeks-at-google-summer-of-code.jpg
 img_credits: Photo by [Simon Abrams](https://unsplash.com/@flysi3000) on [Unsplash](https://unsplash.com)
 ---

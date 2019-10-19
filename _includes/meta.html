@@ -3,18 +3,77 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="theme-color" content="#30353B">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#30353B">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ page.url }}">
-    <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:image" itemprop="image primaryImageOfPage" content="{{ '/assets/img/ravgeet-logo.ico' | prepend: site.url }}">
-    <title>{{ site.title }}</title>
-    <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <meta http-equiv="description" content='Web Design,Web Development,Web Studio,Web Solutions,web site updation,website,Applications,Customize Applications,Software,Customize Software,Financial Accounting Package,Accounting Package,Financial Accounting Software,Accounting Software,Inventory Package,Inventory Software,Business Software,Software Support,Readymade softwares,Real Estate Software,Jewellery Software,Retailer Software,Stock Inventory Software,Production Software,eAccounting,GST Accounting,Rice Sheller Software'>
+    <meta http-equiv="keywords" content='Web Design,Web Development,Web Studio,Web Solutions,web site updation,website,Applications,Customize Applications,Software,Customize Software,Financial Accounting Package,Accounting Package,Financial Accounting Software,Accounting Software,Inventory Package,Inventory Software,Business Software,Software Support,Readymade softwares,Real Estate Software,Jewellery Software,Retailer Software,Stock Inventory Software,Production Software,eAccounting,GST Accounting,Rice Sheller Software'>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="theme-color" content="#30353B" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#30353B" />
+    <meta name="generator" content="Jekyll v3.8.5">
+    <meta name="author" content="{{ site.author }}">
+    
+    <title>
+        {% if page.title != '' %}
+            {{ page.title | append: ' | ' | append: site.author }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
+
+    {% if page.description %}
+        <meta itemprop="description" name="description" content="{{ page.description | truncate: 160 }}" />
+    {% else %}
+        <meta itemprop="description" name="description" content="{{ site.description | truncate: 160 }}" />
+    {% endif %}
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    {% if page.title != '' %}
+        <meta property="og:title" content="{{ page.title | append: ' | ' | append: site.author }}" />
+    {% else %}
+        <meta property="og:title" content="{{ site.title }}" />
+    {% endif %}
+    
+    <meta property="og:url" content="{{ site.url | append: '/' | append:page.url }}" />
+    <meta property="og:image" content="{{ site.url | append: '/assets/img/blog/' | append: page.img }}" />
+    <meta property="og:site_name" content="{{ site.author }}" />
+    <meta property="article:publisher" content="http://www.facebook.com/ravgeet.dhillon" />
+    <meta property="article:author" content="http://www.facebook.com/ravgeet.dhillon" />
+    <meta property="article:published_time" content="{{ page.date }}" />
+    
+    {% if page.description %}
+        <meta property="og:description" content="{{ page.description | truncate: 160 }}">
+    {% else %}
+        <meta property="og:description" content="{{ site.description | truncate: 160 }}">
+    {% endif %}
+
+    {% if page.title != '' %}
+        <meta property="twitter:title" content="{{ page.title | append: ' | ' | append: site.author }}" />
+    {% else %}
+        <meta property="twitter:title" content="{{ site.title }}" />
+    {% endif %}
+
+    {% if page.description %}
+        <meta property="twitter:description" content="{{ page.description | truncate: 160 }}">
+    {% else %}
+        <meta property="twitter:description" content="{{ site.description | truncate: 160 }}">
+    {% endif %}
+
+    <meta name="twitter:site" content="@ravgeetdhillon" />
+    <meta name="twitter:creator" content="@ravgeetdhillon">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="apple-touch-icon-precomposed" href="{{ '/assets/img/apple-touch-icon.png' | prepend: site.url }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ '/assets/img/apple-touch-icon-72x72.png' | prepend: site.url }}">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ '/assets/img/apple-touch-icon-120x120.png' | prepend: site.url }}">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ '/assets/img/apple-touch-icon-152x152.png' | prepend: site.url }}">
+    
     <link rel="icon" href="{{ '/assets/img/ravgeet-dhillon-logo.ico' | prepend: site.url }}" type="image/x-icon">
 	<link rel="shortcut icon" href="{{ '/assets/img/ravgeet-dhillon-logo.ico' | prepend: site.url }}" type="image/x-icon">
+    
+    <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for ravgeetdhillon.github.io" href="{{ '/blog/feed.xml' | prepend: site.url }}" />
     <link href="{{ '/assets/css/markdown.css' | prepend: site.url }}" rel="stylesheet" media="screen" type="text/css" />
     <link href="{{ '/assets/animate.css/animate.min.css' | prepend: site.url }}" rel="stylesheet" media="screen" type="text/css" />
     <link href="{{ '/assets/css/light-theme.css' | prepend: site.url }}" rel="stylesheet" media="screen" type="text/css" id="theme-stylesheet" data-mode="light" />
@@ -24,4 +83,5 @@
 	<script src="{{ '/assets/popper.js/dist/umd/popper.min.js' | prepend: site.url }}"></script>
     <script src="{{ '/assets/bootstrap/dist/js/bootstrap.min.js' | prepend: site.url }}"></script>
     <script src="{{ '/assets/moment/moment.js' | prepend: site.url }}"></script>
+
 </head>

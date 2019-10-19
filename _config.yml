@@ -1,16 +1,19 @@
 title: Ravgeet Dhillon | Web Developer, Designer
 email: ravgeetdhillon@gmail.com
-description: I'm Ravgeet Dhillon and I develop exciting things that run on Web. I see myself as a Web Developer who creates best of the experiences for the people whenever he develops something new.
+description: I develop websites, contribute to Open Source, write algorithms for Self-driving cars, play Fantasy Premier League with AI, write tutorials, and blogs for the community.
 author: Ravgeet Dhillon
+
 baseurl: /
 url: https://ravgeetdhillon.github.io
 site_repo: https://github.com/ravgeetdhillon/ravgeetdhillon.github.io
+
 markdown: kramdown
 kramdown:
   input: GFM
+
 plugins:
   - jekyll-feed
-  # - jekyll-seo-tag
+
 exclude:
   - Gemfile
   - Gemfile.lock

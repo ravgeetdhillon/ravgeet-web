@@ -1,7 +1,8 @@
 ---
-title: Getting Selected for Google SoC'19
+title: Getting Selected for Google SoC 2019
 date: 2019-05-06 11:30:00 +0530
 categories: gsoc gnome gtk
+description: After two months of hard work and getting the proposals right, I got selected for Google SoC 2019 for the GNOME Foundation. Read about my plans for the 2019 summer and more in this blog.
 img: getting-selected-for-google-summer-of-code.jpg
 img_credits: Photo by [Ali Abdul Rahman](https://unsplash.com/@_actually_) on [Unsplash](https://unsplash.com)
 ---
