@@ -76,14 +76,14 @@
         if (mode == 'light') {
             stylesheet.setAttribute('href', "{{ '/assets/css/dark-theme.css' | prepend: site.url }}");
             stylesheet.setAttribute('data-mode', 'dark');
-            e.innerHTML = `<i class="fas fa-sun text-secondary"></i>`;
+            e.innerHTML = `<i class="fas fa-sun text-light"></i>`;
             e.setAttribute('title', 'Switch to Light Mode');
             window.localStorage.setItem('mode', 'dark');
         }
         else if (mode == 'dark') {
             stylesheet.setAttribute('href', "{{ '/assets/css/light-theme.css' | prepend: site.url }}");
             stylesheet.setAttribute('data-mode', 'light');
-            e.innerHTML = `<i class="fas fa-moon text-secondary"></i>`;
+            e.innerHTML = `<i class="fas fa-moon text-light"></i>`;
             e.setAttribute('title', 'Switch to Dark Mode');
             window.localStorage.setItem('mode', 'light');
         }

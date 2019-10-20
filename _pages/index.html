@@ -39,7 +39,7 @@ books:
             </div>
             <div class="row">
                 <div class="col py-3">
-                    <a class="btn btn-darker" target="_blank" href="https://www.buymeacoffee.com/ravgeetdhillon"><img src="{{ '/assets/img/BMC-btn-logo.svg' | prepend: site.url }}" alt="Buy me a coffee"><span class="mr-1"> Buy me a coffee</span></a>
+                    <a class="btn bg-darker border border-less-darker text-light" target="_blank" href="https://www.buymeacoffee.com/ravgeetdhillon"><img src="{{ '/assets/img/BMC-btn-logo.svg' | prepend: site.url }}" alt="Buy me a coffee"><span class="mr-1"> Buy me a coffee</span></a>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@ books:
             </div>
             <div class="row">
                 {% assign projects = site.data.stuff.projects %}
-                {% for project in projects %}
+                {% for project in projects limit:6 %}
                     <div class="col-md-6 col-lg-4 p-3 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
                         <div class="bg-darker hover-darker p-4 rounded h-100">
                             {% for tag in project.tags %}
@@ -71,7 +71,7 @@ books:
             </div>
             <div class="row">
                 <div class="col py-3">
-                    <a href="https://github.com/ravgeetdhillon/" class="btn btn-primary text-white"><i class="fas fa-flask mr-1"></i> More Projects</a>
+                    <a href="https://github.com/ravgeetdhillon/" class="btn bg-darker border-bottom border-less-darker text-light"><i class="fas fa-flask mr-1"></i> More Projects</a>
                 </div>
             </div>
         </div>
@@ -117,7 +117,7 @@ books:
             </div>
             <div class="row d-flex flex-column p-3">
                 {% assign blog_posts = site.blog | reverse %}
-                {% for post in blog_posts %}
+                {% for post in blog_posts limit:5 %}
                     <div class="col d-flex flex-sm-row flex-column align-items-sm-center bg-darker hover-darker py-3 px-4 mb-1 rounded revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
                         <div class="order-sm-2">
                             {% for category in post.categories %}
@@ -130,7 +130,7 @@ books:
             </div>
             <div class="row">
                 <div class="col py-3">
-                    <a href="/blog/" class="btn btn-primary text-white"><i class="fas fa-book mr-1"></i> More Readings</a>
+                    <a href="/blog/" class="btn bg-darker border border-less-darker text-light"><i class="fas fa-book mr-1"></i> More Readings</a>
                 </div>
             </div>
         </div>
@@ -165,7 +165,7 @@ books:
             </div>
             <div class="row">
                 <div class="col py-3">
-                    <a href="https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1" target="_blank" class="btn btn-primary text-white"><i class="fab fa-youtube mr-1"></i> Subscribe</a>
+                    <a href="https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1" target="_blank" class="btn bg-darker border border-less-darker text-light"><i class="fab fa-youtube mr-1"></i> Subscribe</a>
                 </div>
             </div>
         </div>

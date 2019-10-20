@@ -1,24 +1,33 @@
 <footer class="bg-darker mt-4">
     <div class="container w-100 w-md-75">
         <div class="row py-3">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6">
                 <p class="text-muted">About this Website</p>
-                <p>This website is built using <a href="https://jekyllrb.com">Jekyll</a> for Content Management purposes and is deployed using <a href="{{ site.site_repo }}">Github Pages</a>.</p>
-                <a href="https://pages.github.com/" class="btn btn-sm btn-dark text-white"><i class="fab fa-github mr-1"></i> View on Github</a>
+                <p class="text-light">This website is built using <a href="https://jekyllrb.com">Jekyll</a> for Content Management purposes and is deployed using <a href="{{ site.site_repo }}">Github Pages</a>.</p>
+                <a class="btn btn-sm bg-darker border border-less-darker text-light" href="https://pages.github.com/"><i class="fab fa-github mr-1"></i> View on Github</a>
             </div>
-            <div class="col-12 col-md-4 pt-3 pt-md-0">
-                <p class="text-muted">Follow me on my socials</p>
-                <div class="d-flex py-1">
-                    {% assign social_links = site.data.navigation.social_links %}
-                    {% for link in social_links %}
-                        <a href="{{ link.href }}" class="pr-3"><i class="{{ link.icon }}"></i></a>
-                    {% endfor %}
+            <div class="col-12 col-md-6 pt-4 pt-md-0">
+                <p class="text-muted">Other Links</p>
+                <div class="d-flex flex-wrap">
+                    <a href="{{ '/sitemap.xml' | prepend: site.url }}" class="pr-3">Sitemap</a>
+                    <a href="{{ '/blog/feed.xml' | prepend: site.url }}" class="pr-3">Feed</a>
+                </div>
+                <div class="pt-3">
+                    <a class="btn btn-sm bg-darker border border-less-darker text-light" target="_blank" href="https://www.buymeacoffee.com/ravgeetdhillon"><img src="{{ '/assets/img/BMC-btn-logo.svg' | prepend: site.url }}" alt="Buy me a coffee"><span class="mr-1"> Buy me a coffee</span></a>
                 </div>
             </div>
         </div>
         <div class="row border-top border-less-darker text-muted">
-            <div class="col py-2">
-                <span>Developed by <a href="/">Ravgeet Dhillon</a> &#8226; All Rights Reserved</span>
+            <div class="col d-flex justify-content-between flex-wrap py-2">
+                <div>
+                    <span>Developed by <a href="/">Ravgeet Dhillon</a> &#8226; All Rights Reserved</span>
+                </div>
+                <div class="d-flex">
+                    {% assign social_links = site.data.navigation.social_links %}
+                    {% for link in social_links %}
+                        <a href="{{ link.href }}" class="pl-3"><i class="{{ link.icon }}"></i></a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
