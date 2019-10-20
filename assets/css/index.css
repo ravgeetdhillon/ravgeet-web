@@ -176,12 +176,6 @@ body {
 .credits p {
   margin-top: 4px; }
 
-.img-holder-blog {
-  background: linear-gradient(45deg, #f9394344, #4a245188), url("/assets/img/blog-bg.jpg");
-  background-position: 50% 30%;
-  background-size: cover;
-  min-height: 320px; }
-
 .text-shadow {
   text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15) !important; }
 
@@ -209,7 +203,7 @@ strong {
 .sidebar {
   transition: 0.30s ease-in-out; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .animated {
     -o-transition-property: none !important;
     -moz-transition-property: none !important;

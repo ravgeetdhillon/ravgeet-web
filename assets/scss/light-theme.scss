@@ -25,5 +25,12 @@ $link-hover-color: darken($link-color, 15%) !important;
     background: url('/assets/img/ravd-back-light.png');
     background-position: center;
 }
+.blog-banner {
+  background: url('/assets/img/ravd-blog-light.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 320px;
+}
 
 @import "theme";
