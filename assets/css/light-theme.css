@@ -1,3 +1,7 @@
+.landing {
+  background: url("/assets/img/ravd-back-light.png");
+  background-position: center; }
+
 /* latin-ext */
 @font-face {
   font-family: "Lato";

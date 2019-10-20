@@ -21,4 +21,9 @@ $body-color: map-get($theme-colors, 'white');
 $link-color: map-get($theme-colors, 'primary') !default;
 $link-hover-color: lighten($link-color, 15%) !important;
 
+.landing {
+    background: url('/assets/img/ravd-back-dark.png');
+    background-position: center;
+}
+
 @import "theme";

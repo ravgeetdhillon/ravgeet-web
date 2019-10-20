@@ -68,8 +68,6 @@
 
 
     function switchTheme(mode='') {
-        var e = document.getElementById('mode-switch');
-        var stylesheet = document.getElementById('theme-stylesheet');
         if (mode == '') {
             var mode = stylesheet.getAttribute('data-mode');
         }
@@ -89,6 +87,8 @@
         }
     }
 
+    var e = document.getElementById('mode-switch');
+    var stylesheet = document.getElementById('theme-stylesheet');
     checkMode();
 
 </script>
