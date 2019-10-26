@@ -9,6 +9,13 @@
   background-repeat: no-repeat;
   min-height: 320px; }
 
+.project-banner {
+  background: url("/assets/img/ravd-project-light.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 320px; }
+
 /* latin-ext */
 @font-face {
   font-family: "Lato";
@@ -183,123 +190,188 @@ a {
 
 .badge-python {
   color: #0d4739 !important;
-  background-color: #99edd8 !important; }
+  background-color: #99edd8 !important;
+  border: 1px solid #0d4739 !important; }
 
 .badge-bootstrap {
   color: #170120 !important;
-  background-color: #cc5af9 !important; }
+  background-color: #cc5af9 !important;
+  border: 1px solid #170120 !important; }
 
 .badge-html {
   color: #860f0f !important;
-  background-color: #f9cece !important; }
+  background-color: #f9cece !important;
+  border: 1px solid #860f0f !important; }
 
 .badge-css {
   color: #0d2e6c !important;
-  background-color: #b5ccf6 !important; }
+  background-color: #b5ccf6 !important;
+  border: 1px solid #0d2e6c !important; }
 
 .badge-sass {
   color: #6c0d64 !important;
-  background-color: #f6b5f1 !important; }
+  background-color: #f6b5f1 !important;
+  border: 1px solid #6c0d64 !important; }
 
 .badge-django {
   color: black !important;
-  background-color: #1ff50c !important; }
+  background-color: #1ff50c !important;
+  border: 1px solid black !important; }
 
 .badge-js {
   color: #5a5b09 !important;
-  background-color: #f5f6a0 !important; }
+  background-color: #f5f6a0 !important;
+  border: 1px solid #5a5b09 !important; }
 
 .badge-react {
   color: #0b7178 !important;
-  background-color: #bcf5f9 !important; }
+  background-color: #bcf5f9 !important;
+  border: 1px solid #0b7178 !important; }
 
 .badge-mysql {
   color: #7b420c !important;
-  background-color: #f9dcc0 !important; }
+  background-color: #f9dcc0 !important;
+  border: 1px solid #7b420c !important; }
 
 .badge-web-dev {
   color: #867e0f !important;
-  background-color: #f9f7ce !important; }
+  background-color: #f9f7ce !important;
+  border: 1px solid #867e0f !important; }
 
 .badge-ai {
   color: #0f451b !important;
-  background-color: #9ceaae !important; }
+  background-color: #9ceaae !important;
+  border: 1px solid #0f451b !important; }
 
 .badge-utility {
   color: #450f41 !important;
-  background-color: #ea9ce4 !important; }
+  background-color: #ea9ce4 !important;
+  border: 1px solid #450f41 !important; }
 
 .badge-football {
   color: #2e0530 !important;
-  background-color: #ec77f0 !important; }
+  background-color: #ec77f0 !important;
+  border: 1px solid #2e0530 !important; }
 
 .badge-gsoc {
   color: #895302 !important;
-  background-color: #fee5bf !important; }
+  background-color: #fee5bf !important;
+  border: 1px solid #895302 !important; }
 
 .badge-gnome {
   color: #0a4180 !important;
-  background-color: #c2dcfa !important; }
+  background-color: #c2dcfa !important;
+  border: 1px solid #0a4180 !important; }
 
 .badge-gtk {
   color: #663d08 !important;
-  background-color: #f9d6a7 !important; }
+  background-color: #f9d6a7 !important;
+  border: 1px solid #663d08 !important; }
 
 .badge-jekyll {
   color: #541311 !important;
-  background-color: #eeaca9 !important; }
+  background-color: #eeaca9 !important;
+  border: 1px solid #541311 !important; }
 
 .badge-visuals {
   color: #1f990f !important;
-  background-color: #e2fcde !important; }
+  background-color: #e2fcde !important;
+  border: 1px solid #1f990f !important; }
 
 .badge-data-science {
   color: #7a4010 !important;
-  background-color: #f7dbc5 !important; }
+  background-color: #f7dbc5 !important;
+  border: 1px solid #7a4010 !important; }
 
 .badge-git {
   color: #562108 !important;
-  background-color: #f6b79a !important; }
+  background-color: #f6b79a !important;
+  border: 1px solid #562108 !important; }
 
 .badge-github {
   color: black !important;
-  background-color: #ab10be !important; }
+  background-color: #ab10be !important;
+  border: 1px solid black !important; }
+
+.badge-github-api {
+  color: black !important;
+  background-color: #ab10be !important;
+  border: 1px solid black !important; }
+
+.badge-d3js {
+  color: #6a2c02 !important;
+  background-color: #fdc6a1 !important;
+  border: 1px solid #6a2c02 !important; }
+
+.badge-php {
+  color: #40026a !important;
+  background-color: #d8a1fd !important;
+  border: 1px solid #40026a !important; }
 
 .badge-hackerrank {
   color: #104605 !important;
-  background-color: #99f687 !important; }
+  background-color: #99f687 !important;
+  border: 1px solid #104605 !important; }
 
 .badge-aws {
   color: #463705 !important;
-  background-color: #f6dc87 !important; }
+  background-color: #f6dc87 !important;
+  border: 1px solid #463705 !important; }
+
+.badge-gitlab {
+  color: #461a05 !important;
+  background-color: #f6aa87 !important;
+  border: 1px solid #461a05 !important; }
 
 .badge-gitlab-ci {
   color: #461a05 !important;
-  background-color: #f6aa87 !important; }
+  background-color: #f6aa87 !important;
+  border: 1px solid #461a05 !important; }
 
 .badge-heroku {
   color: #051646 !important;
-  background-color: #87a4f6 !important; }
+  background-color: #87a4f6 !important;
+  border: 1px solid #051646 !important; }
 
 .badge-postman {
   color: #754506 !important;
-  background-color: #fbdbb2 !important; }
+  background-color: #fbdbb2 !important;
+  border: 1px solid #754506 !important; }
 
 .badge-spotify {
   color: #104605 !important;
-  background-color: #99f687 !important; }
+  background-color: #99f687 !important;
+  border: 1px solid #104605 !important; }
 
 .badge-stack-overflow {
   color: #461f05 !important;
-  background-color: #f6b387 !important; }
+  background-color: #f6b387 !important;
+  border: 1px solid #461f05 !important; }
 
 .badge-youtube {
   color: #440505 !important;
-  background-color: #f78484 !important; }
+  background-color: #f78484 !important;
+  border: 1px solid #440505 !important; }
 
 .badge-vscode {
   color: #053044 !important;
-  background-color: #84d2f7 !important; }
+  background-color: #84d2f7 !important;
+  border: 1px solid #053044 !important; }
+
+.badge-dropbox-api {
+  color: #064765 !important;
+  background-color: #a4def9 !important;
+  border: 1px solid #064765 !important; }
+
+.badge-flask {
+  color: #5e5e5e !important;
+  background-color: #f7f7f7 !important;
+  border: 1px solid #5e5e5e !important; }
+
+.badge-computer-vision {
+  color: #310f32 !important;
+  background-color: #dc95de !important;
+  border: 1px solid #310f32 !important; }
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)

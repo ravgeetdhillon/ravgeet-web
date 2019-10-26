@@ -287,8 +287,12 @@ $labels: (
     "data-science": #e6893d,
     "git": #e25615,
     "github": #2c0431,
+    "github-api": #2c0431,
+    "d3js": #fa6b0b,
+    "php": #9a0bfa,
     "hackerrank": #30d410,
     "aws": #d4a610,
+    "gitlab": #d44e10,
     "gitlab-ci": #d44e10,
     "heroku": #1044d4,
     "postman": #f39821,
@@ -296,6 +300,9 @@ $labels: (
     "stack-overflow": #d45e10,
     "youtube": #d40e0e,
     "vscode": #0e95d4,
+    "dropbox-api": #14aaf0,
+    "flask": #aaaaaa,
+    "computer-vision": #a333a7,
 );
 
 .badge-lg {
@@ -310,6 +317,7 @@ a {
 @mixin badge-variant($bg) {
     color: darken($bg, 30%) !important;
     background-color: lighten($bg, 30%) !important;
+    border: 1px solid darken($bg, 30%) !important;
 }
 
 .hover-darker {

@@ -1,6 +1,8 @@
 navbar_links:
   - title: Resume
     href: /ravgeet-dhillon-resume.pdf
+  - title: Projects
+    href: /projects/
   - title: Blog
     href: /blog/
   - title: Notes
@@ -18,6 +20,9 @@ social_links:
   - name: Twitter
     href: https://twitter.com/ravgeetdhillon
     icon: fab fa-twitter
+  - name: Twitter
+    href: https://www.linkedin.com/in/ravgeetdhillon/
+    icon: fab fa-linkedin
   - name: Gitlab
     href: https://gitlab.gnome.org/ravgeetdhillon/
     icon: fab fa-gitlab
