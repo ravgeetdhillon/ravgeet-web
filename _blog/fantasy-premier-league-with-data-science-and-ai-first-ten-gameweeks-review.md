@@ -92,3 +92,5 @@ This above graph again shows that humans are inferior to the machine. My AI gave
 ## What's next
 
 I would be doing another blog post regarding my progress on Christmas but still, I would really love to have suggestions from you guys. Should I do blog posts more often or should I write for each game week? Also, if you guys are interested in knowing the technicalities of the AI, just mention me on twitter.
+
+Lemme know if you have any doubt, appreciation or anything else that you would like to communicate to me. You can tweet me [@ravgeetdhillon](https://twitter.com/intent/tweet?screen_name=ravgeetdhillon&original_referer={{ page.url | prepend: site.url }}&ref_src=twsrc%5Etfw). I reply to all the questions as quickly as possible. 😄 And if you liked this post, please [share](https://twitter.com/intent/tweet?text={{ 'Check out this amazing blog post by Ravgeet Dhillon sharing his thoughts on ' | append: page.title | urlencode }}&screen_name=ravgeetdhillon&original_referer={{ page.url | prepend: site.url }}&ref_src=twsrc%5Etfw) it with your twitter community as well.

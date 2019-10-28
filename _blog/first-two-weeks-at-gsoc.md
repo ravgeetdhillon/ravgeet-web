@@ -20,3 +20,5 @@ The landing page is the centerstage for this website and will provide routes to 
 I have forked the original project for the GTK website into my [workspace](https://gitlab.gnome.org/ravgeetdhillon/gtk-web). The website is deployed using Gitlab CI for now and can be surfed [here](https://ravgeetdhillon.pages.gitlab.gnome.org/gtk-web/).
 
 If you have any suggestions or find an issue, please report it [here](https://gitlab.gnome.org/ravgeetdhillon/gtk-web/issues).
+
+Lemme know if you have any doubt, appreciation or anything else that you would like to communicate to me. You can tweet me [@ravgeetdhillon](https://twitter.com/intent/tweet?screen_name=ravgeetdhillon&original_referer={{ page.url | prepend: site.url }}&ref_src=twsrc%5Etfw). I reply to all the questions as quickly as possible. 😄 And if you liked this post, please [share](https://twitter.com/intent/tweet?text={{ 'Check out this amazing blog post by Ravgeet Dhillon sharing his thoughts on ' | append: page.title | urlencode }}&screen_name=ravgeetdhillon&original_referer={{ page.url | prepend: site.url }}&ref_src=twsrc%5Etfw) it with your twitter community as well.

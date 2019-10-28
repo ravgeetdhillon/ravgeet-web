@@ -17,7 +17,7 @@ A huge thanks to all those people from GNOME, who selected me for this job. **Em
 
 For future GSoCers, here is my [proposal][proposal] for the project: **Rework the GTK website**. If you need any kind of help or want me to handle your next project, you can reach me at my [email][email] or DM me on [Instagram].
 
-See you guys in the next post.
+Lemme know if you have any doubt, appreciation or anything else that you would like to communicate to me. You can tweet me [@ravgeetdhillon](https://twitter.com/intent/tweet?screen_name=ravgeetdhillon&original_referer={{ page.url | prepend: site.url }}&ref_src=twsrc%5Etfw). I reply to all the questions as quickly as possible. 😄 And if you liked this post, please [share](https://twitter.com/intent/tweet?text={{ 'Check out this amazing blog post by Ravgeet Dhillon sharing his thoughts on ' | append: page.title | urlencode }}&screen_name=ravgeetdhillon&original_referer={{ page.url | prepend: site.url }}&ref_src=twsrc%5Etfw) it with your twitter community as well. See you guys in the next post.
 
 [proposal]: https://docs.google.com/document/d/1naeFyYH0dLJ30_KcvQes7H4tWI165Xeb5t-Qqfo67NE/edit?usp=sharing
 [instagram]: https://instagram.com/ravd_ravgeet/
