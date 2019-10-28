@@ -17,7 +17,7 @@ The big question now is what can we manage a team using Data Science and Artific
 
 But in data, we can trust. Hence what we do is get the data, process it and find meaningful information from it and see whether it works or not. After all, it is a game of chance and a problem is that a machine doesn't show patience, this AI would work in collaboration with the manager to get the best results.
 
-# Week by Week Report
+## Week by Week Report
 
 ### Gameweek 1
 
