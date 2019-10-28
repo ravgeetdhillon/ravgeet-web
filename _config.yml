@@ -24,6 +24,7 @@ exclude:
   - compile-sass.sh
   - structurize.sh
   - start-server.sh
+  - LICENSE
 
 collections:
   blog:
