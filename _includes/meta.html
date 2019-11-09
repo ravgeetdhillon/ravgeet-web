@@ -82,3 +82,73 @@
     <script src="{{ '/assets/moment/moment.js' | prepend: site.url }}"></script>
 
 </head>
+
+<script>
+    
+    function openNav() {
+        document.querySelector(".sidebar").style.right = "0";
+    }
+        
+    function closeNav() {
+        document.querySelector(".sidebar").style.right = "-50%";
+    }
+    
+    var btnTop = $("#btn-go-to-top");
+    $(window).scroll(function() {
+        if ($(window).scrollTop() < 500) {
+            btnTop.addClass("d-none");
+        }
+        else {
+            btnTop.removeClass("d-none");
+        }
+    });
+    btnTop.on("click", function(e) {
+        e.preventDefault();
+        $("html, body").animate({scrollTop: 0});
+    });
+
+
+    function checkMode() {
+        if (window.localStorage.getItem('mode') == null) {
+            window.localStorage.setItem('mode', 'light');
+        }
+        else if (window.localStorage.getItem('mode') == 'light') {
+            switchTheme(mode='dark');
+        }
+        else if (window.localStorage.getItem('mode') == 'dark') {
+            switchTheme(mode='light');
+        }
+    }
+
+
+    function switchTheme(mode='') {
+        if (mode == '') {
+            var mode = stylesheet.getAttribute('data-mode');
+        }
+        if (mode == 'light') {
+            stylesheet.setAttribute('href', "{{ '/assets/css/dark-theme.css' | prepend: site.url }}");
+            stylesheet.setAttribute('data-mode', 'dark');
+            try {
+                e.innerHTML = `<i class="fas fa-sun text-light"></i>`;
+                e.setAttribute('title', 'Switch to Light Mode');
+            }
+            catch (error) {}
+            window.localStorage.setItem('mode', 'dark');
+        }
+        else if (mode == 'dark') {
+            stylesheet.setAttribute('href', "{{ '/assets/css/light-theme.css' | prepend: site.url }}");
+            stylesheet.setAttribute('data-mode', 'light');
+            try {
+                e.innerHTML = `<i class="fas fa-moon text-light"></i>`;
+                e.setAttribute('title', 'Switch to Dark Mode');
+            }
+            catch (error) {}
+            window.localStorage.setItem('mode', 'light');
+        }
+    }
+
+    var e = document.getElementById('mode-switch');
+    var stylesheet = document.getElementById('theme-stylesheet');
+    checkMode();
+
+</script>
