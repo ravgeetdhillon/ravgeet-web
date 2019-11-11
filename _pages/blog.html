@@ -12,7 +12,9 @@ permalink: /blog/
 
 {% include meta.html %}
 
-<body>
+<body class="d-flex flex-column justify-content-between">
+
+    <div class="top-wrapper">
         
     {% include header.html %}
     
@@ -43,8 +45,13 @@ permalink: /blog/
             </div>
         </div>
     </section>
+    </div>
+    
+    <div class="bottom-wrapper">
 
     {% include footer.html %}
+    
+    </div>
 
 </body>
 

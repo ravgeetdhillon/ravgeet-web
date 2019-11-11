@@ -1,6 +1,8 @@
 {% include meta.html %}
 
-<body>
+<body class="d-flex flex-column justify-content-between">
+
+    <div class="top-wrapper">
     
     {% include header.html %}
 
@@ -35,6 +37,13 @@
             </div>
         </div>
     </section>
+    </div>
+
+    <div class="bottom-wrapper">
+
+    {% include footer.html %}
+    
+    </div>
 
     <script>
         var images = document.querySelectorAll('.markdown-body img');
@@ -42,8 +51,6 @@
             image.classList.add("rounded");
         });
     </script>
-
-    {% include footer.html %}
 
 </body>
 

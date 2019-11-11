@@ -5,13 +5,13 @@ me:
     description: I develop exciting things that run on Web. I see myself as a Web Developer who creates best of the experiences for the people whenever he develops something new.
 music:
     description: Whenever I get free time, I divert my creativeness towards music. I own a Youtube channel where I post my remixes of my favorite songs. Below are few of my favorite that I made so far.
-books:
-    description: I love reading books and articles. They help in increasing my vocabulary and knowledge as well. I read about people, technology, design and universe. I try my best to read a book in a month.
 ---
 
 {% include meta.html %}
 
-<body>
+<body class="d-flex flex-column justify-content-between">
+
+    <div class="top-wrapper">
         
     {% include header.html %}
 
@@ -22,19 +22,6 @@ books:
                     <img src="/assets/img/ravgeet-dhillon.jpg" class="img-fluid rounded-circle pb-3 animated jackInTheBox faster delay-300" style="max-width: 240px;" />
                     <h1 class="display-4 font-weight-bold text-shadow animated fadeInUp faster delay-300">I'm Ravgeet</h1>
                     <p class="text-light text-center lead font-weight-normal animated fadeInUp faster delay-600">{{ site.description }}</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-me py-4">
-        <div class="container w-100 w-md-75">
-            <div class="row">
-                <div class="col-md-8 d-flex flex-column justify-content-end">
-                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">About Me</h2>
-                    <span class="text-light">
-                        {{ site.data.stuff.about_me | markdownify }}
-                    </span>
                 </div>
             </div>
         </div>
@@ -192,8 +179,13 @@ books:
             </div>
         </div>
     </section>
+    </div>
     
+    <div class="bottom-wrapper">
+
     {% include footer.html %}
+    
+    </div>
 
     <script>
         $(document).ready(function(){

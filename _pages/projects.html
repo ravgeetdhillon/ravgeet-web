@@ -1,6 +1,5 @@
 ---
-headline: Most of the projects I have made revolve around my needs or interests. If you have any project for me, you can contact me via [Twitter](https://twitter.com/ravgeetdhillon). Also you can follow me for more updates regarding my projects.
-img: blog-bg.jpg
+headline: Most of the projects I have made revolve around my needs or interests. If you have any project for me, you can [contact](/contact/) me.
 permalink: /projects/
 ---
 
@@ -14,11 +13,13 @@ permalink: /projects/
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-<body>
+<body class="d-flex flex-column justify-content-between">
+
+    <div class="top-wrapper">
 
     {% include header.html %}
     
-    <section class="project-banner d-flex flex-column justify-content-center animated fadeIn">
+    <section class="projects-banner d-flex flex-column justify-content-center animated fadeIn">
         <div class="container w-100 w-md-75">
             <h1 class="display-4 font-weight-bold text-shadow">Projects</h1>
             <div class="w-md-75 w-lg-50">
@@ -72,8 +73,13 @@ permalink: /projects/
             </div>
         </div>
     </section>
+    </div>
+
+    <div class="bottom-wrapper">
 
     {% include footer.html %}
+    
+    </div>
 
 </body>
 
