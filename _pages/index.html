@@ -158,27 +158,6 @@ music:
             </div>
         </div>
     </section>
-
-    <section class="books py-4">
-        <div class="container w-100 w-md-75">
-            <div class="row">
-                <div class="col-md-8 d-flex flex-column justify-content-end">
-                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Books</h2>
-                    <p class="text-light">{{ page.books.description }}</p>
-                </div>
-            </div>
-            <div class="row">
-                {% assign books = site.data.stuff.books %}
-                {% for book in books %}    
-                <div class="col-4 col-sm-3 col-xl-2 p-3 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
-                    <div class="d-flex align-items-center">
-                        <a href="{{ book.link }}"><img src="{{ book.cover }}" alt="{{ book.title }}" class="img-fluid w-100" style="max-width:330px;" /></a>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
     </div>
     
     <div class="bottom-wrapper">

@@ -1,14 +1,16 @@
 navbar_links:
-  - title: Resume
-    href: /ravgeet-dhillon-resume.pdf
+  - title: About
+    href: /about/
   - title: Projects
     href: /projects/
   - title: Blog
     href: /blog/
   - title: Notes
     href: /notes/
-  - title: Github
-    href: https://github.com/ravgeetdhillon/  
+  - title: Contact
+    href: /contact/
+  - title: Resume
+    href: /ravgeet-dhillon-resume.pdf
 
 social_links:
   - name: Github

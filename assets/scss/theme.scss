@@ -302,7 +302,7 @@ $labels: (
     "vscode": #0e95d4,
     "dropbox-api": #14aaf0,
     "flask": #aaaaaa,
-    "computer-vision": #a333a7,
+    "computer-vision": #a333a7
 );
 
 .badge-lg {
@@ -322,9 +322,9 @@ a {
 
 .hover-darker {
     transition: 0.15s ease-in-out;
-    
+
     &:hover {
-        $a: map-get($theme-colors, 'darker');
+        $a: map-get($theme-colors, "darker");
         background: darken($a, 5%) !important;
     }
 }
@@ -333,6 +333,24 @@ a {
     .badge-#{$label} {
         @include badge-variant($value);
     }
+}
+
+$pages: "blog", "notes", "projects", "about", "contact";
+
+@each $page in $pages {
+    .#{$page}-banner {
+        background: url("/assets/img/backs/ravd-#{$page}-#{$theme}.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 320px;
+    }
+}
+
+.landing {
+    background: url("/assets/img/backs/ravd-back-#{$theme}.png");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @import "../bootstrap/scss/bootstrap";

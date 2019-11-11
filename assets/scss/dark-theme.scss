@@ -14,30 +14,16 @@ $theme-colors: (
     "less-darker": #222736
 );
 
-$input-border-color: map-get($theme-colors, lighten(map-get($theme-colors, 'darker'), 20%));
+$input-border-color: map-get(
+    $theme-colors,
+    lighten(map-get($theme-colors, "darker"), 20%)
+);
 
-$body-bg: map-get($theme-colors, 'dark');
-$body-color: map-get($theme-colors, 'white');
-$link-color: map-get($theme-colors, 'primary') !default;
+$body-bg: map-get($theme-colors, "dark");
+$body-color: map-get($theme-colors, "white");
+$link-color: map-get($theme-colors, "primary") !default;
 $link-hover-color: lighten($link-color, 15%) !important;
 
-.landing {
-    background: url('/assets/img/ravd-back-dark.png');
-    background-position: center;
-}
-.blog-banner {
-  background: url('/assets/img/ravd-blog-dark.svg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 320px;
-}
-.project-banner {
-  background: url("/assets/img/ravd-project-dark.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; 
-  min-height: 320px;
-}
+$theme: "dark";
 
 @import "theme";

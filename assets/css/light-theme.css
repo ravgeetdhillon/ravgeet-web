@@ -1,21 +1,3 @@
-.landing {
-  background: url("/assets/img/ravd-back-light.png");
-  background-position: center; }
-
-.blog-banner {
-  background: url("/assets/img/ravd-blog-light.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 320px; }
-
-.project-banner {
-  background: url("/assets/img/ravd-project-light.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 320px; }
-
 /* latin-ext */
 @font-face {
   font-family: "Lato";
@@ -372,6 +354,46 @@ a {
   color: #310f32 !important;
   background-color: #dc95de !important;
   border: 1px solid #310f32 !important; }
+
+.blog-banner {
+  background: url("/assets/img/backs/ravd-blog-light.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 320px; }
+
+.notes-banner {
+  background: url("/assets/img/backs/ravd-notes-light.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 320px; }
+
+.projects-banner {
+  background: url("/assets/img/backs/ravd-projects-light.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 320px; }
+
+.about-banner {
+  background: url("/assets/img/backs/ravd-about-light.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 320px; }
+
+.contact-banner {
+  background: url("/assets/img/backs/ravd-contact-light.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 320px; }
+
+.landing {
+  background: url("/assets/img/backs/ravd-back-light.png");
+  background-position: center;
+  background-repeat: no-repeat; }
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)

@@ -1,0 +1,98 @@
+---
+permalink: /about/
+education:
+    description: |-
+        As a child, I was always fascinated by computers. So to turn this fascination into a living, I am currently pursuing graduation in Computer Science and Engineering at Guru Nanak Dev University in my hometown, Amritsar in Punjab, India. During my degree, I wanted to learn something that can help me show my creative skills and I can start earning as well. So I started with Web Development as I was overwhelmed with the things that were running on the web and impacting people's life.
+gnome:
+    description: |-
+        I am a regular contributor to [GNOME](https://gnome.org). It is one of the largest FLOSS community in the world. I have a personal liking for this community as people here are very welcoming. By contributing to GNOME Web projects, I have learned a lot of skills and open-source practices. In summer 2019, I participated in **Google Summer of Code** for GNOME. I redesigned and developed the GTK's official website. It turned out pretty well and the website would soon be available at [https://gtk.org](https://gtk.org), once the GTK 4 is ready to be released.
+lifelines:
+    description: |-
+        These are the people who are dearest to me. No matter what, we stay together. In some way or the other, they form an integral part of my life.
+
+        * [Sharvan Sharma](https://www.instagram.com/its.crown_king/) - My close friend, brilliant programmer and melodious poet.
+        * [Rishi Raj](https://www.instagram.com/__rishi_raj__/) - My close friend, who is always there no matter what.
+        * [Emmanuele Bassi](https://twitter.com/ebassi/) - My GNOME Guru, who taught me about Open Source.
+quotes:
+    description: |-
+        These are some of my all-time favorite quotes that inspire me to be a great human being and an asset to society.
+        
+        *Amateurs call it genius. Masters call it practice.* - Thierry Henry
+
+        *Only thing we have to fear is fear itself.* - Franklin D. Roosevelt
+
+        *You miss 100 percent of the shots you never take.* - Wayne Gretzky
+        
+        *If I ain't the greatest, then I'm headed for it.* - Drake
+        
+        *The passion in the flame is ignited, you can't put it out once we light it.* - Eminem
+
+        *Do not pray for easy lives, pray to be stronger men.* - John F. Kennedy
+books:
+    description: |-
+        I love reading books and articles. They are a great way to break out from your routine. I read about people, technology, design and universe.
+---
+
+{% include meta.html %}
+
+<body class="d-flex flex-column justify-content-between">
+
+    <div class="top-wrapper">
+
+    {% include header.html %}
+    
+    <section class="about-banner d-flex flex-column justify-content-center animated fadeIn">
+        <div class="container w-100 w-md-75">
+            <h1 class="display-4 font-weight-bold text-shadow">About Me</h1>
+        </div>
+    </section>
+    
+    <section class="about-me py-4">
+        <div class="container w-100 w-md-75">
+            <div class="row lead font-weight-normal">
+                <div class="col-md-10 d-flex flex-column justify-content-end mt-4">
+                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Education</h2>
+                    <span class="text-light">{{ page.education.description | markdownify }}</span>
+                </div>
+                <div class="col-md-10 d-flex flex-column justify-content-end mt-4">
+                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">GNOME</h2>
+                    <span class="text-light">{{ page.gnome.description | markdownify }}</span>
+                </div>
+                <div class="col-md-10 d-flex flex-column justify-content-end mt-4">
+                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Lifelines</h2>
+                    <span class="text-light">{{ page.lifelines.description | markdownify }}</span>
+                </div>
+                <div class="col-md-10 d-flex flex-column justify-content-end mt-4">
+                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Quotes</h2>
+                    <span class="text-light">{{ page.quotes.description | markdownify }}</span>
+                </div>
+                <div class="col-md-10 d-flex flex-column justify-content-end mt-4">
+                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Books</h2>
+                    <span class="text-light">{{ page.books.description | markdownify }}</span>
+                    <div class="row">
+                        {% assign books = site.data.stuff.books %}
+                        {% for book in books %}
+                            <div class="col-4 col-sm-3 col-xl-2 p-3 revealOnScroll faster">
+                                <div class="d-flex align-items-center">
+                                    <a href="{{ book.link }}"><img src="{{ book.cover }}" alt="{{ book.title }}" class="img-fluid w-100" style="max-width:330px;" /></a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <div class="bottom-wrapper">
+    
+    {% include footer.html %}
+
+    </div>
+
+</body>
+
+<script src="/assets/js/scroll.js"></script>
+
+</html>
