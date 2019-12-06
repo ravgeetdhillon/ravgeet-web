@@ -202,14 +202,16 @@
 .markdown-body table th,
 .markdown-body table td {
     padding: 6px 13px;
-    border: 1px solid var(--info);
+    border: 1px solid var(--less-darker);
 }
 .markdown-body table tr {
-    background-color: #fff;
-    border-top: 1px solid var(--info);
+    background-color: var(--darker);
 }
 .markdown-body table tr:nth-child(2n) {
-    background-color: var(--light);
+    background-color: var(--darker);
+}
+.markdown-body thead tr {
+    background-color: var(--less-darker);
 }
 .markdown-body table img {
     background-color: transparent;
