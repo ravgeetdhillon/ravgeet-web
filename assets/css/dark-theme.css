@@ -355,6 +355,46 @@ a {
   background-color: #dc95de !important;
   border: 1px solid #310f32 !important; }
 
+.badge-leaderboard {
+  color: #3e6a61 !important;
+  background-color: #e8f2f0 !important;
+  border: 1px solid #3e6a61 !important; }
+
+.badge-machine-learning {
+  color: #051446 !important;
+  background-color: #87a1f6 !important;
+  border: 1px solid #051446 !important; }
+
+.badge-tensorflow {
+  color: #563300 !important;
+  background-color: #ffd089 !important;
+  border: 1px solid #563300 !important; }
+
+.badge-opencv {
+  color: #03570e !important;
+  background-color: #91fb9f !important;
+  border: 1px solid #03570e !important; }
+
+.badge-jamstack {
+  color: #1f2020 !important;
+  background-color: #b8b9b9 !important;
+  border: 1px solid #1f2020 !important; }
+
+.badge-github-actions {
+  color: black !important;
+  background-color: #ab10be !important;
+  border: 1px solid black !important; }
+
+.badge-gui {
+  color: #3d9280 !important;
+  background-color: white !important;
+  border: 1px solid #3d9280 !important; }
+
+.badge-tkinter {
+  color: #35084f !important;
+  background-color: #d195f4 !important;
+  border: 1px solid #35084f !important; }
+
 .blog-banner {
   background: url("/assets/img/backs/ravd-blog-dark.svg");
   background-position: center;

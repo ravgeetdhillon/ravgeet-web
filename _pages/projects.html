@@ -35,7 +35,12 @@ permalink: /projects/
                 {% for project in projects %}
                     <div class="col-12 col-lg-8 border-bottom border-less-darker py-md-5 py-4 project revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}" id="{{ project.link }}">
                         <div class="mb-3">
-                            <h1>{{ project.title }}</h1>
+                            <div class="d-flex align-items-center">
+                                <h1>{{ project.title }}</h1>
+                                {% for tag in project.tags %}
+                                    <span class="badge ml-2 badge-{{ tag }}">{{ tag | upcase }}</span>
+                                {% endfor %}
+                            </div>
                             <span class="text-light">{{ project.mini_description }}</span>
                         </div>
                         <div>
@@ -43,8 +48,8 @@ permalink: /projects/
                         </div>
                         <div class="mb-3">
                             <p class="mb-2 font-weight-bold">Tools and Technologies</p>
-                            {% for tag in project.tags %}
-                                <span class="badge badge-lg mr-2 mb-2 badge-{{ tag }}">{{ tag | upcase }}</span>
+                            {% for tool in project.tools %}
+                                <span class="badge badge-lg mr-2 mb-2 badge-{{ tool }}">{{ tool | upcase }}</span>
                             {% endfor %}
                         </div>
                         <div class="mb-3">
