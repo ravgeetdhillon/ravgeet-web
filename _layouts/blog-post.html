@@ -49,6 +49,9 @@
         var images = document.querySelectorAll('.markdown-body img');
         images.forEach(image => {
             image.classList.add("rounded");
+            if (image.alt.includes('c-shadow')) {
+                image.classList.add("shadow");
+            }
         });
     </script>
 
