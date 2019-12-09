@@ -129,6 +129,7 @@
             stylesheet.setAttribute('href', "{{ '/assets/css/dark-theme.css' | prepend: site.url }}");
             stylesheet.setAttribute('data-mode', 'dark');
             try {
+                var e = document.getElementById('mode-switch');
                 e.innerHTML = `<i class="fas fa-sun text-light"></i>`;
                 e.setAttribute('title', 'Switch to Light Mode');
             }
@@ -139,6 +140,7 @@
             stylesheet.setAttribute('href', "{{ '/assets/css/light-theme.css' | prepend: site.url }}");
             stylesheet.setAttribute('data-mode', 'light');
             try {
+                var e = document.getElementById('mode-switch');
                 e.innerHTML = `<i class="fas fa-moon text-light"></i>`;
                 e.setAttribute('title', 'Switch to Dark Mode');
             }
@@ -147,7 +149,6 @@
         }
     }
 
-    var e = document.getElementById('mode-switch');
     var stylesheet = document.getElementById('theme-stylesheet');
     checkMode();
 
