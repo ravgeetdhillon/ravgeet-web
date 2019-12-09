@@ -9,7 +9,7 @@
     <section class="py-4">
         <div class="container w-100 w-md-75">
             <div class="row align-items-start">
-                <div class="col-12 col-md-10 p-3">
+                <div class="col-12 col-lg-10 p-3">
                     <div>
                         <h1 class="display-4 font-weight-bold text-shadow animated fadeIn faster">{{ page.title }}</h1>
                         <span class="text-muted m-0 animated fadeInUp faster delay-200">on <span class="font-weight-bold">{{ page.date | date: "%b %d, %Y" }}</span></span>
@@ -25,7 +25,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-12 col-md-10 py-3 pl-3 animated fadeIn faster delay-600">
+                <div class="col-12 col-lg-10 py-3 pl-3 animated fadeIn faster delay-600">
                     <p class="text-muted">More Blog Posts</p>
                     {% assign blog_posts = site.blog | reverse %}
                     {% for post in blog_posts limit:5 %}
