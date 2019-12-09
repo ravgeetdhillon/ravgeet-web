@@ -44,7 +44,11 @@ For each day spent on the leaderboard, the hacker gets a **+1** for an award, wh
 
 ## GitHub Actions
 
-Since I have a GitHub Pro pack, I get free 3000 build mins for GitHub Actions, which is an effective tool to automate the tasks. The [workflow](https://github.com/ravgeetdhillon/gnome-hackers/actions) is simple and clearly explained by the graphic below. The website builds every day at 00:00 UTC. After the workflow is executed successfully, the website build is pushed to the [`website`](https://github.com/ravgeetdhillon/gnome-hackers/tree/website) branch, which triggers a deploy script on the [Netlify](https://app.netlify.com/sites/gnome-hackers/deploys) and publishes the website accordingly.
+Since I have a GitHub Pro pack, I get free 3000 build mins for GitHub Actions, which is an effective tool to automate the tasks. The [workflow](https://github.com/ravgeetdhillon/gnome-hackers/actions) is simple and clearly explained by the graphic below.
+
+![Workflow for GNOME Hackers :c-shadow](/assets/img/blog/gnome-hackers-workflow.jpg)
+
+The website builds every day at 00:00 UTC. After the workflow is executed successfully, the website build is pushed to the [`website`](https://github.com/ravgeetdhillon/gnome-hackers/tree/website) branch, which triggers a deploy script on the [Netlify](https://app.netlify.com/sites/gnome-hackers/deploys) and publishes the website accordingly.
 
 ## Personal Page
 
