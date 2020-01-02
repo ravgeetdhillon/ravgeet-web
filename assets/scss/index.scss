@@ -76,10 +76,6 @@ body {
     text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15) !important;
 }
 
-::selection {
-    background: var(--info);
-}
-
 #btn-go-to-top {
     bottom: 32px;
     right: 32px;
