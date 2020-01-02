@@ -1,6 +1,6 @@
 ---
 title: Celebrating GNOME Newcomers' contributions
-date: 2020-01-02 11:30:00 +0530
+date: 2020-01-02 18:30:00 +0530
 categories: gnome gnome-newcomers
 description: Find out how we identify and celebrate the newcomer contributions at GNOME.
 img: celebrating-newcomers-at-gnome.jpg
@@ -28,7 +28,7 @@ Many GNOME people proposed there views and workarounds to tackle this problem. T
 
 Using Gitlab API, a list of all the users(with their first ten contributions) present on [GNOME Gitlab Instance](https://gitlab.gnome.org/), is fetched. Along with this, a list of projects is also fetched using Gitlab API. The list of users is traversed which divides the users into **Newcomers** and **Regular contributors**. This is achieved by checking when the user first contributed to a GNOME project. If the contribution was made in the last 15 days, then the contributor is categorized as a **Newcomer**. After the newcomers are identified, they are filtered based on the type of contribution made. Currently, notable contributions are related to merge requests and issues.
 
-After going through the above procedure, a detailed report is created as a Markdown file. This markdown file can be found [here](https://gitlab.gnome.org/ravgeetdhillon/newcomers-shoutout/blob/master/src/data/contributions.json).
+After going through the above procedure, a detailed report is created as a JSON file. This JSON file can be found [here](https://gitlab.gnome.org/ravgeetdhillon/newcomers-shoutout/blob/master/src/data/contributions.json).
 
 ## Scheduling scan
 
