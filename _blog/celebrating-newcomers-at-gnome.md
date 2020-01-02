@@ -1,6 +1,6 @@
 ---
 title: Celebrating GNOME Newcomers' contributions
-date: 2020-01-01 11:30:00 +0530
+date: 2020-01-02 11:30:00 +0530
 categories: gnome gnome-newcomers
 description: Find out how we identify and celebrate the newcomer contributions at GNOME.
 img: celebrating-newcomers-at-gnome.jpg
