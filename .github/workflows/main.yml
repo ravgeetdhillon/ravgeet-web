@@ -49,14 +49,21 @@ jobs:
     - name: Optimize images
       run: |
         python optimize.py
+        
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        BRANCH: master
+        FOLDER: ./
 
-    - name: Configure Git
-      run: |
-        git config --global user.email ${GITHUB_ACTOR}@gmail.com
-        git config --global user.name ${GITHUB_ACTOR}
+#     - name: Configure Git
+#       run: |
+#         git config --global user.email ${GITHUB_ACTOR}@gmail.com
+#         git config --global user.name ${GITHUB_ACTOR}
 
-    - name: Commit and Push
-      run: |
-        git add -f assets
-        git commit -m "gh-actions updated website assets"
-        git push --force https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git HEAD:${REMOTE_BRANCH}
+#     - name: Commit and Push
+#       run: |
+#         git add -f assets
+#         git commit -m "gh-actions updated website assets"
+#         git push --force https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git HEAD:${REMOTE_BRANCH}
