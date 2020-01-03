@@ -4,14 +4,12 @@ on:
   push:
     branches:
       - master
-  schedule:
-  - cron: '0 0 * * *'
 
 jobs:
   buildWebsite:
 
     env:
-      REMOTE_BRANCH: gh-pages
+      REMOTE_BRANCH: master
     
     runs-on: ubuntu-latest
     
@@ -20,7 +18,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v1
         
-    - name: Install Node
+    - name: Setup Node
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
@@ -37,41 +35,28 @@ jobs:
     - name: Compile SASS
       run: |
         npm run compile-sass
-
-    - name: Setup Ruby
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: '2.x'
-    
-    - name: Install Gems
-      run: |
-        gem install bundler -v 2.0.1
-        bundle install
       
-    - name: Build website
-      run: |
-        bundle exec jekyll build -d public
-
-    - name: Upload website build
-      uses: actions/upload-artifact@v1
+    - name: Setup Python
+      uses: actions/setup-python@v1
       with:
-        name: artifacts
-        path: public
+        python-version: 3.7.5
+    
+    - name: Install PIP Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Optimize images
+      run: |
+        python optimize.py
 
     - name: Configure Git
       run: |
-        git checkout -f ${REMOTE_BRANCH}
         git config --global user.email ${GITHUB_ACTOR}@gmail.com
         git config --global user.name ${GITHUB_ACTOR}
-    
-    - name: Download website build
-      uses: actions/download-artifact@v1
-      with:
-        name: artifacts
-        path: ./
 
     - name: Commit and Push
       run: |
-        git add -f .
-        git commit -m "gh-actions updated website"
+        git add -f assets
+        git commit -m "gh-actions updated website assets"
         git push --force https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git HEAD:${REMOTE_BRANCH}

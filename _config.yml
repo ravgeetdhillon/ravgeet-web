@@ -13,6 +13,7 @@ kramdown:
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 exclude:
   - Gemfile
@@ -25,6 +26,8 @@ exclude:
   - structurize.sh
   - start-server.sh
   - LICENSE
+  - '*.py'
+  - requirements.txt
 
 collections:
   blog:
@@ -32,7 +35,7 @@ collections:
   pages:
     output: true
   notes:
-    output: true
+    output: false
 
 defaults:
   - scope:
