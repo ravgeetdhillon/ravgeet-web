@@ -2,7 +2,7 @@
   "_args": [
     [
       "animate.css@3.7.2",
-      "/home/ravgeetdhillon/Documents/github/ravgeetdhillon.github.io"
+      "/home/runner/work/ravgeetdhillon.github.io/ravgeetdhillon.github.io"
     ]
   ],
   "_from": "animate.css@3.7.2",
@@ -26,7 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/animate.css/-/animate.css-3.7.2.tgz",
   "_spec": "3.7.2",
-  "_where": "/home/ravgeetdhillon/Documents/github/ravgeetdhillon.github.io",
+  "_where": "/home/runner/work/ravgeetdhillon.github.io/ravgeetdhillon.github.io",
   "author": {
     "name": "Daniel Eden"
   },

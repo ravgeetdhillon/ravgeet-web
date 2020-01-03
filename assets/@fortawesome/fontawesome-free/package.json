@@ -2,7 +2,7 @@
   "_args": [
     [
       "@fortawesome/fontawesome-free@5.10.2",
-      "/home/ravgeetdhillon/Documents/github/ravgeetdhillon.github.io"
+      "/home/runner/work/ravgeetdhillon.github.io/ravgeetdhillon.github.io"
     ]
   ],
   "_from": "@fortawesome/fontawesome-free@5.10.2",
@@ -27,7 +27,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.10.2.tgz",
   "_spec": "5.10.2",
-  "_where": "/home/ravgeetdhillon/Documents/github/ravgeetdhillon.github.io",
+  "_where": "/home/runner/work/ravgeetdhillon.github.io/ravgeetdhillon.github.io",
   "author": {
     "name": "Dave Gandy",
     "email": "dave@fontawesome.com",
