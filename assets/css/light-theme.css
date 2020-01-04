@@ -415,6 +415,11 @@ a {
   background-color: #d195f4 !important;
   border: 1px solid #35084f !important; }
 
+.badge-gnome-newcomers {
+  color: #4d0975 !important;
+  background-color: #e1b7f9 !important;
+  border: 1px solid #4d0975 !important; }
+
 .blog-banner {
   background: url("/assets/img/backs/ravd-blog-light.svg");
   background-position: center;
