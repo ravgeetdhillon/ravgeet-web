@@ -1,10 +1,13 @@
 # My Portfolio Website
 
+[![Workflow Status](https://github.com/ravgeetdhillon/ravgeetdhillon.github.io/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/ravgeetdhillon/ravgeetdhillon.github.io/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ravgeetdhillon/ravgeetdhillon.github.io/blob/master/LICENSE)
+
 [https://ravgeetdhillon.github.io](https://ravgeetdhillon.github.io/)
 
 ## About the site
 
-* Build using [Jekyll](https://jekyllrb.com)
+* Build using [Jekyll](https://jekyllrb.com) and [Github Actions](https://github.com/ravgeetdhillon/ravgeetdhillon.github.io/actions)
 * Deployed using [Github Pages](https://pages.github.com/)
 
 ## Subscribe to RSS

@@ -1,0 +1,1 @@
+curl -u ${GITHUB_ACTOR}:${ACCESS_TOKEN} -X POST https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds -H "Accept: application/vnd.github.mister-fantastic-preview+json"
