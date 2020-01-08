@@ -7,6 +7,8 @@ how to configure a virtual host in apache on ubuntu
 
 ###### Solution
 
+first do
+
 ```
 sudo su
 cd /etc
@@ -18,6 +20,8 @@ enter the website's ip and name as
 ```
 127.0.0.1   example.com
 ```
+
+then do
 
 ```
 cd apache2/sites-available
@@ -44,7 +48,7 @@ add the following text into the file
 #ServerName example.com
 
 ServerAdmin webmaster@example.com
-DocumentRoot /home/ravgeetdhillon/Documents/example.com
+DocumentRoot /home/user/Documents/example.com
 ```
 
 ```
