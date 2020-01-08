@@ -1,8 +1,17 @@
 projects:
+  - title: Musica
+    tags: [automation]
+    tools: [python, google-apis, github-actions, ffmpeg]
+    mini_description: A project to automate your music release on YouTube.
+    description: |-
+      Musica is an automation project which I designed to automate my music release on [my YouTube channel](https://youtube.com/c/ravdmusic). It is written in Python, automated using GitHub Actions and powered by Google Drive and YouTube API. The GitHub Actions' workflow runs every 2nd day. It scans my Google Drive to check if there are any new tracks to upload. If there is at least one new track, it downloads the track and the artwork related to it. Then by using FFmpeg, it creates a video from the downloaded track and artwork. The new video is uploaded to my Youtube channel using YouTube API and video metadata is filled automatically.
+    github: https://github.com/ravgeetdhillon/musica
+    img: /assets/img/project/musica.png
+    link: musica
   - title: SteerAI
     tags: [ai, computer-vision]
     tools: [python, tensorflow, opencv]
-    mini_description: A machine learning project to realize the dream of self driving cars.
+    mini_description: A machine learning project to realize the dream of self-driving cars.
     description: |-
       SteerAI is our machine learning project to achieve the ambition of self-driving cars. I and my friend, [**Sharvan Sharma**](https://github.com/sharvan-sharma) are currently working on this AI and we have achieved some significant progress as well. A blog post would be coming soon regarding our project. So to stay updated, you can follow me on my [Twitter](https://twitter.com/ravgeetdhillon) for more updates.
     github: https://github.com/ravgeetdhillon/steerai
@@ -13,7 +22,7 @@ projects:
     tools: [jekyll, gitlab-ci, jamstack]
     mini_description: Designed and developed the official website for GTK as a part of my Google SoC'19 project for GNOME.
     description: |-
-      After getting selected for GNOME, I was handed the task to rethink, redesign and redevelop the official website for GTK during my Google SoC'19 participation. The old website was written in PHP. Updating the content was very difficult and it was not in relation to Open Source Website standards. So I stumbled upon implementing a website based on Jekyll as a CMS. I implemented a method to add GTK documentation, an issue tracker, Downloads and a community page. The website is currently served over Gitlab Pages using Gitlab CI. I was mentored by [**Emmanuele Bassi**](https://github.com/ebassi) and I got to learn a lot from his experience.
+      After getting selected for GNOME, I was handed the task to rethink, redesign and redevelop the official website for GTK during my Google SoC'19 participation. The old website was written in PHP. Updating the content was very difficult and it was not concerning the Open Source Website standards. So I stumbled upon implementing a website based on Jekyll as a CMS. I implemented a method to add GTK documentation, an issue tracker, Downloads and a community page. The website is currently served over Gitlab Pages using Gitlab CI. I was mentored by [**Emmanuele Bassi**](https://github.com/ebassi) and I got to learn a lot from his experience.
     gitlab: https://gitlab.gnome.org/ravgeetdhillon/gtk-web/
     view_link: https://ravgeetdhillon.pages.gitlab.gnome.org/gtk-web/
     img: /assets/img/project/gtk-website.png
@@ -23,16 +32,16 @@ projects:
     tools: [python, github-actions, github-api]
     mini_description: A Data Science and AI project to play Fantasy Premier League.
     description: |-
-      I am a huge football fan, especially the English Premier League. Also, it comes with its Fantasy Premier League which allows individuals around the world to play as managers and have fun for more than 10 months. It is so intriguing and unpredictable at times that it pushes you to the edge and tests your managing skills, patience, and your ability to foresee the future. So for 2019-20 season, I decided to write an AI that can coordinate with a human manager and give him insights on what steps to take, to maximize the team points. Its been fun writing this program and I got to learn a lot. The major selling points of this AI are its **cost managing** function, ability to make **decisions based on upcoming fixtures**, **player's form**, and give **transfer advice**. The above process has been automated using **GitHub Actions**. The results of the automation are sent via **Email notifications** to my mobile phone. You can read more about the project through this [blog post](/blog/fantasy-premier-league-with-data-science-and-ai-first-ten-gameweeks-review/).
-    github: https://github.com/ravgeetdhillon/fantasy-ai/
+      I am a huge football fan, especially the English Premier League. Also, it comes with its Fantasy Premier League which allows individuals around the world to play as managers and have fun for more than 10 months. It is so intriguing and unpredictable at times that it pushes you to the edge and tests your managing skills, patience, and your ability to foresee the future. So for the 2019-20 season, I decided to write an AI that can coordinate with a human manager and give him insights on what steps to take, to maximize the team points. Its been fun writing this program and I got to learn a lot. The major selling points of this AI are its **cost managing** function, ability to make **decisions based on upcoming fixtures**, **player's form**, and give **transfer advice**. The above process has been automated using **GitHub Actions**. The results of the automation are sent via **Email notifications** to my mobile phone. You can read more about the project through this [blog post](/blog/fantasy-premier-league-with-data-science-and-ai-first-ten-gameweeks-review/).
+    github: https://github.com/ravgeetdhillon/fantasyAI/
     img: /assets/img/project/fantasy-ai.png
-    link: fantasy-ai
+    link: fantasyai
   - title: Komments
     tags: [web-dev]
     tools: [flask, dropbox-api]
     mini_description: A Flask Web App to manage comments for a blog.
     description: |-
-      Komments is a Flask based web app to manage comments on your blog. It stores and retrieves the comments for each blog post on your DropBox App through Dropbox API. You can host it on any cloud platform you want. Only POST requests are served over a valid secure network. For more information on how to setup the web app for your blog, you can refer to this [README](https://github.com/ravgeetdhillon/komments/blob/master/README.md).
+      Komments is a Flask based web app to manage comments on your blog. It stores and retrieves the comments for each blog post on your DropBox App through Dropbox API. You can host it on any cloud platform you want. Only POST requests are served over a valid secure network. For more information on how to set up the web app for your blog, you can refer to this [README](https://github.com/ravgeetdhillon/komments/blob/master/README.md).
     github: https://github.com/ravgeetdhillon/komments/
     img: /assets/img/project/komments.png
     link: komments
@@ -60,7 +69,7 @@ projects:
     tools: [python]
     mini_description: A tool to convert Video Subtitles into usable text format.
     description: |-
-      I made this tool to reduce my screen time and extract something from something really valuable. A lot of times, I had to watch tutorials about different things which are 30 to 45 minutes long. The only thing that matters is the vocal content and rest is just garbage. If I view this on Youtube, it wastes a lot of bandwidth. So what I do this is I get a `.srt` format transcript of the video and feed it into this SRT Convertor. It gives me back clean and filtered file with only important textual information. So if you ever felt like the need to have a tool that can do the above, feel free to fork it from the below given GitHub repository.
+      I made this tool to reduce my screen time and extract something from something really valuable. A lot of times, I had to watch tutorials about different things which are 30 to 45 minutes long. The only thing that matters is the vocal content and rest is just garbage. If I view this on Youtube, it wastes a lot of bandwidth. So what I do this is I get a `.srt` format transcript of the video and input it into this SRT Convertor. It gives me back clean and filtered file with only important textual information. So if you ever felt like the need to have a tool that can do the above, feel free to fork it from the below given GitHub repository.
     github: https://github.com/ravgeetdhillon/srt-convertor/
     img: /assets/img/project/srt-convertor.png
     link: srt-convertor
@@ -69,65 +78,68 @@ technology:
   - title: Web Development
     description: Web Development is my favorite tech job. Every new project brings with itself new challenges. So I try my best to keep my Web Stack updated with new tools and technologies.
     tools: 
-      - name: django
-        description: Django is one of my favorite backend framework for building websites and APIs.
-      - name: flask
-        description: I use Flask whenever I have to test something really quick and its a great micro framework written in Python.
-      - name: html
-      - name: bootstrap
-        description: Bootstrap is my go to framework for building elegent UIs for all kind of devices. I have even customised it to create my own UI design system.
-      - name: css
-      - name: sass
-      - name: jekyll
-        description: A lot static websites that I have made have been possible due to Jekyll. It's an amazing CMS and even Github recommends this.
-      - name: js
-      - name: react
-        description: I am still learning React, but honestly it's a thing to cherish. One can easily design reusable UIs.
-      - name: mysql
-        description: So far, I have only used MySQL as a database in my full stack. I'm learning to use the new age NoSQL databases as well.
+    - name: django
+      description: Django is one of my favorite backend framework for building websites and APIs.
+    - name: flask
+      description: I use Flask whenever I have to test something really quick and its a great micro-framework written in Python.
+    - name: html
+    - name: bootstrap
+      description: Bootstrap is my go-to framework for building elegant UIs for all kind of devices. I have even customized it to create my own UI design system.
+    - name: css
+    - name: sass
+    - name: jekyll
+      description: A lot of static websites that I have made have been possible due to Jekyll. It's an amazing CMS and even Github recommends this.
+    - name: js
+    - name: react
+      description: I am still learning React, but honestly it's a thing to cherish. One can easily design a reusable UI.
+    - name: mysql
+      description: So far, I have only used MySQL as a database in my full-stack. I'm learning to use the new age NoSQL databases as well.
   - title: Competitive Programming
     description: I love to solve new problems every day, learn about new algorithms, data structures and this routine helps me exercise my brain as well. You can check out my [hackerrank](https://www.hackerrank.com/ravgeetdhillon) profile for more.
     tools: 
-      - name: hackerrank
-        description: I solve coding problems on Hackerrank with the difficulty ranging from easy to hard.
-      - name: python
-        description: Python is my go to language for competitive programming as it is all about time conservation and speed.
+    - name: hackerrank
+      description: I solve coding problems on Hackerrank with the difficulty ranging from easy to hard.
+    - name: python
+      description: Python is my go-to language for competitive programming as it is all about time conservation and speed.
   - title: Open Source
-    description: Thanks to the Open Source culture, I have made myself a good web and software developer. So I make sure that in my free time, I contribute towards opoen source projects which I find fascinating.
+    description: Thanks to the Open Source culture, I have made myself a good web and software developer. So I make sure that in my free time, I contribute towards open source projects which I find fascinating.
     tools: 
-      - name: git
-        description: Version Controlling is a necessity these days. It becomes easy to work within a team due to the presence of such a system.
-      - name: github
-        description: I host all of my projects on Github as it help me standardise the workflow through issues and pull requests.
-      - name: gitlab
+    - name: ubuntu
+      description: I switched to Ubuntu Linux from Windows to feel secure, fast and geeky.
+    - name: git
+      description: Version Controlling is a necessity these days. It becomes easy to work within a team due to the presence of such a system.
+    - name: github
+      description: I host all of my projects on Github as it helps me standardize the workflow through issues, pull requests and github actions.
+    - name: gitlab
+      description: I use Gitlab to host my projects related to GNOME. It has great CI/CD tools which help ease the workflows.
   - title: DevOps
-    description: Most of the web projects I have worked upon require continuous integration and delievery. DevOps, since then, have become an important part of my workflow.
+    description: Most of the web projects I have worked upon require continuous integration and delivery. DevOps, since then, has become an important part of my workflow.
     tools: 
-      - name: gitlab-ci
-        description: I use solve coding problems on Hackerrank with the difficulty ranging from easy to hard.
-      - name: heroku
-        description: So far I have deployed my projects on heroku. It offers a great way to integrate it with Github and I can configure the settings for each push I make to the repository.
-      - name: aws
-        description: I haven't used AWS Cloud Computing services that much but I'm still learning it gradually.
-      - name: github-actions
-        description: I'm in love this tool and have used it in a couple of projects. Since I have GitHub Pro pack, I get free 3000 build minutes for each month.
+    - name: gitlab-ci
+      description: I use solve coding problems on Hackerrank with the difficulty ranging from easy to hard.
+    - name: heroku
+      description: So far I have deployed my projects on Heroku. It offers a great way to integrate it with Github and I can configure the settings for each push I make to the repository.
+    - name: aws
+      description: I haven't used AWS Cloud Computing services that much but I'm still learning it gradually.
+    - name: github-actions
+      description: I'm in love with this tool and have used it in a couple of projects. Since I have GitHub Pro pack, I get free 3000 build minutes for each month.
   - title: Others
     description: These tools are not specific to any particular technology but they form an important part of my workspace. I use these tools to complement my major tech stack.
     tools: 
-      - name: postman
-        description: It's a great tool that helps me to debug and test REST APIs.
-      - name: vscode
-        description: Without this, I can't imagine my life as a developer. It's my favorite text editor and I have configured it according to my use.
-      - name: spotify
-        description: Music helps me escape this world. I have various playlists on spotify to boost my productivity while developing and nurture the creative vibes as well.
-      - name: youtube
-        description: I will be honest when I say that Youtube that me more than my undergraduate degree did. Thanks to all the content creators, a new breed of developers emerge as they learn from this wonderful resource.
-      - name: stack-overflow
-        description: Well, words can't describe the love story between developers and Stack overflow. We know it all.
+    - name: postman
+      description: It's a great tool that helps me to debug and test REST APIs.
+    - name: vscode
+      description: Without this, I can't imagine my life as a developer. It's my favorite text editor and I have configured it according to my use.
+    - name: spotify
+      description: Music helps me escape this world. I have various playlists on Spotify to boost my productivity while developing and nurture the creative vibes as well.
+    - name: youtube
+      description: I will be honest when I say that Youtube that me more than my undergraduate degree did. Thanks to all the content creators, a new breed of developers emerge as they learn from this wonderful resource.
+    - name: stack-overflow
+      description: Well, words can't describe the love story between developers and Stack overflow. We know it all.
 
 about_me: |-
 
-  With dream of being a developer, I decided to go for a graduation in Computer Science and Engineering at Guru Nanak Dev Univeristy in my hometown, Amritsar in Punjab, India. During my degree, I wanted to learn something that can help me show my creative skills and I can start earning as well. So I started out with Web Development as I was fascinated with the things that were running on the web and impacting people's life.
+  With the dream of being a developer, I decided to go for graduation in Computer Science and Engineering at Guru Nanak Dev University in my hometown, Amritsar in Punjab, India. During my degree, I wanted to learn something that can help me show my creative skills and I can start earning as well. So I started out with Web Development as I was fascinated with the things that were running on the web and impacting people's life.
 
   Thanks to my love for Web Dev, I participated in **Google Summer of Code** for [GNOME](https://gnome.org) in the summer of 2019. My project was to redesign and develop the GTK's official website. It turned out pretty well and the website would soon be available at [https://gtk.org](https://gtk.org), once the GTK 4 is released.
 

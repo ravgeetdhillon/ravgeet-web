@@ -33,10 +33,7 @@ def resize_image(path_to_image, max_size=1600):
 
             im_resized = im.resize((desired_width, desired_height))
             im_resized.save(path_to_image, quality=80)
-        
-        else:
-            im.save(path_to_image, quality=80)
-
+            
 
 def main():
     base = 'assets/img'
