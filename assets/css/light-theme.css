@@ -420,6 +420,26 @@ a {
   background-color: #e1b7f9 !important;
   border: 1px solid #4d0975 !important; }
 
+.badge-ubuntu {
+  color: #752209 !important;
+  background-color: #f9c6b7 !important;
+  border: 1px solid #752209 !important; }
+
+.badge-google-apis {
+  color: #755809 !important;
+  background-color: #f9e7b7 !important;
+  border: 1px solid #755809 !important; }
+
+.badge-automation {
+  color: #03394e !important;
+  background-color: #89dafa !important;
+  border: 1px solid #03394e !important; }
+
+.badge-ffmpeg {
+  color: #043316 !important;
+  background-color: #74f5a5 !important;
+  border: 1px solid #043316 !important; }
+
 .blog-banner {
   background: url("/assets/img/backs/ravd-blog-light.svg");
   background-position: center;
