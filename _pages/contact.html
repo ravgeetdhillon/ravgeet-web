@@ -1,31 +1,6 @@
 ---
 headline: In case you have any project for me, feel free to get in contact with me. You can contact me through any method of your choice.
 permalink: /contact/
-links:
-    - title: Email
-      href: mailto:ravgeetdhillon@gmail.com
-      icon: fas fa-at
-      color: ea4335
-    - title: Twitter
-      href: https://twitter.com/ravgeetdhillon
-      icon: fab fa-twitter
-      color: 1da1f2
-    - title: GitHub
-      href: https://github.com/ravgeetdhillon
-      icon: fab fa-github
-      color: 6e5494
-    - title: Gitlab
-      href: https://gitlab.gnome.org/ravgeetdhillon
-      icon: fab fa-gitlab
-      color: fc6d26
-    - title: Instagram
-      href: https://www.instagram.com/ravd_ravgeet/
-      icon: fab fa-instagram
-      color: e1306c
-    - title: LinkedIn
-      href: https://www.linkedin.com/in/ravgeetdhillon/
-      icon: fab fa-linkedin
-      color: 0077b5
 ---
 
 <style>
@@ -56,16 +31,22 @@ links:
     <section class="contact py-4 mt-4">
         <div class="container w-100 w-lg-60">
             <div class="row">
-                <div class="col d-flex flex-wrap">
-                    {% for link in page.links %}
-                        <a href="{{ link.href }}" class="btn btn-neutral mb-2 mr-2" style="background: #{{ link.color }};"><i class="{{ link.icon }} fa-fw mr-1"></i>{{ link.title }}</a>
-                    {% endfor %}
-                </div>
+                {% for type in site.data.navigation.link_types %}
+                    {% assign social_links = site.data.navigation.social_links | where: "type", type.name %}
+                    <div class="col-12 mb-4">
+                        <h3 class="text-muted">{{ type.name | capitalize }}</h3>
+                        <div class="d-flex flex-wrap">
+                            {% for link in social_links %}
+                                <a href="{{ link.href }}" class="btn btn-neutral mb-2 mr-2" style="background: #{{ link.color }};"><i class="{{ link.icon }} fa-fw mr-1"></i>{{ link.name | capitalize }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </section>
     </div>
-    
+
     <div class="bottom-wrapper">
 
     {% include footer.html %}

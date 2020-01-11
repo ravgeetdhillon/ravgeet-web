@@ -17,29 +17,53 @@ social_links:
     href: mailto:ravgeetdhillon@gmail.com
     icon: fas fa-at
     color: ea4335
+    type: contact
     footer: false
+  - name: Telegram
+    href: mailto:ravgeetdhillon@gmail.com
+    icon: fab fa-telegram
+    color: 0088cc
+    type: contact
+    footer: true
   - name: Twitter
     href: https://twitter.com/ravgeetdhillon
     icon: fab fa-twitter
     color: 1da1f2
+    type: social
     footer: true
   - name: GitHub
     href: https://github.com/ravgeetdhillon
     icon: fab fa-github
     color: 6e5494
+    type: code
     footer: true
   - name: Gitlab
     href: https://gitlab.gnome.org/ravgeetdhillon
     icon: fab fa-gitlab
     color: fc6d26
+    type: code
     footer: true
   - name: Instagram
     href: https://www.instagram.com/ravd_ravgeet/
     icon: fab fa-instagram
     color: e1306c
+    type: social
     footer: true
   - name: LinkedIn
     href: https://www.linkedin.com/in/ravgeetdhillon/
     icon: fab fa-linkedin
     color: 0077b5
+    type: contact
     footer: true
+  - name: Dribbble
+    href: https://dribbble.com/ravgeetdhillon/
+    icon: fab fa-dribbble
+    color: ea4c89
+    type: design
+    footer: true
+
+link_types:
+  - name: contact
+  - name: social
+  - name: code
+  - name: design
