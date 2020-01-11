@@ -1,6 +1,6 @@
-title: Ravgeet Dhillon | Web Developer, Designer
+title: Ravgeet Dhillon - Developer & Writer
 email: ravgeetdhillon@gmail.com
-description: I develop websites, contribute to Open Source, write algorithms for Self-driving cars, play Fantasy Premier League with AI, write tutorials, and blogs for the community.
+description: I design and develop websites, contribute to Open Source, play Fantasy Premier League with AI, write tutorials, and blogs for the community.
 author: Ravgeet Dhillon
 
 baseurl: /
@@ -22,9 +22,7 @@ exclude:
   - package.json
   - node_modules/
   - README.md
-  - compile-sass.sh
-  - structurize.sh
-  - start-server.sh
+  - '*.sh'
   - LICENSE
   - '*.py'
   - requirements.txt
