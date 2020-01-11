@@ -24,8 +24,6 @@ exclude:
   - README.md
   - '*.sh'
   - LICENSE
-  - '*.py'
-  - requirements.txt
 
 collections:
   blog:
