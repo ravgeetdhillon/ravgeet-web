@@ -7,25 +7,25 @@
     {% include header.html %}
 
     <section class="py-4">
-        <div class="container w-100 w-md-75 px-0 px-sm-3">
+        <div class="container w-100 w-lg-60 px-0 px-sm-3">
             <div class="row align-items-start">
-                <div class="col-12 col-lg-10 py-3">
-                    <div class="px-3 px-sm-0">
+                <div class="col-12 py-3">
+                    <div class="px-3 px-sm-0 pt-4">
                         <h1 class="font-weight-bold text-shadow animated fadeIn faster" style="font-size:3rem;">{{ page.title }}</h1>
                         <span class="text-muted m-0 animated fadeInUp faster delay-200">on <span class="font-weight-bold">{{ page.date | date: "%b %d, %Y" }}</span></span>
                         <span class="text-muted m-0 ml-3 animated fadeInUp faster delay-300"><i class="far fa-clock"></i> <span class="font-weight-bold">{{ page.content | number_of_words | divided_by: 180 | plus: 1 }} min read</span></span>
                     </div>
-                    <div class="py-4 px-sm-0 animated fadeIn faster delay-400">
+                    <div class="pt-5 pb-4 px-sm-0 animated fadeIn faster delay-400">
                         <img src="{{ '/assets/img/blog/' | prepend: site.url | append: page.img }}" class="img-fluid w-100 shadow" alt="{{ page.title | append: ' : ' | append: page.img }}">
                         <span class="small text-muted py-1 credits text-right">{{ page.img_credits | markdownify }}</span>
                     </div>
-                    <div class="pt-4 pb-3 px-3 px-sm-0 animated fadeIn faster">
+                    <div class="pt-3 pb-3 px-3 px-sm-0 animated fadeIn faster">
                         <span class="markdown-body lead font-weight-normal">
                             {{ page.content | markdownify }}
                         </span>
                     </div>
                 </div>
-                <div class="col-12 col-lg-10 py-3 px-4 px-sm-3 animated fadeIn faster delay-600">
+                <div class="col-12 py-3 px-4 px-sm-3 animated fadeIn faster delay-600">
                     <p class="text-muted">More Blog Posts</p>
                     {% assign blog_posts = site.blog | reverse %}
                     {% for post in blog_posts limit:5 %}

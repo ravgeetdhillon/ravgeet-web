@@ -5,8 +5,8 @@ $breakpoints: (
     "xl": 1200px
 );
 
-$widths: 25, 50, 75, 100, auto;
-$heights: 25, 50, 75, 100, auto;
+$widths: 25, 40, 50, 60, 75, 100, auto;
+$heights: 25, 40, 50, 60, 75, 100, auto;
 
 @each $breakpoint in map-keys($breakpoints) {
     @media (min-width: map-get($breakpoints, $breakpoint)) {
@@ -70,6 +70,7 @@ body {
 
 .credits p {
     margin-top: 4px;
+    margin-right: 4px;
 }
 
 .text-shadow {

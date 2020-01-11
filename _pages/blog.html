@@ -19,18 +19,18 @@ permalink: /blog/
     {% include header.html %}
     
     <section class="blog-banner d-flex flex-column justify-content-center animated fadeIn">
-        <div class="container w-100 w-md-75">
+        <div class="container w-100 w-lg-60">
             <h1 class="display-4 font-weight-bold text-shadow">Blog</h1>
-            <p class="text-light w-md-75 w-lg-50 lead font-weight-normal text-shadow">{{ page.headline }}</p>
+            <p class="text-light w-md-75 w-lg-60 lead font-weight-normal text-shadow">{{ page.headline }}</p>
         </div>
     </section>
     
     <section>
-        <div class="container w-100 w-md-75">
+        <div class="container w-100 w-lg-60">
             <div class="row">
                 {% assign blog_posts = site.blog | reverse %}
                 {% for post in blog_posts %}
-                    <div class="col-12 col-lg-8 border-bottom border-less-darker py-md-5 py-4 blog revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                    <div class="col-12 border-bottom border-less-darker py-md-5 py-4 blog revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
                         <p class="text-muted m-0">on <span class="font-weight-bold">{{ post.date | date: "%b %d, %Y" }}</span></p>
                         <h1 class="mb-3">{{ post.title }}</h1>
                         {% for category in post.categories %}

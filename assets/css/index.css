@@ -1,8 +1,12 @@
 @media (min-width: 576px) {
   .w-sm-25 {
     width: 25% !important; }
+  .w-sm-40 {
+    width: 40% !important; }
   .w-sm-50 {
     width: 50% !important; }
+  .w-sm-60 {
+    width: 60% !important; }
   .w-sm-75 {
     width: 75% !important; }
   .w-sm-100 {
@@ -11,8 +15,12 @@
     width: auto !important; }
   .h-sm-25 {
     height: 25% !important; }
+  .h-sm-40 {
+    height: 40% !important; }
   .h-sm-50 {
     height: 50% !important; }
+  .h-sm-60 {
+    height: 60% !important; }
   .h-sm-75 {
     height: 75% !important; }
   .h-sm-100 {
@@ -23,8 +31,12 @@
 @media (min-width: 768px) {
   .w-md-25 {
     width: 25% !important; }
+  .w-md-40 {
+    width: 40% !important; }
   .w-md-50 {
     width: 50% !important; }
+  .w-md-60 {
+    width: 60% !important; }
   .w-md-75 {
     width: 75% !important; }
   .w-md-100 {
@@ -33,8 +45,12 @@
     width: auto !important; }
   .h-md-25 {
     height: 25% !important; }
+  .h-md-40 {
+    height: 40% !important; }
   .h-md-50 {
     height: 50% !important; }
+  .h-md-60 {
+    height: 60% !important; }
   .h-md-75 {
     height: 75% !important; }
   .h-md-100 {
@@ -45,8 +61,12 @@
 @media (min-width: 992px) {
   .w-lg-25 {
     width: 25% !important; }
+  .w-lg-40 {
+    width: 40% !important; }
   .w-lg-50 {
     width: 50% !important; }
+  .w-lg-60 {
+    width: 60% !important; }
   .w-lg-75 {
     width: 75% !important; }
   .w-lg-100 {
@@ -55,8 +75,12 @@
     width: auto !important; }
   .h-lg-25 {
     height: 25% !important; }
+  .h-lg-40 {
+    height: 40% !important; }
   .h-lg-50 {
     height: 50% !important; }
+  .h-lg-60 {
+    height: 60% !important; }
   .h-lg-75 {
     height: 75% !important; }
   .h-lg-100 {
@@ -67,8 +91,12 @@
 @media (min-width: 1200px) {
   .w-xl-25 {
     width: 25% !important; }
+  .w-xl-40 {
+    width: 40% !important; }
   .w-xl-50 {
     width: 50% !important; }
+  .w-xl-60 {
+    width: 60% !important; }
   .w-xl-75 {
     width: 75% !important; }
   .w-xl-100 {
@@ -77,8 +105,12 @@
     width: auto !important; }
   .h-xl-25 {
     height: 25% !important; }
+  .h-xl-40 {
+    height: 40% !important; }
   .h-xl-50 {
     height: 50% !important; }
+  .h-xl-60 {
+    height: 60% !important; }
   .h-xl-75 {
     height: 75% !important; }
   .h-xl-100 {
@@ -143,7 +175,8 @@ body {
   border-color: #6c757d !important; }
 
 .credits p {
-  margin-top: 4px; }
+  margin-top: 4px;
+  margin-right: 4px; }
 
 .text-shadow {
   text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15) !important; }

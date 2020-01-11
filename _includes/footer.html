@@ -1,26 +1,19 @@
 <footer class="bg-darker mt-4">
-    <div class="container w-100 w-md-75">
+    <div class="container w-100 w-lg-60 py-4">
         <div class="row py-3">
             <div class="col-12 col-md-6">
                 <p class="text-muted">About this Website</p>
-                <p class="text-light">This website is built using <a href="https://jekyllrb.com">Jekyll</a> for Content Management purposes and is deployed using <a href="https://pages.github.com/">Github Pages</a>.</p>
-                <a class="btn btn-sm bg-darker border border-less-darker text-light" href="{{ site.site_repo }}"><i class="fab fa-github mr-1"></i> View on Github</a>
-            </div>
-            <div class="col-12 col-md-6 pt-4 pt-md-0">
-                <p class="text-muted">Other Links</p>
-                <div class="d-flex flex-wrap">
-                    <a href="{{ '/sitemap.xml' | prepend: site.url }}" class="pr-3">Sitemap</a>
-                    <a href="{{ '/blog/feed.xml' | prepend: site.url }}" class="pr-3">Feed</a>
-                </div>
-                <div class="pt-3">
-                    <a class="btn btn-sm bg-darker border border-less-darker text-light" target="_blank" href="https://www.buymeacoffee.com/ravgeetdhillon"><img src="{{ '/assets/img/BMC-btn-logo.svg' | prepend: site.url }}" alt="Buy me a coffee"><span class="mr-1"> Buy me a coffee</span></a>
-                </div>
+                <p class="text-light">Powered by <a href="https://jekyllrb.com">Jekyll</a>, built by <a href="https://github.com/features/actions">GitHub Actions</a> and hosted on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+                <p class="text-light">Designed and written by <a href="https://github.com/ravgeetdhillon">Ravgeet</a>.</p>
+                <a class="btn btn-sm bg-darker border border-less-darker text-light" href="{{ site.site_repo }}"><i class="fab fa-github mr-1"></i> View on GitHub</a>
             </div>
         </div>
         <div class="row border-top border-less-darker text-muted">
-            <div class="col d-flex justify-content-between flex-wrap py-2">
-                <div>
-                    <span>Developed by <a href="/">Ravgeet Dhillon</a> &#8226; All Rights Reserved</span>
+            <div class="col d-flex justify-content-between flex-wrap py-3">
+                <div class="d-flex">
+                    <a href="{{ '/sitemap.xml' | prepend: site.url }}" class="pr-3">Sitemap</a>
+                    <a href="{{ '/blog/feed.xml' | prepend: site.url }}" class="pr-3">Feed</a>
+                    <a href="https://www.buymeacoffee.com/ravgeetdhillon" class="pr-3" target="_blank" ><img src="{{ '/assets/img/BMC-btn-logo.svg' | prepend: site.url }}" alt="Buy me a coffee"><span class="mr-1"> Buy me a coffee</span></a>
                 </div>
                 <div class="d-flex">
                     {% assign social_links = site.data.navigation.social_links %}
