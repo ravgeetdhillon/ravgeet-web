@@ -33,16 +33,18 @@ jobs:
       run:
         npm run compile-sass
 
-    - name: Configure Git
+    - name: Commit and Push
       run: |
         git config --global user.email ${GITHUB_ACTOR}@gmail.com
         git config --global user.name ${GITHUB_ACTOR}
-
-    - name: Commit and Push
-      run: |
-        git add -f assets
-        git commit -m "gh-actions updated website assets"
-        git push --force https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git HEAD:${REMOTE_BRANCH}
+        change=`git diff --exit-code assets`
+        change=`echo $?`
+        if [ $change -eq 1 ]
+        then
+            git add assets
+            git commit -m "gh-actions updated website assets"
+            git push --force https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git HEAD:${REMOTE_BRANCH}
+        fi
       env:
         REMOTE_BRANCH: master
 
