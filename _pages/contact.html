@@ -37,7 +37,7 @@ permalink: /contact/
                         <h3 class="text-muted">{{ type.name | capitalize }}</h3>
                         <div class="d-flex flex-wrap">
                             {% for link in social_links %}
-                                <a href="{{ link.href }}" class="btn btn-neutral mb-2 mr-2" style="background: #{{ link.color }};"><i class="{{ link.icon }} fa-fw mr-1"></i>{{ link.name | capitalize }}</a>
+                                <a href="{{ link.href }}" class="btn btn-neutral mb-2 mr-2" style="background: #{{ link.color }};"><i class="{{ link.icon }} fa-fw mr-1"></i>{{ link.name }}</a>
                             {% endfor %}
                         </div>
                     </div>

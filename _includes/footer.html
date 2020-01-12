@@ -1,6 +1,6 @@
 <footer class="bg-darker mt-4">
-    <div class="container w-100 w-lg-60 py-4">
-        <div class="row py-4">
+    <div class="container w-100 w-lg-60 py-5">
+        <div class="row pb-4">
             <div class="col-12 col-md-6">
                 <p class="text-muted">About this Website</p>
                 <p class="text-light">Powered by <a href="https://jekyllrb.com">Jekyll</a>, built by <a href="https://github.com/features/actions">GitHub Actions</a> and hosted on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
@@ -9,23 +9,26 @@
             </div>
         </div>
         <div class="row text-muted">
-            <div class="col d-flex justify-content-between flex-wrap py-4">
-                <div class="d-flex">
+            <div class="col d-flex justify-content-between flex-wrap">
+                <div class="d-flex pt-3">
                     <a href="{{ '/sitemap.xml' | prepend: site.url }}" class="pr-3">Sitemap</a>
                     <a href="{{ '/blog/feed.xml' | prepend: site.url }}" class="pr-3">Feed</a>
                     <a href="https://www.buymeacoffee.com/ravgeetdhillon" class="pr-3" target="_blank" ><img src="{{ '/assets/img/logos/BMC-btn-logo.svg' | prepend: site.url }}" alt="Buy me a coffee"><span class="mr-1"> Buy me a coffee</span></a>
                 </div>
-                <div class="d-flex">
+                <div class="d-flex align-items-center pt-3">
                     {% assign social_links = site.data.navigation.social_links %}
                     {% for link in social_links %}
                         {% if link.footer %}
-                            <a href="{{ link.href }}" class="pl-3"><i class="{{ link.icon }}"></i></a>
+                            {% if forloop.last == false %}
+                                <a href="{{ link.href }}" class="pr-3"><i class="{{ link.icon }}"></i></a>
+                            {% else %}
+                                <a href="{{ link.href }}"><i class="{{ link.icon }}"></i></a>
+                            {% endif %}
                         {% endif %}
                     {% endfor %}
                 </div>
             </div>
         </div>
-    </div>
 </footer>
 
 </body>

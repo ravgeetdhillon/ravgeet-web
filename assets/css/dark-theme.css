@@ -443,36 +443,31 @@ a {
 .blog-banner {
   background: url("/assets/img/backs/ravd-blog-dark.svg");
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: auto;
   min-height: 320px; }
 
 .notes-banner {
   background: url("/assets/img/backs/ravd-notes-dark.svg");
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: auto;
   min-height: 320px; }
 
 .projects-banner {
   background: url("/assets/img/backs/ravd-projects-dark.svg");
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: auto;
   min-height: 320px; }
 
 .about-banner {
   background: url("/assets/img/backs/ravd-about-dark.svg");
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: auto;
   min-height: 320px; }
 
 .contact-banner {
   background: url("/assets/img/backs/ravd-contact-dark.svg");
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: auto;
   min-height: 320px; }
 
 .landing {

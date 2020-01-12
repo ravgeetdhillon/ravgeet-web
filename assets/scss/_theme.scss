@@ -352,16 +352,15 @@ $pages: "blog", "notes", "projects", "about", "contact";
 
 @each $page in $pages {
     .#{$page}-banner {
-        background: url("/assets/img/backs/ravd-#{$page}-#{$theme}.svg");
+        background: url("/assets/img/backs/#{$page}-#{$theme}.svg");
         background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        background-size: auto;
         min-height: 320px;
     }
 }
 
 .landing {
-    background: url("/assets/img/backs/ravd-back-#{$theme}.png");
+    background: url("/assets/img/backs/main-back-#{$theme}.png");
     background-position: center;
     background-repeat: no-repeat;
 }
