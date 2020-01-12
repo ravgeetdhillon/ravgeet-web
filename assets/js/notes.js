@@ -1,7 +1,7 @@
 function searchNotes() {
     notes_holder.forEach(note => {
         note_text = note.innerText.toLowerCase();
-        if (!( note_text.includes( search.value.trim() ) )) {
+        if (!( note_text.includes( search.value.trim().toLowerCase() ) )) {
             note.classList.add('d-none');
         }
         else if (note.classList.contains('d-none')) {
