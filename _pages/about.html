@@ -32,6 +32,9 @@ quotes:
 books:
     description: |-
         I love reading books and articles. They are a great way to break out from your routine. I read about people, technology, design and universe.
+music:
+    description: |-
+        Whenever I get some free time, I divert my creativeness towards music. I own a Youtube channel where I post HipHop music and sometimes the remixes of my favorite songs.
 ---
 
 {% include meta.html %}
@@ -96,8 +99,8 @@ books:
             <div class="row">
                 {% assign youtube_music = site.data.stuff.youtube_music %}
                 {% for music in youtube_music %}
-                    <div class="col-12 col-sm-6 col-md-4 p-3 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
-                        <div class="d-flex flex-sm-row flex-md-column flex-xl-row h-100 bg-darker rounded">
+                    <div class="col-12 col-sm-6 pb-3 pb-sm-3 px-3 p-sm-3 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                        <div class="d-flex flex-sm-column flex-md-row h-100 bg-darker rounded">
                             <div class="d-flex align-items-center">
                                 <img src="{{ music.cover }}" alt="{{ music.title }}" class="img-fluid w-100" style="max-width:330px;" />
                             </div>
@@ -113,12 +116,13 @@ books:
                 {% endfor %}
             </div>
             <div class="row">
-                <div class="col py-3">
+                <div class="col pb-3">
                     <a href="https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1" target="_blank" class="btn bg-darker border border-less-darker text-light"><i class="fab fa-youtube mr-1"></i> Subscribe</a>
                 </div>
             </div>
         </div>
     </section>
+    
     </div>
 
     <div class="bottom-wrapper">

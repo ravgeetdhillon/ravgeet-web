@@ -441,37 +441,37 @@ a {
   border: 1px solid #043316 !important; }
 
 .blog-banner {
-  background: url("/assets/img/backs/ravd-blog-light.svg");
+  background: url("/assets/img/backs/blog-light.svg");
   background-position: center;
   background-size: auto;
   min-height: 320px; }
 
 .notes-banner {
-  background: url("/assets/img/backs/ravd-notes-light.svg");
+  background: url("/assets/img/backs/notes-light.svg");
   background-position: center;
   background-size: auto;
   min-height: 320px; }
 
 .projects-banner {
-  background: url("/assets/img/backs/ravd-projects-light.svg");
+  background: url("/assets/img/backs/projects-light.svg");
   background-position: center;
   background-size: auto;
   min-height: 320px; }
 
 .about-banner {
-  background: url("/assets/img/backs/ravd-about-light.svg");
+  background: url("/assets/img/backs/about-light.svg");
   background-position: center;
   background-size: auto;
   min-height: 320px; }
 
 .contact-banner {
-  background: url("/assets/img/backs/ravd-contact-light.svg");
+  background: url("/assets/img/backs/contact-light.svg");
   background-position: center;
   background-size: auto;
   min-height: 320px; }
 
 .landing {
-  background: url("/assets/img/backs/ravd-back-light.png");
+  background: url("/assets/img/backs/main-back-light.png");
   background-position: center;
   background-repeat: no-repeat; }
 

@@ -441,37 +441,37 @@ a {
   border: 1px solid #043316 !important; }
 
 .blog-banner {
-  background: url("/assets/img/backs/ravd-blog-dark.svg");
+  background: url("/assets/img/backs/blog-dark.svg");
   background-position: center;
   background-size: auto;
   min-height: 320px; }
 
 .notes-banner {
-  background: url("/assets/img/backs/ravd-notes-dark.svg");
+  background: url("/assets/img/backs/notes-dark.svg");
   background-position: center;
   background-size: auto;
   min-height: 320px; }
 
 .projects-banner {
-  background: url("/assets/img/backs/ravd-projects-dark.svg");
+  background: url("/assets/img/backs/projects-dark.svg");
   background-position: center;
   background-size: auto;
   min-height: 320px; }
 
 .about-banner {
-  background: url("/assets/img/backs/ravd-about-dark.svg");
+  background: url("/assets/img/backs/about-dark.svg");
   background-position: center;
   background-size: auto;
   min-height: 320px; }
 
 .contact-banner {
-  background: url("/assets/img/backs/ravd-contact-dark.svg");
+  background: url("/assets/img/backs/contact-dark.svg");
   background-position: center;
   background-size: auto;
   min-height: 320px; }
 
 .landing {
-  background: url("/assets/img/backs/ravd-back-dark.png");
+  background: url("/assets/img/backs/main-back-dark.png");
   background-position: center;
   background-repeat: no-repeat; }
 
