@@ -31,7 +31,7 @@ jobs:
       
     - name: Compile SASS
       run:
-        npm run compile-sass
+        npm run compile-css
 
     - name: Commit and Push
       run: |
