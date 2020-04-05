@@ -5,18 +5,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<meta name="theme-color" content="#30353B" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#30353B" />
+	<meta name="theme-color" content="#1f2325" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1f2325" />
     <meta name="generator" content="Jekyll v3.8.5" />
     <meta name="author" content="{{ site.author }}" />
     
     {% if page.url == '/resume/' %}
-        <meta http-equiv="Refresh" content="0; url={{ '/ravgeet-dhillon-resume.pdf' | prepend: site.url }}" />
+        <meta http-equiv="Refresh" content="0; url={{ '/assets/ravgeet-dhillon-resume.pdf' | prepend: site.url }}" />
     {% endif %}
     
     <title>
         {% if page.title != '' %}
-            {{ page.title | append: ' | ' | append: site.author }}
+            {{ page.title | append: ' - ' | append: site.title }}
         {% else %}
             {{ site.title }}
         {% endif %}
@@ -81,85 +81,16 @@
     
     <link rel="canonical" href="{{ page.url | prepend: site.url }}" />
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for ravgeetdhillon.github.io" href="{{ '/blog/feed.xml' | prepend: site.url }}" />
-    <link href="{{ '/assets/css/markdown.css' | prepend: site.url }}" rel="stylesheet" media="screen" type="text/css" />
-    <link href="{{ '/assets/animate.css/animate.min.css' | prepend: site.url }}" rel="stylesheet" media="screen" type="text/css" />
-    <link href="{{ '/assets/css/light-theme.css' | prepend: site.url }}" rel="stylesheet" media="screen" type="text/css" id="theme-stylesheet" data-mode="light" />
-    <link href="{{ '/assets/css/index.css' | prepend: site.url }}" rel="stylesheet" media="screen" type="text/css" />
-    <link href="{{ '/assets/@fortawesome/fontawesome-free/css/all.min.css' | prepend: site.url }}" rel="stylesheet" media="screen" type="text/css" />
     
-    <script src="{{ '/assets/jquery/dist/jquery.min.js' | prepend: site.url }}"></script>
-	<script src="{{ '/assets/popper.js/dist/umd/popper.min.js' | prepend: site.url }}"></script>
-    <script src="{{ '/assets/bootstrap/dist/js/bootstrap.min.js' | prepend: site.url }}"></script>
-    <script src="{{ '/assets/moment/moment.js' | prepend: site.url }}"></script>
+    {% include styles.html %}
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-148398654-1');
+    </script>
+
 </head>
-
-<script>
-    
-    function openNav() {
-        document.querySelector(".sidebar").style.right = "0%";
-    }
-        
-    function closeNav() {
-        document.querySelector(".sidebar").style.right = "-60%";
-    }
-    
-    var btnTop = $("#btn-go-to-top");
-    $(window).scroll(function() {
-        if ($(window).scrollTop() < 500) {
-            btnTop.addClass("d-none");
-        }
-        else {
-            btnTop.removeClass("d-none");
-        }
-    });
-    btnTop.on("click", function(e) {
-        e.preventDefault();
-        $("html, body").animate({scrollTop: 0});
-    });
-
-
-    function checkMode() {
-        if (window.localStorage.getItem('mode') == null) {
-            window.localStorage.setItem('mode', 'light');
-        }
-        else if (window.localStorage.getItem('mode') == 'light') {
-            switchTheme(mode='dark');
-        }
-        else if (window.localStorage.getItem('mode') == 'dark') {
-            switchTheme(mode='light');
-        }
-    }
-
-
-    function switchTheme(mode='') {
-        if (mode == '') {
-            var mode = stylesheet.getAttribute('data-mode');
-        }
-        if (mode == 'light') {
-            stylesheet.setAttribute('href', "{{ '/assets/css/dark-theme.css' | prepend: site.url }}");
-            stylesheet.setAttribute('data-mode', 'dark');
-            try {
-                var e = document.getElementById('mode-switch');
-                e.innerHTML = `<i class="fas fa-sun text-light"></i>`;
-                e.setAttribute('title', 'Switch to Light Mode');
-            }
-            catch (error) {}
-            window.localStorage.setItem('mode', 'dark');
-        }
-        else if (mode == 'dark') {
-            stylesheet.setAttribute('href', "{{ '/assets/css/light-theme.css' | prepend: site.url }}");
-            stylesheet.setAttribute('data-mode', 'light');
-            try {
-                var e = document.getElementById('mode-switch');
-                e.innerHTML = `<i class="fas fa-moon text-light"></i>`;
-                e.setAttribute('title', 'Switch to Dark Mode');
-            }
-            catch (error) {}
-            window.localStorage.setItem('mode', 'light');
-        }
-    }
-
-    var stylesheet = document.getElementById('theme-stylesheet');
-    checkMode();
-
-</script>

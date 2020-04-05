@@ -1,93 +1,77 @@
 ---
-headline: Most of the projects I have made revolve around my needs or interests. If you have any project for me, you can [contact](/contact/) me.
 permalink: /projects/
 ---
 
-<style>
-    .project:last-child {
-        border: none !important;
-    }
-</style>
-
 {% include meta.html %}
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 <body class="d-flex flex-column justify-content-between">
 
     <div class="top-wrapper">
 
-    {% include header.html %}
-    
-    <section class="projects-banner d-flex flex-column justify-content-center animated fadeIn">
-        <div class="container w-100 w-lg-60">
-            <h1 class="display-4 font-weight-bold text-shadow">Projects</h1>
-            <div class="w-md-75 w-lg-60">
-                <span class="text-light lead font-weight-normal text-shadow">{{ page.headline | markdownify }}</span>
-            </div>
-        </div>
-    </section>
-    
-    <section>
-        <div class="container w-100 w-lg-60">
-            <div class="row py-5">
-                {% assign projects = site.data.stuff.projects %}
-                {% for project in projects %}
-                    <div class="col-12 border-bottom border-less-darker py-md-5 py-4 project revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}" id="{{ project.link }}">
-                        <div class="mb-3">
-                            <div class="d-flex align-items-center">
-                                <h1>{{ project.title }}</h1>
-                                {% for tag in project.tags %}
-                                    <span class="badge ml-2 badge-{{ tag }}">{{ tag | upcase }}</span>
-                                {% endfor %}
-                            </div>
-                            <span class="text-light">{{ project.mini_description }}</span>
-                        </div>
-                        <div class="mb-3">
-                            <img src="{{ project.img | prepend: site.url }}" class="img-fluid w-100 mb-3 rounded shadow" alt="A cover photo for the Ravgeet Dhillon's {{ project.title }} project" />
-                        </div>
-                        <div class="mb-3">
-                            <p class="mb-2 font-weight-bold">Tools and Technologies</p>
-                            {% for tool in project.tools %}
-                                <span class="badge badge-lg mr-2 mb-2 badge-{{ tool }}">{{ tool | upcase }}</span>
+        {% include header.html %}
+        
+        {% include banner.html title="Projects" banner="projects" headline="Most of the projects I have made revolve around my needs or interests. If you have any project for me, you can [contact](/contact/) me." %}
+        
+        {% assign projects = site.projects %}
+        {% assign count = projects | size %}
+        {% assign a = count | divided_by: 2.0 | floor %}
+
+        {% assign arr = '' | split: '' %}
+        {% for i in (1..2) %}
+            {% assign arr = arr | push: a %}
+        {% endfor %}
+
+        {% assign extra = a | times: 2 | minus: count | abs %}
+
+        {% assign narr = '' | split: '' %}
+        {% for j in arr %}
+            {% if extra > 0 %}
+                {% assign i = j | plus: 1 %}
+                {% assign narr = narr | push: i %}
+                {% assign extra = extra | minus: 1 %}
+            {% else %}
+                {% assign narr = narr | push: j %}
+            {% endif %}
+        {% endfor %}
+        
+        <section class="py-5">
+            <div class="container w-xl-60 w-lg-75">
+                <div class="row">
+                    {% assign start = 0 %}
+                    {% for i in narr %}
+                        <div class="col-md-6">
+                            {% assign end = start | plus: i | minus: 1 %}
+                            {% for j in (start..end) %}                   
+                                <div class="col-12 mb-4 px-0 bg-theme-white hover-darker" data-aos="fade-up" data-aos-delay="50">
+                                    <img data-src="{{ '/assets/img/project/' | append: projects[j].img }}" class="w-100 img-fluid">
+                                    <div class="p-3">
+                                        <div class="mb-3 d-flex flex-wrap align-items-center">
+                                            {% for tag in projects[j].tags %}
+                                                <span class="badge badge-{{ tag }} mr-2">{{ tag | upcase }}</span>
+                                            {% endfor %}
+                                        </div>
+                                        <a href="{{ projects[j].url }}" class="stretched-link">
+                                            <h4 class="font-weight-bold">{{ projects[j].title }}</h4>
+                                        </a>
+                                        <span class="text-dark-light p-in-span">{{ projects[j].mini_description | markdownify }}</span>
+                                    </div>
+                                </div>
                             {% endfor %}
+                            {% assign start = end | plus: 1 %}
                         </div>
-                        <div class="mb-3">
-                            <p class="mb-2 font-weight-bold">Description</p>
-                            <span class="text-light">{{ project.description | markdownify }}</span>
-                        </div>
-                        <div class="mb-3">
-                            <p class="mb-2 font-weight-bold">Resources</p>
-                            {% if project.github %}
-                                <a href="{{ project.github }}" class="btn btn-sm border-primary"><i class="fab fa-github mr-1"></i> GitHub Repository</a>
-                            {% endif %}
-
-                            {% if project.gitlab %}
-                                <a href="{{ project.gitlab }}" class="btn btn-sm border-primary"><i class="fab fa-gitlab mr-1"></i> GitLab Repository</a>
-                            {% endif %}
-
-                            {% if project.view_link %}
-                                <a href="{{ project.view_link }}" class="btn btn-sm border-primary"><i class="far fa-eye mr-1"></i> View Live</a>
-                            {% endif %}
-                        </div>
-                        {% if project.github %}
-                            <a class="github-button" href="{{ project.github }}" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ravgeetdhillon/komments on GitHub">Star</a>
-                        {% endif %}
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    
     </div>
 
     <div class="bottom-wrapper">
-
-    {% include footer.html %}
-    
+        {% include footer.html %}
     </div>
 
 </body>
 
-<script src="/assets/js/scroll.js"></script>
+{% include scripts.html %}
 
 </html>

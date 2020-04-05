@@ -1,0 +1,112 @@
+<script src="{{ '/assets/jquery/dist/jquery.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/popper.js/dist/umd/popper.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/bootstrap/dist/js/bootstrap.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/aos/dist/aos.js' | prepend: site.url }}"></script>
+
+<script>
+    // bootstrap tooltip
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
+
+    // sidebar
+    function openNav() {
+        document.querySelector(".sidebar").style.right = "0%";
+    }
+    function closeNav() {
+        document.querySelector(".sidebar").style.right = "-60%";
+    }
+    
+    // go to top button
+    var btnTop = $("#btn-go-to-top");
+    $(window).scroll(function() {
+        if ($(window).scrollTop() < 500) {
+            btnTop.addClass("d-none");
+        }
+        else {
+            btnTop.removeClass("d-none");
+        }
+    });
+    btnTop.on("click", function(e) {
+        e.preventDefault();
+        $("html, body").animate({scrollTop: 0});
+    });
+
+    // light-dark mode switcher
+    function checkMode() {
+        if (window.localStorage.getItem('mode') == null) {
+            window.localStorage.setItem('mode', 'light');
+        }
+        else if (window.localStorage.getItem('mode') == 'light') {
+            switchTheme(mode='dark');
+        }
+        else if (window.localStorage.getItem('mode') == 'dark') {
+            switchTheme(mode='light');
+        }
+    }
+    function switchTheme(mode='') {
+        if (mode == '') {
+            var mode = stylesheet.getAttribute('data-mode');
+        }
+        if (mode == 'light') {
+            stylesheet.setAttribute('href', "{{ '/assets/css/dark-theme.css' | prepend: site.url }}");
+            stylesheet.setAttribute('data-mode', 'dark');
+            try {
+                var e = document.getElementById('mode-switch');
+                e.children[0].classList.remove("fa-moon");
+                e.children[0].classList.add("fa-sun");
+                e.setAttribute('title', 'Switch to Light Mode');
+            }
+            catch (error) {}
+            window.localStorage.setItem('mode', 'dark');
+        }
+        else if (mode == 'dark') {
+            stylesheet.setAttribute('href', "{{ '/assets/css/light-theme.css' | prepend: site.url }}");
+            stylesheet.setAttribute('data-mode', 'light');
+            try {
+                var e = document.getElementById('mode-switch');
+                e.children[0].classList.remove("fa-sun");
+                e.children[0].classList.add("fa-moon");
+                e.setAttribute('title', 'Switch to Dark Mode');
+            }
+            catch (error) {}
+            window.localStorage.setItem('mode', 'light');
+        }
+    }
+    var stylesheet = document.getElementById('theme-stylesheet');
+    checkMode();
+
+    // handle animations
+    AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+        
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: true, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    });
+
+    // lazy load images
+    function loadImages() {
+        var images = document.getElementsByTagName('img');
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].getAttribute('data-src')) {
+                images[i].setAttribute('src', images[i].getAttribute('data-src'));
+            }
+        }
+    }
+    window.addEventListener("load", loadImages);
+
+</script>

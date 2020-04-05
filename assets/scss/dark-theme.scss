@@ -1,28 +1,29 @@
 // color system
 
 $theme-colors: (
-    "primary": #2085c9,
-    "secondary": #eadf44,
+    "primary": #ee7d32,
+    "primary-light": #ffecdf,
+    "primary-dark": #1a0b02,
+    "secondary": #203fc9,
+    "secondary-light": #e0e5ff,
+    "secondary-dark": #5d6ebd,
     "success": #29c44d,
     "info": #1485ba,
     "warning": #fca728,
     "danger": #ef3437,
-    "white": #ced2d6,
-    "light": #9da5ad,
-    "dark": #343a40,
-    "darker": #30353b,
-    "less-darker": #222736
+    "pure-white": #1f2325,
+    "theme-white": #1a1d1f,
+    "theme-white-light": #16181a,
+    "dark-light": #a3a2a2,
+    "dark": #bdbdbd
 );
 
-$input-border-color: map-get(
-    $theme-colors,
-    lighten(map-get($theme-colors, "darker"), 20%)
-);
+$input-border-color: map-get($theme-colors, darken(map-get($theme-colors, "theme-white-light"), 20%));
 
-$body-bg: map-get($theme-colors, "dark");
-$body-color: map-get($theme-colors, "white");
+$body-bg: map-get($theme-colors, "pure-white");
+$body-color: map-get($theme-colors, "dark");
 $link-color: map-get($theme-colors, "primary") !default;
-$link-hover-color: lighten($link-color, 15%) !important;
+$link-hover-color: darken($link-color, 15%) !important;
 
 $theme: "dark";
 

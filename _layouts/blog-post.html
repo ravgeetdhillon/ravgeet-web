@@ -4,59 +4,52 @@
 
     <div class="top-wrapper">
     
-    {% include header.html %}
+        {% include header.html %}
 
-    <section class="py-4">
-        <div class="container w-100 w-lg-60 px-0 px-sm-3">
-            <div class="row align-items-start">
-                <div class="col-12 py-3">
-                    <div class="px-3 px-sm-0 pt-4">
-                        <h1 class="font-weight-bold text-shadow animated fadeIn faster" style="font-size:3rem;">{{ page.title }}</h1>
-                        <span class="text-muted m-0 animated fadeInUp faster delay-200">on <span class="font-weight-bold">{{ page.date | date: "%b %d, %Y" }}</span></span>
-                        <span class="text-muted m-0 ml-3 animated fadeInUp faster delay-300"><i class="far fa-clock"></i> <span class="font-weight-bold">{{ page.content | number_of_words | divided_by: 180 | plus: 1 }} min read</span></span>
-                    </div>
-                    <div class="pt-5 pb-4 px-sm-0 animated fadeIn faster delay-400">
-                        <img src="{{ '/assets/img/blog/' | prepend: site.url | append: page.img }}" class="img-fluid w-100 shadow" alt="{{ page.title | append: ' : ' | append: page.img }}">
-                        <span class="small text-muted py-1 credits text-right">{{ page.img_credits | markdownify }}</span>
-                    </div>
-                    <div class="pt-3 pb-3 px-3 px-sm-0 animated fadeIn faster">
-                        <span class="markdown-body lead font-weight-normal">
-                            {{ page.content | markdownify }}
-                        </span>
-                    </div>
-                </div>
-                <div class="col-12 py-3 px-4 px-sm-3 animated fadeIn faster delay-600">
-                    <p class="text-muted">More Blog Posts</p>
-                    {% assign blog_posts = site.blog | reverse %}
-                    {% for post in blog_posts limit:5 %}
-                        <div class="pb-2">
-                            <p class="mb-0"><a href="{{ post.url }}">{{ post.title }}</a></p>
+        <section class="py-4">
+            <div class="container w-100 w-lg-75 w-xl-60 px-0 px-sm-3">
+                <div class="row align-items-start">
+                    <div class="col-12 py-3">
+                        <div class="small d-flex mb-4" data-aos="fade">
+                            <div>
+                                <img data-src="{{ '/assets/img/ravgeet-dhillon-small.jpg' | prepend: site.url }}" class="img-fluid rounded-circle" alt="{{ site.title }}">
+                            </div>
+                            <div class="d-flex flex-column justify-content-center ml-3">
+                                <span><a href="{{ site.url }}" class="text-decoration-none">{{ site.author }}</a></span>
+                                <span class="text-muted">on <strong>{{ page.date | date: "%b %d, %Y" }}</strong><span class="mx-2">&bull;</span><strong>{{ page.content | number_of_words | divided_by: 180 | plus: 1 }} min</strong> read</span></span>
+                            </div>
                         </div>
-                    {% endfor %}
+                        <h1 class="font-weight-bold mb-4" data-aos="fade">{{ page.title }}</h1>
+                        <div class="mb-4" data-aos="fade" data-aos-delay="50">
+                            <img data-src="{{ '/assets/img/blog/' | prepend: site.url | append: page.img }}" class="img-fluid w-100 shadow mb-2" alt="{{ page.title }} blog" data-aos="fade">
+                            <span class="small text-muted credits text-right">{{ page.img_credits | markdownify }}</span>
+                        </div>
+                        <div class="py-4 px-3 px-sm-0" data-aos="fade">
+                            <span class="markdown-body">
+                                {{ page.content | markdownify }}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-12 py-3 px-4 px-sm-3">
+                        <p class="text-muted">More Blog Posts</p>
+                        {% assign blog_posts = site.blog | reverse %}
+                        {% for post in blog_posts limit:5 %}
+                            <div class="pb-2">
+                                <p class="mb-0"><a href="{{ post.url }}">{{ post.title }}</a></p>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </div>
 
     <div class="bottom-wrapper">
-
-    {% include footer.html %}
-    
+        {% include footer.html %}
     </div>
-
-    <script>
-        var images = document.querySelectorAll('.markdown-body img');
-        images.forEach(image => {
-            image.classList.add("rounded");
-            if (image.alt.includes('c-shadow')) {
-                image.classList.add("shadow");
-            }
-        });
-    </script>
 
 </body>
 
-<script src="/assets/js/scroll.js"></script>
+{% include scripts.html %}
 
 </html>

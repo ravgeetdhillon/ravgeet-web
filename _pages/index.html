@@ -1,6 +1,20 @@
 ---
 permalink: /
 title: ''
+
+landing:
+  heading: I'm Ravgeet
+  description: I work on **Web Design**, **Development**, **Automation**, and **Open Source**.
+  current_status: Currently, **Full Stack Developer Intern** at [Techies Infotech](https://techiesinfotech.co.in).
+
+projects:
+  heading: Projects
+
+tools:
+  heading: Tools and Technologies
+
+blogs:
+  heading: Blogs
 ---
 
 {% include meta.html %}
@@ -8,133 +22,112 @@ title: ''
 <body class="d-flex flex-column justify-content-between">
 
     <div class="top-wrapper">
-        
-    {% include header.html %}
 
-    <section class="landing py-5">
-        <div class="container w-100 w-lg-60">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 d-flex flex-column align-items-center">
-                    <img src="/assets/img/ravgeet-dhillon.jpg" class="img-fluid rounded-circle pb-3 animated jackInTheBox faster delay-300" style="max-width: 240px;" />
-                    <h1 class="display-4 font-weight-bold text-shadow animated fadeInUp faster delay-300">I'm Ravgeet</h1>
-                    <p class="text-light text-center lead font-weight-normal animated fadeInUp faster delay-600">{{ site.description }}</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="landing">
 
-    <section class="projects py-4">
-        <div class="container w-100 w-lg-60">
-            <div class="row">
-                <div class="col-md-8 d-flex flex-column justify-content-end">
-                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Projects</h2>
-                </div>
-            </div>
-            <div class="row pt-3">
-                {% assign projects = site.data.stuff.projects %}
-                {% for project in projects limit:6 %}
-                    <div class="col-md-6 mb-1 mb-md-3 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
-                        <div class="bg-darker hover-darker p-4 rounded h-100">
-                            {% for tag in project.tags %}
-                                <span class="badge badge-{{ tag }} small mb-2">{{ tag }}</span>
-                            {% endfor %}
-                            <h4>{{ project.title }}</h4>
-                            <span class="p-in-span text-light">
-                                {{ project.mini_description | markdownify }}
-                            </span>
-                            <a href="{{ project.link | prepend: '#' | prepend: '/projects/' | prepend: site.url }}" class="stretched-link"></a>
-                        </div>
+            {% include header.html %}
+            
+            <div class="container w-100 w-lg-75 w-xl-60 pt-5 pb-6" data-aos="fade">
+                <div class="row justify-content-center flex-md-row-reverse">
+                    <div class="col-md-5 col-lg-6 col-xl-5 d-flex align-items-center">
+                        <img src="{{ '/assets/img/ravgeet-dhillon.jpg' | prepend: site.url }}" class="img-fluid mb-4 mb-md-0 rounded shadow-lg" data-aos="fade-up">
                     </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col pb-3">
-                    <a href="/projects/" class="btn bg-darker border-bottom border-less-darker text-light"><i class="fas fa-flask mr-1"></i> More Projects</a>
+                    <div class="col-md-7 col-lg-6 col-xl-7 d-flex flex-column justify-content-center">
+                        <h1 class="display-3 font-weight-bold text-shadow" data-aos="fade-up" data-aos-delay="50">{{ page.landing.heading }}</h1>
+                        <span class="text-dark-light lead font-weight-normal" data-aos="fade-up" data-aos-delay="100">{{ page.landing.description | markdownify }}</span>
+                        <span class="small text-muted" data-aos="fade-up" data-aos-delay="150">{{ page.landing.current_status | markdownify }}</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="tools py-4">
-        <div class="container w-100 w-lg-60">
-            <div class="row">
-                <div class="col-md-8 d-flex flex-column justify-content-end">
-                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Tools and Technologies</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col py-3 px-4">
-                    {% assign technology = site.data.stuff.technology %}
-                    {% for tech in technology %}
-                        <div class="row bg-darker rounded py-4 px-3 px-lg-0 py-lg-0 mb-1 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
-                            <div class="col-lg-4 p-lg-4">
-                                <h4>{{ tech.title }}</h4>
-                            </div>
-                            <div class="col-lg-8 p-lg-4">
-                                <span class="p-in-span text-light">
-                                    {{ tech.description | markdownify }}
-                                </span>
-                                <br>
-                                {% for tool in tech.tools %}
-                                    <span class="badge badge-lg mr-2 mt-2 badge-{{ tool.name }}" title="{{ tool.description }}" data-toggle="tooltip">{{ tool.name | upcase }}</span>
+        <section class="projects py-5">
+            <div class="container w-100 w-lg-75 w-xl-60">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between align-items-center mb-3" data-aos="fade">
+                        <h2 class="mb-0">{{ page.projects.heading }}</h2>
+                        <a href="{{ '/projects/' | prepend: site.url }}" class="btn btn-sm border text-dark-light"><i class="fas fa-flask mr-1"></i> More Projects</a>
+                    </div>
+                    {% assign projects = site.data.stuff.projects %}
+                    {% for project in projects limit:6 %}
+                        <div class="col-md-6 mb-1 mb-md-3" data-aos="fade-up" data-aos-delay="50">
+                            <div class="bg-theme-white hover-darker p-4 rounded h-100">
+                                {% for tag in project.tags %}
+                                    <span class="badge badge-{{ tag }} small mb-2">{{ tag }}</span>
                                 {% endfor %}
+                                <h4>{{ project.title }}</h4>
+                                <span class="p-in-span text-dark-light">
+                                    {{ project.mini_description | markdownify }}
+                                </span>
+                                <a href="{{ project.link | prepend: '#' | prepend: '/projects/' | prepend: site.url }}" class="stretched-link"></a>
                             </div>
                         </div>
                     {% endfor %}
                 </div>
             </div>
-        </div>
-    </section>    
+        </section>
 
-    <section class="blog py-4">
-        <div class="container w-100 w-lg-60">
-            <div class="row">
-                <div class="col-md-8 d-flex flex-column justify-content-end">
-                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Featured Blog Posts</h2>
-                </div>
-            </div>
-            <div class="row d-flex flex-column p-3">
-                {% assign blog_posts = site.blog | reverse %}
-                {% for post in blog_posts limit:5 %}
-                    <div class="col bg-darker hover-darker py-3 px-4 mb-1 rounded revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
-                        <div class="d-flex flex-md-row flex-column align-items-md-center">
-                            <div class="order-md-2 mb-1 mb-md-0">
-                                {% for category in post.categories %}
-                                    <span class="badge badge-{{ category }} mr-1">{{ category }}</span>
-                                {% endfor %}
-                            </div>
-                            <span class="pr-3 font-weight-bold">{{ post.title }}</span>
-                        </div>
-                        <div class="mt-1">
-                            <span class="text-light">{{ post.description | split: '.' | first | append: '.' }}</span>
-                        </div>
-                        <a href="{{ post.url }}" class="stretched-link"></a>
+        <section class="bg-theme-white tools py-5">
+            <div class="container w-100 w-lg-75 w-xl-60">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between align-items-center mb-3" data-aos="fade">
+                        <h2 class="mb-0">{{ page.tools.heading }}</h2>
                     </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col pb-3">
-                    <a href="/blog/" class="btn bg-darker border border-less-darker text-light"><i class="fas fa-book mr-1"></i> More Readings</a>
+                    <div class="col-12 px-4">
+                        {% assign technology = site.data.stuff.technology %}
+                        {% for tech in technology %}
+                            <div class="row bg-pure-white rounded py-4 px-3 px-lg-0 py-lg-0 mb-1" data-aos="fade-up" data-aos-delay="50">
+                                <div class="col-lg-4 p-lg-4">
+                                    <h4>{{ tech.title }}</h4>
+                                </div>
+                                <div class="col-lg-8 p-lg-4">
+                                    <span class="p-in-span text-dark-light">
+                                        {{ tech.description | markdownify }}
+                                    </span>
+                                    <br>
+                                    {% for tool in tech.tools %}
+                                        <span class="badge badge-{{ tool.name }} mr-2 mt-2" title="{{ tool.description }}" data-toggle="tooltip">{{ tool.name | upcase }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>    
+
+        <section class="blog py-5">
+            <div class="container w-100 w-lg-75 w-xl-60">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between align-items-center mb-3" data-aos="fade">
+                        <h2 class="mb-0" data-animation="fadeIn">{{ page.blogs.heading }}</h2>
+                        <a href="{{ '/blog/' | prepend: site.url }}" class="btn btn-sm border text-dark-light"><i class="fas fa-flask mr-1"></i> Read Blog</a>
+                    </div>
+                    {% assign blog_posts = site.blog | reverse %}
+                    {% for i in (1..2) %}
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+                            {% assign start = i | times: 2 | minus: 2 %}
+                            {% assign end = start | plus: 1 %}
+                            {% for j in (start..end) %}
+                                <div class="col-12 mb-4 px-0" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                                    <img data-src="{{ '/assets/img/blog/' | prepend: site.url | append: blog_posts[j].img }}" class="w-100 img-fluid mb-3">
+                                    <a href="{{ blog_posts[j].url }}" class="stretched-link"><h4 class="pr-3 font-weight-bold">{{ blog_posts[j].title }}</h4></a>
+                                    <span class="small text-dark-light">{{ blog_posts[j].description | split: '.' | first | append: '.' }}</span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
     </div>
     
     <div class="bottom-wrapper">
-
-    {% include footer.html %}
-    
+        {% include footer.html %}
     </div>
-
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();   
-        });
-    </script>
 
 </body>
 
-<script src="/assets/js/scroll.js"></script>
+{% include scripts.html %}
 
 </html>

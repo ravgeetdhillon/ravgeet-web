@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-sass": "node-sass -w assets/scss/ -o assets/css/",
-    "compile-sass": "node-sass assets/scss/ -o assets/css/"
+    "watch-css": "node-sass -w assets/scss/ -o assets/css/ --output-style compressed",
+    "compile-css": "node-sass assets/scss/ -o assets/css/ --output-style compressed"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,10 @@
     "ravgeet",
     "dhillon",
     "web",
-    "designer",
+    "web development",
+    "web designer",
+    "automation",
+    "open source",
     "blog",
     "personal blog",
     "gsoc",
@@ -31,11 +34,10 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
-    "animate.css": "^3.7.2",
+    "aos": "^2.3.4",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
-    "moment": "^2.24.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "popper.js": "^1.15.0"
   }
 }

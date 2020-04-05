@@ -1,0 +1,86 @@
+{% include meta.html %}
+
+<body class="d-flex flex-column justify-content-between">
+
+    <div class="top-wrapper">
+    
+        {% include header.html %}
+
+        <section class="py-5">
+            <div class="container w-100 w-lg-75 w-xl-60 px-0 px-sm-3">
+                <div class="row align-items-start">
+                    <div class="col-12 py-3">
+                        <div class="mb-4 px-3 px-sm-0">
+                            <div class="d-flex align-items-center">
+                                <h1>{{ page.title }}</h1>
+                                {% for tag in page.tags %}
+                                    <span class="badge ml-2 badge-{{ tag }}">{{ tag | upcase }}</span>
+                                {% endfor %}
+                            </div>
+                            <span class="text-dark-light">{{ page.mini_description }}</span>
+                        </div>
+                        <div class="mb-4">
+                            <img src="{{ '/assets/img/project/' | append: page.img | prepend: site.url }}" class="img-fluid shadow" alt="{{ page.title }} project">
+                        </div>
+                        <div class="mb-4 px-3 px-sm-0">
+                            <p class="mb-2 lead font-weight-normal">Tools and Technologies</p>
+                            {% for tool in page.tools %}
+                                <span class="badge badge-lg mr-2 mb-2 badge-{{ tool }}">{{ tool | upcase }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-4 px-3 px-sm-0">
+                            <p class="mb-2 lead font-weight-normal">Description</p>
+                            <span class="text-dark-light p-in-span">{{ page.content | markdowinfy }}</span>
+                        </div>
+                        <div class="mb-4 px-3 px-sm-0">
+                            <p class="mb-2 lead font-weight-normal">Resources</p>
+                            {% if page.github %}
+                                <a href="{{ page.github }}" class="btn btn-sm border-primary text-primary"><i class="fab fa-github mr-1"></i> GitHub Repository</a>
+                            {% endif %}
+
+                            {% if page.gitlab %}
+                                <a href="{{ page.gitlab }}" class="btn btn-sm border-primary text-primary"><i class="fab fa-gitlab mr-1"></i> Gitlab Project</a>
+                            {% endif %}
+
+                            {% if page.view_link %}
+                                <a href="{{ page.view_link }}" class="btn btn-sm border-primary text-primary"><i class="far fa-eye mr-1"></i> View Live</a>
+                            {% endif %}
+                        </div>
+                        {% if project.github %}
+                            <a class="github-button" href="{{ project.github }}" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ravgeetdhillon/komments on GitHub">Star</a>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="col-12 px-4 px-md-3">
+                        <p class="text-muted border-bottom">Other Projects</p>
+                        <div class="row">
+                            {% if page.previous %}
+                                <div class="col-md-6 mb-4 mb-md-0">
+                                    <img data-src="{{ '/assets/img/project/' | append: page.previous.img | prepend: site.url }}" class="img-fluid mb-3">
+                                    <h3><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h3>
+                                    <span class="text-dark-light">{{ page.previous.mini_description }}</span>
+                                </div>
+                            {% endif %}
+                            {% if page.next %}
+                                <div class="col-md-6">
+                                    <img data-src="{{ '/assets/img/project/' | append: page.next.img | prepend: site.url }}" class="img-fluid mb-3">
+                                    <h3><a href="{{ page.next.url }}" class="stretched-link">{{ page.next.title }}</a></h3>
+                                    <span class="text-dark-light">{{ page.next.mini_description }}</span>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="bottom-wrapper">
+        {% include footer.html %}
+    </div>
+
+</body>
+<script async defer src="{{ '/assets/js/buttons.js' | prepend: site.url }}"></script>
+{% include scripts.html %}
+
+</html>

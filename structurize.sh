@@ -1,4 +1,4 @@
-dependencies=('bootstrap' 'jquery' 'popper.js' '@fortawesome' 'animate.css' 'moment')
+dependencies=('bootstrap' 'jquery' 'popper.js' '@fortawesome' 'aos')
 for dependency in "${dependencies[@]}"
 do
     rsync -a node_modules/${dependency} assets

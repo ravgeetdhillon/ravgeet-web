@@ -1,10 +1,10 @@
-title: Ravgeet Dhillon - Developer & Writer
+title: Ravgeet Dhillon - Web Development, Web Design, Automation, Open Source
 email: ravgeetdhillon@gmail.com
-description: I design and develop websites, contribute to Open Source, play Fantasy Premier League with AI, write tutorials, and blogs for the community.
+description: Ravgeet Dhillon works on Web Development, Web Design, Automation, Open Source, and write blogs for the community.
 author: Ravgeet Dhillon
 
 baseurl: /
-url: https://ravgeetdhillon.github.io
+url: https://ravgeet.dev
 site_repo: https://github.com/ravgeetdhillon/ravgeetdhillon.github.io
 
 markdown: kramdown
@@ -32,6 +32,8 @@ collections:
     output: true
   notes:
     output: false
+  projects:
+    output: true
 
 defaults:
   - scope:
@@ -39,6 +41,13 @@ defaults:
     values:
       layout: blog-post
       permalink: blog/:name/
+      navbar_color: bg-theme-white
+  - scope:
+      type: projects
+    values:
+      layout: project-post
+      permalink: projects/:name/
+      navbar_color: bg-theme-white
 
 feed:
   collections:

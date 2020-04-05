@@ -1,5 +1,4 @@
 ---
-headline: In case you have any project for me, feel free to get in contact with me. You can contact me through any method of your choice.
 permalink: /contact/
 ---
 
@@ -19,42 +18,35 @@ permalink: /contact/
 
     <div class="top-wrapper">
 
-    {% include header.html %}
-    
-    <section class="contact-banner d-flex flex-column justify-content-center animated fadeIn">
-        <div class="container w-100 w-lg-60">
-            <h1 class="display-4 font-weight-bold text-shadow">Contact</h1>
-            <p class="text-light w-md-75 w-lg-60 lead font-weight-normal text-shadow">{{ page.headline }}</p>
-        </div>
-    </section>
-    
-    <section class="contact py-4 mt-4">
-        <div class="container w-100 w-lg-60">
-            <div class="row">
-                {% for type in site.data.navigation.link_types %}
-                    {% assign social_links = site.data.navigation.social_links | where: "type", type.name %}
-                    <div class="col-12 mb-4">
-                        <h3 class="text-muted">{{ type.name | capitalize }}</h3>
-                        <div class="d-flex flex-wrap">
-                            {% for link in social_links %}
-                                <a href="{{ link.href }}" class="btn btn-neutral mb-2 mr-2" style="background: #{{ link.color }};"><i class="{{ link.icon }} fa-fw mr-1"></i>{{ link.name }}</a>
-                            {% endfor %}
+        {% include header.html %}
+        
+        {% include banner.html title="Contact" banner="contact" headline="In case you have any project for me, feel free to get in contact with me. You can contact me through any method of your choice." %}
+        
+        <section class="contact py-4 mt-4">
+            <div class="container w-100 w-lg-75 w-xl-60">
+                <div class="row">
+                    {% for type in site.data.navigation.link_types %}
+                        {% assign social_links = site.data.navigation.social_links | where: "type", type.name %}
+                        <div class="col-12 mb-4" data-aos="fade">
+                            <h3 class="text-muted">{{ type.name | capitalize }}</h3>
+                            <div class="d-flex flex-wrap">
+                                {% for link in social_links %}
+                                    <a href="{{ link.href }}" class="btn btn-neutral mb-2 mr-2" style="background: #{{ link.color }};"><i class="{{ link.icon }} fa-fw mr-1"></i>{{ link.name }}</a>
+                                {% endfor %}
+                            </div>
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
     </div>
 
     <div class="bottom-wrapper">
-
-    {% include footer.html %}
-    
+        {% include footer.html %}
     </div>
 
 </body>
 
-<script src="/assets/js/scroll.js"></script>
+{% include scripts.html %}
 
 </html>

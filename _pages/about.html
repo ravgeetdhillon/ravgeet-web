@@ -1,40 +1,76 @@
 ---
 permalink: /about/
+
 education:
-    description: |-
-        As a child, I was always fascinated by computers. So to turn this fascination into a living, I am currently pursuing graduation in Computer Science and Engineering at Guru Nanak Dev University in my hometown, Amritsar in Punjab, India. During my degree, I wanted to learn something that can help me show my creative skills and I can start earning as well. So I started with Web Development as I was overwhelmed with the things that were running on the web and impacting people's life.
+  heading: Education
+  description: |-
+    As a child, I was always fascinated by computers. So to turn this fascination into a living, I am currently pursuing graduation in Computer Science and Engineering at Guru Nanak Dev University in my hometown, Amritsar in Punjab, India. During my degree, I wanted to learn something that can help me show my creative skills and I can start earning as well. So I started with Web Development as I was overwhelmed with the things that were running on the web and impacting people's life.
+
 gnome:
-    description: |-
-        I am a regular contributor to [GNOME](https://gnome.org). It is one of the largest FLOSS community in the world. I have a personal liking for this community as people here are very welcoming. By contributing to GNOME Web projects, I have learned a lot of skills and open-source practices. In summer 2019, I participated in **Google Summer of Code** for GNOME. I redesigned and developed the GTK's official website. It turned out pretty well and the website would soon be available at [https://gtk.org](https://gtk.org), once the GTK 4 is ready to be released.
-lifelines:
-    description: |-
-        These are the people who are dearest to me. No matter what, we stay together. In some way or the other, they form an integral part of my life.
+  heading: GNOME
+  description: |-
+    I am a regular contributor to [GNOME](https://gnome.org). It is one of the largest FLOSS community in the world. I have a personal liking for this community as people here are very welcoming. By contributing to GNOME Web projects, I have learned a lot of skills and open-source practices. In summer 2019, I participated in **Google Summer of Code** for GNOME. I redesigned and developed the GTK's official website. It turned out pretty well and the website would soon be available at [https://gtk.org](https://gtk.org), once the GTK 4 is ready to be released.
 
-        * [Sharvan Sharma](https://www.instagram.com/its.crown_king/) - My close friend, brilliant programmer and melodious poet.
-        * [Rishi Raj](https://www.instagram.com/__rishi_raj__/) - My close friend, who is always there no matter what.
-        * [Robin Kataria](https://github.com/robinkataria) - A classic man. A creative YouTuber. Awesome human being.
-        * [Emmanuele Bassi](https://twitter.com/ebassi/) - My GNOME Guru, who taught me about Open Source.
 quotes:
-    description: |-
-        These are some of my all-time favorite quotes that inspire me to be a great human being and an asset to society.
-        
-        *Amateurs call it genius. Masters call it practice.* - Thierry Henry
+  heading: Quotes
+  description: |-
+    These are some of my all-time favorite quotes that inspire me to be a great human being and an asset to society.
+    
+    ***Amateurs call it genius. Masters call it practice.*** - Thierry Henry
 
-        *Only thing we have to fear is fear itself.* - Franklin D. Roosevelt
+    ***Only thing we have to fear is fear itself.*** - Franklin D. Roosevelt
 
-        *You miss 100 percent of the shots you never take.* - Wayne Gretzky
-        
-        *If I ain't the greatest, then I'm headed for it.* - Drake
-        
-        *The passion in the flame is ignited, you can't put it out once we light it.* - Eminem
+    ***You miss 100 percent of the shots you never take.*** - Wayne Gretzky
+    
+    ***If I ain't the greatest, then I'm headed for it.*** - Drake
 
-        *Do not pray for easy lives, pray to be stronger men.* - John F. Kennedy
-books:
-    description: |-
-        I love reading books and articles. They are a great way to break out from your routine. I read about people, technology, design and universe.
+    ***Do not pray for easy lives, pray to be stronger men.*** - John F. Kennedy
+
 music:
-    description: |-
-        Whenever I get some free time, I divert my creativeness towards music. I own a Youtube channel where I post HipHop music and sometimes the remixes of my favorite songs.
+  heading: Music
+  description: |-
+    Whenever I get some free time, I divert my creativeness towards music. I own a Youtube channel where I post HipHop music and sometimes the remixes of my favorite songs.
+  music_list:
+  - artist: Drake
+    title: Broskies
+    link: https://www.youtube.com/watch?v=GFgwd15B_Nc
+    cover: /assets/img/music/drake-broskies-ravd.jpg
+  - artist: Bebe Rexha
+    title: Sad
+    link: https://www.youtube.com/watch?v=8FlzS8ctvgs
+    cover: /assets/img/music/sad-ravd-remix.jpg
+  - artist: Lauv
+    title: Paris in the Rain
+    link: https://www.youtube.com/watch?v=WQ-81Zj1eos
+    cover: /assets/img/music/paris-in-the-rain-ravd-remix.jpg
+  - artist: Khalid, Martin Garrix
+    title: Ocean
+    link: https://www.youtube.com/watch?v=InHLoyOUWtE
+    cover: /assets/img/music/ocean-ravd-remix.jpg
+  - artist: Justin Beiber
+    title: Where are you now?
+    link: https://www.youtube.com/watch?v=udkaUZbvgGY
+    cover: /assets/img/music/where-are-you-now-ravd-remix.jpg
+  - artist: Zedd, Maren Morris
+    title: The Middle
+    link: https://www.youtube.com/watch?v=F_npFxfOm_E
+    cover: /assets/img/music/middle-ravd-remix.jpg
+
+books:
+  heading: Books
+  description: |-
+    I love reading books and articles. They are a great way to break out from your routine. I read about people, technology, design and universe.
+  books_list:
+  - cover: /assets/img/books/refactoring-ui.png
+    title: Refactoring UI
+    link: https://refactoringui.com/book/
+  - cover: /assets/img/books/the-test-of-my-life.jpg
+    title: The Test of my Life
+    link: https://www.amazon.in/Yuvraj-singh-Test-My-Life/dp/818400298X
+  - cover: /assets/img/books/strictly-personal.jpg
+    title: Strictly Personal
+    link: https://www.amazon.in/Strictly-Personal-Gursharan-Daman-Singh/dp/9351363244
+  
 ---
 
 {% include meta.html %}
@@ -45,94 +81,73 @@ music:
 
     {% include header.html %}
     
-    <section class="about-banner d-flex flex-column justify-content-center animated fadeIn">
-        <div class="container w-100 w-lg-60">
-            <h1 class="display-4 font-weight-bold text-shadow">About Me</h1>
-        </div>
-    </section>
-    
-    <section class="about-me py-4">
-        <div class="container w-100 w-lg-60">
-            <div class="row lead font-weight-normal">
-                <div class="col-12 d-flex flex-column justify-content-end mt-4">
-                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Education</h2>
-                    <span class="text-light">{{ page.education.description | markdownify }}</span>
-                </div>
-                <div class="col-12 d-flex flex-column justify-content-end mt-4">
-                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">GNOME</h2>
-                    <span class="text-light">{{ page.gnome.description | markdownify }}</span>
-                </div>
-                <div class="col-12 d-flex flex-column justify-content-end mt-4">
-                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Lifelines</h2>
-                    <span class="text-light">{{ page.lifelines.description | markdownify }}</span>
-                </div>
-                <div class="col-12 d-flex flex-column justify-content-end mt-4">
-                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Quotes</h2>
-                    <span class="text-light">{{ page.quotes.description | markdownify }}</span>
-                </div>
-                <div class="col-12 d-flex flex-column justify-content-end mt-4">
-                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Books</h2>
-                    <span class="text-light">{{ page.books.description | markdownify }}</span>
-                    <div class="row">
-                        {% assign books = site.data.stuff.books %}
-                        {% for book in books %}
-                            <div class="col-4 col-sm-3 col-xl-2 p-3 revealOnScroll faster">
-                                <div class="d-flex align-items-center">
-                                    <a href="{{ book.link }}"><img src="{{ book.cover }}" alt="{{ book.title }}" class="img-fluid w-100" style="max-width:330px;" /></a>
-                                </div>
-                            </div>
-                        {% endfor %}
+        {% include banner.html title="About Me" banner="about" %}
+        
+        <section class="py-5">
+            <div class="container w-100 w-lg-75 w-xl-60">
+                <div class="row">
+                    <div class="col-12 d-flex flex-column justify-content-end mb-4">
+                        <h2 class="font-weight-bold" data-aos="fade">{{ page.education.heading }}</h2>
+                        <span class="text-dark-light" data-aos="fade">{{ page.education.description | markdownify }}</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="music py-4">
-        <div class="container w-100 w-lg-60">
-            <div class="row">
-                <div class="col-md-8 d-flex flex-column justify-content-end">
-                    <h2 class="font-weight-bold revealOnScroll faster" data-animation="fadeIn">Music</h2>
-                    <span class="text-light">{{ page.music.description | markdownify }}</span>
-                </div>
-            </div>
-            <div class="row">
-                {% assign youtube_music = site.data.stuff.youtube_music %}
-                {% for music in youtube_music %}
-                    <div class="col-12 col-sm-6 pb-3 pb-sm-3 px-3 p-sm-3 revealOnScroll faster" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
-                        <div class="d-flex flex-sm-column flex-md-row h-100 bg-darker rounded">
-                            <div class="d-flex align-items-center">
-                                <img src="{{ music.cover }}" alt="{{ music.title }}" class="img-fluid w-100" style="max-width:330px;" />
-                            </div>
-                            <div class="w-100 px-3 py-3 h-100 d-flex flex-column justify-content-between align-items-start">
-                                <div>
-                                    <span class="text-muted small">{{ music.artist }}</span>
-                                    <h5 class="mb-3">{{ music.title }}</h5>
+                    <div class="col-12 d-flex flex-column justify-content-end mb-4">
+                        <h2 class="font-weight-bold" data-aos="fade">{{ page.gnome.heading }}</h2>
+                        <span class="text-dark-light" data-aos="fade">{{ page.gnome.description | markdownify }}</span>
+                    </div>
+                    
+                    <div class="col-12 d-flex flex-column justify-content-end mb-4">
+                        <h2 class="font-weight-bold" data-aos="fade">{{ page.quotes.heading }}</h2>
+                        <span class="text-dark-light" data-aos="fade">{{ page.quotes.description | markdownify }}</span>
+                    </div>
+
+                    <div class="col-12 d-flex flex-column justify-content-end mb-4">
+                        <h2 class="font-weight-bold" data-aos="fade">{{ page.music.heading }}</h2>
+                        <span class="text-dark-light" data-aos="fade">{{ page.music.description | markdownify }}</span>
+                        <div class="row">
+                            {% assign youtube_music = page.music.music_list %}
+                            {% for music in youtube_music %}
+                                <div class="col-sm-6 mb-3" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="d-flex bg-theme-white hover-darker">
+                                        <div class="w-xs-20">
+                                            <img data-src="{{ music.cover }}" alt="{{ music.title }}" class="img-fluid">
+                                        </div>
+                                        <div class="d-flex w-100 align-items-center justify-content-between px-3">
+                                            <span>{{ music.title }}</span>
+                                            <a href="{{ music.link }}" class="stretched-link"><i class="fas fa-play-circle fa-fw"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="{{ music.link }}"><i class="fas fa-play-circle fa-fw"></i></a>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col pb-3">
-                    <a href="https://www.youtube.com/channel/UCZCpcL0_eKe5uANKKfKkUJw?sub_confirmation=1" target="_blank" class="btn bg-darker border border-less-darker text-light"><i class="fab fa-youtube mr-1"></i> Subscribe</a>
+
+                    <div class="col-12 d-flex flex-column justify-content-end mb-4">
+                        <h2 class="font-weight-bold" data-aos="fade">{{ page.books.heading }}</h2>
+                        <span class="text-dark-light" data-aos="fade">{{ page.books.description | markdownify }}</span>
+                        <div class="row">
+                            {% assign books = page.books.books_list %}
+                            {% for book in books %}
+                                <div class="col-4 col-sm-3 col-xl-2 p-3" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="d-flex align-items-center">
+                                        <a href="{{ book.link }}"><img data-src="{{ book.cover }}" alt="{{ book.title }}" class="img-fluid w-100" style="max-width:330px;" /></a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
+        </section>
+
     </div>
 
     <div class="bottom-wrapper">
-    
-    {% include footer.html %}
-
+        {% include footer.html %}
     </div>
 
 </body>
 
-<script src="/assets/js/scroll.js"></script>
+{% include scripts.html %}
 
 </html>

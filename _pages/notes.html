@@ -1,5 +1,4 @@
 ---
-headline: My Lil Stack Overflow &#128521;
 permalink: /notes/
 ---
 
@@ -9,45 +8,53 @@ permalink: /notes/
 
     <div class="top-wrapper">
     
-    {% include header.html %}
+        {% include header.html %}
 
-    <section class="notes-banner d-flex flex-column justify-content-center animated fadeIn">
-        <div class="container w-100 w-lg-60">
-            <h1 class="display-4 font-weight-bold text-shadow">Notes</h1>
-            <p class="text-light w-md-75 w-lg-60 lead font-weight-normal text-shadow">{{ page.headline }}</p>
-        </div>
-    </section>
+        {% include banner.html title="Notes" banner="notes" headline="My Lil Stack Overflow &#128521;" %}
 
-    <section class="notes py-4">
-        <div class="container w-100 w-lg-60">
-            <div class="row flex-column">
-                <div class="col-md-10 py-4">
-                    <input class="form-control bg-darker text-light" type="text" placeholder="Try pip install or anything you want" name="search" />
+        <section class="notes py-5">
+            <div class="container w-lg-75 w-xl-60">
+                <div class="row flex-column mb-5">
+                    <div class="col-12">
+                        <input class="form-control bg-darker text-light" type="text" placeholder="Try pip install or anything you want" name="search" data-aos="fade">
+                    </div>
+                </div>
+                <div class="row flex-column" id="notes-holder">
+                    {% assign notes = site.notes %}
+                    {% for note in notes %}
+                        <div class="note col-12 mb-5" data-aos="fade">
+                            <div class="pl-3 pt-3 border-left border-less-darker markdown-body">
+                                {{ note.content | markdownify }}
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
-            <div class="row flex-column" id="notes-holder">
-                {% assign notes = site.notes %}
-                {% for note in notes %}
-                    <div class="col-md-10 py-4 note revealOnScroll faster" data-animation="fadeIn" data-delay="100">
-                        <div class="pl-3 pt-3 border-left border-less-darker markdown-body">
-                            {{ note.content | markdownify }}
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
+        </section>
     </div>
     
     <div class="bottom-wrapper">
-
-    {% include footer.html %}
-    
+        {% include footer.html %}    
     </div>
 
 </body>
 
-<script src="/assets/js/scroll.js"></script>
-<script src="/assets/js/notes.js"></script>
+{% include scripts.html %}
+<script>
+    function searchNotes() {
+        notes_holder.forEach(note => {
+            note_text = note.innerText.toLowerCase();
+            if (!( note_text.includes( search.value.trim().toLowerCase() ) )) {
+                note.classList.add('d-none');
+            }
+            else if (note.classList.contains('d-none')) {
+                note.classList.remove('d-none');
+            }
+        });
+    }
+    var notes_holder = document.querySelectorAll('#notes-holder .note');
+    var search = document.getElementsByName('search')[0];
+    search.addEventListener('keyup', searchNotes);
+</script>
 
 </html>

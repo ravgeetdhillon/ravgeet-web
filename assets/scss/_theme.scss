@@ -254,6 +254,9 @@ $spacers: (
         $spacer * 4
     ),
     6: (
+        $spacer * 6
+    ),
+    7: (
         $spacer * 8
     )
 );
@@ -263,7 +266,11 @@ $pagination-focus-box-shadow: none !important;
 $input-btn-focus-box-shadow: none !important;
 $btn-focus-box-shadow: none !important;
 $input-focus-box-shadow: none !important;
-$link-hover-decoration: none !important;
+$enable-responsive-font-sizes: true !default;
+
+// overriding other defaults
+$font-size-base: 1.125rem !default;
+$border-color: map-get($theme-colors, "theme-white-light") !default;
 
 $labels: (
     "python": #24c9a0,
@@ -333,15 +340,6 @@ a {
     border: 1px solid darken($bg, 30%) !important;
 }
 
-.hover-darker {
-    transition: 0.15s ease-in-out;
-
-    &:hover {
-        $a: map-get($theme-colors, "darker");
-        background: darken($a, 5%) !important;
-    }
-}
-
 @each $label, $value in $labels {
     .badge-#{$label} {
         @include badge-variant($value);
@@ -352,7 +350,7 @@ $pages: "blog", "notes", "projects", "about", "contact";
 
 @each $page in $pages {
     .#{$page}-banner {
-        background: url("/assets/img/backs/#{$page}-#{$theme}.svg");
+        background: url("/assets/img/backs/#{$page}.svg");
         background-position: center;
         background-size: auto;
         min-height: 320px;
@@ -363,6 +361,143 @@ $pages: "blog", "notes", "projects", "about", "contact";
     background: url("/assets/img/backs/main-back-#{$theme}.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @import "../bootstrap/scss/bootstrap";
+
+$widths: 20, 25, 40, 50, 60, 75, 80, 100, auto;
+$heights: 20, 25, 40, 50, 60, 75, 80, 100, auto;
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+        @each $i in $widths {
+            .w-#{$breakpoint}-#{$i} {
+                @if type-of($i) == "number" {
+                    width: unquote($i + "%" + " !important");
+                } @else {
+                    width: #{$i} !important;
+                }
+            }
+        }
+        @each $i in $heights {
+            .h-#{$breakpoint}-#{$i} {
+                @if type-of($i) == "number" {
+                    height: unquote($i + "%" + " !important");
+                } @else {
+                    height: #{$i} !important;
+                }
+            }
+        }
+    }
+}
+
+@for $i from 0 through 10 {
+    $gap: 100;
+    $i: $i * $gap;
+    .delay-#{$i} {
+        animation-delay: #{$i / 1000}s;
+    }
+}
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+.tab-pane::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.tab-pane::-webkit-scrollbar:hover {
+    width: 0.6rem;
+}
+
+.tab-pane::-webkit-scrollbar-thumb {
+    background: var(--info);
+    border-radius: 1.6rem;
+}
+
+.tab-pane::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 1rem;
+}
+
+.border-muted {
+    border-color: #6c757d !important;
+}
+
+.credits p {
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
+.text-shadow {
+    text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15) !important;
+}
+
+#btn-go-to-top {
+    bottom: 32px;
+    right: 32px;
+    z-index: 1000;
+}
+
+.p-in-span p {
+    margin-bottom: 0;
+}
+
+.v-align-text-bottom {
+    vertical-align: text-bottom;
+}
+
+b,
+strong {
+    font-weight: bold !important;
+}
+
+.lead > b,
+.lead > strong {
+    color: map-get($theme-colors, "secondary");
+}
+
+.animated.none {
+    animation: none;
+}
+
+.sidebar {
+    transition: 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 992px) {
+    .animated {
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
+}
+
+.hover-darker {
+    transition: 0.15s ease-in-out;
+    &:hover {
+        background: darken(map-get($theme-colors, "theme-white-light"), 5%) !important;
+    }
+}
+
+.img-blur {
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+}
