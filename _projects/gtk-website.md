@@ -4,7 +4,7 @@ tags: [web-dev]
 tools: [jekyll, gitlab-ci, jamstack]
 mini_description: I designed and developed the official website for GTK as a part of as Google Summer of Code developer for GNOME.
 gitlab: https://gitlab.gnome.org/ravgeetdhillon/gtk-web/
-view_link: https://ravgeetdhillon.pages.gitlab.gnome.org/gtk-web/
+view_link: https://gtk.org
 img: gtk-website.png
 ---
 

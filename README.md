@@ -3,7 +3,7 @@
 [![Workflow Status](https://github.com/ravgeetdhillon/ravgeetdhillon.github.io/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/ravgeetdhillon/ravgeetdhillon.github.io/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ravgeetdhillon/ravgeetdhillon.github.io/blob/master/LICENSE)
 
-[https://ravgeetdhillon.github.io](https://ravgeetdhillon.github.io/)
+[https://ravgeet.dev](https://ravgeet.dev)
 
 ## About the site
 
@@ -12,7 +12,7 @@
 
 ## Subscribe to RSS
 
-[https://ravgeetdhillon.github.io/blog/feed](https://ravgeetdhillon.github.io/blog/feed)
+[https://ravgeet.dev/blog/feed](https://ravgeet.dev/blog/feed)
 
 ## Want to add a guest blog?
 

@@ -48,7 +48,7 @@ blogs:
                         <h2 class="mb-0">{{ page.projects.heading }}</h2>
                         <a href="{{ '/projects/' | prepend: site.url }}" class="btn btn-sm border text-dark-light"><i class="fas fa-flask mr-1"></i> More Projects</a>
                     </div>
-                    {% assign projects = site.data.stuff.projects %}
+                    {% assign projects = site.projects %}
                     {% for project in projects limit:6 %}
                         <div class="col-md-6 mb-1 mb-md-3" data-aos="fade-up" data-aos-delay="50">
                             <div class="bg-theme-white hover-darker p-4 rounded h-100">
