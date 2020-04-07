@@ -42,7 +42,7 @@ jobs:
       run: |
         bundle exec jekyll -d public
 
-  - name: Upload artifacts
+    - name: Upload artifacts
       uses: actions/upload-artifact@v1
       with:
         name: public
