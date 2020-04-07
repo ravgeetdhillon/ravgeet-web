@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: build
 
 on:
   push:
@@ -6,50 +6,76 @@ on:
       - master
 
 jobs:
-  buildWebsite:
-    
+  build:
     runs-on: ubuntu-latest
     
     steps:
-    
     - name: Checkout repository
       uses: actions/checkout@v1
-        
+    
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
         registry-url: 'https://registry.npmjs.org'
-      
-    - name: Install NPM packages
-      run:
-        npm install
 
-    - name: Structurize website
-      run:
-        bash structurize.sh
-      
-    - name: Compile SASS
-      run:
-        npm run compile-css
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6
 
-    - name: Commit and Push
+    - name: Install GEM Dependencies
       run: |
+        gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
+        bundle install
+
+    - name: Install NPM packages
+      run: |
+        npm install
+    
+    - name: Optimize website
+      run: |
+        bash structurize.sh
+        npm run compile-css
+    
+    - name: Build website
+      run: |
+        bundle exec jekyll -d public
+
+  - name: Upload artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: public
+        path: public
+
+  pushWebsite:    
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      REMOTE_BRANCH: website
+    
+    steps:
+    - name: Clone the repoitory
+      uses: actions/checkout@v1
+    
+    - name: Configure Git
+      run: |
+        git checkout -f ${REMOTE_BRANCH}
         git config --global user.email ${GITHUB_ACTOR}@gmail.com
         git config --global user.name ${GITHUB_ACTOR}
-        change=`git diff --exit-code assets`
-        change=`echo $?`
-        if [ $change -eq 1 ]
-        then
-            git add assets
-            git commit -m "gh-actions updated website assets"
-            git push --force https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git HEAD:${REMOTE_BRANCH}
-        fi
-      env:
-        REMOTE_BRANCH: master
-
-    - name: Trigger GitHub Pages build
-      run:
-        bash gh-pages-build.sh
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+    
+    - name: Remove data
+      run: |
+        rm -rf public
+    
+    - name: Download artifacts
+      uses: actions/download-artifact@v1
+      with:
+        name: public
+        path: public
+    
+    - name: Commit and Push
+      run: |
+        git add -f public
+        git commit -m "gh-actions updated website"
+        git push --force https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git HEAD:${REMOTE_BRANCH}
