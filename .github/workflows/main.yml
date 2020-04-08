@@ -40,7 +40,7 @@ jobs:
     
     - name: Build website
       run: |
-        bundle exec jekyll -d public
+        bundle exec jekyll build -d public
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v1
@@ -48,7 +48,7 @@ jobs:
         name: public
         path: public
 
-  pushWebsite:    
+  pushWebsite:
     needs: build
     runs-on: ubuntu-latest
     env:
