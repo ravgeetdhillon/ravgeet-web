@@ -59,7 +59,7 @@ blogs:
                                 <span class="p-in-span text-dark-light">
                                     {{ project.mini_description | markdownify }}
                                 </span>
-                                <a href="{{ project.link | prepend: '#' | prepend: '/projects/' | prepend: site.url }}" class="stretched-link"></a>
+                                <a href="{{ project.url | prepend: site.url }}" class="stretched-link"></a>
                             </div>
                         </div>
                     {% endfor %}
