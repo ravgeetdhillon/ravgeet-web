@@ -17,7 +17,7 @@ permalink: /blog/
                 <div class="row">
                     {% assign blog_posts = site.blog | reverse %}
                     {% for post in blog_posts %}
-                        <div class="col-12 mb-5">
+                        <div class="col-12 mb-5" data-aos="fade-up" data-aos-delay="50">
                             <div class="row">
                                 <div class="col-md-6 col-lg-5 mb-3 mb-md-0 overflow-hidden">
                                     <img data-src="{{ '/assets/img/blog/' | append: post.img | prepend: site.url }}" class="img-fluid">

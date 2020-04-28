@@ -4,8 +4,8 @@ description: Ravgeet Dhillon works on Web Development, Web Design, Automation, O
 author: Ravgeet Dhillon
 
 baseurl: /
-url: https://ravgeet.dev
-site_repo: https://github.com/ravgeetdhillon/ravgeetdhillon.github.io
+url: https://www.ravgeet.dev
+site_repo: https://github.com/ravgeetdhillon/ravgeet.dev
 
 markdown: kramdown
 kramdown:
