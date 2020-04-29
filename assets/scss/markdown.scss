@@ -306,11 +306,9 @@
 
 .markdown-body code,
 .markdown-body tt {
-    padding: 0.2em 0.4em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
     margin: 0;
-    font-size: 85%;
-    background: var(--primary-light);
-    color: var(--dark-light);
     border-radius: 2px;
     border: 1px solid var(--theme-white-light);
 }

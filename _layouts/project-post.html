@@ -30,7 +30,9 @@
                         </div>
                         <div class="mb-4 px-3 px-sm-0">
                             <p class="mb-2 lead font-weight-normal">Description</p>
-                            <span class="text-dark-light p-in-span">{{ page.content | markdowinfy }}</span>
+                            <span class="text-dark-light markdown-body">
+                                {{ page.content | markdowinfy }}
+                            </span>
                         </div>
                         <div class="mb-4 px-3 px-sm-0">
                             <p class="mb-2 lead font-weight-normal">Resources</p>
