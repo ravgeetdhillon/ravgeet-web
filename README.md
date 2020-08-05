@@ -11,4 +11,4 @@
 
 ## Subscribe to RSS
 
-[https://ravgeet.dev/blog/feed](https://ravgeet.dev/blog/feed)
+[https://ravgeet.dev/blog/feed](https://ravgeet.dev/blog/feed.xml)
