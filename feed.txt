@@ -22,7 +22,7 @@ permalink: /blog/feed.json
             "image": "{{ blog.img | absolute_url }}",
             "banner_image": "{{ blog.img | absolute_url }}",
             "authors": {{ site.author | jsonify }},
-            "categories": {{ blog.categories | jsonify }},
+            "categories": {{ blog.categories | jsonify }}
         }{% unless forloop.last %},{% endunless %}{% endfor %}
     ]
 }
