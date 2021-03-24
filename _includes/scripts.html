@@ -1,7 +1,7 @@
-<script src="{{ '/assets/jquery/dist/jquery.min.js' | prepend: site.url }}"></script>
-<script src="{{ '/assets/popper.js/dist/umd/popper.min.js' | prepend: site.url }}"></script>
-<script src="{{ '/assets/bootstrap/dist/js/bootstrap.min.js' | prepend: site.url }}"></script>
-<script src="{{ '/assets/aos/dist/aos.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/jquery/dist/jquery.min.js' }}"></script>
+<script src="{{ '/assets/popper.js/dist/umd/popper.min.js' }}"></script>
+<script src="{{ '/assets/bootstrap/dist/js/bootstrap.min.js' }}"></script>
+<script src="{{ '/assets/aos/dist/aos.js' }}"></script>
 
 <script>
     // bootstrap tooltip
@@ -31,50 +31,6 @@
         e.preventDefault();
         $("html, body").animate({scrollTop: 0});
     });
-
-    // light-dark mode switcher
-    function checkMode() {
-        if (window.localStorage.getItem('mode') == null) {
-            window.localStorage.setItem('mode', 'light');
-        }
-        else if (window.localStorage.getItem('mode') == 'light') {
-            switchTheme(mode='dark');
-        }
-        else if (window.localStorage.getItem('mode') == 'dark') {
-            switchTheme(mode='light');
-        }
-    }
-    function switchTheme(mode='') {
-        if (mode == '') {
-            var mode = stylesheet.getAttribute('data-mode');
-        }
-        if (mode == 'light') {
-            stylesheet.setAttribute('href', "{{ '/assets/css/dark-theme.css' | prepend: site.url }}");
-            stylesheet.setAttribute('data-mode', 'dark');
-            try {
-                var e = document.getElementById('mode-switch');
-                e.children[0].classList.remove("fa-moon");
-                e.children[0].classList.add("fa-sun");
-                e.setAttribute('title', 'Switch to Light Mode');
-            }
-            catch (error) {}
-            window.localStorage.setItem('mode', 'dark');
-        }
-        else if (mode == 'dark') {
-            stylesheet.setAttribute('href', "{{ '/assets/css/light-theme.css' | prepend: site.url }}");
-            stylesheet.setAttribute('data-mode', 'light');
-            try {
-                var e = document.getElementById('mode-switch');
-                e.children[0].classList.remove("fa-sun");
-                e.children[0].classList.add("fa-moon");
-                e.setAttribute('title', 'Switch to Dark Mode');
-            }
-            catch (error) {}
-            window.localStorage.setItem('mode', 'light');
-        }
-    }
-    var stylesheet = document.getElementById('theme-stylesheet');
-    checkMode();
 
     // handle animations
     AOS.init({

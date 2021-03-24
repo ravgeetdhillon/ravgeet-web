@@ -20,7 +20,7 @@
                             <span class="text-dark-light">{{ page.mini_description }}</span>
                         </div>
                         <div class="mb-4">
-                            <img src="{{ '/assets/img/project/' | append: page.img | prepend: site.url }}" class="img-fluid shadow" alt="{{ page.title }} project">
+                            <img src="{{ '/assets/img/project/' | append: page.img }}" class="img-fluid shadow" alt="{{ page.title }} project">
                         </div>
                         <div class="mb-4 px-3 px-sm-0">
                             <p class="mb-2 lead font-weight-normal">Tools and Technologies</p>
@@ -58,14 +58,14 @@
                         <div class="row">
                             {% if page.previous %}
                                 <div class="col-md-6 mb-4 mb-md-0">
-                                    <img data-src="{{ '/assets/img/project/' | append: page.previous.img | prepend: site.url }}" class="img-fluid mb-3">
+                                    <img data-src="{{ '/assets/img/project/' | append: page.previous.img }}" class="img-fluid mb-3">
                                     <h3><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h3>
                                     <span class="text-dark-light">{{ page.previous.mini_description }}</span>
                                 </div>
                             {% endif %}
                             {% if page.next %}
                                 <div class="col-md-6">
-                                    <img data-src="{{ '/assets/img/project/' | append: page.next.img | prepend: site.url }}" class="img-fluid mb-3">
+                                    <img data-src="{{ '/assets/img/project/' | append: page.next.img }}" class="img-fluid mb-3">
                                     <h3><a href="{{ page.next.url }}" class="stretched-link">{{ page.next.title }}</a></h3>
                                     <span class="text-dark-light">{{ page.next.mini_description }}</span>
                                 </div>
@@ -82,7 +82,7 @@
     </div>
 
 </body>
-<script async defer src="{{ '/assets/js/buttons.js' | prepend: site.url }}"></script>
+<script async defer src="{{ '/assets/js/buttons.js' }}"></script>
 {% include scripts.html %}
 
 </html>

@@ -23,13 +23,13 @@ To create a static website, I could have used any Static Site Generator such as 
 
 For allocating points and building up the leaderboard, the script uses the following scheme, If you feel that a rule is biased against the others, you can open an [issue](https://github.com/ravgeetdhillon/gnome-hackers/issues) and we will have a conservation regarding the same.
 
-| Event  | Points |
-| ------------- | ------------- |
-| Each line of commit | 0.01 |
-| Opened Merge Request | 5 |
-| Closed Merge Request | 10 |
-| Opened Issue | 1 |
-| Closed Issue | 2 |
+| Event                | Points |
+| -------------------- | ------ |
+| Each line of commit  | 0.01   |
+| Opened Merge Request | 5      |
+| Closed Merge Request | 10     |
+| Opened Issue         | 1      |
+| Closed Issue         | 2      |
 
 ## Awards
 
@@ -63,4 +63,4 @@ The website builds every day at 00:00 UTC. After the workflow is executed succes
 
 If you liked by work, you can appreciate the same by [buying me a cup of coffee](https://www.buymeacoffee.com/ravgeetdhillon). Also, I was given GNOME Membership, while I was working on this project. It made me feel so happy and I want to thank [GNOME](https://gnome.org/) for all the support. For this website, I am looking forward to new ideas that I can implement on the website to make it even more interesting. If you liked my project, I would love you to [star it](https://github.com/ravgeetdhillon/gnome-hackers) as well. These little things encourage me to work further.
 
-Lemme know if you have any doubt, appreciation or anything else that you would like to communicate to me. You can tweet me [@ravgeetdhillon](https://twitter.com/intent/tweet?screen_name=ravgeetdhillon&original_referer={{ page.url | prepend: site.url }}&ref_src=twsrc%5Etfw). I reply to all the questions as quickly as possible. 😄 And if you liked this post, please [share](https://twitter.com/intent/tweet?text={{ 'Check out this amazing blog post by Ravgeet Dhillon sharing his thoughts on ' | append: page.title | urlencode }}&screen_name=ravgeetdhillon&original_referer={{ page.url | prepend: site.url }}&ref_src=twsrc%5Etfw) it with your twitter community as well.
+Lemme know if you have any doubt, appreciation or anything else that you would like to communicate to me. You can tweet me [@ravgeetdhillon](https://twitter.com/intent/tweet?screen_name=ravgeetdhillon&original_referer={{ page.url }}&ref_src=twsrc%5Etfw). I reply to all the questions as quickly as possible. 😄 And if you liked this post, please [share](https://twitter.com/intent/tweet?text={{ 'Check out this amazing blog post by Ravgeet Dhillon sharing his thoughts on ' | append: page.title | urlencode }}&screen_name=ravgeetdhillon&original_referer={{ page.url }}&ref_src=twsrc%5Etfw) it with your twitter community as well.

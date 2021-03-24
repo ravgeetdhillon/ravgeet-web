@@ -4,7 +4,7 @@ description: Ravgeet Dhillon works on Web Development, Web Design, Automation, O
 author: Ravgeet Dhillon
 
 baseurl: /
-url: https://www.ravgeet.dev
+url: https://ravgeetdev.netlify.app
 site_repo: https://github.com/ravgeetdhillon/ravgeet.dev
 
 markdown: kramdown
@@ -39,6 +39,7 @@ defaults:
   - scope:
       type: blog
     values:
+      type: blog
       layout: blog-post
       permalink: blog/:name/
       navbar_color: bg-theme-white

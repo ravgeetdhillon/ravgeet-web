@@ -30,7 +30,7 @@ blogs:
             <div class="container w-100 w-lg-75 w-xl-60 pt-5 pb-6" data-aos="fade">
                 <div class="row justify-content-center flex-md-row-reverse">
                     <div class="col-md-5 col-lg-6 col-xl-5 d-flex align-items-center">
-                        <img src="{{ '/assets/img/ravgeet-dhillon.jpg' | prepend: site.url }}" class="img-fluid mb-4 mb-md-0 rounded shadow-lg" data-aos="fade-up">
+                        <img src="{{ '/assets/img/ravgeet-dhillon.jpg' }}" class="img-fluid mb-4 mb-md-0 rounded shadow-lg" data-aos="fade-up">
                     </div>
                     <div class="col-md-7 col-lg-6 col-xl-7 d-flex flex-column justify-content-center">
                         <h1 class="display-3 font-weight-bold text-shadow" data-aos="fade-up" data-aos-delay="50">{{ page.landing.heading }}</h1>
@@ -46,7 +46,7 @@ blogs:
                 <div class="row">
                     <div class="col-12 d-flex justify-content-between align-items-center mb-3" data-aos="fade">
                         <h2 class="mb-0">{{ page.projects.heading }}</h2>
-                        <a href="{{ '/projects/' | prepend: site.url }}" class="btn btn-sm border text-dark-light"><i class="fas fa-flask mr-1"></i> More Projects</a>
+                        <a href="{{ '/projects/' }}" class="btn btn-sm border text-dark-light"><i class="fas fa-flask mr-1"></i> More Projects</a>
                     </div>
                     {% assign projects = site.projects %}
                     {% for project in projects limit:6 %}
@@ -59,7 +59,7 @@ blogs:
                                 <span class="p-in-span text-dark-light">
                                     {{ project.mini_description | markdownify }}
                                 </span>
-                                <a href="{{ project.url | prepend: site.url }}" class="stretched-link"></a>
+                                <a href="{{ project.url }}" class="stretched-link"></a>
                             </div>
                         </div>
                     {% endfor %}
@@ -101,7 +101,7 @@ blogs:
                 <div class="row">
                     <div class="col-12 d-flex justify-content-between align-items-center mb-3" data-aos="fade">
                         <h2 class="mb-0" data-animation="fadeIn">{{ page.blogs.heading }}</h2>
-                        <a href="{{ '/blog/' | prepend: site.url }}" class="btn btn-sm border text-dark-light"><i class="fas fa-flask mr-1"></i> Read Blog</a>
+                        <a href="{{ '/blog/' }}" class="btn btn-sm border text-dark-light"><i class="fas fa-flask mr-1"></i> Read Blog</a>
                     </div>
                     {% assign blog_posts = site.blog | reverse %}
                     {% for i in (1..2) %}
@@ -110,7 +110,7 @@ blogs:
                             {% assign end = start | plus: 1 %}
                             {% for j in (start..end) %}
                                 <div class="col-12 mb-4 px-0" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
-                                    <img data-src="{{ '/assets/img/blog/' | prepend: site.url | append: blog_posts[j].img }}" class="w-100 img-fluid mb-3">
+                                    <img data-src="{{ '/assets/img/blog/' | append: blog_posts[j].img }}" class="w-100 img-fluid mb-3">
                                     <a href="{{ blog_posts[j].url }}" class="stretched-link"><h4 class="pr-3 font-weight-bold">{{ blog_posts[j].title }}</h4></a>
                                     <span class="small text-dark-light">{{ blog_posts[j].description | split: '.' | first | append: '.' }}</span>
                                 </div>

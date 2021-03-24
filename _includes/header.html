@@ -1,7 +1,7 @@
 <section class="{{ page.navbar_color }}" data-aos="fade">
     <header class="container w-lg-75 w-xl-60 d-flex flex-row justify-content-between py-3">
         <div class="brand d-flex justify-content-center">
-            <a href="/" class="text-decoration-none"></span><img src="{{ '/assets/img/logos/ravgeet-dhillon-logo.png' | prepend: site.url }}" style="max-width: 40px;"></a>
+            <a href="/" class="text-decoration-none"></span><img src="{{ '/assets/img/logos/ravgeet-dhillon-logo.png' }}" style="max-width: 40px;"></a>
         </div>
         <div class="links d-flex justify-content-center align-items-center">
             <ul class="list-inline mb-0 d-none d-md-block">
@@ -18,9 +18,8 @@
                     </li>
                 {% endfor %}
             </ul>
-            <ul class="list-inline mb-0 ml-5">
-                <li class="list-inline-item"><a class="text-xs-center" style="cursor:pointer;" onclick="switchTheme(mode='')" id="mode-switch" title="Switch to Light Mode"><i class="fas fa-moon text-muted" style="font-size: 24px;"></i></a></li>
-                <li class="d-md-none list-inline-item ml-3"><a class="text-xs-center" style="cursor:pointer;" onclick="openNav()"><i class="fas fa-bars text-muted" style="font-size: 24px;"></i></a></li>
+            <ul class="list-inline mb-0 ml-5 d-md-none">
+                <li class="list-inline-item ml-3"><a class="text-xs-center" style="cursor:pointer;" onclick="openNav()"><i class="fas fa-bars text-muted" style="font-size: 24px;"></i></a></li>
             </ul>
         </div>
     </header>
