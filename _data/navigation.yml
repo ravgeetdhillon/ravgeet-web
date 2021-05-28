@@ -53,15 +53,8 @@ social_links:
     color: 0077b5
     type: work
     footer: true
-  - name: Dribbble
-    href: https://dribbble.com/ravgeetdhillon/
-    icon: fab fa-dribbble
-    color: ea4c89
-    type: design
-    footer: true
 
 link_types:
   - name: work
   - name: social
   - name: code
-  - name: design

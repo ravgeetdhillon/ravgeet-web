@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-css": "node-sass -w assets/scss/ -o assets/css/ --output-style compressed",
     "compile-css": "node-sass assets/scss/ -o assets/css/ --output-style compressed",
-    "minify-html":"run(){ html-minifier --collapse-whitespace --remove-comments --remove-tag-whitespace $1 -o $1; }; run"
+    "minify-html": "run(){ html-minifier --collapse-whitespace --remove-comments --remove-tag-whitespace $1 -o $1; }; run"
   },
   "repository": {
     "type": "git",
@@ -39,7 +39,7 @@
     "bootstrap": "^4.3.1",
     "html-minifier": "^4.0.0",
     "jquery": "^3.5.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "popper.js": "^1.15.0"
   }
 }

@@ -10,7 +10,7 @@ permalink: /blog/
         
         {% include header.html %}
         
-        {% include banner.html title="Blog" banner="blog" headline="I write about technologies I use, places I travel, tutorials and other things that are relevant to the community." %}
+        {% include banner.html title="Blog" banner="blog" headline="I write about technologies, leadership, good coding practices, places I travel, and other things that are relevant to the community." %}
         
         <section class="py-5">
             <div class="container w-lg-75 w-xl-60">
@@ -19,12 +19,10 @@ permalink: /blog/
                     {% for post in blog_posts %}
                         <div class="col-12 mb-5" data-aos="fade-up" data-aos-delay="50">
                             <div class="row">
-                                <div class="col-md-6 col-lg-5 mb-3 mb-md-0 overflow-hidden">
-                                    <img data-src="{{ '/assets/img/blog/' | append: post.img }}" class="img-fluid">
-                                </div>
-                                <div class="col-md-6 col-lg-7 d-flex flex-column justify-content-center">
+                                <div class="col-md-12 col-lg-12 d-flex flex-column justify-content-center">
                                     <p class="text-muted small">on <span class="font-weight-bold">{{ post.date | date: "%b %d, %Y" }}</span></p>
                                     <a href="{{ post.url }}" class="stretched-link"><h4 class="font-weight-bold">{{ post.title }}</h4></a>
+                                    <div class="small text-dark-light mb-3">{{ post.description | split: '.' | first | append: '.' }}</div>
                                     <div class="">
                                         {% for category in post.categories %}
                                             <span class="badge badge-sm badge-{{ category }}">{{ category }}</span>

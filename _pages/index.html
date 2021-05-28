@@ -4,8 +4,8 @@ title: ''
 
 landing:
   heading: I'm Ravgeet
-  description: I work on **Web Design**, **Development**, **Automation**, and **Open Source**.
-  current_status: Currently, **CTO** at [**RavSam**](https://www.ravsam.in/).
+  description: I work on **Digital Products**, **Automation**, **Teaching**, and **Open Source**.
+  current_status: Currently, **Founder &amp; Developer** at [**RavSam**](https://www.ravsam.in/).
 
 projects:
   heading: Projects
@@ -23,15 +23,16 @@ blogs:
 
     <div class="top-wrapper">
 
-        <section class="landing">
+        <section class="border-bottom">
 
             {% include header.html %}
             
             <div class="container w-100 w-lg-75 w-xl-60 pt-5 pb-6" data-aos="fade">
                 <div class="row justify-content-center flex-md-row-reverse">
-                    <div class="col-md-5 col-lg-6 col-xl-5 d-flex align-items-center">
-                        <img src="{{ '/assets/img/ravgeet-dhillon.jpg' }}" class="img-fluid mb-4 mb-md-0 rounded shadow-lg" data-aos="fade-up">
+                    <div class="col-md-5 col-lg-5 col-xl-4 mb-4 mb-lg-0 d-flex align-items-center">
+                        <img src="{{ '/assets/img/ravgeet-dhillon.jpg' }}" class="img-fluid rounded shadow-lg" data-aos="fade-up">
                     </div>
+                    <div class="d-none d-lg-block col-lg-1 col-xl-1 d-flex align-items-center"></div>
                     <div class="col-md-7 col-lg-6 col-xl-7 d-flex flex-column justify-content-center">
                         <h1 class="display-3 font-weight-bold text-shadow" data-aos="fade-up" data-aos-delay="50">{{ page.landing.heading }}</h1>
                         <span class="text-dark-light lead font-weight-normal" data-aos="fade-up" data-aos-delay="100">{{ page.landing.description | markdownify }}</span>
@@ -41,7 +42,26 @@ blogs:
             </div>
         </section>
 
-        <section class="projects py-5">
+        <section class="blog py-5">
+            <div class="container w-100 w-lg-75 w-xl-60">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between align-items-center mb-4" data-aos="fade">
+                        <h2 class="mb-0" data-animation="fadeIn">{{ page.blogs.heading }}</h2>
+                        <a href="{{ '/blog/' }}" class="btn btn-sm border text-dark-light"><i class="fas fa-flask mr-1"></i> Read Blog</a>
+                    </div>
+                    {% assign blog_posts = site.blog | reverse %}
+                    {% for blog_post in blog_posts limit:5 %}
+                        <div class="col-12 {% unless forloop.last %} mb-4 {% endunless %}" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
+                            <a href="{{ blog_post.url }}" class="stretched-link"><h3 class="pr-3 font-weight-bold h5">{{ blog_post.title }}</h3></a>
+                            <span class="small text-dark-light">{{ blog_post.description | split: '.' | first | append: '.' }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        {% comment %}
+        <section class="projects bg-theme-white py-5">
             <div class="container w-100 w-lg-75 w-xl-60">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-between align-items-center mb-3" data-aos="fade">
@@ -51,7 +71,7 @@ blogs:
                     {% assign projects = site.projects %}
                     {% for project in projects limit:6 %}
                         <div class="col-md-6 mb-1 mb-md-3" data-aos="fade-up" data-aos-delay="50">
-                            <div class="bg-theme-white hover-darker p-4 rounded h-100">
+                            <div class="bg-pure-white hover-darker p-4 rounded h-100">
                                 {% for tag in project.tags %}
                                     <span class="badge badge-{{ tag }} small mb-2">{{ tag }}</span>
                                 {% endfor %}
@@ -67,7 +87,7 @@ blogs:
             </div>
         </section>
 
-        <section class="bg-theme-white tools py-5">
+        <section class="tools py-5">
             <div class="container w-100 w-lg-75 w-xl-60">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-between align-items-center mb-3" data-aos="fade">
@@ -76,7 +96,7 @@ blogs:
                     <div class="col-12 px-4">
                         {% assign technology = site.data.stuff.technology %}
                         {% for tech in technology %}
-                            <div class="row bg-pure-white rounded py-4 px-3 px-lg-0 py-lg-0 mb-1" data-aos="fade-up" data-aos-delay="50">
+                            <div class="row bg-theme-white rounded py-4 px-3 px-lg-0 py-lg-0 mb-1" data-aos="fade-up" data-aos-delay="50">
                                 <div class="col-lg-4 p-lg-4">
                                     <h4>{{ tech.title }}</h4>
                                 </div>
@@ -86,7 +106,7 @@ blogs:
                                     </span>
                                     <br>
                                     {% for tool in tech.tools %}
-                                        <span class="badge badge-{{ tool.name }} mr-2 mt-2" title="{{ tool.description }}" data-toggle="tooltip">{{ tool.name | upcase }}</span>
+                                        <span class="badge badge-{{ tool.name }} mr-2 mt-2">{{ tool.name | upcase }}</span>
                                     {% endfor %}
                                 </div>
                             </div>
@@ -94,32 +114,8 @@ blogs:
                     </div>
                 </div>
             </div>
-        </section>    
-
-        <section class="blog py-5">
-            <div class="container w-100 w-lg-75 w-xl-60">
-                <div class="row">
-                    <div class="col-12 d-flex justify-content-between align-items-center mb-3" data-aos="fade">
-                        <h2 class="mb-0" data-animation="fadeIn">{{ page.blogs.heading }}</h2>
-                        <a href="{{ '/blog/' }}" class="btn btn-sm border text-dark-light"><i class="fas fa-flask mr-1"></i> Read Blog</a>
-                    </div>
-                    {% assign blog_posts = site.blog | reverse %}
-                    {% for i in (1..2) %}
-                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
-                            {% assign start = i | times: 2 | minus: 2 %}
-                            {% assign end = start | plus: 1 %}
-                            {% for j in (start..end) %}
-                                <div class="col-12 mb-4 px-0" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 100 }}">
-                                    <img data-src="{{ '/assets/img/blog/' | append: blog_posts[j].img }}" class="w-100 img-fluid mb-3">
-                                    <a href="{{ blog_posts[j].url }}" class="stretched-link"><h4 class="pr-3 font-weight-bold">{{ blog_posts[j].title }}</h4></a>
-                                    <span class="small text-dark-light">{{ blog_posts[j].description | split: '.' | first | append: '.' }}</span>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
         </section>
+        {% endcomment %}
     </div>
     
     <div class="bottom-wrapper">
