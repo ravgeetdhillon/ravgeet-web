@@ -1,0 +1,18 @@
+[build]
+command = "npm run build"
+publish = "build"
+
+[[headers]]
+for = "*.js"
+[headers.values]
+Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+for = "*.css"
+[headers.values]
+Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+for = "*.woff2"
+[headers.values]
+Cache-Control = "public, max-age=1296000"

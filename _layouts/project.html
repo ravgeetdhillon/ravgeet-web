@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    {% include structure/meta.html %}
+    {% include schemas/blog-schema.html %}
+    {% include structure/styles.html markdown="true" %}
+</head>
+
+<body class="d-flex flex-column justify-content-between min-vh-100">
+
+    <div class="top-wrapper">
+
+        <section class="d-flex flex-column justify-content-between">
+            {% include structure/notifications.html %}
+            {% include structure/navbar.html %}
+        </section>
+
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row w-lg-75 w-xl-60 mx-lg-auto align-items-start">
+                    <div class="col-12 mb-5">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <h1>{{ page.title }}</h1>
+                                <div class="ml-3">
+                                    {% for tag in page.tags %}
+                                        <span class="badge p-0 {% unless forloop.last %} mr-2 {% endunless %}">{{ tag | upcase }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <p class="text-dark-light">{{ page.mini_description }}</p>
+                        </div>
+                        <div class="mb-4">
+                            <img src="{{ '/assets/images/projects/' | append: page.img }}" class="img-fluid shadow" alt="{{ page.title }} project">
+                        </div>
+                        <div class="mb-4">
+                            <p class="mb-2 lead font-weight-normal">Tools and Technologies</p>
+                            {% for tool in page.tools %}
+                                <span class="badge p-0 {% unless forloop.last %} mr-2 {% endunless %} mb-2">{{ tool | upcase }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-4">
+                            <p class="mb-2 lead font-weight-normal">Description</p>
+                            <article class="text-dark-light markdown-body">
+                                {{ page.content | markdowinfy }}
+                            </article>
+                        </div>
+                        <div class="mb-4">
+                            <p class="mb-2 lead font-weight-normal">Resources</p>
+                            {% if page.github %}
+                                <a href="{{ page.github }}" target="_blank" class="btn btn-outline-primary btn-sm">GitHub Repository</a>
+                            {% endif %}
+
+                            {% if page.gitlab %}
+                                <a href="{{ page.gitlab }}" target="_blank" class="btn btn-outline-primary btn-sm">Gitlab Project</a>
+                            {% endif %}
+
+                            {% if page.view_link %}
+                                <a href="{{ page.view_link }}" target="_blank" class="btn btn-outline-primary btn-sm">View Live</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <p class="text-muted">Other Projects</p>
+                        <div class="row">
+                            {% if page.previous %}
+                                <div class="col-md-6 mb-4 mb-md-0">
+                                    <a href="{{ page.previous.url }}">
+                                        <h3 class="h5">{{ page.previous.title }}</h3>
+                                    </a>
+                                    <p class="text-dark-light mb-0">{{ page.previous.mini_description }}</p>
+                                </div>
+                            {% endif %}
+                            {% if page.next %}
+                                <div class="col-md-6">
+                                    <a href="{{ page.next.url }}">
+                                        <h3 class="h5">{{ page.next.title }}</h3>
+                                    </a>
+                                    <p class="text-dark-light mb-0">{{ page.next.mini_description }}</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer-wrapper">
+        {% include structure/footer.html %}
+    </div>
+
+{% include structure/scripts.html %}
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+{% for stylesheet in site.data.css_hashes %}
+    <link href="{{ stylesheet | absolute_url }}" rel="stylesheet" type="text/css" />
+{% endfor %}

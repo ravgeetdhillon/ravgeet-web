@@ -1,0 +1,37 @@
+{
+    "name": "ravgeet-web",
+    "version": "1.0.0",
+    "description": "This is a NPM package manager file for Ravgeet Dhillon's website.",
+    "scripts": {
+        "setup": "chmod +x _scripts/bash/setup.sh && _scripts/bash/setup.sh",
+        "compile-css": "chmod +x _scripts/bash/bundle-css.sh && _scripts/bash/bundle-css.sh",
+        "compile-js": "chmod +x _scripts/bash/bundle-js.sh && _scripts/bash/bundle-js.sh",
+        "minify-html": "chmod +x _scripts/bash/minify-html.sh && _scripts/bash/minify-html.sh",
+        "develop": "bundle exec jekyll serve --host localhost",
+        "build": "chmod +x _scripts/bash/build.sh && _scripts/bash/build.sh"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ravgeetdhillon/ravgeet-web"
+    },
+    "bugs": {
+        "url": "https://github.com/ravgeetdhillon/ravgeet-web/issues"
+    },
+    "homepage": "https://github.com/ravgeetdhillon/ravgeet-web",
+    "keywords": [],
+    "author": "Ravgeet Dhillon",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "4.6.0",
+        "jquery": "3.6.0"
+    },
+    "devDependencies": {
+        "fs": "0.0.1-security",
+        "html-minifier": "4.0.0",
+        "node-sass": "5.0.0",
+        "slugify": "^1.6.0",
+        "terser": "5.7.1",
+        "turndown": "^7.1.1",
+        "turndown-plugin-gfm": "^1.0.2"
+    }
+}

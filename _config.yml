@@ -1,0 +1,82 @@
+title: Full Stack Developer, Flutter Developer, Technical Content Writer - Ravgeet Dhillon
+
+description: Ravgeet Dhillon is a Full Stack Developer, Flutter Developer, and Technical Content Writer based in India.
+
+author: Ravgeet Dhillon
+
+google:
+  analytics_code: G-5P5CKH4GH2
+
+site_repo: https://github.com/ravgeetdhillon/ravgeet-web
+
+baseurl: ""
+
+url: https://www.ravgeet.in
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package-lock.json
+  - package.json
+  - node_modules/
+  - README.md
+  - "*.sh"
+  - netlify.toml
+
+collections_dir: collections
+
+collections:
+  pages:
+    output: true
+  blogs:
+    output: true
+  blogs_external:
+    output: true
+  projects:
+    output: true
+  assets:
+    output: true
+  misc:
+    output: true
+
+defaults:
+  - scope:
+      type: blogs
+    values:
+      layout: blog
+      type: article
+      permalink: blog/:name/
+  - scope:
+      type: blogs_external
+    values:
+      layout: blog
+      type: article
+      external: true
+      permalink: blog/:name/
+  - scope:
+      type: projects
+    values:
+      layout: project
+      type: project
+      permalink: projects/:name/
+  - scope:
+      type: misc
+    values:
+      index: noindex
+
+extlinks:
+  attributes: { rel: "nofollow noreferrer" }
+  rel_exclude: ["ravgeet.in", "ravsam.in"]
+
+feed:
+  posts_limit: 100
+  collections:
+    blogs:
+      path: /blog/feed.xml
+
+show_notifications: false

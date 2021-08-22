@@ -1,0 +1,48 @@
+---
+permalink: /contact/
+
+meta:
+  title: Contact - Ravgeet Dhillon
+  description: Ravgeet Dhillon is a Full Stack Developer, Flutter Developer, and Technical Content Writer based in India.
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    {% include structure/meta.html %}
+    {% include structure/styles.html %}
+</head>
+
+<body class="d-flex flex-column justify-content-between min-vh-100">
+
+    <div class="top-wrapper">
+        
+        <section class="d-flex flex-column justify-content-between">
+            {% include structure/notifications.html %}
+            {% include structure/navbar.html %}
+        </section>
+
+        {% include structure/banner.html title="Contact" banner="contact" headline="In case you have any project for me, feel free to get in contact with me. I can help you with Full Stack Development, Flutter Developement, and Technical Content Writing." %}
+        
+        <section class="py-5">
+            <div class="container">
+                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
+                    <div class="col-12">
+                        {% for link in site.data.navigation.social_links %}
+                            <a href="{{ link.href }}" target="_blank" class="d-block {% unless forloop.last %} mb-3 {% endunless %}">{{ link.name }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer-wrapper">
+        {% include structure/footer.html %}
+    </div>
+
+{% include structure/scripts.html %}
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+navbar_links:
+  - title: About
+    url: /about/
+  - title: Projects
+    url: /projects/
+  - title: Blog
+    url: /blog/
+  - title: Contact
+    url: /contact/
+  - title: Resume
+    url: /resume/
+
+social_links:
+  - name: Email
+    href: mailto:ravgeetdhillon@gmail.com
+  - name: Twitter
+    href: https://twitter.com/ravgeetdhillon
+  - name: LinkedIn
+    href: https://www.linkedin.com/in/ravgeetdhillon/
+  - name: Dribbble
+    href: https://www.dribbble.com/ravgeetdhillon/
+  - name: Github
+    href: https://github.com/ravgeetdhillon
+  - name: Gitlab
+    href: https://gitlab.gnome.org/ravgeetdhillon

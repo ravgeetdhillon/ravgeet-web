@@ -1,0 +1,72 @@
+---
+permalink: /blog/
+
+meta:
+  title: Blog - Ravgeet Dhillon
+  description: I write about Jamstack, Flutter, Automation, Leadership, and things that are relevant to the community.
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    {% include structure/meta.html %}
+    {% include structure/styles.html %}
+</head>
+
+<body class="d-flex flex-column justify-content-between min-vh-100">
+
+    <div class="top-wrapper">
+        
+        <section class="d-flex flex-column justify-content-between">
+            {% include structure/notifications.html %}
+            {% include structure/navbar.html %}
+        </section>
+
+
+        {% include structure/banner.html title="Blog" banner="blog" headline="I write about Jamstack, Flutter, Automation, Leadership, and things that are relevant to the community." %}
+
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
+                    <div class="col-12">
+                        {% assign blogs = '' | split: ',' %}
+
+                        {% for page in site.blogs %}
+                            {% assign blogs = blogs | push: page %}
+                        {% endfor %}
+
+                        {% for page in site.blogs_external %}
+                            {% assign blogs = blogs | push: page %}
+                        {% endfor %}
+
+                        {% assign blogs = blogs | sort: 'date' | reverse | group_by_exp: 'blog', "blog.date | date: '%B %Y'" %}
+                        
+                        {% for month_year in blogs %}
+                            <div class="{% unless forloop.last %} mb-5 {% endunless %}">
+                                <p class="text-muted mb-3">{{ month_year.name }}</p>
+                                {% for blog in month_year.items reversed %}
+                                    <div class="{% unless forloop.last %} mb-4 {% endunless %}">
+                                        <a href="{{ blog.url | absolute_url }}" class="text-dark">
+                                            <h3 class="h5 mb-1">{{ blog.title }}</h3>
+                                        </a>
+                                        <p class="text-dark-light mb-0">{{ blog.description }}</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer-wrapper">
+        {% include structure/footer.html %}
+    </div>
+
+{% include structure/scripts.html %}
+
+</body>
+</html>

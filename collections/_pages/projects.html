@@ -1,0 +1,85 @@
+---
+permalink: /projects/
+
+meta:
+  title: Projects - Ravgeet Dhillon
+  description: Ravgeet Dhillon is a Full Stack Developer, Flutter Developer, and Technical Content Writer based in India.
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    {% include structure/meta.html %}
+    {% include structure/styles.html %}
+</head>
+
+<body class="d-flex flex-column justify-content-between min-vh-100">
+
+    <div class="top-wrapper">
+        
+        <section class="d-flex flex-column justify-content-between">
+            {% include structure/notifications.html %}
+            {% include structure/navbar.html %}
+        </section>
+
+        {% include structure/banner.html title="Projects" banner="projects" headline="If you want to me to work on your project, feel free to [send me an email](mailto:ravgeetdhillon@gmail.com)." %}
+
+        {% assign projects = site.projects %}
+        {% assign count = projects | size %}
+        {% assign a = count | divided_by: 2.0 | floor %}
+
+        {% assign arr = '' | split: '' %}
+        {% for i in (1..2) %}
+            {% assign arr = arr | push: a %}
+        {% endfor %}
+
+        {% assign extra = a | times: 2 | minus: count | abs %}
+
+        {% assign narr = '' | split: '' %}
+        {% for j in arr %}
+            {% if extra > 0 %}
+                {% assign i = j | plus: 1 %}
+                {% assign narr = narr | push: i %}
+                {% assign extra = extra | minus: 1 %}
+            {% else %}
+                {% assign narr = narr | push: j %}
+            {% endif %}
+        {% endfor %}
+        
+        <section class="py-5">
+            <div class="container">
+                <div class="row w-xl-60 w-lg-75 mx-lg-auto">
+                    {% assign start = 0 %}
+                    {% for i in narr %}
+                        <div class="col-md-6">
+                            {% assign end = start | plus: i | minus: 1 %}
+                            {% for j in (start..end) %}                   
+                                <div class="col-12 mb-4 bg-theme-white p-4">
+                                    <div class="mb-3 d-flex flex-wrap align-items-center">
+                                        {% for tag in projects[j].tags %}
+                                            <span class="badge p-0 mr-2">{{ tag | upcase }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    <a href="{{ projects[j].url }}" class="stretched-link">
+                                        <h4 class="font-weight-bold">{{ projects[j].title }}</h4>
+                                    </a>
+                                    <p class="text-dark-light mb-0">{{ projects[j].mini_description }}</p>
+                                </div>
+                            {% endfor %}
+                            {% assign start = end | plus: 1 %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer-wrapper">
+        {% include structure/footer.html %}
+    </div>
+
+{% include structure/scripts.html %}
+
+</body>
+</html>

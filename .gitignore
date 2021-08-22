@@ -1,0 +1,21 @@
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+.env
+
+node_modules/
+_site/
+build/
+
+assets/prod-css/
+assets/prod-js/
+assets/css/
+
+_includes/css/
+_includes/js/
+_includes/icons/
+_data/*hashes.yml
+
+# Local Netlify folder
+.netlify

@@ -1,0 +1,37 @@
+{% assign url = page.url | split: '/' | shift %}
+{% assign url_count = url | size %}
+
+{% if url_count > 0 %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {% assign current_path = '/' %}
+            {% for part in url %}
+                {% assign current_path = current_path | append: part | append: '/' %}
+                {% assign words = part | replace: '-', ' ' | split: ' ' %}
+
+                {% capture titlecase %}
+                    {% for word in words %} {{ word | capitalize }} {% endfor %}
+                {% endcapture %}
+
+                {% if forloop.last == true %}
+                    {
+                        "@type": "ListItem",
+                        "position": {{ forloop.index }},
+                        "name": "{{ titlecase }}"
+                    }
+                {% else %}
+                    {
+                        "@type": "ListItem",
+                        "position": {{ forloop.index }},
+                        "name": "{{ titlecase }}",
+                        "item": "{{ current_path | absolute_url }}"
+                    },
+                {% endif %}
+            {% endfor %}
+        ]
+    }
+    </script>
+{% endif %}
