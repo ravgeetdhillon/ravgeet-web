@@ -70,14 +70,11 @@
                         <div class="row">
                             {% for blog in related_blogs %}
                                 <div class="col-md-12 {% unless forloop.last %} mb-4 {% endunless %}">
-                                    <a href="{{ blog.url }}">
+                                    <a href="{{ blog.url }}" class="text-dark">
                                         <h3 class="h5">{{ blog.title }}</h3>
                                     </a>
                                     <p class="text-dark-light mb-0">{{ blog.description }}</p>
                                 </div>
-                                <!-- <div class="pb-2">
-                                    <p class="mb-0"><a href="{{ blog.url }}">{{ blog.title }}</a></p>
-                                </div> -->
                             {% endfor %}
                         </div>
                     </div>
