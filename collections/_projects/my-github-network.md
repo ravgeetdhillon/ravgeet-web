@@ -1,10 +1,16 @@
 ---
 title: My Github Network
+
 tags: [web-dev]
+
 tools: [php, heroku, d3js, github-api]
+
 mini_description: A PHP/JS app to show your Github Network in the form of connected node graph.
+
 github: https://github.com/ravgeetdhillon/my-github-network/
+
 view_link: https://my-github-network.herokuapp.com/
+
 img: my-github-network.png
 ---
 

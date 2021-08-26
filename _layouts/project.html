@@ -33,7 +33,7 @@
                             <p class="text-dark-light">{{ page.mini_description }}</p>
                         </div>
                         <div class="mb-4">
-                            <img src="{{ '/assets/images/projects/' | append: page.img }}" class="img-fluid shadow" alt="{{ page.title }} project">
+                            <img src="{{ '/assets/images/projects/' | append: page.img }}" class="img-fluid" alt="{{ page.title }} project">
                         </div>
                         <div class="mb-4">
                             <p class="mb-2 lead font-weight-normal">Tools and Technologies</p>
@@ -68,7 +68,7 @@
                         <div class="row">
                             {% if page.previous %}
                                 <div class="col-md-6 mb-4 mb-md-0">
-                                    <a href="{{ page.previous.url }}">
+                                    <a href="{{ page.previous.url }}" class="text-dark">
                                         <h3 class="h5">{{ page.previous.title }}</h3>
                                     </a>
                                     <p class="text-dark-light mb-0">{{ page.previous.mini_description }}</p>
@@ -76,7 +76,7 @@
                             {% endif %}
                             {% if page.next %}
                                 <div class="col-md-6">
-                                    <a href="{{ page.next.url }}">
+                                    <a href="{{ page.next.url }}" class="text-dark">
                                         <h3 class="h5">{{ page.next.title }}</h3>
                                     </a>
                                     <p class="text-dark-light mb-0">{{ page.next.mini_description }}</p>

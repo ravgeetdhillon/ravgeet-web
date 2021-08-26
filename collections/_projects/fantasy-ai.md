@@ -1,9 +1,14 @@
 ---
 title: FantasyAI
+
 tags: [ai, data-science]
+
 tools: [python, github-actions, github-api]
+
 mini_description: A Data Science and AI project to play Fantasy Premier League.
+
 github: https://github.com/ravgeetdhillon/fantasyAI/
+
 img: fantasy-ai.png
 ---
 

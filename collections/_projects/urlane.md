@@ -1,9 +1,14 @@
 ---
 title: UrLane
+
 tags: [ai, hackathon]
+
 tools: [python, tkinter]
+
 mini_description: An Image Analysis AI made in Python to regulate the traffic at toll booths.
+
 github: https://github.com/ravgeetdhillon/urlane/
+
 img: urlane.png
 ---
 

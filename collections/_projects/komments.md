@@ -1,9 +1,14 @@
 ---
 title: Komments
+
 tags: [web-dev]
+
 tools: [flask, dropbox-api]
+
 mini_description: A Flask Web App to manage comments for a blog.
+
 github: https://github.com/ravgeetdhillon/komments/
+
 img: komments.png
 ---
 

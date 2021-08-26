@@ -1,9 +1,14 @@
 ---
 title: Musica
+
 tags: [automation]
+
 tools: [python, google-apis, github-actions, ffmpeg]
+
 mini_description: A project to automate your music release on YouTube.
+
 github: https://github.com/ravgeetdhillon/musica
+
 img: musica.png
 ---
 
