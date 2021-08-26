@@ -51,7 +51,8 @@ meta:
                                         <a href="{{ blog.url | absolute_url }}" class="text-dark">
                                             <h3 class="h5 mb-1">{{ blog.title }}</h3>
                                         </a>
-                                        <p class="text-dark-light mb-0">{{ blog.description }}</p>
+                                        <p class="text-dark-light mb-1">{{ blog.description }}</p>
+                                        <p class="small mb-0 text-primary"><i>Written for <b>{{ blog.canonical_details.site }}</b></i></p>
                                     </div>
                                 {% endfor %}
                             </div>
