@@ -46,7 +46,7 @@ meta:
                         {% for month_year in blogs %}
                             <div class="{% unless forloop.last %} mb-5 {% endunless %}">
                                 <p class="text-muted mb-3">{{ month_year.name }}</p>
-                                {% for blog in month_year.items reversed %}
+                                {% for blog in month_year.items %}
                                     <div class="{% unless forloop.last %} mb-4 {% endunless %}">
                                         <a href="{{ blog.url | absolute_url }}" class="text-dark">
                                             <h3 class="h5 mb-1">{{ blog.title }}</h3>
