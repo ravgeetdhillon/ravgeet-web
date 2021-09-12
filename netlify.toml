@@ -19,6 +19,12 @@ Cache-Control = "public, max-age=1296000"
 
 [[redirects]]
 force = false
-from = "https://www.ravgeet.in/blog/:splat"
+from = "https://www.ravgeet.in/blog/"
 status = 301
-to = "https://blog.ravgeet.in/*"
+to = "https://blog.ravgeet.in/"
+
+[[redirects]]
+force = false
+from = "https://www.ravgeet.in/blog/*"
+status = 301
+to = "https://blog.ravgeet.in/:splat"
