@@ -16,3 +16,9 @@ Cache-Control = "public, max-age=2592000"
 for = "*.woff2"
 [headers.values]
 Cache-Control = "public, max-age=1296000"
+
+[[redirects]]
+force = false
+from = "https://www.ravgeet.in/blog/:splat"
+status = 301
+to = "https://blog.ravgeet.in/*"

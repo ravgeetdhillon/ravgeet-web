@@ -13,20 +13,6 @@ permalink: /sitemap.json
     {%- assign pages = pages | push: page -%}
 {%- endfor -%}
 
-{%- assign blogs = '' | split: ',' -%}
-
-{%- for page in site.blogs -%}
-    {%- assign blogs = blogs | push: page -%}
-{%- endfor -%}
-
-{%- for page in site.blogs_external -%}
-    {%- assign blogs = blogs | push: page -%}
-{%- endfor -%}
-
-{%- for page in blogs -%}
-    {%- assign pages = pages | push: page -%}
-{%- endfor -%}
-
 {
     "total_pages": "{{ pages | size }}",
     "pages": [

@@ -33,10 +33,6 @@ collections_dir: collections
 collections:
   pages:
     output: true
-  blogs:
-    output: true
-  blogs_external:
-    output: true
   projects:
     output: true
   assets:
@@ -45,19 +41,6 @@ collections:
     output: true
 
 defaults:
-  - scope:
-      type: blogs
-    values:
-      layout: blog
-      type: article
-      permalink: blog/:name/
-  - scope:
-      type: blogs_external
-    values:
-      layout: blog
-      type: article
-      external: true
-      permalink: blog/:name/
   - scope:
       type: projects
     values:
@@ -72,11 +55,5 @@ defaults:
 extlinks:
   attributes: { rel: "nofollow noreferrer" }
   rel_exclude: ["ravgeet.in", "ravsam.in"]
-
-feed:
-  posts_limit: 100
-  collections:
-    blogs:
-      path: /blog/feed.xml
 
 show_notifications: false

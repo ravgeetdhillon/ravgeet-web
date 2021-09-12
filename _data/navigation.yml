@@ -4,7 +4,7 @@ navbar_links:
   - title: Projects
     url: /projects/
   - title: Blog
-    url: /blog/
+    url: https://blog.ravgeet.in/
   - title: Contact
     url: /contact/
   - title: Resume
