@@ -9,6 +9,3 @@ npm install
 
 # compile css
 npm run compile-css
-
-# compile js
-npm run compile-js
