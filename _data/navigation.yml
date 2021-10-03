@@ -1,6 +1,6 @@
 navbar_links:
-  - title: About
-    url: /about/
+  - title: Story
+    url: /story/
   - title: Projects
     url: /projects/
   - title: Blog
@@ -16,9 +16,9 @@ social_links:
   - name: Twitter
     href: https://twitter.com/ravgeetdhillon
   - name: LinkedIn
-    href: https://www.linkedin.com/in/ravgeetdhillon/
+    href: https://linkedin.com/in/ravgeetdhillon/
   - name: Dribbble
-    href: https://www.dribbble.com/ravgeetdhillon/
+    href: https://dribbble.com/ravgeetdhillon/
   - name: Github
     href: https://github.com/ravgeetdhillon
   - name: Gitlab

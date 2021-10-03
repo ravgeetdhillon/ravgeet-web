@@ -15,7 +15,6 @@
             {% include structure/navbar.html %}
         </section>
 
-
         <section class="py-5">
             <div class="container">
                 <div class="row w-lg-75 w-xl-60 mx-lg-auto align-items-start">
@@ -25,19 +24,19 @@
                                 <h1>{{ page.title }}</h1>
                                 <div class="ml-3">
                                     {% for tag in page.tags %}
-                                        <span class="badge p-0 {% unless forloop.last %} mr-2 {% endunless %}">{{ tag | upcase }}</span>
+                                        <span class="badge badge-theme-white p-1 {% unless forloop.last %} mr-2 {% endunless %}">{{ tag | upcase }}</span>
                                     {% endfor %}
                                 </div>
                             </div>
                             <p class="text-dark-light">{{ page.mini_description }}</p>
                         </div>
                         <div class="mb-4">
-                            <img src="{{ '/assets/images/projects/' | append: page.img }}" class="img-fluid" alt="{{ page.title }} project">
+                            <img src="{{ '/assets/images/projects/' | append: page.img | absolute_url }}" class="img-fluid rounded" alt="{{ page.title }} project">
                         </div>
                         <div class="mb-4">
                             <p class="mb-2 lead font-weight-normal">Tools and Technologies</p>
                             {% for tool in page.tools %}
-                                <span class="badge p-0 {% unless forloop.last %} mr-2 {% endunless %} mb-2">{{ tool | upcase }}</span>
+                                <span class="{% unless forloop.last %} mr-2 {% endunless %} mb-2">{{ tool }}</span>
                             {% endfor %}
                         </div>
                         <div class="mb-4">

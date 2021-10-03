@@ -21,7 +21,12 @@
                             {% assign link_style = "text-muted" %}
                         {% endif %}
                         <li class="{% unless forloop.first %} ml-3 {% endunless %}">
-                            <a class="text-xs-center text-decoration-none {{ link_style }}" href="{{ link.url }}">{{ link.title }}</a>
+                            <a class="text-xs-center text-decoration-none {{ link_style }}" href="{{ link.url }}">
+                                {{ link.title }}
+                                {% if link.title == 'Blog' %}
+                                    {% include icons/external-link.html %}
+                                {% endif %}
+                            </a>
                         </li>
                     {% endfor %}
                 </ul>

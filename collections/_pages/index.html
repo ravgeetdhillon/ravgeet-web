@@ -8,11 +8,90 @@ meta:
 landing:
   heading: I'm Ravgeet 👋
   status: Full Stack Developer and Technical Content Writer.
-  description: |-
-    I provide my freelance services to clients all over the world via my [Full Stack Development agency](https://www.ravsam.in). I do Technical Content Writing for various companies like [CSS Tricks](https://css-tricks.com/author/ravgeetdhillon), [Vonage](https://learn.vonage.com/authors/ravgeet-dhillon/), ATA, Hit Subscribe and more. I am an open-source contributor to GNOME where I design [websites](https://gtk.org).
 
-blog:
-  heading: Blogs
+about:
+  heading: 😄 About Me
+  description: |-
+    I am a **Full-Stack Developer** and **Technical Content Writer** based in India 🇮🇳.
+
+    I run my one-man Digital Product Development agency, [RavSam](https://www.ravsam.in), via which I provide my **freelance services** to **startups** and **businesses** around the globe.
+
+    I am currently **pursuing my Masters in Computer Science and Engineering** at Guru Nanak Dev University and will be post-graduating in 2022.
+
+    [Read my Story >](/story/)
+
+work_developer:
+  heading: 👨‍💻 Full Stack Development
+  description: |-
+    I provide my freelance services to clients all over the world via my [Full Stack Development agency](https://www.ravsam.in). My first large-scale project was the revamp of the [GTK website](https://gtk.org) which I did as Google Summer of Code Developer. It was [greatly appreciated](https://twitter.com/GTKtoolkit/status/1230167481228107776) by the open-source community.
+
+    Since then, I have worked with many startups and made digital products for them.
+    Currently, I am working with [CloudAnswers](https://cloudanswers.com) as a Full Stack Developer and Consultant on contract basis. I am also passionate about design and user experience.
+
+    [Projects](/projects/) <span class="text-light">&bull;</span>
+    [GitHub](https://github.com/ravgeetdhillon) <span class="text-light">&bull;</span>
+    [Dribbble](https://dribbble.com/ravgeetdhillon)
+
+work_writer:
+  heading: ✍️ Technical Content Writing
+  description: |-
+    As a Technical Content Writer, my work is not just limited to writing tutorials, how-to guides, and docs but also setup documentation websites, publishing workflows, and more.
+
+    Currently, I am working on a contract basis with [Draft.dev](https://draft.dev) and [Honeybadger](https://honeybadger.io) as a Technical Content Writer.
+
+    Besides these, I also write for:
+
+    - [CSS Tricks](https://css-tricks.com/author/ravgeetdhillon)
+    - [Vonage](https://learn.vonage.com/authors/ravgeet-dhillon/)
+    - [Twilio](https://www.twilio.com/blog/author/ravgeet_dhillon)
+    - [Adam The Automator](https://adamtheautomator.com/author/ravgeet-dhillon/)
+    - [RavSam](https://www.ravsam.in/blog/)
+    - [Personal Blog](https://blog.ravgeet.in/)
+
+tech_stack:
+  heading: 🏗 Tech Stack
+  description: |-
+    These are some of my favorite technologies that I use in my daily products. I am always learning about new ones and looking to expand my horizon.
+
+    - **Front End Development** - React, Vue, Next, Nuxt
+    - **Backend Development** - Python, Node, Laravel
+    - **Cross-Platform App Development** - Flutter
+    - **CMS and API Development** - Strapi
+    - **Static Site Generation** - Jekyll, Hugo
+    - **Deployment** - Netlify, DigitalOcean, Heroku, VPS
+    - **DevOps** - GitHub Actions, Gitlab CI CD
+    - **Automation** - Google Apps Script
+    - **Add-Ons** - Stripe, Notion, Markdown, Trello
+    - **Development** - VSCode, Linux Ubuntu, GitHub, Spotify
+    - **Design** - Figma
+
+    I'm currently aiming to learn about **Kubernetes** and **Docker**.
+
+music:
+  heading: 🎹 Music
+  description: |-
+    Sometimes I decide to get away from tech life and dive straight into music production. I have [my Youtube channel](https://youtube.com/ravdmusic), where you can listen to my remixes and originals.
+    
+sports:
+  heading: ⚽️ Sports
+  description: |-
+    ***All work and no play makes Jack a dull boy***. So, I go out with my friends to play outdoor sports like Cricket, Football and more. I love to cycle around my city and try to ride at least 10-15 km a day.
+
+newsletter:
+  heading: 📫 Newsletter
+  description: |-
+    I publish a monthly [newsletter](https://www.ravsam.in/newsletter/) with **300+ subscribers** in which I share personal stories, things that I am working on, what is happening in the world of tech, and some interesting dev related posts which I across while surfing on the web.
+
+contact:
+  heading: ☎️ Get In Touch
+  description: |-
+    Whether you are a student or a CEO, my inbox is open to everyone. I'd love to help you in any way possible. If you have an interesting project for me, please get in touch for a discussion. I am **open to working with startups and businesses that offer remote work**.
+
+    You can reach out to me via any of these channels:
+
+    [Email](mailto:ravgeetdhillon@gmail.com) <span class="text-light">&bull;</span>
+    [Twitter](https://www.twitter.com/ravgeetdhillon) <span class="text-light">&bull;</span>
+    [LinkedIn](https://www.linkedin.com/in/ravgeetdhillon)
 ---
 
 <!DOCTYPE html>
@@ -32,7 +111,7 @@ blog:
             {% include structure/navbar.html %}
         </section>
 
-        <section class="py-5">
+        <section class="py-5 bg-theme-white">
             <div class="container">
                 <div class="row w-lg-75 w-xl-60 mx-lg-auto">
                     <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
@@ -40,58 +119,99 @@ blog:
                             <h1>{{ page.landing.heading }}</h1>
                             <p class="text-muted">{{ page.landing.status }}</p>
                         </div>
-                        <img src="{{ '/assets/images/icons/logos/ravgeet-dhillon.jpg' | absolute_url }}" style="max-width: 15rem; width:100%;" class="img-fluid mb-4">
-                    </div>
-                    <div class="col-12">                        
-                        <span class="text-dark-light lead">{{ page.landing.description | markdownify }}</span>
-                        <a href="{{ '/about/' | absolute_url }}">Read my story ></a>
+                        <img src="{{ '/assets/images/icons/logos/ravgeet-dhillon.jpg' | absolute_url }}" style="max-width: 15rem; width:100%;" class="img-fluid rounded mb-4">
                     </div>
                 </div>
             </div>
         </section>
 
-        {% comment %}
-        <section>
-            <div class="container">
-                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
-                    <div class="col-12 text-center">
-                        <span class="display-4 text-theme-white-light">~~~</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-5">
+        <section id="about" class="pt-5">
             <div class="container">
                 <div class="row w-lg-75 w-xl-60 mx-lg-auto">
                     <div class="col-12">
-                        <h2 class="mb-4" data-animation="fadeIn">{{ page.blog.heading }}</h2>
-                        {% assign blogs = '' | split: ',' %}
-
-                        {% for page in site.blogs %}
-                            {% assign blogs = blogs | push: page %}
-                        {% endfor %}
-
-                        {% for page in site.blogs_external %}
-                            {% assign blogs = blogs | push: page %}
-                        {% endfor %}
-
-                        {% assign blogs = blogs | sort: 'date' | reverse %}
-                        
-                        {% for blog in blogs limit: 5 %}
-                            <div class="w-100 mb-4" data-animation="fadeInUp" data-delay="{{ forloop.index | times: 50 }}">
-                                <a href="{{ blog.url }}" class="text-dark">
-                                    <h3 class="h5">{{ blog.title }}</h3>
-                                </a>
-                                <p class="text-dark-light mb-0">{{ blog.description | split: '.' | first | append: '.' }}</p>
-                            </div>
-                        {% endfor %}
-                        <a href="{{ '/blog/' }}" class="text-dark-light"><u>Read More</u></a>
+                        <h2>{{ page.about.heading }}</h2>
+                        <p class="text-dark-light">{{ page.about.description | markdownify }}</p>
                     </div>
                 </div>
             </div>
         </section>
-        {% endcomment %}
+
+        <section id="developer" class="pt-5">
+            <div class="container">
+                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
+                    <div class="col-12">
+                        <h2>{{ page.work_developer.heading }}</h2>
+                        <p class="text-dark-light">{{ page.work_developer.description | markdownify }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="writer" class="pt-5">
+            <div class="container">
+                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
+                    <div class="col-12">
+                        <h2>{{ page.work_writer.heading }}</h2>
+                        <p class="text-dark-light">{{ page.work_writer.description | markdownify }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech-stack" class="pt-5">
+            <div class="container">
+                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
+                    <div class="col-12">
+                        <h2>{{ page.tech_stack.heading }}</h2>
+                        <p class="text-dark-light">{{ page.tech_stack.description | markdownify }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="music" class="pt-5">
+            <div class="container">
+                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
+                    <div class="col-12">
+                        <h2>{{ page.music.heading }}</h2>
+                        <p class="text-dark-light">{{ page.music.description | markdownify }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sports" class="pt-5">
+            <div class="container">
+                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
+                    <div class="col-12">
+                        <h2>{{ page.sports.heading }}</h2>
+                        <p class="text-dark-light">{{ page.sports.description | markdownify }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="pt-5">
+            <div class="container">
+                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
+                    <div class="col-12">
+                        <h2>{{ page.newsletter.heading }}</h2>
+                        <p class="text-dark-light">{{ page.newsletter.description | markdownify }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <div class="container">
+                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
+                    <div class="col-12">
+                        <h2>{{ page.contact.heading }}</h2>
+                        <p class="text-dark-light">{{ page.contact.description | markdownify }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <div class="footer-wrapper">
