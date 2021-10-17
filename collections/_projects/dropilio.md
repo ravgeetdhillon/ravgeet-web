@@ -1,9 +1,9 @@
 ---
 title: Dropilio
 
-tags: [web-dev, hackathon]
+tags: [Web, Hackathon]
 
-tools: [php, heroku, twilio-api, dropbox-api]
+tools: [PHP, Heroku, Twilio API, Dropbox API]
 
 mini_description: A REST API service for sending local files as attachments with Twilio Whatsapp API.
 

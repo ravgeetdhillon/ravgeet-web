@@ -29,16 +29,22 @@ meta:
             <div class="container">
                 <div class="row w-xl-60 w-lg-75 mx-lg-auto">
                     {% for project in site.projects %}
-                        <div class="col-12 mb-5">
+                        <div class="col-12 mb-5 {% cycle '', 'bg-theme-white p-3 rounded' %}">
                             <div class="mb-3 d-flex flex-wrap align-items-center">
                                 {% for tag in project.tags %}
-                                    <span class="badge badge-theme-white p-1 mr-2">{{ tag | upcase }}</span>
+                                    <span class="badge badge-theme-white p-1 {% unless forloop.last %} mr-2 {% endunless %}">{{ tag }}</span>
                                 {% endfor %}
                             </div>
                             <a href="{{ project.url }}" class="stretched-link">
-                                <h2 class="h4">{{ project.title }}</h2>
+                                <h2 class="h3">{{ project.title }}</h2>
                             </a>
-                            <p class="text-dark-light mb-0">{{ project.mini_description }}</p>
+                            <p class="text-dark-light lead mb-2">{{ project.mini_description }}</p>
+                            <div class="d-flex flex-wrap align-items-center text-muted">
+                                <span>Tools -&nbsp;</span>
+                                {% for tool in project.tools %}
+                                    <span class="">{{ tool }}{% unless forloop.last %},&nbsp;{% endunless %}</span>
+                                {% endfor %}
+                            </div>
                         </div>
                     {% endfor %}
                 </div>

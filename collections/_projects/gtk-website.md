@@ -1,9 +1,9 @@
 ---
 title: GTK Website
 
-tags: [web-dev]
+tags: [Web]
 
-tools: [jekyll, gitlab-ci, jamstack]
+tools: [Jekyll, Gitlab CI, Jamstack]
 
 mini_description: I designed and developed the official website for GTK as a part of as Google Summer of Code developer for GNOME.
 

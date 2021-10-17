@@ -1,9 +1,9 @@
 ---
 title: Flutter App for Brandcares
 
-tags: [web-dev]
+tags: [Web]
 
-tools: [flutter, laravel]
+tools: [Flutter, Laravel]
 
 mini_description: Infringement Detection app made for internal use at Brandcares.
 

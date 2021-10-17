@@ -1,9 +1,9 @@
 ---
 title: Lab Test Booking for Soni Diagnostics
 
-tags: [web-dev]
+tags: [Web]
 
-tools: [strapi, jekyll, bootstrap, netlify]
+tools: [Strapi, Jekyll, Bootstrap, Netlify]
 
 mini_description: Online Lab Testing Booking powered by Strapi.
 

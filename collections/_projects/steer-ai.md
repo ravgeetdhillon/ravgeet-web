@@ -1,11 +1,11 @@
 ---
 title: SteerAI
 
-tags: [ai, computer-vision]
+tags: [AI]
 
-tools: [python, tensorflow, opencv]
+tools: [Python]
 
-mini_description: A machine learning project to realize the dream of self-driving cars.
+mini_description: A Machine Learning project to realize the dream of a Self-driving car.
 
 github: https://github.com/ravgeetdhillon/steerAI
 

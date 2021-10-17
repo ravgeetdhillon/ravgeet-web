@@ -7,11 +7,10 @@ meta:
 
 landing:
   heading: I'm Ravgeet 👋
-  status: Full Stack Developer and Technical Content Writer.
-
-about:
-  heading: 😄 About Me
+  status: Full Stack Developer and Technical Content Writer
   description: |-
+    ## 😄 About Me
+
     I am a **Full-Stack Developer** and **Technical Content Writer** based in India 🇮🇳.
 
     I run my one-man Digital Product Development agency, [RavSam](https://www.ravsam.in), via which I provide my **freelance services** to **startups** and **businesses** around the globe.
@@ -20,9 +19,8 @@ about:
 
     [Read my Story >](/story/)
 
-work_developer:
-  heading: 👨‍💻 Full Stack Development
-  description: |-
+    ## 👨‍💻 Full Stack Development
+
     I provide my freelance services to clients all over the world via my [Full Stack Development agency](https://www.ravsam.in). My first large-scale project was the revamp of the [GTK website](https://gtk.org) which I did as Google Summer of Code Developer. It was [greatly appreciated](https://twitter.com/GTKtoolkit/status/1230167481228107776) by the open-source community.
 
     Since then, I have worked with many startups and made digital products for them.
@@ -31,10 +29,9 @@ work_developer:
     [Projects](/projects/) <span class="text-light">&bull;</span>
     [GitHub](https://github.com/ravgeetdhillon) <span class="text-light">&bull;</span>
     [Dribbble](https://dribbble.com/ravgeetdhillon)
+  
+    ## ✍️ Technical Content Writing
 
-work_writer:
-  heading: ✍️ Technical Content Writing
-  description: |-
     As a Technical Content Writer, my work is not just limited to writing tutorials, how-to guides, and docs but also setup documentation websites, publishing workflows, and more.
 
     Currently, I am working on a contract basis with [Draft.dev](https://draft.dev) and [Honeybadger](https://honeybadger.io) as a Technical Content Writer.
@@ -48,13 +45,12 @@ work_writer:
     - [RavSam](https://www.ravsam.in/blog/)
     - [Personal Blog](https://blog.ravgeet.in/)
 
-tech_stack:
-  heading: 🏗 Tech Stack
-  description: |-
+    ## 🏗 Tech Stack
+
     These are some of my favorite technologies that I use in my daily products. I am constantly learning about new ones and looking to expand my knowledge horizon.
 
     - **Front End Development** - React, Vue, Next, Nuxt
-    - **Backend Development** - Python, Node, Laravel
+    - **Backend Development** - Python, Node, Laravel, MySQL
     - **Cross-Platform App Development** - Flutter
     - **CMS and API Development** - Strapi
     - **Static Site Generation** - Jekyll, Hugo
@@ -67,24 +63,20 @@ tech_stack:
 
     I'm currently aiming to learn about **Kubernetes** and **Docker**.
 
-music:
-  heading: 🎹 Music
-  description: |-
+    ## 🎹 Music
+
     Sometimes I decide to get away from tech life and dive straight into music production. I have [my Youtube channel](https://youtube.com/ravdmusic), where you can listen to my remixes and originals.
     
-sports:
-  heading: ⚽️ Sports
-  description: |-
+    ## ⚽️ Sports
+
     ***All work and no play makes Jack a dull boy***. So, I go out with my friends to play outdoor sports like Cricket, Football and more. I love to cycle around my city and try to ride at least 10-15 km a day.
 
-newsletter:
-  heading: 📫 Newsletter
-  description: |-
+    ## 📫 Newsletter
+
     I publish a monthly [newsletter](https://www.ravsam.in/newsletter/) with **300+ subscribers** in which I share personal stories, projects that I am working on, what is happening in the world of tech, and some interesting dev related posts which I come across while surfing on the web.
 
-contact:
-  heading: ☎️ Get In Touch
-  description: |-
+    ## ☎️ Get In Touch
+
     Whether you are a student or a CEO, my inbox is open to everyone. I'd love to help you in any way possible. If you have an interesting project for me, please get in touch for a discussion. I am **open to working with startups and businesses that offer remote work**.
 
     You can reach out to me via any of these channels:
@@ -100,6 +92,11 @@ contact:
 <head>
     {% include structure/meta.html %}
     {% include structure/styles.html %}
+    <style>
+        h2 {
+            margin-top: 4rem;
+        }
+    </style>
 </head>
 
 <body class="d-flex flex-column justify-content-between min-vh-100">
@@ -125,89 +122,11 @@ contact:
             </div>
         </section>
 
-        <section id="about" class="pt-5">
+        <section id="about" class="pt-3 py-5">
             <div class="container">
                 <div class="row w-lg-75 w-xl-60 mx-lg-auto">
                     <div class="col-12">
-                        <h2>{{ page.about.heading }}</h2>
-                        <p class="text-dark-light">{{ page.about.description | markdownify }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="developer" class="pt-5">
-            <div class="container">
-                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
-                    <div class="col-12">
-                        <h2>{{ page.work_developer.heading }}</h2>
-                        <p class="text-dark-light">{{ page.work_developer.description | markdownify }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="writer" class="pt-5">
-            <div class="container">
-                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
-                    <div class="col-12">
-                        <h2>{{ page.work_writer.heading }}</h2>
-                        <p class="text-dark-light">{{ page.work_writer.description | markdownify }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="tech-stack" class="pt-5">
-            <div class="container">
-                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
-                    <div class="col-12">
-                        <h2>{{ page.tech_stack.heading }}</h2>
-                        <p class="text-dark-light">{{ page.tech_stack.description | markdownify }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="music" class="pt-5">
-            <div class="container">
-                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
-                    <div class="col-12">
-                        <h2>{{ page.music.heading }}</h2>
-                        <p class="text-dark-light">{{ page.music.description | markdownify }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="sports" class="pt-5">
-            <div class="container">
-                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
-                    <div class="col-12">
-                        <h2>{{ page.sports.heading }}</h2>
-                        <p class="text-dark-light">{{ page.sports.description | markdownify }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="newsletter" class="pt-5">
-            <div class="container">
-                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
-                    <div class="col-12">
-                        <h2>{{ page.newsletter.heading }}</h2>
-                        <p class="text-dark-light">{{ page.newsletter.description | markdownify }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="py-5">
-            <div class="container">
-                <div class="row w-lg-75 w-xl-60 mx-lg-auto">
-                    <div class="col-12">
-                        <h2>{{ page.contact.heading }}</h2>
-                        <p class="text-dark-light">{{ page.contact.description | markdownify }}</p>
+                        <p class="text-dark-light">{{ page.landing.description | markdownify }}</p>
                     </div>
                 </div>
             </div>

@@ -1,9 +1,9 @@
 ---
 title: Komments
 
-tags: [web-dev]
+tags: [Web]
 
-tools: [flask, dropbox-api]
+tools: [Flask, Dropbox API]
 
 mini_description: A Flask Web App to manage comments for a blog.
 
