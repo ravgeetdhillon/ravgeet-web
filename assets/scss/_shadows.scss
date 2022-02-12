@@ -1,0 +1,18 @@
+// $box-shadow-sm: 0 0.125rem 0.25rem rgba(map-get($theme-colors, 'secondary-dark'), 0.075) !default;
+// $box-shadow: 0 0.5rem 1rem rgba(map-get($theme-colors, 'secondary-dark'), 0.15) !default;
+// $box-shadow-lg: 0 1rem 3rem rgba(map-get($theme-colors, 'secondary-dark'), 0.175) !default;
+
+$sizes: (
+  'sm': $box-shadow,
+  'md': $box-shadow-lg,
+  'lg': $box-shadow-sm,
+);
+
+@each $size, $value in $sizes {
+  .shadow-#{$size}-hover {
+    transition: 0.1s ease-in-out;
+    &:hover {
+      box-shadow: $value !important;
+    }
+  }
+}

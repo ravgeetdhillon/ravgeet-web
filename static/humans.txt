@@ -1,0 +1,11 @@
+/* OWNER */
+  Name: Ravgeet Dhillon
+  Contact: ravgeetdhillon [at] gmail.com
+  Twitter: @ravgeetdhillon
+  From: Amritsar, Punjab, India
+
+/* SITE */
+  Language: English
+  Doctype: HTML5
+  IDE: VSCode
+  Technologies: NuxtJs

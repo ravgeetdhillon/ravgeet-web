@@ -1,0 +1,6 @@
+$placementPositions: 'top', 'right', 'bottom', 'left';
+@each $position in $placementPositions {
+  .#{$position}-0 {
+    #{$position}: 0;
+  }
+}
