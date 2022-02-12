@@ -1,38 +1,38 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto">
-    <Banner title="Projects" />
+    <Banner title="Services" />
     <div
-      v-for="(project, projectIndex) in projects"
-      :key="projectIndex"
-      class="col-6 mb-5"
+      v-for="(service, serviceIndex) in services"
+      :key="serviceIndex"
+      class="col-12 mb-5"
     >
-      <!-- <img
-        :src="`/images/projects/${project.image}`"
+      <img
+        :src="`/images/services/${service.image}`"
         class="img-fluid rounded mb-3"
-        :alt="`${project.title} project`"
-      /> -->
+        :alt="`${service.title} service`"
+      />
       <div class="mb-3 d-flex flex-wrap align-items-center">
         <span
-          v-for="(tag, tagIndex) in project.category"
+          v-for="(tag, tagIndex) in service.category"
           :key="tagIndex"
           :class="`badge badge-theme-white p-1 ${
-            tagIndex != project.category.length - 1 ? 'mr-2' : ''
+            tagIndex != service.category.length - 1 ? 'mr-2' : ''
           }`"
         >
           {{ tag }}
         </span>
       </div>
-      <nuxt-link :to="`/projects/${project.slug}`">
-        <h2 class="h3">{{ project.title }}</h2>
+      <nuxt-link :to="`/services/${service.slug}`">
+        <h2 class="h3">{{ service.title }}</h2>
       </nuxt-link>
       <p class="text-dark-light mb-2">
-        {{ project.promo }}
+        {{ service.promo }}
       </p>
       <div class="d-flex flex-wrap align-items-center text-muted">
         <span>Tech Stack -&nbsp;</span>
-        <span v-for="(tool, toolIndex) in project.tech_stack" :key="toolIndex">
+        <span v-for="(tool, toolIndex) in service.tech_stack" :key="toolIndex">
           {{ tool
-          }}<span v-if="toolIndex != project.tech_stack.length - 1"
+          }}<span v-if="toolIndex != service.tech_stack.length - 1"
             >,&nbsp;</span
           >
         </span>
@@ -44,10 +44,8 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const projects = await $content('projects').fetch()
-    return {
-      projects,
-    }
+    const services = await $content('services').fetch()
+    return { services }
   },
 
   data() {

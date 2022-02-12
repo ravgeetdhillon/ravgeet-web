@@ -48,7 +48,12 @@ export default {
   plugins: ['@/plugins/index.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: ['@/components', '@/components/icons', '@/components/structure'],
+  components: [
+    '@/components',
+    '@/components/icons',
+    '@/components/structure',
+    '@/components/elements',
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [

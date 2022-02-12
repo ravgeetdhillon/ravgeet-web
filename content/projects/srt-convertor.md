@@ -1,15 +1,15 @@
 ---
 title: SRT Convertor
 
-tags: [Utility]
+category: [Utility]
 
-tools: [Python]
+tech_stack: [Python]
 
-mini_description: A tool to convert Video Subtitles into usable text format.
+promo: A tool to convert Video Subtitles into usable text format.
 
 github: https://github.com/ravgeetdhillon/srt-convertor/
 
-img: srt-convertor.png
+image: srt-convertor.png
 
 link: srt-convertor
 ---

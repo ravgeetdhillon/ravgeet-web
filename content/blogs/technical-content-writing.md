@@ -1,5 +1,5 @@
 ---
-title: FantasyAI
+title: Technical Content Writing
 
 category: [AI, Data Science]
 

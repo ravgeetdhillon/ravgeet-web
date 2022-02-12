@@ -1,15 +1,11 @@
 <template>
   <div>
-    <Banner title="Story" />
-    <section class="pt-3 py-5">
-      <div class="container">
-        <div class="row w-lg-75 w-xl-60 mx-lg-auto">
-          <div class="col-12">
-            <nuxt-content class="markdown-body mb-4" :document="pageContent" />
-          </div>
-        </div>
+    <div class="row w-lg-75 mx-lg-auto">
+      <Banner title="Story" />
+      <div class="col-12">
+        <nuxt-content class="markdown-body" :document="pageContent" />
       </div>
-    </section>
+    </div>
   </div>
 </template>
 

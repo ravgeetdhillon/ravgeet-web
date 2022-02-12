@@ -2,7 +2,11 @@
   <div>
     <div class="top-wrapper">
       <Navbar />
-      <Nuxt />
+      <main class="py-5">
+        <div class="container">
+          <Nuxt />
+        </div>
+      </main>
     </div>
     <div class="bottom-wrapper">
       <Footer />

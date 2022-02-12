@@ -1,7 +1,7 @@
 <template>
-  <section class="bg-theme-white">
-    <header class="container">
-      <div class="row w-lg-75 w-xl-60 mx-lg-auto">
+  <header class="bg-theme-white">
+    <div class="container">
+      <div class="row w-lg-75 mx-lg-auto">
         <div
           class="col-12 d-flex flex-sm-row flex-column justify-content-between align-items-sm-center py-3"
         >
@@ -43,8 +43,8 @@
           </ul>
         </div>
       </div>
-    </header>
-  </section>
+    </div>
+  </header>
 </template>
 
 <script>
@@ -54,24 +54,32 @@ export default {
       navbarLinks: [
         {
           title: 'Story',
-          url: '/story/',
+          url: '/story',
         },
         {
           title: 'Projects',
-          url: '/projects/',
+          url: '/projects',
         },
+        // {
+        //   title: 'Services',
+        //   url: '/services',
+        // },
+        // {
+        //   title: 'Clients',
+        //   url: '/clients',
+        // },
         {
           title: 'Blog',
-          url: 'https://blog.ravgeet.in/',
+          url: 'https://blog.ravgeet.in',
           external: true,
         },
         {
           title: 'Contact',
-          url: '/contact/',
+          url: '/contact',
         },
         {
           title: 'Resume',
-          url: '/resume/',
+          url: '/resume',
         },
       ],
     }

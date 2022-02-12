@@ -1,16 +1,8 @@
 <template>
-  <section
-    class="py-5 d-flex flex-column justify-content-center bg-theme-white"
-  >
-    <div class="container">
-      <div class="row w-lg-75 w-xl-60 mx-lg-auto">
-        <div class="col-12">
-          <h1 class="display-4">{{ title }}</h1>
-          <div class="lead text-dark-light" v-html="markdownify(headline)" />
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="col-12 mb-5">
+    <h1>{{ title }}</h1>
+    <div class="text-dark-light" v-html="markdownify(headline)" />
+  </div>
 </template>
 
 <script>

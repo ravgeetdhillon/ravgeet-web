@@ -1,33 +1,41 @@
 <template>
-  <div>
+  <div class="row w-lg-75 mx-lg-auto">
     <Banner
       title="Contact"
       headline="If you want me to work on your project, feel free to [send me an email](mailto:ravgeetdhillon@gmail.com). I am open to working with startups and businesses that offer remote work."
     />
-    <section class="py-5">
-      <div class="container">
-        <div class="row w-lg-75 w-xl-60 mx-lg-auto">
-          <div class="col-12">
+
+    <div class="col-12">
+      <div class="row">
+        <div
+          v-for="(link, linkIndex) in socialLinks"
+          :key="linkIndex"
+          class="col-sm-4 mb-3"
+        >
+          <div
+            class="shadow-lg-hover border border-theme-white-light rounded w-100 h-100 p-3"
+          >
+            <!-- <img
+      class="img-fluid"
+      style="max-height: 2.5rem"
+      :src="`/images/projects/${client.image}`"
+      :alt="`${client.name} client`"
+    /> -->
             <a
-              v-for="(link, linkIndex) in socialLinks"
-              :key="linkIndex"
               :href="link.href"
-              :class="`d-block ${
-                linkIndex != socialLinks.length - 1 ? 'mb-3' : ''
-              }`"
-              >{{ link.name }}</a
+              class="text-decoration-none stretched-link d-block"
             >
+              {{ link.name }}
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  layout: 'default',
-
   data() {
     return {
       title: 'Contact - Ravgeet Dhillon',
