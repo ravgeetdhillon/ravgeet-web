@@ -1,6 +1,6 @@
 [build]
-command = "npm run build"
-publish = "build"
+command = "NODE_ENV=production npm run generate"
+publish = "dist"
 
 [[headers]]
 for = "*.js"
@@ -15,20 +15,45 @@ Cache-Control = "public, max-age=31536000"
 [[headers]]
 for = "*.woff2"
 [headers.values]
-Cache-Control = "public, max-age=1296000"
+Cache-Control = "public, max-age=31536000"
 
+[[redirects]]
+from = "/*"
+status = 200
+to = "/index.html"
+
+[[redirects]]
+from = "/resume"
+status = 301
+to = "/files/ravgeet-dhillon-resume.pdf"
+
+[[redirects]]
+from = "/cover-letter"
+status = 301
+to = "/files/ravgeet-dhillon-cover-letter.pdf"
+
+# historic
 [[redirects]]
 force = false
 from = "https://www.ravgeet.in/blog/"
 status = 301
 to = "https://blog.ravgeet.in/"
 
+# historic
 [[redirects]]
 force = false
 from = "https://www.ravgeet.in/blog/*"
 status = 301
 to = "https://blog.ravgeet.in/:splat"
 
+# historic
+[[redirects]]
+force = false
+from = "https://www.ravgeet.in/assets/*"
+status = 301
+to = "https://www.ravgeet.in/files/:splat"
+
+# historic
 [[redirects]]
 force = false
 from = "/about/"
