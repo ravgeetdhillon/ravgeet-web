@@ -14,11 +14,11 @@
 
         <img
           :src="`/images/projects/${project.image}`"
-          class="img-fluid rounded mb-4"
+          class="img-fluid w-100 rounded mb-4"
           :alt="`${project.title} project`"
         />
 
-        <div class="col-12 border rounded">
+        <div class="col-12 border-top border-left border-right rounded">
           <div class="row py-2 border-bottom align-items-center">
             <div class="col-4 text-muted">Category</div>
             <div class="col-8">
@@ -47,17 +47,32 @@
               </span>
             </div>
           </div>
-          <div v-if="project.github" class="row py-2 align-items-center">
+          <div
+            v-if="project.github"
+            class="row border-bottom py-2 align-items-center"
+          >
             <div class="col-4 text-muted">GitHub</div>
-            <div class="col-8">{{ project.github }}</div>
+            <div class="col-8">
+              <a :href="project.github">{{ project.github }}</a>
+            </div>
           </div>
-          <div v-if="project.gitlab" class="row py-2 align-items-center">
+          <div
+            v-if="project.gitlab"
+            class="row border-bottom py-2 align-items-center"
+          >
             <div class="col-4 text-muted">Gitlab</div>
-            <div class="col-8">{{ project.gitlab }}</div>
+            <div class="col-8">
+              <a :href="project.gitlab">{{ project.gitlab }}</a>
+            </div>
           </div>
-          <div v-if="project.view_link" class="row py-2 align-items-center">
+          <div
+            v-if="project.view_link"
+            class="row border-bottom py-2 align-items-center"
+          >
             <div class="col-4 text-muted">Live View</div>
-            <div class="col-8">{{ project.view_link }}</div>
+            <div class="col-8">
+              <a :href="project.view_link">{{ project.view_link }}</a>
+            </div>
           </div>
         </div>
       </div>
