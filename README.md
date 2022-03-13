@@ -3,7 +3,7 @@
 
 # Ravgeet Dhillon's Website
 
-A Jekyll website for [Ravgeet Dhillon](https://www.ravgeet.in).
+A Nuxt.js website for [Ravgeet Dhillon](https://www.ravgeet.in).
 
 ## Prerequisites
 
@@ -18,22 +18,22 @@ These things are required before setting up the project.
 Follow these instructions to get the project up and running.
 
 ```bash
-# clone the repo
-$ git clone https://github.com/ravsamhq/ravgeet-web.git
+# Clone the repo
+$ git clone https://github.com/ravgeetdhillon/ravgeet-web.git
 
-# change directory
+# Change directory
 $ cd ravgeet-web
 
-# setup the project
-$ npm run setup
+# Install dependencies
+$ npm install
 
-# serve at http://localhost:4000
+# Serve at http://localhost:3000
 $ npm run develop
 ```
 
 ## Tech Stack
 
-- [Jekyll](https://jekyllrb.com/) - Jekyll
+- [Frontend](https://nuxtjs.org/) - Nuxt.js
 
 ## Authors
 
