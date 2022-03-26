@@ -3,8 +3,9 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import { marked } from 'marked'
 import VueGtag from 'vue-gtag'
 
-function markdownify(input) {
+const markdownify = (input) => {
   if (input) {
+    input = input.replace(/%\[(.*?)\]/gm, '') // remove hashnode specific markdown for links
     return marked.parse(input)
   }
 }
