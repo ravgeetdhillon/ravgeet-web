@@ -1,12 +1,5 @@
 {
-    "prettier.tabWidth": 4,
-    "prettier.printWidth": 120,
-    "[json]": {
-        "editor.formatOnSave": false,
-        "editor.formatOnPaste": false
-    },
-    "[html]": {
-        "editor.formatOnSave": false,
-        "editor.formatOnPaste": false
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
     }
 }
