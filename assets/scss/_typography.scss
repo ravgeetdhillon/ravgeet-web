@@ -10,3 +10,9 @@ strong {
 figcaption {
   font-size: 1rem;
 }
+
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
