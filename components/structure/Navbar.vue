@@ -76,8 +76,7 @@ export default {
         // },
         {
           title: 'Blog',
-          url: 'https://blog.ravgeet.in',
-          external: true,
+          url: '/blogs',
         },
         {
           title: 'Contact',

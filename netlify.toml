@@ -30,9 +30,9 @@ to = "/files/ravgeet-dhillon-cover-letter.pdf"
 # historic
 [[redirects]]
 force = false
-from = "https://www.ravgeet.in/blog/"
+from = "https://blog.ravgeet.in/"
 status = 301
-to = "https://blog.ravgeet.in/"
+to = "https://www.ravgeet.in/blog"
 
 # historic
 [[redirects]]
@@ -59,4 +59,4 @@ to = "/index.html"
 force = false
 from = "/about/"
 status = 301
-to = "/story/"
+to = "/story"
