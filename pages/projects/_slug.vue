@@ -36,15 +36,12 @@
           <div class="row py-2 border-bottom align-items-center">
             <div class="col-4 text-muted">Tech Stack</div>
             <div class="col-8">
-              <span
-                v-for="(tool, toolIndex) in project.tech_stack"
-                :key="toolIndex"
-                :class="`${
-                  toolIndex != project.tech_stack.length - 1 ? 'mr-2' : ''
-                }`"
-              >
-                {{ tool }}
-              </span>
+              {{
+                new Intl.ListFormat('en', {
+                  style: 'long',
+                  type: 'conjunction',
+                }).format(project.tech_stack)
+              }}
             </div>
           </div>
           <div

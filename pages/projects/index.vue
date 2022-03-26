@@ -6,11 +6,6 @@
       :key="projectIndex"
       class="col-6 mb-5"
     >
-      <!-- <img
-        :src="`/images/projects/${project.image}`"
-        class="img-fluid rounded mb-3"
-        :alt="`${project.title} project`"
-      /> -->
       <div class="mb-3 d-flex flex-wrap align-items-center">
         <span
           v-for="(tag, tagIndex) in project.category"
@@ -29,12 +24,14 @@
         {{ project.promo }}
       </p>
       <div class="d-flex flex-wrap align-items-center text-muted">
-        <span>Tech Stack -&nbsp;</span>
-        <span v-for="(tool, toolIndex) in project.tech_stack" :key="toolIndex">
-          {{ tool
-          }}<span v-if="toolIndex != project.tech_stack.length - 1"
-            >,&nbsp;</span
-          >
+        <span>
+          Tech Stack -&nbsp;
+          {{
+            new Intl.ListFormat('en', {
+              style: 'long',
+              type: 'conjunction',
+            }).format(project.tech_stack)
+          }}
         </span>
       </div>
     </div>
@@ -45,9 +42,7 @@
 export default {
   async asyncData({ $content }) {
     const projects = await $content('projects').fetch()
-    return {
-      projects,
-    }
+    return { projects }
   },
 
   data() {
