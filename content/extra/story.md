@@ -31,19 +31,19 @@ At the same time, I started my freelance digital product development agency, [Ra
 
 I know that life is unpredictable and a lot of things can change in a small period but I always keep in mind that
 
-***The best way to predict the future is to create it.*** - Abraham Lincoln
+**_The best way to predict the future is to create it._** - Abraham Lincoln
 
-***If somebody offers you an amazing opportunity but you are not sure you can do it, say yes – then learn how to do it later!*** - Richard Branson
+**_If somebody offers you an amazing opportunity but you are not sure you can do it, say yes – then learn how to do it later!_** - Richard Branson
 
-***Amateurs call it genius. Masters call it practice.*** - Thierry Henry
+**_Amateurs call it genius. Masters call it practice._** - Thierry Henry
 
-***Only thing we have to fear is fear itself.*** - Franklin D. Roosevelt
+**_Only thing we have to fear is fear itself._** - Franklin D. Roosevelt
 
-***You miss 100 per cent of the shots you never take.*** - Wayne Gretzky
+**_You miss 100 per cent of the shots you never take._** - Wayne Gretzky
 
-***If I ain't the greatest then I'm headed for it.*** - Drake
+**_If I ain't the greatest then I'm headed for it._** - Drake
 
-***Do not pray for easy lives, pray to be stronger men.*** - John F. Kennedy
+**_Do not pray for easy lives, pray to be stronger men._** - John F. Kennedy
 
 ## 👨‍💻 Full Stack Development
 
@@ -56,46 +56,13 @@ Currently, I am working with [CloudAnswers](https://cloudanswers.com) as a Full 
 [GitHub](https://github.com/ravgeetdhillon) <span class="text-light">&bull;</span>
 [Dribbble](https://dribbble.com/ravgeetdhillon)
 
-## ✍️ Technical Content Writing
-
-As a Technical Content Writer, my work is not just limited to writing tutorials, how-to guides, and docs but also setup documentation websites, publishing workflows, and more.
-
-Currently, I am working on a contract basis with [Draft.dev](https://draft.dev) and [Honeybadger](https://honeybadger.io) as a Technical Content Writer.
-
-Besides these, I also write for:
-
-- [CSS Tricks](https://css-tricks.com/author/ravgeetdhillon)
-- [Vonage](https://learn.vonage.com/authors/ravgeet-dhillon/)
-- [Twilio](https://www.twilio.com/blog/author/ravgeet_dhillon)
-- [Adam The Automator](https://adamtheautomator.com/author/ravgeet-dhillon/)
-- [Adeva IT](https://adevait.com/author/ravgeet-dhillon)
-- [RavSam](https://www.ravsam.in/blog/)
-- [Personal Blog](https://blog.ravgeet.in/)
-
-## 🏗 Tech Stack
-
-These are some of my favorite technologies that I use in my daily products. I am constantly learning about new ones and looking to expand my knowledge horizon.
-
-- **Front End Development** - React, Vue, Next, Nuxt
-- **Backend Development** - Python, Node, Laravel, MySQL
-- **Cross-Platform App Development** - Flutter
-- **CMS and API Development** - Strapi
-- **Static Site Generation** - Jekyll, Hugo
-- **Deployment** - Netlify, DigitalOcean, Heroku, VPS
-- **DevOps** - GitHub Actions, Gitlab CI CD
-- **Automation** - Google Apps Script
-- **Add-Ons** - Stripe, Notion, Markdown, Trello
-- **Development** - VSCode, Linux Ubuntu, GitHub, Spotify
-- **Design** - Figma
-- I'm currently aiming to learn about **Kubernetes** and **Docker**.
-
 ## 🎹 Music
 
 Sometimes I decide to get away from tech life and dive straight into music production. I have [my Youtube channel](https://youtube.com/ravdmusic), where you can listen to my remixes and originals.
 
 ## ⚽️ Sports
 
-***All work and no play makes Jack a dull boy***. So, I go out with my friends to play outdoor sports like Cricket, Football and more. I love to cycle around my city and try to ride at least 10-15 km a day.
+**_All work and no play makes Jack a dull boy_**. So, I go out with my friends to play outdoor sports like Cricket, Football and more. I love to cycle around my city and try to ride at least 10-15 km a day.
 
 ## 📫 Newsletter
 
