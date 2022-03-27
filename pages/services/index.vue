@@ -1,11 +1,7 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto">
-    <Banner title="Services" />
-    <div
-      v-for="(service, serviceIndex) in services"
-      :key="serviceIndex"
-      class="col-12 mb-5"
-    >
+    <banner title="Services" />
+    <div v-for="(service, serviceIndex) in services" :key="serviceIndex" class="col-12 mb-5">
       <img
         :src="`/images/services/${service.image}`"
         class="img-fluid rounded mb-3"
@@ -31,10 +27,7 @@
       <div class="d-flex flex-wrap align-items-center text-muted">
         <span>Tech Stack -&nbsp;</span>
         <span v-for="(tool, toolIndex) in service.tech_stack" :key="toolIndex">
-          {{ tool
-          }}<span v-if="toolIndex != service.tech_stack.length - 1"
-            >,&nbsp;</span
-          >
+          {{ tool }}<span v-if="toolIndex != service.tech_stack.length - 1">,&nbsp;</span>
         </span>
       </div>
     </div>

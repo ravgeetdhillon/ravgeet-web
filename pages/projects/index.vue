@@ -1,6 +1,6 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto">
-    <Banner title="Projects" />
+    <banner title="Projects" headline="Open Source, Personal, and Freelance projects." />
     <div v-for="(project, projectIndex) in projects" :key="projectIndex" class="col-6 mb-5">
       <project-brief :project="project" />
     </div>

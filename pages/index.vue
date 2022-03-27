@@ -2,50 +2,34 @@
   <div class="row w-lg-75 mx-lg-auto">
     <div class="col-12 mb-5">
       <div class="row align-items-start flex-row-reverse">
-        <div class="col-4 overflow-hidden">
-          <img src="/images/icons/logos/ravgeet-dhillon.jpg" class="img-fluid rounded" />
+        <div class="col-12 overflow-hidden">
+          <img
+            src="/images/icons/logos/ravgeet-dhillon.jpg"
+            class="img-fluid rounded mb-4"
+            style="max-width: 12rem"
+          />
         </div>
-
-        <div class="col-8 pr-4">
+        <div class="col-12 pr-4">
           <nuxt-content class="markdown-body" :document="pageContent" />
         </div>
       </div>
     </div>
 
     <!-- <div class="col-12 mb-5">
-      <div class="d-flex align-items-center mb-2">
-        <h2 class="font-weight-bold mb-0 mr-3">
-          {{ clientsSection.heading }}
-        </h2>
-        <nuxt-link to="/clients" class="btn btn-sm btn-theme-white">
-          All <b-icon-arrow-right-short />
-        </nuxt-link>
-      </div>
-      <div
-        class="text-muted"
-        v-html="markdownify(clientsSection.description)"
-      />
+      <heading :title="clientsSection.heading" to="/clients" />
       <div class="row">
         <div
           v-for="(client, clientIndex) in clients"
           :key="clientIndex"
           class="col-md-3 col-6 mb-4"
         >
-          <Client :client="client" />
+          <client :client="client" />
         </div>
       </div>
     </div> -->
 
     <div class="col-12 mb-5">
-      <div class="d-flex justify-content-between align-items-center mb-2">
-        <h2 class="font-weight-bold mb-0 mr-3">
-          {{ projectsSection.heading }}
-        </h2>
-        <nuxt-link to="/projects" class="btn btn-sm btn-theme-white">
-          All <b-icon-arrow-right-short />
-        </nuxt-link>
-      </div>
-      <div class="text-muted mb-4" v-html="markdownify(projectsSection.description)" />
+      <heading :title="projectsSection.heading" to="/projects" />
       <div class="row">
         <div v-for="(project, projectIndex) in projects" :key="projectIndex" class="col-md-6 mb-4">
           <project-card :project="project" />
@@ -54,61 +38,39 @@
     </div>
 
     <!-- <div class="col-12 mb-5">
-      <div class="d-flex align-items-center mb-2">
-        <h2 class="font-weight-bold mb-0 mr-3">
-          {{ servicesSection.heading }}
-        </h2>
-        <nuxt-link to="/services" class="btn btn-sm btn-theme-white">
-          All <b-icon-arrow-right-short />
-        </nuxt-link>
-      </div>
-      <div
-        class="text-muted"
-        v-html="markdownify(servicesSection.description)"
-      />
+      <heading :title="servicesSection.heading" to="/services" />
       <div class="row">
-        <div
-          v-for="(service, serviceIndex) in services"
-          :key="serviceIndex"
-          class="col-md-6 mb-4"
-        >
-          <Service :service="service" />
+        <div v-for="(service, serviceIndex) in services" :key="serviceIndex" class="col-md-6 mb-4">
+          <service :service="service" />
         </div>
       </div>
     </div> -->
 
-    <!-- <div class="col-12 mb-5">
-      <div class="d-flex align-items-center mb-2">
-        <h2 class="font-weight-bold mb-0 mr-3">
-          {{ blogsSection.heading }}
-        </h2>
-        <nuxt-link to="/blog" class="btn btn-sm btn-theme-white">
-          All <b-icon-arrow-right-short />
-        </nuxt-link>
-      </div>
-      <div class="text-muted" v-html="markdownify(blogsSection.description)" />
+    <div class="col-12 mb-5">
+      <heading :title="blogsSection.heading" to="/blog" />
       <div class="row">
         <div
           v-for="(blog, blogIndex) in blogs"
           :key="blogIndex"
-          class="col-12 mb-4"
+          :class="cx('col-12', { 'mb-4': blogIndex !== blogs.length - 1 })"
         >
-          <Blog :blog="blog" />
+          <blog-brief :blog="blog" :show-date="false" :has-heading="false" />
         </div>
       </div>
-    </div> -->
+    </div>
 
-    <!-- <div class="col-12">
+    <div class="col-12">
       <newsletter />
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script>
 import shuffle from 'lodash/shuffle'
+import { ArticlesAPI } from '~/utils/articles'
 
 export default {
-  async asyncData({ $content }) {
+  async asyncData({ $content, $axios }) {
     const pageContent = await $content('extra', 'index').fetch()
 
     let clients = await $content('clients').fetch()
@@ -120,7 +82,10 @@ export default {
     let services = await $content('services').fetch()
     services = shuffle(services).slice(0, 4)
 
-    return { pageContent, clients, projects, services }
+    let { blogs } = await ArticlesAPI($axios).find()
+    blogs = blogs.slice(0, 5)
+
+    return { pageContent, clients, projects, services, blogs }
   },
 
   data() {
@@ -129,19 +94,19 @@ export default {
       description:
         'Ravgeet Dhillon is a Full Stack Developer, Flutter Developer, and Technical Content Writer based in India.',
       clientsSection: {
-        heading: 'Clients',
+        heading: '🤝 Clients',
         description: "Here are some of the companies and startups I've worked with",
       },
       projectsSection: {
-        heading: 'Projects',
+        heading: '🏗 Projects',
         description: "Here are some of the projects that I'm really proud of",
       },
       servicesSection: {
-        heading: 'Services',
+        heading: '🛠 Services',
         description: 'Here are some of the services that I provide',
       },
       blogsSection: {
-        heading: 'Blogs',
+        heading: '✍️ Blogs',
         description: 'Here are some of the services that I provide',
       },
     }

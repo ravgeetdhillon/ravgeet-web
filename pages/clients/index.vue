@@ -1,11 +1,7 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto">
-    <Banner title="Clients" />
-    <div
-      v-for="(client, clientIndex) in clients"
-      :key="clientIndex"
-      class="col-6 mb-4"
-    >
+    <banner title="Clients" />
+    <div v-for="(client, clientIndex) in clients" :key="clientIndex" class="col-6 mb-4">
       <Client :client="client" />
     </div>
   </div>
@@ -15,9 +11,7 @@
 export default {
   async asyncData({ $content }) {
     const clients = await $content('clients').fetch()
-    return {
-      clients,
-    }
+    return { clients }
   },
 
   data() {

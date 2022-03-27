@@ -22,24 +22,13 @@
           <div class="row py-2 border-bottom align-items-center">
             <div class="col-4 text-muted">Category</div>
             <div class="col-8">
-              <span
-                v-for="(tag, tagIndex) in project.category"
-                :key="tagIndex"
-                :class="`${tagIndex != project.category.length - 1 ? 'mr-2' : ''}`"
-              >
-                {{ tag }}
-              </span>
+              {{ conjuction(project.category) }}
             </div>
           </div>
           <div class="row py-2 border-bottom align-items-center">
             <div class="col-4 text-muted">Tech Stack</div>
             <div class="col-8">
-              {{
-                new Intl.ListFormat('en', {
-                  style: 'long',
-                  type: 'conjunction',
-                }).format(project.tech_stack)
-              }}
+              {{ conjuction(project.tech_stack) }}
             </div>
           </div>
           <div v-if="project.github" class="row border-bottom py-2 align-items-center">
@@ -63,7 +52,7 @@
         </div>
       </div>
 
-      <nuxt-content class="markdown-body mb-4" :document="project" />
+      <nuxt-content class="markdown-body" :document="project" />
     </div>
   </div>
 </template>

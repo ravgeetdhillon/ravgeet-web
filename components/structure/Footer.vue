@@ -19,7 +19,7 @@
               {{ $config.site.author }}
             </p>
             <a :href="$config.site.repo" class="mr-3">Source Code</a>
-            <!-- <nuxt-link to="/newsletter" class="mr-3">Newsletter</nuxt-link> -->
+            <a :href="$config.site.newsletter" class="mr-3">Newsletter</a>
             <nuxt-link to="/contact">Contact</nuxt-link>
           </div>
         </div>

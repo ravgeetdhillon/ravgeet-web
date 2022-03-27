@@ -6,7 +6,7 @@
       :alt="`${project.title} project`"
     />
     <div class="d-flex justify-content-between align-items-center py-2 px-3">
-      <p class="mb-0 mr-3">{{ project.title }}</p>
+      <p class="mb-0 mr-3 text-truncate">{{ project.title }}</p>
       <span class="badge badge-theme-white">{{ project.category[0] }}</span>
     </div>
     <nuxt-link :to="`/projects/${project.slug}`" class="stretched-link" />

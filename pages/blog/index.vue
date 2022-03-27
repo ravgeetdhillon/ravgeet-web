@@ -1,24 +1,12 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto">
-    <Banner title="Blogs" />
+    <banner title="Blogs" headline="These are the blogs that I've written for different publications around the net."/>
     <div
       v-for="(blog, blogIndex) in blogs"
       :key="blogIndex"
-      class="col-12 mb-5"
+      :class="cx('col-12', { 'mb-5': blogIndex !== blogs.length - 1 })"
     >
-      <p class="text-muted">
-        {{
-          new Intl.DateTimeFormat('en-US', {
-            dateStyle: 'long',
-          }).format(new Date(blog.dateAdded))
-        }}
-      </p>
-      <nuxt-link :to="`/blog/${blog.slug}`">
-        <h2 class="h3">{{ blog.title }}</h2>
-      </nuxt-link>
-      <p class="text-dark-light mb-2 text-truncate">
-        {{ blog.brief }}
-      </p>
+      <blog-brief :blog="blog" />
     </div>
   </div>
 </template>
