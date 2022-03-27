@@ -19,8 +19,8 @@
       <heading :title="clientsSection.heading" to="/clients" />
       <div class="row">
         <div
-          v-for="(client, clientIndex) in clients"
-          :key="clientIndex"
+          v-for="client in clients"
+          :key="client.nid"
           class="col-md-3 col-6 mb-4"
         >
           <client :client="client" />
@@ -31,27 +31,31 @@
     <div class="col-12 mb-5">
       <heading :title="projectsSection.heading" to="/projects" />
       <div class="row">
-        <div v-for="(project, projectIndex) in projects" :key="projectIndex" class="col-md-6 mb-4">
+        <div v-for="project in projects" :key="project.nid" class="col-md-6 mb-4">
           <project-card :project="project" />
         </div>
       </div>
     </div>
 
-    <!-- <div class="col-12 mb-5">
+    <div class="col-12 mb-5">
       <heading :title="servicesSection.heading" to="/services" />
       <div class="row">
-        <div v-for="(service, serviceIndex) in services" :key="serviceIndex" class="col-md-6 mb-4">
-          <service :service="service" />
+        <div
+          v-for="(service, serviceIndex) in services"
+          :key="service.nid"
+          :class="cx('col-12', { 'mb-4': serviceIndex !== services.length - 1 })"
+        >
+          <service-brief :service="service" :show-date="false" :has-heading="false" />
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div class="col-12 mb-5">
       <heading :title="blogsSection.heading" to="/blog" />
       <div class="row">
         <div
           v-for="(blog, blogIndex) in blogs"
-          :key="blogIndex"
+          :key="blog.nid"
           :class="cx('col-12', { 'mb-4': blogIndex !== blogs.length - 1 })"
         >
           <blog-brief :blog="blog" :show-date="false" :has-heading="false" />

@@ -13,10 +13,7 @@
           "
         >
           <div class="brand d-flex mr-3 mb-sm-0 mb-3">
-            <nuxt-link
-              to="/"
-              class="d-flex align-items-center text-decoration-none text-dark"
-            >
+            <nuxt-link to="/" class="d-flex align-items-center text-decoration-none text-dark">
               <img
                 src="/images/icons/logos/ravgeet-dhillon-small.jpg"
                 class="img-fluid rounded-circle mr-2"
@@ -66,10 +63,10 @@ export default {
           title: 'Projects',
           url: '/projects',
         },
-        // {
-        //   title: 'Services',
-        //   url: '/services',
-        // },
+        {
+          title: 'Services',
+          url: '/services',
+        },
         // {
         //   title: 'Clients',
         //   url: '/clients',
