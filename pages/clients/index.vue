@@ -1,7 +1,7 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto">
     <banner title="Clients" />
-    <div v-for="(client, clientIndex) in clients" :key="clientIndex" class="col-6 mb-4">
+    <div v-for="client in clients" :key="client.nid" class="col-6 mb-4">
       <Client :client="client" />
     </div>
   </div>

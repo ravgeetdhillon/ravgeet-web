@@ -6,7 +6,7 @@
     />
     <div
       v-for="(blog, blogIndex) in blogs"
-      :key="blogIndex"
+      :key="blog.nid"
       :class="cx('col-12', { 'mb-5': blogIndex !== blogs.length - 1 })"
     >
       <blog-brief :blog="blog" />

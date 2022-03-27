@@ -1,7 +1,9 @@
+import { addNuxtId } from '~/utils/id'
+
 const ProjectsAPI = ($content, error) => ({
   find: async () => {
     const projects = await $content('projects').fetch()
-    return projects
+    return addNuxtId(projects)
   },
 
   findOne: async ({ slug }) => {
@@ -10,7 +12,7 @@ const ProjectsAPI = ($content, error) => ({
       .catch((_) => {
         error({ statusCode: 404, message: 'Page not found' })
       })
-    return project
+    return addNuxtId(project)
   },
 })
 

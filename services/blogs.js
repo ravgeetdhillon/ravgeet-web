@@ -1,3 +1,5 @@
+import { addNuxtId } from '~/utils/id'
+
 const axiosConfig = {
   baseURL: 'https://api.hashnode.com',
   headers: {
@@ -9,7 +11,7 @@ const BlogsAPI = ($axios) => ({
   find: async () => {
     const data = (page) =>
       JSON.stringify({
-        query: `query GetUserArticles($page: Int!) {
+        query: `query GetUserBlogs($page: Int!) {
           user(username: "ravgeetdhillon") {
             publication {
               posts(page: $page) {
@@ -45,13 +47,13 @@ const BlogsAPI = ($axios) => ({
       page = page + 1
     }
 
-    return blogs
+    return addNuxtId(blogs)
   },
 
   findOne: async ({ slug }) => {
     const data = (slug) =>
       JSON.stringify({
-        query: `query GetArticle($slug: String!) {
+        query: `query GetBlog($slug: String!) {
           post(slug: $slug, hostname:"https://hashnode.com/@ravgeetdhillon") {
             slug
             title
@@ -69,7 +71,7 @@ const BlogsAPI = ($axios) => ({
 
     const blog = res.data.post
 
-    return blog
+    return addNuxtId(blog)
   },
 })
 
