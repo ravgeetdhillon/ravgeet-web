@@ -128,6 +128,7 @@ export default {
     site: {
       author: 'Ravgeet Dhillon',
       repo: 'https://github.com/ravgeetdhillon/ravgeet-web',
+      newsletter: 'https://www.ravsam.in/newsletter/',
     },
   },
 }
