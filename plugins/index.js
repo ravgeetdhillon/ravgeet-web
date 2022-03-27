@@ -62,7 +62,7 @@ export default (ctx, inject) => {
   const { $axios, $content, error } = ctx
 
   const services = {
-    articles: BlogsAPI($axios, error),
+    blogs: BlogsAPI($axios, error),
     projects: ProjectsAPI($content, error),
     clients: ClientsAPI($content, error),
     services: ServicesAPI($content, error),

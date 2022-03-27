@@ -81,7 +81,7 @@ export default {
     let services = await $services.services.find()
     services = shuffle(services).slice(0, 4)
 
-    let blogs = await $services.articles.find()
+    let blogs = await $services.blogs.find()
     blogs = blogs.slice(0, 5)
 
     return { pageContent, clients, projects, services, blogs }
