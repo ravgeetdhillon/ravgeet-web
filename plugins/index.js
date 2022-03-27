@@ -3,6 +3,10 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import { marked } from 'marked'
 import VueGtag from 'vue-gtag'
 import classNames from 'classnames'
+import { BlogsAPI } from '~/services/blogs'
+import { ProjectsAPI } from '~/services/projects'
+import { ClientsAPI } from '~/services/clients'
+import { ServicesAPI } from '~/services/services'
 
 const markdownify = (value) => {
   if (value) {
@@ -53,3 +57,16 @@ Vue.filter('markdownify', markdownify)
 Vue.filter('cx', cx)
 Vue.filter('conjuction', conjuction)
 Vue.filter('formatDate', formatDate)
+
+export default (ctx, inject) => {
+  const { $axios, $content, error } = ctx
+
+  const services = {
+    articles: BlogsAPI($axios, error),
+    projects: ProjectsAPI($content, error),
+    clients: ClientsAPI($content, error),
+    services: ServicesAPI($content, error),
+  }
+
+  inject('services', services)
+}

@@ -23,9 +23,7 @@
               <span
                 v-for="(tag, tagIndex) in service.category"
                 :key="tagIndex"
-                :class="`${
-                  tagIndex != service.category.length - 1 ? 'mr-2' : ''
-                }`"
+                :class="`${tagIndex != service.category.length - 1 ? 'mr-2' : ''}`"
               >
                 {{ tag }}
               </span>
@@ -37,9 +35,7 @@
               <span
                 v-for="(tool, toolIndex) in service.tech_stack"
                 :key="toolIndex"
-                :class="`${
-                  toolIndex != service.tech_stack.length - 1 ? 'mr-2' : ''
-                }`"
+                :class="`${toolIndex != service.tech_stack.length - 1 ? 'mr-2' : ''}`"
               >
                 {{ tool }}
               </span>
@@ -55,13 +51,9 @@
 
 <script>
 export default {
-  async asyncData({ $content, params, error }) {
-    const service = await $content('services', params.slug)
-      .fetch()
-      .catch((_) => {
-        error({ statusCode: 404, message: 'Page not found' })
-      })
-
+  async asyncData({ $services, params }) {
+    const { slug } = params
+    const service = await $services.services.findOne({ slug })
     return { service }
   },
 }

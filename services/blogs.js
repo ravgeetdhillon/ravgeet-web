@@ -5,7 +5,7 @@ const axiosConfig = {
   },
 }
 
-const ArticlesAPI = ($axios) => ({
+const BlogsAPI = ($axios) => ({
   find: async () => {
     const data = (page) =>
       JSON.stringify({
@@ -45,7 +45,7 @@ const ArticlesAPI = ($axios) => ({
       page = page + 1
     }
 
-    return { blogs }
+    return blogs
   },
 
   findOne: async ({ slug }) => {
@@ -69,8 +69,8 @@ const ArticlesAPI = ($axios) => ({
 
     const blog = res.data.post
 
-    return { blog }
+    return blog
   },
 })
 
-export { ArticlesAPI }
+export { BlogsAPI }

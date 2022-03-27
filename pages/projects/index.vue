@@ -9,8 +9,8 @@
 
 <script>
 export default {
-  async asyncData({ $content }) {
-    const projects = await $content('projects').fetch()
+  async asyncData({ $services }) {
+    const projects = await $services.projects.find()
     return { projects }
   },
 

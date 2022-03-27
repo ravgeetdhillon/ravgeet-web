@@ -8,12 +8,10 @@
 </template>
 
 <script>
-import { ArticlesAPI } from '~/utils/articles'
-
 export default {
-  async asyncData({ $axios, params }) {
+  async asyncData({ $services, params }) {
     const { slug } = params
-    const { blog } = await ArticlesAPI($axios).findOne({ slug })
+    const blog = await $services.blogs.findOne({ slug })
     return { blog }
   },
 

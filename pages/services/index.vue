@@ -36,8 +36,8 @@
 
 <script>
 export default {
-  async asyncData({ $content }) {
-    const services = await $content('services').fetch()
+  async asyncData({ $services }) {
+    const services = await $services.services.find()
     return { services }
   },
 

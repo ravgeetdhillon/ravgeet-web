@@ -4,13 +4,9 @@
 
 <script>
 export default {
-  async asyncData({ $content, params, error }) {
-    const project = await $content('projects', params.slug)
-      .fetch()
-      .catch((_) => {
-        error({ statusCode: 404, message: 'Page not found' })
-      })
-
+  async asyncData({ $services, params }) {
+    const { slug } = params
+    const project = await $services.projects.findOne({ slug })
     return { project }
   },
 }

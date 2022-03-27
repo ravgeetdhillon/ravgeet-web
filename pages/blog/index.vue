@@ -1,6 +1,9 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto">
-    <banner title="Blogs" headline="These are the blogs that I've written for different publications around the net."/>
+    <banner
+      title="Blogs"
+      headline="These are the blogs that I've written for different publications around the net."
+    />
     <div
       v-for="(blog, blogIndex) in blogs"
       :key="blogIndex"
@@ -12,11 +15,9 @@
 </template>
 
 <script>
-import { ArticlesAPI } from '~/utils/articles'
-
 export default {
-  async asyncData({ $axios }) {
-    const { blogs } = await ArticlesAPI($axios).find()
+  async asyncData({ $services }) {
+    const blogs = await $services.blogs.find()
     return { blogs }
   },
 

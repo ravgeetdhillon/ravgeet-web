@@ -67,22 +67,21 @@
 
 <script>
 import shuffle from 'lodash/shuffle'
-import { ArticlesAPI } from '~/utils/articles'
 
 export default {
-  async asyncData({ $content, $axios }) {
+  async asyncData({ $content, $services }) {
     const pageContent = await $content('extra', 'index').fetch()
 
-    let clients = await $content('clients').fetch()
+    let clients = await $services.clients.find()
     clients = shuffle(clients).slice(0, 4)
 
-    let projects = await $content('projects').fetch()
+    let projects = await $services.projects.find()
     projects = shuffle(projects).slice(0, 4)
 
-    let services = await $content('services').fetch()
+    let services = await $services.services.find()
     services = shuffle(services).slice(0, 4)
 
-    let { blogs } = await ArticlesAPI($axios).find()
+    let blogs = await $services.articles.find()
     blogs = blogs.slice(0, 5)
 
     return { pageContent, clients, projects, services, blogs }

@@ -23,9 +23,7 @@
               <span
                 v-for="(tag, tagIndex) in client.category"
                 :key="tagIndex"
-                :class="`${
-                  tagIndex != client.category.length - 1 ? 'mr-2' : ''
-                }`"
+                :class="`${tagIndex != client.category.length - 1 ? 'mr-2' : ''}`"
               >
                 {{ tag }}
               </span>
@@ -37,9 +35,7 @@
               <span
                 v-for="(tool, toolIndex) in client.tech_stack"
                 :key="toolIndex"
-                :class="`${
-                  toolIndex != client.tech_stack.length - 1 ? 'mr-2' : ''
-                }`"
+                :class="`${toolIndex != client.tech_stack.length - 1 ? 'mr-2' : ''}`"
               >
                 {{ tool }}
               </span>
@@ -67,13 +63,9 @@
 
 <script>
 export default {
-  async asyncData({ $content, params, error }) {
-    const client = await $content('clients', params.slug)
-      .fetch()
-      .catch((_) => {
-        error({ statusCode: 404, message: 'Page not found' })
-      })
-
+  async asyncData({ $services, params }) {
+    const { slug } = params
+    const client = await $services.clients.findOne({ slug })
     return { client }
   },
 }
