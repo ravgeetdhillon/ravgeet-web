@@ -20,8 +20,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title:
-      'Ravgeet Dhillon - Full Stack Developer and Technical Content Writer',
+    title: 'Ravgeet Dhillon - Full Stack Developer and Technical Content Writer',
     htmlAttrs: {
       lang: 'en',
     },
@@ -49,18 +48,14 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
-    '@/components',
-    '@/components/icons',
-    '@/components/structure',
-    '@/components/elements',
+    {
+      path: '@/components',
+      pathPrefix: false,
+    },
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/pwa',
-    '@/modules/sitemapRouteGenerator',
-  ],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/pwa', '@/modules/sitemapRouteGenerator'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

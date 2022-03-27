@@ -1,9 +1,7 @@
 <template>
-  <div
-    class="shadow-lg-hover border border-theme-white-light rounded w-100 h-100 overflow-hidden"
-  >
+  <div class="shadow-lg-hover border border-theme-white-light rounded w-100 h-100 overflow-hidden">
     <img
-      class="img-fluid"
+      class="img-cover"
       :src="`/images/projects/${project.image}`"
       :alt="`${project.title} project`"
     />

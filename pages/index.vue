@@ -1,12 +1,9 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto">
-    <div class="col-12">
+    <div class="col-12 mb-5">
       <div class="row align-items-start flex-row-reverse">
         <div class="col-4 overflow-hidden">
-          <img
-            src="/images/icons/logos/ravgeet-dhillon.jpg"
-            class="img-fluid rounded"
-          />
+          <img src="/images/icons/logos/ravgeet-dhillon.jpg" class="img-fluid rounded" />
         </div>
 
         <div class="col-8 pr-4">
@@ -39,29 +36,22 @@
       </div>
     </div> -->
 
-    <!-- <div class="col-12 mb-5">
-      <div class="d-flex align-items-center mb-2">
+    <div class="col-12 mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-2">
         <h2 class="font-weight-bold mb-0 mr-3">
           {{ projectsSection.heading }}
         </h2>
-        <NuxtLink to="/projects" class="btn btn-sm btn-theme-white">
+        <nuxt-link to="/projects" class="btn btn-sm btn-theme-white">
           All <b-icon-arrow-right-short />
-        </NuxtLink>
+        </nuxt-link>
       </div>
-      <div
-        class="text-muted"
-        v-html="markdownify(projectsSection.description)"
-      />
+      <div class="text-muted mb-4" v-html="markdownify(projectsSection.description)" />
       <div class="row">
-        <div
-          v-for="(project, projectIndex) in projects"
-          :key="projectIndex"
-          class="col-md-6 mb-4"
-        >
-          <Project :project="project" />
+        <div v-for="(project, projectIndex) in projects" :key="projectIndex" class="col-md-6 mb-4">
+          <project-card :project="project" />
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- <div class="col-12 mb-5">
       <div class="d-flex align-items-center mb-2">
@@ -92,7 +82,7 @@
         <h2 class="font-weight-bold mb-0 mr-3">
           {{ blogsSection.heading }}
         </h2>
-        <nuxt-link to="/blogs" class="btn btn-sm btn-theme-white">
+        <nuxt-link to="/blog" class="btn btn-sm btn-theme-white">
           All <b-icon-arrow-right-short />
         </nuxt-link>
       </div>
@@ -115,7 +105,7 @@
 </template>
 
 <script>
-import { shuffle } from 'lodash'
+import shuffle from 'lodash/shuffle'
 
 export default {
   async asyncData({ $content }) {
@@ -135,14 +125,12 @@ export default {
 
   data() {
     return {
-      title:
-        'Full Stack Developer, Flutter Developer, Technical Content Writer - Ravgeet Dhillon',
+      title: 'Full Stack Developer, Flutter Developer, Technical Content Writer - Ravgeet Dhillon',
       description:
         'Ravgeet Dhillon is a Full Stack Developer, Flutter Developer, and Technical Content Writer based in India.',
       clientsSection: {
         heading: 'Clients',
-        description:
-          "Here are some of the companies and startups I've worked with",
+        description: "Here are some of the companies and startups I've worked with",
       },
       projectsSection: {
         heading: 'Projects',
