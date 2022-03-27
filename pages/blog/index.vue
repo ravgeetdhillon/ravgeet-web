@@ -13,7 +13,7 @@
           }).format(new Date(blog.dateAdded))
         }}
       </p>
-      <nuxt-link :to="`/blogs/${blog.slug}`">
+      <nuxt-link :to="`/blog/${blog.slug}`">
         <h2 class="h3">{{ blog.title }}</h2>
       </nuxt-link>
       <p class="text-dark-light mb-2 text-truncate">

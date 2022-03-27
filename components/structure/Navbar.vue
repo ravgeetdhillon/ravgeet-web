@@ -76,7 +76,7 @@ export default {
         // },
         {
           title: 'Blog',
-          url: '/blogs',
+          url: '/blog',
         },
         {
           title: 'Contact',

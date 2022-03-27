@@ -3,7 +3,7 @@
     <pre>{{ blog }}</pre>
     <p class="">{{ blog.title }}</p>
     <p>{{ blog.createdAt }}</p>
-    <nuxt-link :to="`/blogs/${blog.slug}`" class="stretched-lin" />
+    <nuxt-link :to="`/blog/${blog.slug}`" class="stretched-lin" />
   </div>
 </template>
 

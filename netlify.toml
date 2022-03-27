@@ -30,20 +30,6 @@ to = "/files/ravgeet-dhillon-cover-letter.pdf"
 # historic
 [[redirects]]
 force = false
-from = "https://blog.ravgeet.in/"
-status = 301
-to = "https://www.ravgeet.in/blog"
-
-# historic
-[[redirects]]
-force = false
-from = "https://www.ravgeet.in/blog/*"
-status = 301
-to = "https://blog.ravgeet.in/:splat"
-
-# historic
-[[redirects]]
-force = false
 from = "https://www.ravgeet.in/assets/*"
 status = 301
 to = "https://www.ravgeet.in/files/:splat"
@@ -60,3 +46,18 @@ force = false
 from = "/about/"
 status = 301
 to = "/story"
+
+# these are used by blog.ravgeet.in keep them here
+# # historic
+# [[redirects]]
+# force = false
+# from = "https://blog.ravgeet.in/"
+# status = 301
+# to = "https://www.ravgeet.in/blog"
+
+# # historic
+# [[redirects]]
+# force = false
+# from = "https://blog.ravgeet.in/:splat"
+# status = 301
+# to = "https://www.ravgeet.in/blog/*"
