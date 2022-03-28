@@ -1,6 +1,6 @@
 ---
 title: Software Engineering
-promo: Specialized Software Consulting and Development related to Web apps, Mobile apps and DevOps Automation.
+promo: Specialized Software Consulting and Development related to Web apps, Mobile apps, and DevOps Automation.
 ---
 
 At my workplace, I primarily work with:
@@ -25,4 +25,6 @@ These are some of my favorite technologies that I have at least used once in pro
 - **Development** - VSCode, Linux Ubuntu, GitHub, Spotify
 - **Design** - Figma
 
-This year my aim is to learn about **Golang**, **Kubernetes** and **Docker**.
+This year my aim is to learn about **Golang**, **Kubernetes**, and **Docker**.
+
+Although my availability is limited as I work on a full-time basis, still if you'd like me to work on your project, please consider sending me an email at ravgeetdhillon@gmail.com or reach out via your preferred contact channel.

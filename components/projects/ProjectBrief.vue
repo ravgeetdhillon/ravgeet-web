@@ -1,10 +1,12 @@
 <template>
   <div>
-    <img
-      class="img-cover rounded mb-3"
-      :src="`/images/projects/${project.image}`"
-      :alt="`${project.title} project`"
-    />
+    <nuxt-link :to="`/projects/${project.slug}`">
+      <img
+        class="img-cover rounded mb-3"
+        :src="`/images/projects/${project.image}`"
+        :alt="`${project.title} project`"
+      />
+    </nuxt-link>
     <div class="d-flex justify-content-between align-items-center mb-2">
       <nuxt-link :to="`/projects/${project.slug}`" class="text-truncate">
         <h3 class="text-truncate mr-3 mb-0">{{ project.title }}</h3>

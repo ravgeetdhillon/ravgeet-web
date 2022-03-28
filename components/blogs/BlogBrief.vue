@@ -7,7 +7,7 @@
       <h3 v-if="hasHeading">{{ blog.title }}</h3>
       <p v-else class="h4">{{ blog.title }}</p>
     </nuxt-link>
-    <p class="text-dark-light mb-2 text-truncate">
+    <p class="text-dark-light mb-0 text-truncate">
       {{ blog.brief }}
     </p>
   </div>

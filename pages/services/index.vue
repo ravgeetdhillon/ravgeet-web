@@ -4,7 +4,7 @@
     <div
       v-for="(service, serviceIndex) in services"
       :key="service.nid"
-      :class="cx('col-12', { 'mb-5': serviceIndex !== services.length - 1 })"
+      :class="cx('col-12', { 'mb-4': serviceIndex !== services.length - 1 })"
     >
       <service-brief :service="service" />
     </div>
