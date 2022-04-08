@@ -7,7 +7,9 @@
           <p class="text-dark-light mb-0">
             Powered by <a href="https://nuxtjs.org">NuxtJs</a>, deployed on
             <a href="https://netlify.com">Netlify</a>. Designed and written by
-            <a href="https://linkedin.com/in/ravgeetdhillon">Ravgeet</a>.
+            <a href="https://linkedin.com/in/ravgeetdhillon">Ravgeet</a>. Last Updated on
+            <b>{{ formatDate($config.appLastUpdatedAt) }}</b
+            >.
           </p>
         </div>
       </div>

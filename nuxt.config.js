@@ -1,3 +1,10 @@
+import fs from 'fs'
+
+let appLastUpdatedAt = new Date()
+try {
+  appLastUpdatedAt = fs.readFileSync('./.last-updated-at', 'utf8')
+} catch (err) {}
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -108,23 +115,10 @@ export default {
         prettify: false,
       },
     },
-    // extend(config, ctx) {
-    //   config.module.rules.push({
-    //     enforce: 'pre',
-    //     test: /\.(js|vue)$/,
-    //     loader: 'eslint-loader',
-    //     exclude: /(node_modules)/,
-    //     options: {
-    //       fix: true,
-    //     },
-    //   })
-    //   if (ctx.isDev) {
-    //     config.devtool = ctx.isClient ? 'source-map' : 'inline-source-map'
-    //   }
-    // },
   },
 
   publicRuntimeConfig: {
+    appLastUpdatedAt,
     site: {
       author: 'Ravgeet Dhillon',
       repo: 'https://github.com/ravgeetdhillon/ravgeet-web',
