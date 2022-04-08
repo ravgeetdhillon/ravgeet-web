@@ -1,0 +1,48 @@
+name: Production Deploy
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "0 0 */3 * *"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    outputs:
+      node_version: ${{ steps.node_version.outputs.node_version }}
+    steps:
+      - name: Set up Repository
+        uses: actions/checkout@v2
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Get Node Version
+        id: node_version
+        run: |
+          node_version=`cat .nvmrc`
+          echo "::set-output name=node_version::$node_version"
+
+      - name: Set up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ steps.node_version.outputs.node_version }}
+
+      - name: Generate Metadata files
+        run: |
+          last_updated_at=`date +%Y-%m-%dT%H:%M:%S.000%z`
+          printf "$last_updated_at" > .last-updated-at
+
+      - name: Build Website
+        run: NODE_ENV=production npm run generate
+
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=dist --prod
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
