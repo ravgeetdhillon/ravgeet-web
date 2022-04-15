@@ -17,6 +17,7 @@ export default {
 
   head() {
     return {
+      title: this.blog.title,
       link: [
         {
           rel: 'canonical',

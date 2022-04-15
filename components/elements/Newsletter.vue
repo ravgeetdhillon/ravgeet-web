@@ -1,6 +1,6 @@
 <template>
   <div class="bg-theme-white p-4 rounded">
-    <h2>{{ heading }}</h2>
+    <div class="h4">{{ heading }}</div>
     <div class="text-dark-light" v-html="markdownify(promo)" />
     <a :href="$config.site.newsletter" class="btn btn-primary btn-block">
       Subscribe <b-icon-arrow-right-short />
