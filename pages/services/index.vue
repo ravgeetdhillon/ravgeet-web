@@ -20,7 +20,7 @@ export default {
 
   data() {
     return {
-      title: 'Projects - Ravgeet Dhillon',
+      title: 'Services - Ravgeet Dhillon',
       description:
         'Ravgeet Dhillon is a Full Stack Developer, Flutter Developer, and Technical Content Writer based in India',
     }
