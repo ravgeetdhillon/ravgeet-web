@@ -1,17 +1,14 @@
 import { nanoid } from 'nanoid'
 
-const addNuxtId = (entity) => {
-  if (Array.isArray(entity)) {
-    return entity.map((item) => ({
-      ...item,
-      nid: nanoid(),
-    }))
-  } else if (typeof entity === 'object' && !Array.isArray(entity) && entity !== null) {
-    return {
-      ...entity,
-      nid: nanoid(),
-    }
+const isObject = (val) => val && typeof val === 'object' && !Array.isArray(val)
+
+const addNuxtId = (obj) => {
+  if (!obj || typeof obj !== 'object') return
+  if (isObject(obj)) {
+    obj.nid = nanoid()
   }
+  Object.keys(obj).forEach((k) => addNuxtId(obj[k]))
+  return obj
 }
 
 export { addNuxtId }
