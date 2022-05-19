@@ -39,10 +39,26 @@ export default {
           'width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no',
       },
       { name: 'author', content: 'Ravgeet Dhillon' },
-      { name: 'description', content: '' },
+      {
+        name: 'description',
+        content:
+          'Ravgeet Dhillon is a full time Full Stack Developer and Technical Content Writer working remotely and based in India.',
+      },
       { name: 'generator', content: 'Nuxt.js' },
       { name: 'robots', content: 'all' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Ravgeet Dhillon is a full time Full Stack Developer and Technical Content Writer working remotely and based in India.',
+      },
+      { hid: 'og:title', name: 'og:title', content: 'Ravgeet Dhillon' },
+      { hid: 'og:site_name', name: 'og:site_name', content: 'Ravgeet Dhillon' },
+      {
+        hid: 'apple-mobile-web-app-title',
+        name: 'apple-mobile-web-app-title',
+        content: 'Ravgeet Dhillon',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
