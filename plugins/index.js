@@ -34,6 +34,15 @@ const formatDate = (value) => {
   }
 }
 
+const formatDateTime = (value) => {
+  if (value) {
+    return new Intl.DateTimeFormat('en-US', {
+      dateStyle: 'long',
+      timeStyle: 'long',
+    }).format(new Date(value))
+  }
+}
+
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
@@ -50,6 +59,7 @@ Vue.mixin({
     cx,
     conjuction,
     formatDate,
+    formatDateTime,
   },
 })
 
@@ -57,6 +67,7 @@ Vue.filter('markdownify', markdownify)
 Vue.filter('cx', cx)
 Vue.filter('conjuction', conjuction)
 Vue.filter('formatDate', formatDate)
+Vue.filter('formatDateTime', formatDateTime)
 
 export default (ctx, inject) => {
   const { $axios, $content, error } = ctx

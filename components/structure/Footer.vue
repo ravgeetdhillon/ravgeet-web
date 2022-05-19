@@ -8,7 +8,9 @@
             Powered by <a href="https://nuxtjs.org">NuxtJs</a>, deployed on
             <a href="https://netlify.com">Netlify</a>. Designed and written by
             <a href="https://linkedin.com/in/ravgeetdhillon">Ravgeet</a>. Last Updated on
-            <b>{{ formatDate($config.appLastUpdatedAt) }}</b
+            <b :title="formatDateTime($config.appLastUpdatedAt)">{{
+              formatDate($config.appLastUpdatedAt)
+            }}</b
             >.
           </p>
         </div>

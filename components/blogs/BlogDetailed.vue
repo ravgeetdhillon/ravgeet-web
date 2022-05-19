@@ -4,7 +4,7 @@
       <div class="mb-4">
         <back-link label="All Blogs" to="/blog" />
         <h1 class="mb-3">{{ blog.title }}</h1>
-        <p class="text-muted">
+        <p class="text-muted" :title="formatDateTime(blog.dateAdded)">
           {{ formatDate(blog.dateAdded) }}
         </p>
       </div>
