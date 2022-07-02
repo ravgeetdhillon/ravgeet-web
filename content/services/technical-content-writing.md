@@ -14,6 +14,9 @@ I write for content creation agencies and software startups:
 - [Twilio](https://www.twilio.com/blog/author/ravgeet_dhillon)
 - [Adam The Automator](https://adamtheautomator.com/author/ravgeet-dhillon/)
 - [Adeva IT](https://adevait.com/author/ravgeet-dhillon)
+- [Tiny.Cloud](https://www.tiny.cloud/blog/author/ravgeet-dhillon/)
+- [Bird Eats Bug](https://birdeatsbug.com/authors/ravgeet-dhillon)
+- [Ably](https://ably.com/blog/author/ravgeet-dhillon)
 - [RavSam](https://www.ravsam.in/blog/)
 - [Personal Blog](https://www.ravgeet.in/blog)
 <!-- - Strapi
