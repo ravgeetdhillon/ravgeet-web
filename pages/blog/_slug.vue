@@ -18,12 +18,6 @@ export default {
   head() {
     return {
       title: this.blog.title,
-      link: [
-        {
-          rel: 'canonical',
-          href: 'https://hashnode.ravgeet.in/' + this.blog.slug,
-        },
-      ],
     }
   },
 }
