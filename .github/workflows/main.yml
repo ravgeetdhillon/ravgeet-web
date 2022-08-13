@@ -11,6 +11,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      DRIBBBLE_ACCESS_TOKEN: ${{ secrets.DRIBBBLE_ACCESS_TOKEN }}
     outputs:
       node_version: ${{ steps.node_version.outputs.node_version }}
     steps:
