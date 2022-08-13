@@ -6,13 +6,13 @@
           class="
             col-12
             d-flex
-            flex-sm-row flex-column
+            flex-md-row flex-column
             justify-content-between
-            align-items-sm-center
+            align-items-md-center
             py-3
           "
         >
-          <div class="brand d-flex mr-3 mb-sm-0 mb-3">
+          <div class="brand d-flex mr-3 mb-md-0 mb-3">
             <nuxt-link to="/" class="d-flex align-items-center text-decoration-none text-dark">
               <img
                 src="/images/icons/logos/ravgeet-dhillon-small.jpg"
@@ -25,15 +25,19 @@
               </div>
             </nuxt-link>
           </div>
-          <ul class="navbar list-unstyled d-flex flex-wrap mb-0 p-0">
-            <li v-for="(link, index) in navbarLinks" :key="index" class="ml-3">
+          <ul class="navbar list-unstyled d-flex flex-nowrap snap-scroll-horizontal mb-0 p-0">
+            <li
+              v-for="(link, index) in navbarLinks"
+              :key="index"
+              :class="cx('snap-child-at-start', { 'ml-3': index !== 0 })"
+            >
               <a
                 v-if="link.external || link.static"
                 :href="link.url"
                 class="text-muted text-xs-center text-decoration-none"
               >
                 {{ link.title }}
-                <span v-if="link.external"><ExternalLink /></span>
+                <span v-if="link.external"><external-link /></span>
               </a>
               <nuxt-link
                 v-else
@@ -62,6 +66,10 @@ export default {
         {
           title: 'Projects',
           url: '/projects',
+        },
+        {
+          title: 'Design',
+          url: '/design',
         },
         {
           title: 'Services',
