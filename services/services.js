@@ -10,7 +10,7 @@ const ServicesAPI = ($content, error) => ({
     const service = await $content('services', slug)
       .fetch()
       .catch((_) => {
-        error({ statusCode: 404, message: 'Page not found' })
+        error({ statusCode: 404, message: 'This page could not be found' })
       })
     return addNuxtId(service)
   },

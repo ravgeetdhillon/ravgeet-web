@@ -10,7 +10,7 @@ const ProjectsAPI = ($content, error) => ({
     const project = await $content('projects', slug)
       .fetch()
       .catch((_) => {
-        error({ statusCode: 404, message: 'Page not found' })
+        error({ statusCode: 404, message: 'This page could not be found' })
       })
     return addNuxtId(project)
   },

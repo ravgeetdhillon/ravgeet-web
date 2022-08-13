@@ -10,7 +10,7 @@ const ClientsAPI = ($content, error) => ({
     const client = await $content('clients', slug)
       .fetch()
       .catch((_) => {
-        error({ statusCode: 404, message: 'Page not found' })
+        error({ statusCode: 404, message: 'This page could not be found' })
       })
     return addNuxtId(client)
   },
