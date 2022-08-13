@@ -3,10 +3,15 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import { marked } from 'marked'
 import VueGtag from 'vue-gtag'
 import classNames from 'classnames'
+import dayjs from 'dayjs'
+import utc from 'dayjs/plugin/utc'
+import timezone from 'dayjs/plugin/timezone'
+import relativeTime from 'dayjs/plugin/relativeTime'
 import { BlogsAPI } from '~/services/blogs'
 import { ProjectsAPI } from '~/services/projects'
 import { ClientsAPI } from '~/services/clients'
 import { ServicesAPI } from '~/services/services'
+import { DribbbleAPI } from '~/services/dribbble'
 
 const markdownify = (value) => {
   if (value) {
@@ -26,22 +31,16 @@ const conjuction = (value) => {
   }
 }
 
-const formatDate = (value) => {
+const formatDate = (value, format = 'D MMMM, YYYY') => {
   if (value) {
-    return new Intl.DateTimeFormat('en-US', {
-      dateStyle: 'long',
-    }).format(new Date(value))
+    dayjs.extend(utc)
+    dayjs.extend(timezone)
+    dayjs.extend(relativeTime)
+    return dayjs(value).tz(dayjs.tz.guess()).format(format)
   }
 }
 
-const formatDateTime = (value) => {
-  if (value) {
-    return new Intl.DateTimeFormat('en-US', {
-      dateStyle: 'long',
-      timeStyle: 'long',
-    }).format(new Date(value))
-  }
-}
+const formatDateTime = (value) => formatDate(value, 'D MMMM, YYYY - hh:mm A')
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
