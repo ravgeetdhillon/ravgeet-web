@@ -1,6 +1,6 @@
 import { addNuxtId } from '~/utils/id'
 
-const ClientsAPI = ($content, error) => ({
+const ClientsAPI = ({ $content, error }) => ({
   find: async () => {
     const clients = await $content('clients').fetch()
     return addNuxtId(clients)

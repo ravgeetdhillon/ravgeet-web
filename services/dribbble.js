@@ -7,7 +7,7 @@ const axiosConfig = {
   },
 }
 
-const DribbbleAPI = ($axios, error, $config) => ({
+const DribbbleAPI = ({ $axios, error, $config }) => ({
   find: async () => {
     try {
       const res = await $axios

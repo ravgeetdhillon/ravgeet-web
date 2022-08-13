@@ -7,7 +7,7 @@ const axiosConfig = {
   },
 }
 
-const BlogsAPI = ($axios, error) => ({
+const BlogsAPI = ({ $axios, error }) => ({
   find: async () => {
     const data = (page) =>
       JSON.stringify({

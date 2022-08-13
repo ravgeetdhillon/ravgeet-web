@@ -69,14 +69,12 @@ Vue.filter('formatDate', formatDate)
 Vue.filter('formatDateTime', formatDateTime)
 
 export default (ctx, inject) => {
-  const { $axios, $content, error, $config } = ctx
-
   const services = {
-    blogs: BlogsAPI($axios, error),
-    projects: ProjectsAPI($content, error),
-    clients: ClientsAPI($content, error),
-    services: ServicesAPI($content, error),
-    dribbble: DribbbleAPI($axios, error, $config),
+    blogs: BlogsAPI(ctx),
+    projects: ProjectsAPI(ctx),
+    clients: ClientsAPI(ctx),
+    services: ServicesAPI(ctx),
+    dribbble: DribbbleAPI(ctx),
   }
 
   inject('services', services)
