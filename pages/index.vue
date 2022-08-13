@@ -38,6 +38,15 @@
     </div>
 
     <div class="col-12 mb-5">
+      <heading :title="designSection.heading" to="/design" />
+      <div class="row">
+        <div v-for="designPost in designPosts" :key="designPost.nid" class="col-md-6 mb-4">
+          <dribbble-card :post="designPost" />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 mb-5">
       <heading :title="servicesSection.heading" to="/services" />
       <div class="row">
         <div
@@ -88,8 +97,7 @@ export default {
     let services = await $services.services.find()
     services = shuffle(services).slice(0, 4)
 
-    let blogs = await $services.blogs.find()
-    blogs = blogs.slice(0, 5)
+    const blogs = await $services.blogs.findByPage({ page: 1 })
 
     return { pageContent, clients, designPosts, projects, services, blogs }
   },
@@ -107,15 +115,12 @@ export default {
       },
       projectsSection: {
         heading: '🏗 Projects',
-        description: "Here are some of the projects that I'm really proud of",
       },
       servicesSection: {
         heading: '🛠 Services',
-        description: 'Here are some of the services that I provide',
       },
       blogsSection: {
         heading: '✍️ Blogs',
-        description: 'Here are some of the services that I provide',
       },
     }
   },

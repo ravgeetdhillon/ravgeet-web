@@ -1,26 +1,9 @@
 <template>
-  <div class="row w-lg-75 mx-lg-auto">
-    <banner
-      title="Blogs"
-      headline="These are the blogs that I've written for different publications around the net."
-    />
-    <div
-      v-for="(blog, blogIndex) in blogs"
-      :key="blog.nid"
-      :class="cx('col-12', { 'mb-4': blogIndex !== blogs.length - 1 })"
-    >
-      <blog-brief :blog="blog" />
-    </div>
-  </div>
+  <div></div>
 </template>
 
 <script>
 export default {
-  async asyncData({ $services }) {
-    const blogs = await $services.blogs.find()
-    return { blogs }
-  },
-
   data() {
     return {
       title: 'Blog - Ravgeet Dhillon',
@@ -40,6 +23,10 @@ export default {
         },
       ],
     }
+  },
+
+  created() {
+    this.$router.push('/blog/page/1')
   },
 }
 </script>

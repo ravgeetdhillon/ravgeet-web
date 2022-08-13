@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p v-if="showDate" class="text-muted mb-2" :title="formatDateTime(blog.dateAdded)">
+    <p v-if="showDate" class="text-muted mb-2 small" :title="formatDateTime(blog.dateAdded)">
       {{ formatDate(blog.dateAdded) }}
     </p>
     <nuxt-link :to="`/blog/${blog.slug}`">

@@ -8,7 +8,7 @@
           {{ formatDate(blog.dateAdded) }}
         </p>
       </div>
-      <img :src="blog.coverImage" class="img-fluid rounded" :alt="`${blog.title} blog`" />
+      <img :src="blog.coverImage" class="img-fluid rounded w-100" :alt="`${blog.title} blog`" />
     </div>
 
     <div class="markdown-body mb-4" v-html="markdownify(blog.contentMarkdown)" />

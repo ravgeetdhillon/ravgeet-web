@@ -7,7 +7,7 @@ const axiosConfig = {
   },
 }
 
-const BlogsAPI = ($axios) => ({
+const BlogsAPI = ($axios, error) => ({
   find: async () => {
     const data = (page) =>
       JSON.stringify({
@@ -50,6 +50,39 @@ const BlogsAPI = ($axios) => ({
     return addNuxtId(blogs)
   },
 
+  findByPage: async ({ page }) => {
+    const data = (page) =>
+      JSON.stringify({
+        query: `query GetUserBlogs($page: Int!) {
+          user(username: "ravgeetdhillon") {
+            publication {
+              posts(page: $page) {
+                slug
+                title
+                brief
+                contentMarkdown
+                coverImage
+                isActive
+                dateAdded
+              }
+            }
+          }
+        }`,
+        variables: { page },
+      })
+
+    try {
+      const res = await $axios.create(axiosConfig).$post('/', data(page - 1)) // subtract -1 since hashnode api uses zero-based indexing
+      const blogs = res.data.user.publication.posts.filter((post) => post.isActive === true)
+      if (blogs.length === 0) {
+        error({ statusCode: 404, message: 'This page could not be found' })
+      }
+      return addNuxtId(blogs)
+    } catch (err) {
+      error({ statusCode: err.statuscode, message: err.message })
+    }
+  },
+
   findOne: async ({ slug }) => {
     const data = (slug) =>
       JSON.stringify({
@@ -68,8 +101,11 @@ const BlogsAPI = ($axios) => ({
       })
 
     const res = await $axios.create(axiosConfig).$post('/', data(slug))
-
     const blog = res.data.post
+
+    if (!blog) {
+      error({ statusCode: 404, message: 'This page could not be found' })
+    }
 
     return addNuxtId(blog)
   },
