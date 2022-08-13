@@ -140,5 +140,6 @@ export default {
       repo: 'https://github.com/ravgeetdhillon/ravgeet-web',
       newsletter: 'https://www.ravsam.in/newsletter/',
     },
+    dribbbleApiAccessToken: process.env.DRIBBBLE_ACCESS_TOKEN,
   },
 }

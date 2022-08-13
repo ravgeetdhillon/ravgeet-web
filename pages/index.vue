@@ -79,6 +79,9 @@ export default {
     let clients = await $services.clients.find()
     clients = shuffle(clients).slice(0, 4)
 
+    let designPosts = await $services.dribbble.find()
+    designPosts = shuffle(designPosts).slice(0, 4)
+
     let projects = await $services.projects.find()
     projects = shuffle(projects).slice(0, 4)
 
@@ -88,7 +91,7 @@ export default {
     let blogs = await $services.blogs.find()
     blogs = blogs.slice(0, 5)
 
-    return { pageContent, clients, projects, services, blogs }
+    return { pageContent, clients, designPosts, projects, services, blogs }
   },
 
   data() {
@@ -98,7 +101,9 @@ export default {
         'Ravgeet Dhillon is a Full Stack Developer, Flutter Developer, and Technical Content Writer based in India.',
       clientsSection: {
         heading: '🤝 Clients',
-        description: "Here are some of the companies and startups I've worked with",
+      },
+      designSection: {
+        heading: '🎨 Design',
       },
       projectsSection: {
         heading: '🏗 Projects',
