@@ -21,6 +21,7 @@ I write for content creation agencies and software startups:
 - [RavSam](https://www.ravsam.in/blog/)
 - [Personal Blog](https://www.ravgeet.in/blog)
 - [CircleCI](https://circleci.com/blog/deploy-nuxt3-app-to-netlify/)
+- [Mattermost](https://mattermost.com/blog/author/ravgeet-dhillon/)
 <!-- - Strapi
 - Yext
 - Airplane -->
