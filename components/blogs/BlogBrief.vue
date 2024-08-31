@@ -1,7 +1,7 @@
 <template>
   <div>
-    <p v-if="showDate" class="text-muted mb-2 small" :title="formatDateTime(blog.dateAdded)">
-      {{ formatDate(blog.dateAdded) }}
+    <p v-if="showDate" class="text-muted mb-2 small" :title="formatDateTime(blog.publishedAt)">
+      {{ formatDate(blog.publishedAt) }}
     </p>
     <nuxt-link :to="`/blog/${blog.slug}`">
       <h3 v-if="hasHeading">{{ blog.title }}</h3>

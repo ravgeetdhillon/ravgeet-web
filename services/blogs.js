@@ -1,107 +1,81 @@
 import { addNuxtId } from '~/utils/id'
 
 const axiosConfig = {
-  baseURL: 'https://api.hashnode.com',
+  baseURL: 'https://gql.hashnode.com',
   headers: {
     'Content-Type': 'application/json',
   },
 }
 
+const HOST_NAME = 'ravgeetdhillon.hashnode.dev'
+const BLOGS_PER_PAGE = 10
+
 const BlogsAPI = ({ $axios, error }) => ({
-  find: async () => {
-    const data = (page) =>
+  find: async ({ lastPostId = '' }) => {
+    const data = () =>
       JSON.stringify({
-        query: `query GetUserBlogs($page: Int!) {
-          user(username: "ravgeetdhillon") {
-            publication {
-              posts(page: $page) {
-                slug
-                title
-                brief
-                contentMarkdown
-                coverImage
-                isActive
-                dateAdded
+        query: `
+          query GetUserBlogs($lastPostId: String!) {
+            publication(host: "${HOST_NAME}") {
+              posts(first:${BLOGS_PER_PAGE}, after: $lastPostId) {
+                totalDocuments
+                pageInfo {
+                  hasNextPage
+                  endCursor
+                }
+                edges {
+                  node {
+                    slug
+                    title
+                    brief
+                    content {
+                      markdown
+                    }
+                    coverImage {
+                      url
+                    }
+                    publishedAt
+                  }
+                }
               }
             }
-          }
-        }`,
-        variables: { page },
+          }`,
+        variables: { lastPostId },
       })
 
-    let blogs = []
-    let page = 0
-
-    while (true) {
-      const res = await $axios.create(axiosConfig).$post('/', data(page))
-
-      const postsOnNewPage = res.data.user.publication.posts.filter(
-        (post) => post.isActive === true
-      )
-
-      if (postsOnNewPage.length === 0) {
-        break
-      }
-
-      blogs = [...blogs, ...postsOnNewPage]
-      page = page + 1
-    }
-
-    return addNuxtId(blogs)
-  },
-
-  findByPage: async ({ page }) => {
-    const data = (page) =>
-      JSON.stringify({
-        query: `query GetUserBlogs($page: Int!) {
-          user(username: "ravgeetdhillon") {
-            publication {
-              posts(page: $page) {
-                slug
-                title
-                brief
-                contentMarkdown
-                coverImage
-                isActive
-                dateAdded
-              }
-            }
-          }
-        }`,
-        variables: { page },
-      })
-
-    try {
-      const res = await $axios.create(axiosConfig).$post('/', data(page - 1)) // subtract -1 since hashnode api uses zero-based indexing
-      const blogs = res.data.user.publication.posts.filter((post) => post.isActive === true)
-      if (blogs.length === 0) {
-        error({ statusCode: 404, message: 'This page could not be found' })
-      }
-      return addNuxtId(blogs)
-    } catch (err) {
-      error({ statusCode: err.statuscode, message: err.message })
-    }
+    const res = await $axios.create(axiosConfig).$post('/', data(lastPostId))
+    const blogs = res.data.publication.posts.edges.map((edge) => edge.node)
+    const totalBlogs = res.data.publication.posts.totalDocuments
+    const { hasNextPage, endCursor } = res.data.publication.posts.pageInfo
+    return { blogs: addNuxtId(blogs), totalBlogs, hasNextPage, endCursor }
   },
 
   findOne: async ({ slug }) => {
     const data = (slug) =>
       JSON.stringify({
-        query: `query GetBlog($slug: String!) {
-          post(slug: $slug, hostname:"https://hashnode.com/@ravgeetdhillon") {
-            slug
-            title
-            brief
-            contentMarkdown
-            coverImage
-            isActive
-            dateAdded
-          }
-        }`,
+        query: `
+          query GetBlog($slug: String!) {
+            publication(host: "${HOST_NAME}") {
+              post(slug: $slug) {
+                id
+                slug
+                title
+                brief
+                content {
+                  markdown
+                }
+                coverImage {
+                  url
+                }
+                publishedAt
+              }
+            }
+          }`,
         variables: { slug },
       })
 
     const res = await $axios.create(axiosConfig).$post('/', data(slug))
-    const blog = res.data.post
+    const blog = res.data.publication.post
 
     if (!blog) {
       error({ statusCode: 404, message: 'This page could not be found' })
