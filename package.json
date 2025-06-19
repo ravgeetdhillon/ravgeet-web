@@ -14,10 +14,6 @@
   "keywords": [],
   "author": "Ravgeet Dhillon <ravgeetdhillon@gmail.com>",
   "license": "ISC",
-  "engines": {
-    "node": ">=10.16.0 <=14.x.x",
-    "npm": ">=6.0.0"
-  },
   "scripts": {
     "dev-http": "nuxt --port 3001",
     "dev": "npm run dev-http & local-ssl-proxy --key .cert/localhost-key.pem --cert .cert/localhost.pem --source 3000 --target 3001",
