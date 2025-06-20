@@ -1,5 +1,3 @@
-import { addNuxtId } from '~/utils/id'
-
 const axiosConfig = {
   baseURL: 'https://gql.hashnode.com',
   headers: {
@@ -25,6 +23,8 @@ const BlogsAPI = ({ $axios, error }) => ({
                 }
                 edges {
                   node {
+                    id
+                    cuid
                     slug
                     title
                     brief
@@ -47,7 +47,7 @@ const BlogsAPI = ({ $axios, error }) => ({
     const blogs = res.data.publication.posts.edges.map((edge) => edge.node)
     const totalBlogs = res.data.publication.posts.totalDocuments
     const { hasNextPage, endCursor } = res.data.publication.posts.pageInfo
-    return { blogs: addNuxtId(blogs), totalBlogs, hasNextPage, endCursor }
+    return { blogs, totalBlogs, hasNextPage, endCursor }
   },
 
   findOne: async ({ slug }) => {
@@ -58,6 +58,7 @@ const BlogsAPI = ({ $axios, error }) => ({
             publication(host: "${HOST_NAME}") {
               post(slug: $slug) {
                 id
+                cuid
                 slug
                 title
                 brief
@@ -81,7 +82,7 @@ const BlogsAPI = ({ $axios, error }) => ({
       error({ statusCode: 404, message: 'This page could not be found' })
     }
 
-    return addNuxtId(blog)
+    return blog
   },
 })
 

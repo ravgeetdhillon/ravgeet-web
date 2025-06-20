@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use 'variables' as variables;
+
 .markdown-body {
   font-size: 1rem;
   line-height: 1.5;
@@ -43,14 +46,14 @@
   }
   p {
     margin-top: 0;
-    color: map-get($theme-colors, 'dark-light');
+    color: map.get(variables.$theme-colors, 'dark-light');
   }
   blockquote {
     margin-top: 0;
     margin-bottom: 2rem;
     padding: 0 1rem;
-    border-left: 0.25rem solid darken(map-get($theme-colors, 'theme-white'), 50%);
-    background: map-get($theme-colors, 'theme-white');
+    border-left: 0.25rem solid darken(map.get(variables.$theme-colors, 'theme-white'), 50%);
+    background: map.get(variables.$theme-colors, 'theme-white');
     padding-top: 1rem;
     padding-bottom: 1rem;
     &:first-child {
@@ -114,11 +117,11 @@
     th {
       font-weight: 600;
       padding: 0.8rem 0.75rem;
-      border: 1px solid rgba(map-get($theme-colors, 'dark-light'), 0.2);
+      border: 1px solid rgba(map.get(variables.$theme-colors, 'dark-light'), 0.2);
     }
     td {
       padding: 0.8rem 0.75rem;
-      border: 1px solid rgba(map-get($theme-colors, 'dark-light'), 0.2);
+      border: 1px solid rgba(map.get(variables.$theme-colors, 'dark-light'), 0.2);
     }
     img {
       background-color: transparent;
@@ -132,18 +135,18 @@
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
-    background-color: map-get($theme-colors, 'theme-white');
+    background-color: map.get(variables.$theme-colors, 'theme-white');
     border-radius: 0.25rem;
     &:hover {
       &::-webkit-scrollbar-thumb {
-        background: map-get($theme-colors, 'light');
+        background: map.get(variables.$theme-colors, 'light');
       }
     }
     &::-webkit-scrollbar {
       height: 0.25rem;
     }
     &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 0.25rem map-get($theme-colors, 'light');
+      box-shadow: inset 0 0 0.25rem map.get(variables.$theme-colors, 'light');
     }
     > code {
       padding: 0;
@@ -172,7 +175,7 @@
       line-height: inherit;
       word-wrap: normal;
       background-color: transparent;
-      color: map-get($theme-colors, 'dark');
+      color: map.get(variables.$theme-colors, 'dark');
       border: 0;
     }
   }
@@ -375,7 +378,7 @@
   }
   thead {
     tr {
-      background-color: rgba(map-get($theme-colors, 'dark-light'), 0.05);
+      background-color: rgba(map.get(variables.$theme-colors, 'dark-light'), 0.05);
     }
   }
   img {
@@ -480,7 +483,7 @@
     margin: 0;
     font-size: 80%;
     border-radius: 0.125rem;
-    background: map-get($theme-colors, 'theme-white');
+    background: map.get(variables.$theme-colors, 'theme-white');
     br {
       display: none;
     }
@@ -538,15 +541,15 @@
   }
 }
 li {
-  color: map-get($theme-colors, 'dark-light');
+  color: map.get(variables.$theme-colors, 'dark-light');
 }
 table {
-  color: map-get($theme-colors, 'dark-light');
+  color: map.get(variables.$theme-colors, 'dark-light');
 }
 textarea {
   &:hover {
     &::-webkit-scrollbar-thumb {
-      background: map-get($theme-colors, 'light');
+      background: map.get(variables.$theme-colors, 'light');
       cursor: pointer;
     }
   }
@@ -554,6 +557,6 @@ textarea {
     width: 0.5rem;
   }
   &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 0.25rem map-get($theme-colors, 'dark');
+    box-shadow: inset 0 0 0.25rem map.get(variables.$theme-colors, 'dark');
   }
 }

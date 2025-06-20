@@ -1,12 +1,14 @@
-@import './variables';
-@import './fonts';
+@use './variables';
+@use './fonts';
 
-@import '@/node_modules/bootstrap/scss/bootstrap.scss';
+@use 'bootstrap/scss/bootstrap' with (
+  $theme-colors: variables.$theme-colors
+);
 
-@import './display';
-@import './images';
-@import './markdown';
-@import './positions';
-@import './scroll';
-@import './shadows';
-@import './typography';
+@use './display';
+@use './images';
+@use './markdown';
+@use './positions';
+@use './scroll';
+@use './shadows';
+@use './typography';

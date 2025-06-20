@@ -9,18 +9,9 @@
       <div class="row">
         <div v-for="(link, linkIndex) in socialLinks" :key="linkIndex" class="col-sm-4 mb-3">
           <div
-            class="
-              shadow-lg-hover
-              border border-theme-white-light
-              rounded
-              w-100
-              h-100
-              p-3
-              d-flex
-              align-items-center
-            "
+            class="shadow-lg-hover border border-theme-white-light rounded w-100 h-100 p-3 d-flex align-items-center"
           >
-            <b-icon v-if="link.icon" :icon="link.icon" class="text-light mr-2" />
+            <b-icon v-if="link.icon" :icon="link.icon" class="text-dark-light mr-2" />
             <a :href="link.href" class="text-dark text-decoration-none stretched-link d-block">
               {{ link.name }}
             </a>

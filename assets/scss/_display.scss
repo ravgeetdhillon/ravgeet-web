@@ -1,3 +1,7 @@
+@use 'sass:map';
+@use 'bootstrap/scss/bootstrap';
+@use 'variables' as variables;
+
 html,
 body {
   overflow-x: hidden;
@@ -5,9 +9,9 @@ body {
   font-display: swap;
 }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
-    @each $i in $widths {
+@each $breakpoint in map-keys(bootstrap.$grid-breakpoints) {
+  @media (min-width: map.get(bootstrap.$grid-breakpoints, $breakpoint)) {
+    @each $i in variables.$widths {
       $breakpointValue: '';
       @if $breakpoint == 'xs' {
         $breakpointValue: $i;
@@ -22,7 +26,7 @@ body {
         }
       }
     }
-    @each $i in $heights {
+    @each $i in variables.$heights {
       $breakpointValue: '';
       @if $breakpoint == 'xs' {
         $breakpointValue: $i;

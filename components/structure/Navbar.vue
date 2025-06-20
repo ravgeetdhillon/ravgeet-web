@@ -3,14 +3,7 @@
     <div class="container">
       <div class="row w-lg-75 mx-lg-auto">
         <div
-          class="
-            col-12
-            d-flex
-            flex-md-row flex-column
-            justify-content-between
-            align-items-md-center
-            py-3
-          "
+          class="col-12 d-flex flex-md-row flex-column justify-content-between align-items-md-center py-3"
         >
           <div class="brand d-flex mr-3 mb-md-0 mb-3">
             <nuxt-link to="/" class="d-flex align-items-center text-decoration-none text-dark">
@@ -98,8 +91,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<!-- <style lang="scss" scoped>
 .navbar .nuxt-link-exact-active {
   font-weight: bold;
 }
-</style>
+</style> -->

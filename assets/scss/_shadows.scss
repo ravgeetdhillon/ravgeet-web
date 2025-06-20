@@ -1,7 +1,9 @@
+@use 'variables' as variables;
+
 $sizes: (
-  'sm': $box-shadow,
-  'md': $box-shadow-lg,
-  'lg': $box-shadow-sm,
+  'sm': variables.$box-shadow,
+  'md': variables.$box-shadow-lg,
+  'lg': variables.$box-shadow-sm,
 );
 
 @each $size, $value in $sizes {
