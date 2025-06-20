@@ -16,4 +16,4 @@ I designed a Progressive Web App for Soni Diagnostics to allow their patients to
 
 ## Screenshots
 
-![](//images/projects/soni-diagnostics-web-preview.png)
+![](/images//projects/soni-diagnostics-web-preview.png)

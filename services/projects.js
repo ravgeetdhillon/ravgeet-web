@@ -2,7 +2,7 @@ import { addNuxtId } from '~/utils/id'
 
 const ProjectsAPI = ({ $content, error }) => ({
   find: async () => {
-    const projects = await $content('projects').fetch()
+    const projects = await $content('projects').where({ show: true }).limit(4).fetch()
     return addNuxtId(projects)
   },
 

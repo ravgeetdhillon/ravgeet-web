@@ -4,6 +4,16 @@
     <div v-for="project in projects" :key="project.nid" class="col-md-6 mb-5">
       <project-brief :project="project" />
     </div>
+    <div :class="`mb-5 ${projects.length % 2 === 0 ? 'col-md-12' : 'col-md-6'}`">
+      <div
+        class="shadow-lg-hover bg-dark text-light border border-theme-white-light rounded w-100 h-100 overflow-hidden"
+      >
+        <div class="d-flex justify-content-center align-items-center py-2 px-3 h-100">
+          <p class="mb-0 mr-3 text-truncate">Visit GitHub &rarr;</p>
+        </div>
+        <a href="https://github.com/ravgeetdhillon?tab=repositories" class="stretched-link" />
+      </div>
+    </div>
   </div>
 </template>
 

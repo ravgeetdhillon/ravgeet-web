@@ -37,12 +37,12 @@ curl https://example.herokuapp.com/key.php \
 
 ```json
 {
-    "data": {
-        "hash": "r7c1c78ebruerc17r8c1c5c4x212pi2w21x2z1c8rrermeucpiwmzputz4zyewe7ekne83367323ccuewewng1084dncy484nknccnkxe9eulaqppqpqnbchciuirrer"
-    },
-    "errors": 0,
-    "errors_list": [],
-    "status": 200
+  "data": {
+    "hash": "r7c1c78ebruerc17r8c1c5c4x212pi2w21x2z1c8rrermeucpiwmzputz4zyewe7ekne83367323ccuewewng1084dncy484nknccnkxe9eulaqppqpqnbchciuirrer"
+  },
+  "errors": 0,
+  "errors_list": [],
+  "status": 200
 }
 ```
 
@@ -65,21 +65,21 @@ curl https://example.herokuapp.com/ \
 
 ```json
 {
-    "data": {
-        "account_sid": "ACd61axxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-        "body": "Your message goes here.",
-        "direction": "outbound-api",
-        "from": "whatsapp:+14155238886",
-        "num_media": "1",
-        "sid": "MMe63f3bb421xxxxxxxxxxxxxxxxxxxxxx",
-        "status": "queued",
-        "subresource_uris": "\/2010-04-01\/Accounts\/ACd61axxxxxxxxxxxxxxxxxxxxxxxxxxxx\/Messages\/MMe63f3bb421xxxxxxxxxxxxxxxxxxxxxx\/Media.json",
-        "to": "whatsapp:+9197801xxxxx",
-        "uri": "\/2010-04-01\/Accounts\/ACd61axxxxxxxxxxxxxxxxxxxxxxxxxxxx\/Messages\/MMe63f3bb421xxxxxxxxxxxxxxxxxxxxxx.json"
-    },
-    "errors": 0,
-    "errors_list": [],
-    "status": 200
+  "data": {
+    "account_sid": "ACd61axxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "body": "Your message goes here.",
+    "direction": "outbound-api",
+    "from": "whatsapp:+14155238886",
+    "num_media": "1",
+    "sid": "MMe63f3bb421xxxxxxxxxxxxxxxxxxxxxx",
+    "status": "queued",
+    "subresource_uris": "/2010-04-01/Accounts/ACd61axxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages/MMe63f3bb421xxxxxxxxxxxxxxxxxxxxxx/Media.json",
+    "to": "whatsapp:+9197801xxxxx",
+    "uri": "/2010-04-01/Accounts/ACd61axxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages/MMe63f3bb421xxxxxxxxxxxxxxxxxxxxxx.json"
+  },
+  "errors": 0,
+  "errors_list": [],
+  "status": 200
 }
 ```
 
@@ -101,21 +101,21 @@ curl https://example.herokuapp.com/ \
 
 ```json
 {
-    "data": {
-        "account_sid": "ACd61axxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-        "body": "how are you?",
-        "direction": "outbound-api",
-        "from": "whatsapp:+14155238886",
-        "num_media": "0",
-        "sid": "SMdf924da6e3xxxxxxxxxxxxxxxxxxxxxx",
-        "status": "queued",
-        "subresource_uris": "\/2010-04-01\/Accounts\/ACd61axxxxxxxxxxxxxxxxxxxxxxxxxxxx\/Messages\/SMdf924da6e3xxxxxxxxxxxxxxxxxxxxxx\/Media.json",
-        "to": "whatsapp:+9197802xxxxx",
-        "uri": "\/2010-04-01\/Accounts\/ACd61axxxxxxxxxxxxxxxxxxxxxxxxxxxx\/Messages\/SMdf924da6e3xxxxxxxxxxxxxxxxxxxxxx.json"
-    },
-    "errors": 0,
-    "errors_list": [],
-    "status": 200
+  "data": {
+    "account_sid": "ACd61axxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "body": "how are you?",
+    "direction": "outbound-api",
+    "from": "whatsapp:+14155238886",
+    "num_media": "0",
+    "sid": "SMdf924da6e3xxxxxxxxxxxxxxxxxxxxxx",
+    "status": "queued",
+    "subresource_uris": "/2010-04-01/Accounts/ACd61axxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages/SMdf924da6e3xxxxxxxxxxxxxxxxxxxxxx/Media.json",
+    "to": "whatsapp:+9197802xxxxx",
+    "uri": "/2010-04-01/Accounts/ACd61axxxxxxxxxxxxxxxxxxxxxxxxxxxx/Messages/SMdf924da6e3xxxxxxxxxxxxxxxxxxxxxx.json"
+  },
+  "errors": 0,
+  "errors_list": [],
+  "status": 200
 }
 ```
 
@@ -138,12 +138,10 @@ curl https://example.herokuapp.com/ \
 
 ```json
 {
-    "data": [],
-    "errors": 1,
-    "errors_list": [
-        "Key is either incorrect or tampered"
-    ],
-    "status": 403
+  "data": [],
+  "errors": 1,
+  "errors_list": ["Key is either incorrect or tampered"],
+  "status": 403
 }
 ```
 
@@ -164,13 +162,13 @@ curl https://example.herokuapp.com/ \
 
 ```json
 {
-    "data": [],
-    "errors": 2,
-    "errors_list": [
-        "Authorization key is either empty or invalid",
-        "body parameter is either empty or invalid"
-    ],
-    "status": 400
+  "data": [],
+  "errors": 2,
+  "errors_list": [
+    "Authorization key is either empty or invalid",
+    "body parameter is either empty or invalid"
+  ],
+  "status": 400
 }
 ```
 
@@ -193,11 +191,9 @@ curl https://example.herokuapp.com/other-url.php \
 
 ```json
 {
-    "data": [],
-    "errors": 1,
-    "errors_list": [
-        "Not found."
-    ],
-    "status": 404
+  "data": [],
+  "errors": 1,
+  "errors_list": ["Not found."],
+  "status": 404
 }
 ```
