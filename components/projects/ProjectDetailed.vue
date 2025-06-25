@@ -4,7 +4,7 @@
       <div class="mb-4">
         <div class="mb-4">
           <nuxt-link to="/projects" class="btn btn-sm btn-theme-white mb-4">
-            <b-icon-arrow-left-short /> All Projects
+            &larr; All Projects
           </nuxt-link>
           <h1>{{ project.title }}</h1>
           <p class="text-dark-light lead">

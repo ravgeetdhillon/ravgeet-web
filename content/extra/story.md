@@ -43,6 +43,10 @@ I know that life is unpredictable and a lot of things can change in a small peri
 
 **_Do not pray for easy lives, pray to be stronger men._** - John F. Kennedy
 
+## 📫 Newsletter
+
+I publish a monthly [newsletter](https://www.ravsam.in/newsletter/) with **400+ subscribers** in which I share personal stories, projects that I am working on, and what is happening in the world of tech, and some interesting dev related posts which I come across while surfing on the web.
+
 ## 🎹 Music
 
 Sometimes I decide to get away from tech life and dive straight into music production. I have [my Youtube channel](https://youtube.com/ravdmusic), where you can listen to my remixes and originals.
@@ -51,16 +55,12 @@ Sometimes I decide to get away from tech life and dive straight into music produ
 
 **_All work and no play makes Jack a dull boy_**. So, I go out with my friends to play outdoor sports like Cricket, Football, and more. I love to cycle around my city and try to ride at least 10-15 km a day.
 
-## 📫 Newsletter
-
-I publish a monthly [newsletter](https://www.ravsam.in/newsletter/) with **400+ subscribers** in which I share personal stories, projects that I am working on, and what is happening in the world of tech, and some interesting dev related posts which I come across while surfing on the web.
-
 ## ☎️ Get In Touch
 
 Whether you are a student or a CEO, my inbox is open to everyone. I'd love to help you in any way possible. If you have an interesting project for me, please get in touch for a discussion. I am **open to working with startups and businesses that offer remote work**.
 
 You can reach out to me via any of these channels:
 
-[Email](mailto:ravgeetdhillon@gmail.com) <span class="text-light">&bull;</span>
-[Twitter](https://www.twitter.com/ravgeetdhillon) <span class="text-light">&bull;</span>
+[Email](mailto:ravgeetdhillon@gmail.com) <span class="text-theme-white-light">&bull;</span>
+[Twitter](https://www.twitter.com/ravgeetdhillon) <span class="text-theme-white-light">&bull;</span>
 [LinkedIn](https://www.linkedin.com/in/ravgeetdhillon)

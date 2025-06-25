@@ -1,15 +1,14 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto">
-    <div class="col-12 mb-5">
+    <div class="col-12 mb-5 py-5">
       <div class="row align-items-start flex-row-reverse">
-        <div class="col-12 overflow-hidden">
+        <div class="col-xl-4">
           <img
             src="/images/icons/logos/ravgeet-dhillon.jpg"
-            class="img-fluid rounded mb-4"
-            style="max-width: 12rem"
+            class="img-fluid rounded-circle mb-4 mb-xl-0 w-100 shadow-sm border border-theme-white-light"
           />
         </div>
-        <div class="col-12 pr-4">
+        <div class="col-xl-8 pr-xl-5">
           <nuxt-content class="markdown-body" :document="pageContent" />
         </div>
       </div>
@@ -18,11 +17,7 @@
     <!-- <div class="col-12 mb-5">
       <heading :title="clientsSection.heading" to="/clients" />
       <div class="row">
-        <div
-          v-for="client in clients"
-          :key="client.nid"
-          class="col-md-3 col-6 mb-4"
-        >
+        <div v-for="client in clients" :key="client.nid" class="col-md-3 col-6 mb-4">
           <client :client="client" />
         </div>
       </div>

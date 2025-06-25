@@ -28,6 +28,7 @@ const BlogsAPI = ({ $axios, error }) => ({
                     slug
                     title
                     brief
+                    subtitle
                     content {
                       markdown
                     }
@@ -62,6 +63,7 @@ const BlogsAPI = ({ $axios, error }) => ({
                 slug
                 title
                 brief
+                subtitle
                 content {
                   markdown
                 }

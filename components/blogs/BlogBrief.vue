@@ -8,7 +8,7 @@
       <p v-else class="h4">{{ blog.title }}</p>
     </nuxt-link>
     <p class="text-dark-light mb-0 text-truncate">
-      {{ blog.brief }}
+      {{ blog.subtitle ?? blog.brief }}
     </p>
   </div>
 </template>

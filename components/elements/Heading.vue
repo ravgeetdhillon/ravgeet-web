@@ -3,9 +3,7 @@
     <h2 class="font-weight-bold mb-0 mr-3">
       {{ title }}
     </h2>
-    <nuxt-link v-if="to" :to="to" class="btn btn-sm btn-theme-white">
-      All <b-icon-arrow-right-short />
-    </nuxt-link>
+    <nuxt-link v-if="to" :to="to" class="btn btn-sm btn-theme-white">All &rarr;</nuxt-link>
   </div>
 </template>
 

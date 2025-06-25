@@ -8,7 +8,7 @@
       <div
         v-for="(blog, blogIndex) in blogs"
         :key="blog.nid"
-        :class="cx('w-100', { 'mb-4': blogIndex !== blogs.length - 1 })"
+        :class="cx('w-100', { 'mb-5': blogIndex !== blogs.length - 1 })"
       >
         <blog-brief :blog="blog" />
       </div>

@@ -1,7 +1,5 @@
 <template>
-  <nuxt-link :to="to" class="btn btn-sm btn-theme-white mb-4">
-    <b-icon-arrow-left-short /> {{ label }}
-  </nuxt-link>
+  <nuxt-link :to="to" class="btn btn-sm btn-theme-white mb-4">&larr; {{ label }}</nuxt-link>
 </template>
 
 <script>

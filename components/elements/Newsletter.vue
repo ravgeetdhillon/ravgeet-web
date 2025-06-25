@@ -2,9 +2,7 @@
   <div class="bg-theme-white p-4 rounded">
     <div class="h4">{{ heading }}</div>
     <div class="text-dark-light" v-html="markdownify(promo)" />
-    <a :href="$config.site.newsletter" class="btn btn-primary btn-block">
-      Subscribe <b-icon-arrow-right-short />
-    </a>
+    <a :href="$config.site.newsletter" class="btn btn-primary btn-block">Subscribe &rarr;</a>
   </div>
 </template>
 
