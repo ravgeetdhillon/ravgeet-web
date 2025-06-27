@@ -6,7 +6,7 @@ const axiosConfig = {
 }
 
 const HOST_NAME = 'ravgeetdhillon.hashnode.dev'
-const BLOGS_PER_PAGE = 10
+const BLOGS_PER_PAGE = 50
 
 const BlogsAPI = ({ $axios, error }) => ({
   find: async ({ lastPostId = '' }) => {
