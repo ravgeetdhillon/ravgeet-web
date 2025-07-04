@@ -9,13 +9,13 @@ const HOST_NAME = 'ravgeetdhillon.hashnode.dev'
 const BLOGS_PER_PAGE = 50
 
 const BlogsAPI = ({ $axios, error }) => ({
-  find: async ({ lastPostId = '' }) => {
+  find: async ({ pageSize = BLOGS_PER_PAGE, lastPostId = '' }) => {
     const data = () =>
       JSON.stringify({
-        query: `
+        query: `blogs
           query GetUserBlogs($lastPostId: String!) {
             publication(host: "${HOST_NAME}") {
-              posts(first:${BLOGS_PER_PAGE}, after: $lastPostId) {
+              posts(first:${pageSize}, after: $lastPostId) {
                 totalDocuments
                 pageInfo {
                   hasNextPage
