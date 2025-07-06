@@ -2,7 +2,7 @@
   <div class="row w-lg-75 mx-lg-auto">
     <banner
       :title="`Blogs (${totalBlogs})`"
-      headline="These are the blogs that I've written for different publications on the Internet."
+      headline="A curated list of articles that I've written for different publications on the Internet."
     />
     <div v-if="!error" class="col-12 mb-5">
       <div
