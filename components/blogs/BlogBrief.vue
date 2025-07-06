@@ -4,12 +4,11 @@
       {{ formatDate(blog.publishedAt) }}
     </p>
     <nuxt-link :to="`/blog/${blog.slug}`">
-      <h3 v-if="hasHeading">{{ blog.title }}</h3>
-      <p v-else class="h4">{{ blog.title }}</p>
+      <div class="h6">{{ blog.title }}</div>
     </nuxt-link>
-    <p class="text-dark-light mb-0 text-truncate">
+    <div class="text-dark-light text-truncate">
       {{ blog.subtitle ?? blog.brief }}
-    </p>
+    </div>
   </div>
 </template>
 
@@ -21,11 +20,6 @@ export default {
       required: true,
     },
     showDate: {
-      type: Boolean,
-      required: false,
-      default: true,
-    },
-    hasHeading: {
       type: Boolean,
       required: false,
       default: true,

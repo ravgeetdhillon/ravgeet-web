@@ -1,20 +1,20 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto align-items-start">
     <div class="col-12">
-      <div class="mb-4">
-        <div class="mb-4">
+      <div class="mb-5">
+        <div class="mb-5">
           <nuxt-link to="/projects" class="btn btn-sm btn-theme-white mb-4">
             &larr; All Projects
           </nuxt-link>
-          <h1>{{ project.title }}</h1>
-          <p class="text-dark-light lead">
+          <h3>{{ project.title }}</h3>
+          <p class="text-dark-light">
             {{ project.promo }}
           </p>
         </div>
 
         <img
           :src="`/images/projects/${project.image}`"
-          class="img-fluid w-100 rounded mb-4"
+          class="img-fluid w-100 rounded mb-5"
           :alt="`${project.title} project`"
         />
 

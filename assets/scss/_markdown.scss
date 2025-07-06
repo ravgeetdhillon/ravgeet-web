@@ -101,7 +101,7 @@
       margin-top: 1rem;
       font-size: 1rem;
       font-style: italic;
-      font-weight: 600;
+      font-weight: 500;
     }
     dd {
       padding: 0 1rem;
@@ -115,7 +115,7 @@
     width: 100%;
     overflow: auto;
     th {
-      font-weight: 600;
+      font-weight: 500;
       padding: 0.8rem 0.75rem;
       border: 1px solid rgba(map.get(variables.$theme-colors, 'dark-light'), 0.2);
     }
@@ -151,7 +151,6 @@
     > code {
       padding: 0;
       margin: 0;
-      font-size: 100%;
       word-break: normal;
       white-space: pre;
       background: transparent;
@@ -205,7 +204,7 @@
   }
   h1 {
     margin-top: 3rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25;
     padding-bottom: 0.3rem;
     font-size: 2rem;
@@ -231,10 +230,12 @@
   }
   h2 {
     margin-top: 3.5rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25;
     padding-bottom: 0.3rem;
     font-size: 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1.25rem;
     .octicon-link {
       color: #1b1f23;
       vertical-align: middle;
@@ -257,7 +258,7 @@
   }
   h3 {
     margin-top: 2rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25;
     font-size: 1.25rem;
     .octicon-link {
@@ -282,7 +283,7 @@
   }
   h4 {
     margin-top: 3rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25;
     font-size: 1rem;
     .octicon-link {
@@ -307,7 +308,7 @@
   }
   h5 {
     margin-top: 3rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25;
     font-size: 0.875rem;
     .octicon-link {
@@ -332,7 +333,7 @@
   }
   h6 {
     margin-top: 3rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25;
     margin-bottom: 0.5rem;
     font-size: 0.85rem;
@@ -519,7 +520,7 @@
       line-height: 1;
       text-align: left;
       white-space: nowrap;
-      font-weight: 600;
+      font-weight: 500;
       background: #f6f8fa;
       border-top: 0;
     }

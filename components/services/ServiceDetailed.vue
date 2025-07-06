@@ -2,7 +2,7 @@
   <div class="col-12">
     <div class="mb-4">
       <back-link label="All Services" to="/services" />
-      <h1>{{ service.title }}</h1>
+      <h3>{{ service.title }}</h3>
     </div>
     <nuxt-content class="markdown-body" :document="service" />
   </div>

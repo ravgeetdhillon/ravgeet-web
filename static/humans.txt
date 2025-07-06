@@ -1,7 +1,7 @@
 /* OWNER */
   Name: Ravgeet Dhillon
   Contact: ravgeetdhillon [at] gmail.com
-  Twitter: @ravgeetdhillon
+  X: @ravgeetdhillon
   From: Amritsar, Punjab, India
 
 /* SITE */

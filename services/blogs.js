@@ -36,6 +36,9 @@ const BlogsAPI = ({ $axios, error }) => ({
                       url
                     }
                     publishedAt
+                    tags {
+                      name
+                    }
                   }
                 }
               }
@@ -75,6 +78,9 @@ const BlogsAPI = ({ $axios, error }) => ({
                   url
                 }
                 publishedAt
+                tags {
+                  name
+                }
               }
             }
           }`,

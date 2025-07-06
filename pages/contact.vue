@@ -36,9 +36,9 @@ export default {
           icon: 'google',
         },
         {
-          name: 'Twitter',
-          href: 'https://twitter.com/ravgeetdhillon',
-          icon: 'twitter',
+          name: 'X',
+          href: 'https://X.com/ravgeetdhillon',
+          icon: 'X',
         },
         {
           name: 'LinkedIn',

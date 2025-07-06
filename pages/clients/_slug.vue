@@ -4,7 +4,7 @@
       <div class="mb-4">
         <div class="mb-4">
           <back-link label="All Clients" to="/clients" />
-          <h1>{{ client.name }}</h1>
+          <h3>{{ client.name }}</h3>
           <p class="text-dark-light lead">
             {{ client.promo }}
           </p>

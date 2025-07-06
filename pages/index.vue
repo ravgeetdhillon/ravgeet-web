@@ -91,7 +91,7 @@ export default {
     let designPosts = await $services.dribbble.find()
     designPosts = shuffle(designPosts).slice(0, 4)
 
-    let projects = await $services.projects.find()
+    let projects = await $services.projects.find({})
     projects = shuffle(projects).slice(0, 4)
 
     let services = await $services.services.find()

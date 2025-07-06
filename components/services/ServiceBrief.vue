@@ -1,12 +1,11 @@
 <template>
   <div>
     <nuxt-link :to="`/services/${service.slug}`">
-      <h3 v-if="hasHeading">{{ service.title }}</h3>
-      <p v-else class="h4">{{ service.title }}</p>
+      <div class="h6">{{ service.title }}</div>
     </nuxt-link>
-    <p class="text-dark-light mb-0">
+    <div class="text-dark-light">
       {{ service.promo }}
-    </p>
+    </div>
   </div>
 </template>
 
@@ -18,11 +17,6 @@ export default {
       required: true,
     },
     showDate: {
-      type: Boolean,
-      required: false,
-      default: true,
-    },
-    hasHeading: {
       type: Boolean,
       required: false,
       default: true,

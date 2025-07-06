@@ -3,7 +3,7 @@
     <div class="mb-5">
       <div class="mb-4">
         <back-link label="All Blogs" to="/blog" />
-        <h1 class="mb-3">{{ blog.title }}</h1>
+        <h3 class="mb-3">{{ blog.title }}</h3>
         <p class="text-muted" :title="formatDateTime(blog.publishedAt)">
           {{ formatDate(blog.publishedAt) }}
         </p>

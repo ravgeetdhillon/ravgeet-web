@@ -1,8 +1,8 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto">
     <banner title="Projects" headline="Open Source, Personal, and Freelance projects." />
-    <div v-for="project in projects" :key="project.nid" class="col-md-6 mb-5">
-      <project-brief :project="project" />
+    <div v-for="project in projects" :key="project.nid" class="col-md-6 mb-4">
+      <project-card :project="project" />
     </div>
     <div :class="`mb-5 ${projects.length % 2 === 0 ? 'col-md-12' : 'col-md-6'}`">
       <div
@@ -20,7 +20,7 @@
 <script>
 export default {
   async asyncData({ $services }) {
-    const projects = await $services.projects.find()
+    const projects = await $services.projects.find({})
     return { projects }
   },
 
