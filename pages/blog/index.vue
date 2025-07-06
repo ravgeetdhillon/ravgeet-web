@@ -13,7 +13,7 @@
         <blog-brief :blog="blog" />
       </div>
     </div>
-    <div class="col-12">
+    <div v-else class="col-12">
       <div class="alert alert-danger">{{ error }}</div>
     </div>
     <div v-if="hasNextPage" class="col-12 d-flex justify-content-end">

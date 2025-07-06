@@ -65,7 +65,7 @@
           <blog-brief :blog="blog" :show-date="false" :has-heading="false" />
         </div>
       </div>
-      <div class="row">
+      <div v-else class="row">
         <div class="col-12">
           <div class="alert alert-danger">{{ error }}</div>
         </div>
