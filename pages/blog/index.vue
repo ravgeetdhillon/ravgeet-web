@@ -4,7 +4,7 @@
       :title="`Blogs (${totalBlogs})`"
       headline="These are the blogs that I've written for different publications on the Internet."
     />
-    <div class="col-12 mb-5">
+    <div v-if="!error" class="col-12 mb-5">
       <div
         v-for="(blog, blogIndex) in blogs"
         :key="blog.nid"
@@ -12,6 +12,9 @@
       >
         <blog-brief :blog="blog" />
       </div>
+    </div>
+    <div class="col-12">
+      <div class="alert alert-danger">{{ error }}</div>
     </div>
     <div v-if="hasNextPage" class="col-12 d-flex justify-content-end">
       <b-button variant="link" class="p-0" @click="loadMorePosts">Load More...</b-button>
@@ -22,10 +25,10 @@
 <script>
 export default {
   async asyncData({ $services }) {
-    const { blogs, totalBlogs, hasNextPage, endCursor } = await $services.blogs.find({
+    const { blogs, totalBlogs, hasNextPage, endCursor, error } = await $services.blogs.find({
       lastPostId: '',
     })
-    return { blogs, totalBlogs, hasNextPage, endCursor }
+    return { blogs, totalBlogs, hasNextPage, endCursor, error }
   },
 
   data() {

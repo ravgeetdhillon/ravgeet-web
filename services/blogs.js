@@ -12,7 +12,7 @@ const BlogsAPI = ({ $axios, error }) => ({
   find: async ({ pageSize = BLOGS_PER_PAGE, lastPostId = '' }) => {
     const data = () =>
       JSON.stringify({
-        query: `blogs
+        query: `
           query GetUserBlogs($lastPostId: String!) {
             publication(host: "${HOST_NAME}") {
               posts(first:${pageSize}, after: $lastPostId) {
@@ -44,11 +44,15 @@ const BlogsAPI = ({ $axios, error }) => ({
         variables: { lastPostId },
       })
 
-    const res = await $axios.create(axiosConfig).$post('/', data(lastPostId))
-    const blogs = res.data.publication.posts.edges.map((edge) => edge.node)
-    const totalBlogs = res.data.publication.posts.totalDocuments
-    const { hasNextPage, endCursor } = res.data.publication.posts.pageInfo
-    return { blogs, totalBlogs, hasNextPage, endCursor }
+    try {
+      const res = await $axios.create(axiosConfig).$post('/', data(lastPostId))
+      const blogs = res.data.publication.posts.edges.map((edge) => edge.node)
+      const totalBlogs = res.data.publication.posts.totalDocuments
+      const { hasNextPage, endCursor } = res.data.publication.posts.pageInfo
+      return { blogs, totalBlogs, hasNextPage, endCursor }
+    } catch (err) {
+      return { blogs: [], totalBlogs: 0, hasNextPage: false, endCursor: '', error: err.message }
+    }
   },
 
   findOne: async ({ slug }) => {
