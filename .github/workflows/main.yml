@@ -1,63 +1,13 @@
 name: Production Deploy
 
 on:
-  push:
-    branches:
-      - master
   schedule:
-    - cron: "0 0 */3 * *"
+    - cron: '0 0 */2 * *'
   workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      DRIBBBLE_ACCESS_TOKEN: ${{ secrets.DRIBBBLE_ACCESS_TOKEN }}
-    outputs:
-      node_version: ${{ steps.node_version.outputs.node_version }}
     steps:
-      - name: Set up Repository
-        uses: actions/checkout@v4
-        with:
-          ref: master
-          fetch-depth: 0
-
-      - name: Get Node Version
-        id: node_version
-        run: |
-          node_version=`cat .nvmrc`
-          echo "::set-output name=node_version::$node_version"
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ steps.node_version.outputs.node_version }}
-
-      - name: Cache NPM Dependencies
-        id: cache-npm-dependencies
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
-
-      - name: Install NPM Dependencies if not cached
-        if: steps.cache-npm-dependencies.outputs.cache-hit != 'true'
-        run: |
-          npm install
-
-      - name: Generate Metadata files
-        run: |
-          last_updated_at=`date +%Y-%m-%dT%H:%M:%S.000%z`
-          printf "$last_updated_at" > .last-updated-at
-
-      - name: Build Website
-        run: |
-          NODE_ENV=production npm run generate
-
-      - name: Deploy to Netlify
-        uses: netlify/actions/cli@master
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        with:
-          args: deploy --dir=dist --prod
+      - name: Trigger Vercel Deploy Hook
+        run: curl -X POST ${{ secrets.VERCEL_DEPLOY_HOOK }}
