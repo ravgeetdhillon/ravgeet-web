@@ -24,6 +24,7 @@
             </p>
             <a :href="$config.site.repo" class="mr-3">Source Code</a>
             <a :href="$config.site.newsletter" class="mr-3">Newsletter</a>
+            <a href="/feed.xml" class="mr-3" title="Subscribe to RSS Feed">RSS Feed</a>
             <nuxt-link to="/contact">Contact</nuxt-link>
           </div>
         </div>
