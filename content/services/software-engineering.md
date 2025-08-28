@@ -7,9 +7,10 @@ At my [workplace](https://cloudanswers.com), I primarily work with:
 
 - React.js
 - Next.js
-- Netlify
+- Vercel
 - GitHub Actions
 - Salesforce API
+- Supabase
 
 Below are some of the technologies that I have at least used once in production-ready software. I am constantly learning about new ones and looking to expand my knowledge horizon.
 
@@ -18,13 +19,12 @@ Below are some of the technologies that I have at least used once in production-
 - **Cross-Platform App Development** - Flutter
 - **CMS and API Development** - Strapi
 - **Static Site Generation** - Jekyll, Hugo
-- **Deployment** - Netlify, DigitalOcean, Heroku, VPS
+- **Deployment** - Vercel, Netlify, DigitalOcean, Heroku, VPS
 - **DevOps** - GitHub Actions, Gitlab CI CD
 - **Automation** - Google Apps Script
 - **Add-Ons** - Stripe, Notion, Markdown, Trello
 - **Development** - VSCode, Linux Ubuntu, GitHub, Spotify
 - **Design** - Figma
+- **AI** - Open AI (ChatGPT), Claude
 
-This year my aim is to learn **Golang**, **Kubernetes**, and **Docker**.
-
-Although my availability is limited as I work on a full-time basis, still if you'd like me to work on your project, please consider sending me an email at ravgeetdhillon@gmail.com or reach out via your preferred [contact](/contact) channel.
+Although my availability is limited as I work on a full-time basis, still if you'd like me to work on your project, please consider sending me an [email](mailto:ravgeetdhillon@gmail.com) or reach out via your preferred [contact](/contact) channel.

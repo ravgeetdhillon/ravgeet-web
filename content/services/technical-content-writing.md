@@ -26,4 +26,4 @@ I write for content creation agencies and software startups:
 - Yext
 - Airplane -->
 
-If you'd like me to write for your blog, please consider sending me an email at [ravgeetdhillon@gmail.com](mailto:ravgeetdhillon@gmail.com) or reach via your preferred [contact](/contact) channel.
+If you'd like me to write for your blog, please consider sending me an [email](mailto:ravgeetdhillon@gmail.com) or reach via your preferred [contact](/contact) channel.

@@ -94,8 +94,7 @@ export default {
     let projects = await $services.projects.find({})
     projects = shuffle(projects).slice(0, 4)
 
-    let services = await $services.services.find()
-    services = shuffle(services).slice(0, 4)
+    const services = await $services.services.find()
 
     const { blogs, error } = await $services.blogs.find({ pageSize: 5 })
 
