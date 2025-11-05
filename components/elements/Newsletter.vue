@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      heading: '🚀 Come Join my Newsletter',
+      heading: '📮 Join my newsletter',
       promo:
         'I share tips on how to get started with freelancing, remote jobs, developer-related stuff, startup ecosystem, and lots of insider secrets with my subscribers.',
     }

@@ -14,6 +14,24 @@
       </div>
     </div>
 
+    <div class="col-12 mb-5">
+      <heading :title="blogsSection.heading" to="/blog" />
+      <div v-if="!error" class="row">
+        <div
+          v-for="(blog, blogIndex) in blogs"
+          :key="blog.nid"
+          :class="cx('col-12', { 'mb-4': blogIndex !== blogs.length - 1 })"
+        >
+          <blog-brief :blog="blog" :show-date="false" :has-heading="false" />
+        </div>
+      </div>
+      <div v-else class="row">
+        <div class="col-12">
+          <div class="alert alert-danger">{{ error }}</div>
+        </div>
+      </div>
+    </div>
+
     <!-- <div class="col-12 mb-5">
       <heading :title="clientsSection.heading" to="/clients" />
       <div class="row">
@@ -50,24 +68,6 @@
           :class="cx('col-12', { 'mb-4': serviceIndex !== services.length - 1 })"
         >
           <service-brief :service="service" :show-date="false" :has-heading="false" />
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 mb-5">
-      <heading :title="blogsSection.heading" to="/blog" />
-      <div v-if="!error" class="row">
-        <div
-          v-for="(blog, blogIndex) in blogs"
-          :key="blog.nid"
-          :class="cx('col-12', { 'mb-4': blogIndex !== blogs.length - 1 })"
-        >
-          <blog-brief :blog="blog" :show-date="false" :has-heading="false" />
-        </div>
-      </div>
-      <div v-else class="row">
-        <div class="col-12">
-          <div class="alert alert-danger">{{ error }}</div>
         </div>
       </div>
     </div>

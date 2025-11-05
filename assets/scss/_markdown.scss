@@ -386,6 +386,8 @@
     max-width: 100%;
     box-sizing: content-box;
     margin-top: 1rem;
+    border: 1px solid rgba(map.get(variables.$theme-colors, 'dark-light'), 0.05);
+    border-radius: 0.25rem;
   }
   img[align='right'] {
     padding-left: 1.25rem;

@@ -15,7 +15,15 @@ import { DribbbleAPI } from '~/services/dribbble'
 
 const markdownify = (value) => {
   if (value) {
-    value = value.replace(/%\[(.*?)\]/gm, '') // remove hashnode specific markdown for links
+    // Remove hashnode specific markdown for links
+    value = value.replace(/%\[(.*?)\]/gm, '')
+
+    // Fix Hashnode image syntax - remove align attributes from image markdown
+    value = value.replace(/!\[\]\((.*?)\s+align=".*?"\)/gm, '![]($1)')
+
+    // Also handle images with alt text
+    value = value.replace(/!\[(.*?)\]\((.*?)\s+align=".*?"\)/gm, '![$1]($2)')
+
     return marked.parse(value)
   }
 }
