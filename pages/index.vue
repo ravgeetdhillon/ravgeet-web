@@ -1,7 +1,7 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto">
     <div class="col-12 mb-5 py-5">
-      <div class="row align-items-start flex-row-reverse">
+      <div class="row align-items-center flex-row-reverse">
         <div class="col-xl-4">
           <img
             src="/images/icons/logos/ravgeet-dhillon.jpg"
@@ -9,9 +9,15 @@
           />
         </div>
         <div class="col-xl-8 pr-xl-5">
-          <nuxt-content class="markdown-body" :document="pageContent" />
+          <h1>Ravgeet Dhillon</h1>
+          <div>Full-Stack Developer and Technical Content Writer</div>
         </div>
       </div>
+    </div>
+
+    <div class="col-12 mb-5">
+      <heading :title="aboutSection.heading" />
+      <nuxt-content class="markdown-body" :document="pageContent" />
     </div>
 
     <div class="col-12 mb-5">
@@ -31,15 +37,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="col-12 mb-5">
-      <heading :title="clientsSection.heading" to="/clients" />
-      <div class="row">
-        <div v-for="client in clients" :key="client.nid" class="col-md-3 col-6 mb-4">
-          <client :client="client" />
-        </div>
-      </div>
-    </div> -->
 
     <div class="col-12 mb-5">
       <heading :title="projectsSection.heading" to="/projects" />
@@ -106,20 +103,20 @@ export default {
       title: 'Full Stack Developer, Flutter Developer, Technical Content Writer - Ravgeet Dhillon',
       description:
         'Ravgeet Dhillon is a Full Stack Developer, Flutter Developer, and Technical Content Writer based in India.',
-      clientsSection: {
-        heading: '🤝 Clients',
+      aboutSection: {
+        heading: 'About',
       },
       designSection: {
-        heading: '🎨 Design',
+        heading: 'Design',
       },
       projectsSection: {
-        heading: '🏗 Projects',
+        heading: 'Projects',
       },
       servicesSection: {
-        heading: '🛠 Services',
+        heading: 'Services',
       },
       blogsSection: {
-        heading: '✍️ Blogs',
+        heading: 'Blogs',
       },
     }
   },

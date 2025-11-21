@@ -1,6 +1,6 @@
 <template>
   <div class="col-12 mb-5">
-    <div class="h5 border-bottom pb-2">{{ title }}</div>
+    <div class="h5 border-bottom pb-2 font-weight-bold">{{ title }}</div>
     <div v-if="headline" class="text-dark-light" v-html="markdownify(headline)" />
   </div>
 </template>
