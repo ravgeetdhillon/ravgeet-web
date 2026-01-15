@@ -1,4 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e3423c5a-3e57-4ffc-aa2d-7c2bcbeb2a3c/deploy-status)](https://app.netlify.com/sites/ravgeetdev/deploys)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ravgeetdhillon/ravgeet-web/blob/master/LICENSE)
 
 # Ravgeet Dhillon's Website
