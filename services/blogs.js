@@ -5,15 +5,6 @@ const axiosConfig = {
   },
 }
 
-const devtoAxiosConfig = {
-  baseURL: 'https://dev.to/api',
-  headers: {
-    'Content-Type': 'application/json',
-    'User-Agent': 'RavgeetWeb/1.0',
-    'Access-Control-Allow-Origin': '*',
-  },
-}
-
 const HOST_NAME = 'ravgeetdhillon.hashnode.dev'
 const BLOGS_PER_PAGE = 50
 
@@ -50,26 +41,25 @@ const matchArticles = (hashnodeBlog, devtoArticles) => {
   return match
 }
 
-const BlogsAPI = ({ $axios, error, $config }) => {
-  // Fetch Dev.to articles with page view counts
-  const findDevToArticles = async () => {
-    if (!$config.devtoApiToken) {
-      return []
-    }
-
+const BlogsAPI = ({ $axios, error }) => {
+  // Load cached Dev.to articles from pre-generated file
+  const findDevToArticles = () => {
     try {
-      const config = {
-        ...devtoAxiosConfig,
-        headers: {
-          ...devtoAxiosConfig.headers,
-          'api-key': $config.devtoApiToken,
-        },
-      }
+      const fs = require('fs')
+      const path = require('path')
+      const filePath = path.join(process.cwd(), '.temp', 'devto-articles.json')
 
-      const articles = await $axios.create(config).$get('/articles/me?per_page=1000')
-      return articles || []
+      if (fs.existsSync(filePath)) {
+        const data = fs.readFileSync(filePath, 'utf8')
+        const articles = JSON.parse(data)
+        console.log(`📖 Loaded ${articles.length} Dev.to articles from cache`)
+        return articles
+      } else {
+        console.warn('⚠️  Dev.to articles cache file not found, skipping Dev.to view counts')
+        return []
+      }
     } catch (err) {
-      console.error('Error fetching Dev.to articles:', err.message)
+      console.error('Error loading Dev.to articles from cache:', err.message)
       return []
     }
   }
@@ -114,10 +104,30 @@ const BlogsAPI = ({ $axios, error, $config }) => {
         })
 
       try {
+        // Fetch Hashnode blogs
         const res = await $axios.create(axiosConfig).$post('/', data(lastPostId))
-        const blogs = res.data.publication.posts.edges.map((edge) => edge.node)
+        const hashnodeBlogs = res.data.publication.posts.edges.map((edge) => edge.node)
         const totalBlogs = res.data.publication.posts.totalDocuments
         const { hasNextPage, endCursor } = res.data.publication.posts.pageInfo
+
+        // Load Dev.to articles from pre-generated cache
+        const devtoArticles = findDevToArticles()
+
+        // Combine view counts
+        const blogs = hashnodeBlogs.map((blog) => {
+          const devtoMatch = matchArticles(blog, devtoArticles)
+          const hashnodeViews = blog.views || 0
+          const devtoViews = devtoMatch?.page_views_count || 0
+          const combinedViews = hashnodeViews + devtoViews
+
+          return {
+            ...blog,
+            views: combinedViews,
+            hashnodeViews,
+            devtoViews,
+          }
+        })
+
         return { blogs, totalBlogs, hasNextPage, endCursor }
       } catch (err) {
         return { blogs: [], totalBlogs: 0, hasNextPage: false, endCursor: '', error: err.message }
@@ -161,8 +171,8 @@ const BlogsAPI = ({ $axios, error, $config }) => {
         error({ statusCode: 404, message: 'This page could not be found' })
       }
 
-      // Fetch Dev.to articles to get matching article's view count
-      const devtoArticles = await findDevToArticles()
+      // Load Dev.to articles from pre-generated cache to get matching article's view count
+      const devtoArticles = findDevToArticles()
       const devtoMatch = matchArticles(blog, devtoArticles)
       const hashnodeViews = blog.views || 0
       const devtoViews = devtoMatch?.page_views_count || 0

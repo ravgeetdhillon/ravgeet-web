@@ -91,3 +91,6 @@ sw.*
 
 .last-updated-at
 .cert
+
+# Temporary files
+.temp/
