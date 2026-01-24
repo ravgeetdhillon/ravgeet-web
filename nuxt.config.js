@@ -260,6 +260,10 @@ export default {
       repo: 'https://github.com/ravgeetdhillon/ravgeet-web',
       newsletter: 'https://www.ravsam.in/newsletter/',
     },
+  },
+
+  privateRuntimeConfig: {
     dribbbleApiAccessToken: process.env.DRIBBBLE_ACCESS_TOKEN,
+    devtoApiToken: process.env.DEVTO_API_TOKEN,
   },
 }

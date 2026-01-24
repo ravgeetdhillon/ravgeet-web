@@ -6,7 +6,7 @@
     <nuxt-link :to="`/blog/${blog.slug}`">
       <div class="h6">{{ blog.title }}</div>
     </nuxt-link>
-    <div class="text-dark-light text-truncate">
+    <div class="text-dark-light text-truncate small">
       {{ blog.subtitle ?? blog.brief }}
     </div>
   </div>

@@ -4,9 +4,13 @@
       <div class="mb-4">
         <back-link label="All Blogs" to="/blog" />
         <h3 class="mb-3">{{ blog.title }}</h3>
-        <p class="text-muted" :title="formatDateTime(blog.publishedAt)">
-          {{ formatDate(blog.publishedAt) }}
-        </p>
+        <div class="d-flex text-muted small">
+          <div class="text-muted" :title="formatDateTime(blog.publishedAt)">
+            {{ formatDate(blog.publishedAt) }}
+          </div>
+          <div class="mx-2">&bull;</div>
+          <div>{{ roundViews(blog.views) }} views</div>
+        </div>
       </div>
       <img
         v-if="blog.coverImage"
