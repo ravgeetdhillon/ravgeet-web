@@ -45,6 +45,31 @@ const BlogsAPI = ({ error }) => {
         error({ statusCode: 500, message: 'Error loading blog data' })
       }
     },
+
+    search: async ({ query }) => {
+      try {
+        const { blogs } = await loadBlogData()
+        const lowerQuery = query.toLowerCase()
+        const filteredBlogs = blogs.filter(
+          (b) =>
+            b.title.toLowerCase().includes(lowerQuery) ||
+            b.brief.toLowerCase().includes(lowerQuery) ||
+            (b.tags && b.tags.some((tag) => tag.name.toLowerCase().includes(lowerQuery)))
+        )
+
+        return {
+          blogs: filteredBlogs,
+          totalBlogs: filteredBlogs.length,
+          error: null,
+        }
+      } catch (err) {
+        return {
+          blogs: [],
+          totalBlogs: 0,
+          error: err.message,
+        }
+      }
+    },
   }
 }
 

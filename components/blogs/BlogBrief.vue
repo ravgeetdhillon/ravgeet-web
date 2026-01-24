@@ -1,8 +1,12 @@
 <template>
   <div>
-    <p v-if="showDate" class="text-muted mb-2 small" :title="formatDateTime(blog.publishedAt)">
-      {{ formatDate(blog.publishedAt) }}
-    </p>
+    <div class="d-flex small text-muted mb-2">
+      <div v-if="showDate" :title="formatDateTime(blog.publishedAt)">
+        {{ formatDate(blog.publishedAt) }}
+      </div>
+      <div class="mx-2">&bull;</div>
+      <div>{{ roundViews(blog.views) }} reads</div>
+    </div>
     <nuxt-link :to="`/blog/${blog.slug}`">
       <div class="h6">{{ blog.title }}</div>
     </nuxt-link>

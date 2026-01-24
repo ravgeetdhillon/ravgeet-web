@@ -51,7 +51,7 @@ const formatDateTime = (value) => formatDate(value, 'D MMMM, YYYY - hh:mm A')
 
 // Round views to next 1000 value
 const roundViews = (value) => {
-  const roundUpto = 500
+  const roundUpto = 5
   const rounded = Math.ceil(value / roundUpto) * roundUpto
   return '~' + rounded.toString()
 }
