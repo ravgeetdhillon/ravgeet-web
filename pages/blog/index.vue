@@ -5,24 +5,40 @@
       headline="A curated list of articles that I've written for different publications on the Internet."
     />
 
-    <!-- Search Bar -->
     <div class="col-12 mb-5">
-      <div class="form-group mb-0">
-        <input
-          v-model="searchQuery"
-          type="text"
-          class="form-control"
-          placeholder="Search blogs..."
-          @input="handleSearch"
-        />
+      <div class="row">
+        <!-- Search -->
+        <div class="col-md-8">
+          <div class="form-group mb-0">
+            <input
+              v-model="searchQuery"
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Search blogs..."
+              @input="handleSearch"
+            />
+          </div>
+        </div>
 
-        <small v-if="searchQuery && filteredBlogs.length === 0" class="text-muted mt-2 d-block">
-          No blogs found matching "{{ searchQuery }}"
-        </small>
-        <small v-else-if="searchQuery" class="text-muted mt-2 d-block">
-          Showing {{ filteredBlogs.length }} of {{ totalBlogs }} blogs
-        </small>
+        <!-- Sort -->
+        <div class="col-md-4">
+          <div class="form-group mb-0">
+            <select v-model="sortBy" class="form-control form-control-sm" @change="applySorting">
+              <option value="recent">Published recently</option>
+              <option value="oldest">Published earliest</option>
+              <option value="most-views">Most viewed</option>
+              <option value="least-views">Least viewed</option>
+            </select>
+          </div>
+        </div>
       </div>
+
+      <small v-if="searchQuery && filteredBlogs.length === 0" class="text-muted mt-2 d-block">
+        No blogs found matching "{{ searchQuery }}"
+      </small>
+      <small v-else-if="searchQuery" class="text-muted mt-2 d-block">
+        Showing {{ filteredBlogs.length }} of {{ totalBlogs }} blogs
+      </small>
     </div>
 
     <div v-if="!error" class="col-12 mb-5">
@@ -54,6 +70,7 @@ export default {
         'Ravgeet Dhillon is a Full Stack Developer, Flutter Developer, and Technical Content Writer based in India',
       searchQuery: '',
       filteredBlogs: [],
+      sortBy: 'recent',
     }
   },
 
@@ -77,14 +94,34 @@ export default {
   },
 
   mounted() {
-    // Initialize filtered blogs with all blogs
-    this.filteredBlogs = this.blogs
+    // Initialize filtered blogs with all blogs and apply initial sorting
+    this.filteredBlogs = this.sortBlogs([...this.blogs])
   },
 
   methods: {
+    sortBlogs(blogs) {
+      const sorted = [...blogs]
+      switch (this.sortBy) {
+        case 'most-views':
+          return sorted.sort((a, b) => (b.views || 0) - (a.views || 0))
+        case 'least-views':
+          return sorted.sort((a, b) => (a.views || 0) - (b.views || 0))
+        case 'recent':
+          return sorted.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+        case 'oldest':
+          return sorted.sort((a, b) => new Date(a.publishedAt) - new Date(b.publishedAt))
+        default:
+          return sorted
+      }
+    },
+
+    applySorting() {
+      this.filteredBlogs = this.sortBlogs(this.filteredBlogs)
+    },
+
     async handleSearch() {
       if (!this.searchQuery.trim()) {
-        this.filteredBlogs = this.blogs
+        this.filteredBlogs = this.sortBlogs([...this.blogs])
         return
       }
 
@@ -92,7 +129,7 @@ export default {
         const { blogs } = await this.$services.blogs.search({
           query: this.searchQuery.trim(),
         })
-        this.filteredBlogs = blogs || []
+        this.filteredBlogs = this.sortBlogs(blogs || [])
       } catch (error) {
         console.error('Search error:', error)
         this.filteredBlogs = []
