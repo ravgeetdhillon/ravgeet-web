@@ -133,7 +133,7 @@
     word-wrap: normal;
     padding: 1rem;
     overflow: auto;
-    font-size: 1rem;
+    font-size: 0.85rem;
     line-height: 1.45;
     background-color: map.get(variables.$theme-colors, 'theme-white');
     border-radius: 0.25rem;
@@ -153,6 +153,7 @@
       margin: 0;
       word-break: normal;
       white-space: pre;
+      font-size: 0.85rem;
       background: transparent;
       border: 0;
     }
@@ -163,6 +164,7 @@
       overflow: visible;
       line-height: inherit;
       word-wrap: normal;
+      font-size: 0.85rem;
       background-color: transparent;
       border: 0;
     }
