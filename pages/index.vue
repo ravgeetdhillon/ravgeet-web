@@ -28,7 +28,7 @@
           :key="blog.nid"
           :class="cx('col-12', { 'mb-4': blogIndex !== blogs.length - 1 })"
         >
-          <blog-brief :blog="blog" :show-date="false" :has-heading="false" />
+          <blog-brief :blog="blog" :show-date-and-views="false" :has-heading="false" />
         </div>
       </div>
       <div v-else class="row">

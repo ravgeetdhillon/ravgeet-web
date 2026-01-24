@@ -8,7 +8,7 @@
       <div class="h6 mb-0 border-bottom pb-2">🧠 More Interesting Reads</div>
     </div>
     <div v-for="b in allSuggestedBlogs" :key="b.nid" class="col-12 mb-4">
-      <blog-brief :blog="b" :show-date="false" :has-heading="false" />
+      <blog-brief :blog="b" :show-date-and-views="false" :has-heading="false" />
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="d-flex small text-muted mb-2">
-      <div v-if="showDate" :title="formatDateTime(blog.publishedAt)">
+    <div v-if="showDateAndViews" class="d-flex small text-muted mb-2">
+      <div :title="formatDateTime(blog.publishedAt)">
         {{ formatDate(blog.publishedAt) }}
       </div>
       <div class="mx-2">&bull;</div>
@@ -23,7 +23,7 @@ export default {
       type: Object,
       required: true,
     },
-    showDate: {
+    showDateAndViews: {
       type: Boolean,
       required: false,
       default: true,
