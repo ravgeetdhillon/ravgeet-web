@@ -48,15 +48,6 @@
     </div>
 
     <div class="col-12 mb-5">
-      <heading :title="designSection.heading" to="/design" />
-      <div class="row">
-        <div v-for="designPost in designPosts" :key="designPost.nid" class="col-md-6 mb-4">
-          <dribbble-card :post="designPost" />
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 mb-5">
       <heading :title="servicesSection.heading" to="/services" />
       <div class="row">
         <div
@@ -85,9 +76,6 @@ export default {
     let clients = await $services.clients.find()
     clients = shuffle(clients).slice(0, 4)
 
-    let designPosts = await $services.dribbble.find()
-    designPosts = shuffle(designPosts).slice(0, 4)
-
     let projects = await $services.projects.find({})
     projects = shuffle(projects).slice(0, 4)
 
@@ -95,7 +83,7 @@ export default {
 
     const { blogs, error } = await $services.blogs.find({ pageSize: 5 })
 
-    return { pageContent, clients, designPosts, projects, services, blogs, error }
+    return { pageContent, clients, projects, services, blogs, error }
   },
 
   data() {
@@ -105,9 +93,6 @@ export default {
         'Ravgeet Dhillon is a Full Stack Developer, Flutter Developer, and Technical Content Writer based in India.',
       aboutSection: {
         heading: 'About',
-      },
-      designSection: {
-        heading: 'Design',
       },
       projectsSection: {
         heading: 'Projects',

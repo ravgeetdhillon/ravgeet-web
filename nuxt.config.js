@@ -262,7 +262,5 @@ export default {
     },
   },
 
-  privateRuntimeConfig: {
-    dribbbleApiAccessToken: process.env.DRIBBBLE_ACCESS_TOKEN,
-  },
+  privateRuntimeConfig: {},
 }

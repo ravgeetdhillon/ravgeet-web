@@ -61,17 +61,9 @@ export default {
           url: '/projects',
         },
         {
-          title: 'Design',
-          url: '/design',
-        },
-        {
           title: 'Services',
           url: '/services',
         },
-        // {
-        //   title: 'Clients',
-        //   url: '/clients',
-        // },
         {
           title: 'Blog',
           url: '/blog',

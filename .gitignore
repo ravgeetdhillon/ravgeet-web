@@ -92,5 +92,6 @@ sw.*
 .last-updated-at
 .cert
 
-# Temporary files
-.temp/
+# Processed data
+# Static blog data
+static/blogs.json

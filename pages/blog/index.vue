@@ -16,19 +16,14 @@
     <div v-else class="col-12">
       <div class="alert alert-danger">{{ error }}</div>
     </div>
-    <div v-if="hasNextPage" class="col-12 d-flex justify-content-end">
-      <b-button variant="link" class="p-0" @click="loadMorePosts">Load More...</b-button>
-    </div>
   </div>
 </template>
 
 <script>
 export default {
   async asyncData({ $services }) {
-    const { blogs, totalBlogs, hasNextPage, endCursor, error } = await $services.blogs.find({
-      lastPostId: '',
-    })
-    return { blogs, totalBlogs, hasNextPage, endCursor, error }
+    const { blogs, totalBlogs, error } = await $services.blogs.find({})
+    return { blogs, totalBlogs, error }
   },
 
   data() {
@@ -36,7 +31,6 @@ export default {
       title: 'Blog - Ravgeet Dhillon',
       description:
         'Ravgeet Dhillon is a Full Stack Developer, Flutter Developer, and Technical Content Writer based in India',
-      lastPostId: '',
     }
   },
 
@@ -51,17 +45,6 @@ export default {
         },
       ],
     }
-  },
-
-  methods: {
-    async loadMorePosts() {
-      const { blogs, hasNextPage, endCursor } = await this.$services.blogs.find({
-        lastPostId: this.endCursor,
-      })
-      this.blogs = [...this.blogs, ...blogs]
-      this.endCursor = endCursor
-      this.hasNextPage = hasNextPage
-    },
   },
 }
 </script>

@@ -11,7 +11,6 @@ import { BlogsAPI } from '~/services/blogs'
 import { ProjectsAPI } from '~/services/projects'
 import { ClientsAPI } from '~/services/clients'
 import { ServicesAPI } from '~/services/services'
-import { DribbbleAPI } from '~/services/dribbble'
 
 const markdownify = (value) => {
   if (value) {
@@ -90,7 +89,6 @@ export default (ctx, inject) => {
     projects: ProjectsAPI(ctx),
     clients: ClientsAPI(ctx),
     services: ServicesAPI(ctx),
-    dribbble: DribbbleAPI(ctx),
   }
 
   inject('services', services)
