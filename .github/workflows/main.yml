@@ -2,7 +2,7 @@ name: Production Deploy
 
 on:
   schedule:
-    - cron: '0 0 */2 * *'
+    - cron: "0 0 * * *" # This will run the workflow every day at midnight (UTC)
   workflow_dispatch:
 
 jobs:
