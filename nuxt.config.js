@@ -72,7 +72,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/scss/index.scss'],
+  css: ['@/assets/scss/index.scss', 'prismjs/themes/prism-tomorrow.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/index.js'],

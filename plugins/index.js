@@ -1,6 +1,22 @@
 import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import { marked } from 'marked'
+import Prism from 'prismjs'
+import 'prismjs/components/prism-markup'
+import 'prismjs/components/prism-css'
+import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/components/prism-jsx'
+import 'prismjs/components/prism-tsx'
+import 'prismjs/components/prism-bash'
+import 'prismjs/components/prism-json'
+import 'prismjs/components/prism-yaml'
+import 'prismjs/components/prism-python'
+import 'prismjs/components/prism-go'
+import 'prismjs/components/prism-rust'
+import 'prismjs/components/prism-dart'
+import 'prismjs/components/prism-scss'
+import 'prismjs/components/prism-graphql'
 import VueGtag from 'vue-gtag'
 import classNames from 'classnames'
 import dayjs from 'dayjs'
@@ -11,6 +27,16 @@ import { BlogsAPI } from '~/services/blogs'
 import { ProjectsAPI } from '~/services/projects'
 import { ClientsAPI } from '~/services/clients'
 import { ServicesAPI } from '~/services/services'
+
+// Configure marked to use Prism for syntax highlighting
+const renderer = new marked.Renderer()
+renderer.code = (code, language) => {
+  const lang = language && Prism.languages[language] ? language : 'plaintext'
+  const highlighted =
+    lang !== 'plaintext' ? Prism.highlight(code, Prism.languages[lang], lang) : code
+  return `<pre class="language-${lang}"><code class="language-${lang}">${highlighted}</code></pre>`
+}
+marked.setOptions({ renderer })
 
 const markdownify = (value) => {
   if (value) {

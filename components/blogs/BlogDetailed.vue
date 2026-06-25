@@ -9,7 +9,7 @@
             {{ formatDate(blog.publishedAt) }}
           </div>
           <div class="mx-2">&bull;</div>
-          <div>{{ roundViews(blog.views) }} reads</div>
+          <div :title="blog.views">{{ roundViews(blog.views) }} reads</div>
         </div>
       </div>
       <img
