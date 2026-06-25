@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="showDateAndViews" class="d-flex small text-muted mb-2">
+    <div v-if="showDateAndViews" class="d-flex small text-muted mb-1">
       <div :title="formatDateTime(blog.publishedAt)">
         {{ formatDate(blog.publishedAt) }}
       </div>
