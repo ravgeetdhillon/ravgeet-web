@@ -1,8 +1,8 @@
 <template>
   <div class="row w-lg-75 mx-lg-auto">
     <banner
-      :title="`Blogs (${filteredBlogs.length})`"
-      headline="A curated list of articles that I've written for different publications on the Internet."
+      title="Blogs"
+      :headline="`A curated list of ${filteredBlogs.length} articles that I've written for different publications on the Internet.`"
     />
 
     <div class="col-12 mb-5">
