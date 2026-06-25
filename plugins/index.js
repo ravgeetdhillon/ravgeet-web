@@ -14,7 +14,23 @@ import { ServicesAPI } from '~/services/services'
 
 const markdownify = (value) => {
   if (value) {
-    // Remove hashnode specific markdown for links
+    // Replace Dev.to YouTube embed liquid tags with responsive iframes
+    // Handles {% embed https://youtu.be/ID %} and {% embed https://youtube.com/watch?v=ID %}
+    value = value.replace(
+      /\{%\s*embed\s+(https?:\/\/(?:www\.)?(?:youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]+)[^\s]*)\s*%\}/gm,
+      (_, _url, videoId) =>
+        `<div class="embed-responsive embed-responsive-16by9">` +
+        `<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${videoId}" ` +
+        `allowfullscreen loading="lazy"></iframe></div>`
+    )
+
+    // Replace any remaining Dev.to liquid embed tags with a plain link
+    value = value.replace(
+      /\{%\s*embed\s+(https?:\/\/[^\s%]+)\s*%\}/gm,
+      (_, url) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`
+    )
+
+    // Remove other Dev.to/Hashnode specific liquid tags
     value = value.replace(/%\[(.*?)\]/gm, '')
 
     // Fix Hashnode image syntax - remove align attributes from image markdown

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row w-lg-75 mx-lg-auto">
-      <banner title="Story" />
+      <banner title="My Story" />
       <div class="col-12">
         <nuxt-content class="markdown-body" :document="pageContent" />
       </div>

@@ -3,10 +3,15 @@
     <div class="col-12 mb-5 py-5">
       <div class="row align-items-center flex-row-reverse">
         <div class="col-xl-4">
-          <img
-            src="/images/icons/logos/ravgeet-dhillon.jpg"
-            class="img-fluid rounded-circle mb-4 mb-xl-0 w-100 shadow-sm border border-theme-white-light"
-          />
+          <div
+            class="border border-theme-white-light rounded-circle p-1 mb-4 mb-xl-0 overflow-hidden w-100"
+            style="aspect-ratio: 1; border-width: 2px !important"
+          >
+            <img
+              src="/images/icons/logos/ravgeet-dhillon.jpg"
+              class="img-fluid w-100 rounded-circle"
+            />
+          </div>
         </div>
         <div class="col-xl-8 pr-xl-5">
           <h1>Ravgeet Dhillon</h1>

@@ -1,9 +1,9 @@
 <template>
   <div>
     <nuxt-link :to="`/services/${service.slug}`">
-      <div class="h6">{{ service.title }}</div>
+      <div>{{ service.title }}</div>
     </nuxt-link>
-    <div class="text-dark-light">
+    <div class="text-dark-light small">
       {{ service.promo }}
     </div>
   </div>

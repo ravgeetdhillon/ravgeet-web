@@ -3,10 +3,8 @@
     <div class="col-12">
       <div class="mb-5">
         <div class="mb-5">
-          <nuxt-link to="/projects" class="btn btn-sm btn-theme-white mb-4">
-            &larr; All Projects
-          </nuxt-link>
-          <h3>{{ project.title }}</h3>
+          <back-link label="All Projects" to="/projects" />
+          <h1>{{ project.title }}</h1>
           <p class="text-dark-light">
             {{ project.promo }}
           </p>

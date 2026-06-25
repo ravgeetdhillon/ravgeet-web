@@ -8,7 +8,7 @@
       <div :title="blog.views">{{ roundViews(blog.views) }} reads</div>
     </div>
     <nuxt-link :to="`/blog/${blog.slug}`">
-      <div class="h6">{{ blog.title }}</div>
+      <div>{{ blog.title }}</div>
     </nuxt-link>
     <div v-if="blog.subtitle ?? blog.brief" class="text-dark-light text-truncate small">
       {{ blog.subtitle ?? blog.brief }}

@@ -150,55 +150,24 @@ export default {
           },
         }
 
-        // Import axios and fetch blog posts
+        // Import axios and fetch blog posts from Dev.to
         const axios = require('axios')
-
-        const axiosConfig = {
-          baseURL: 'https://gql.hashnode.com',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-
-        const query = JSON.stringify({
-          query: `
-            query GetUserBlogs {
-              publication(host: "ravgeetdhillon.hashnode.dev") {
-                posts(first: 50) {
-                  edges {
-                    node {
-                      id
-                      cuid
-                      slug
-                      title
-                      brief
-                      subtitle
-                      content {
-                        markdown
-                      }
-                      coverImage {
-                        url
-                      }
-                      publishedAt
-                      tags {
-                        name
-                      }
-                    }
-                  }
-                }
-              }
-            }`,
-        })
+        const devtoApiToken = process.env.DEVTO_API_TOKEN
 
         try {
-          const response = await axios.post('https://gql.hashnode.com', query, axiosConfig)
-          const posts = response.data.data.publication.posts.edges.map((edge) => edge.node)
+          const response = await axios.get('https://dev.to/api/articles/me?per_page=1000', {
+            headers: {
+              'api-key': devtoApiToken,
+              'User-Agent': 'RavgeetWeb/1.0',
+              'Content-Type': 'application/json',
+            },
+          })
+          const posts = response.data || []
 
           posts.forEach((post) => {
             const postUrl = `https://www.ravgeet.in/blog/${post.slug}`
-            // Clean the content to avoid HTML entity issues
-            const cleanContent = post.content?.markdown
-              ? post.content.markdown.replace(
+            const cleanContent = post.body_markdown
+              ? post.body_markdown.replace(
                   /&(?![a-zA-Z][a-zA-Z0-9]*;|#[0-9]+;|#x[0-9a-fA-F]+;)/g,
                   '&amp;'
                 )
@@ -206,10 +175,10 @@ export default {
 
             feed.addItem({
               title: post.title,
-              id: postUrl, // Use full URL as GUID
-              guid: postUrl, // Explicitly set GUID to full URL
+              id: postUrl,
+              guid: postUrl,
               link: postUrl,
-              description: post.brief || post.subtitle || '',
+              description: post.description || '',
               content: cleanContent,
               author: [
                 {
@@ -217,13 +186,14 @@ export default {
                   link: 'https://www.ravgeet.in',
                 },
               ],
-              date: new Date(post.publishedAt),
-              image: post.coverImage?.url,
-              category: post.tags?.map((tag) => ({ name: tag.name })) || [],
+              date: new Date(post.published_at),
+              image: post.cover_image || undefined,
+              category: (post.tags || []).map((name) => ({ name })),
             })
           })
         } catch (error) {
           // Silently handle errors - RSS feed will be empty if blog posts can't be fetched
+          // eslint-disable-next-line no-console
           console.error(error)
         }
 
@@ -234,7 +204,7 @@ export default {
 
         feed.addContributor({
           name: 'Ravgeet Dhillon',
-          email: 'hi@ravgeet.in',
+          email: 'ravgeetdhillon@gmail.com',
           link: 'https://www.ravgeet.in',
         })
 
